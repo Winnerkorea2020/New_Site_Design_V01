@@ -1,0 +1,36 @@
+.badge {
+  @apply text-xs font-semibold  px-2.5 py-0.5 rounded;
+}
+
+.bgdge-large {
+  @apply text-sm font-medium  px-2.5 py-0.5;
+}
+
+.badge-rounded {
+  @apply rounded-full;
+}
+
+.badge-default {
+  @apply bg-blue-400 text-blue-100;
+}
+.badge-dark {
+  @apply bg-gray-400 text-gray-100;
+}
+.badge-red {
+  @apply bg-red-400 text-red-100;
+}
+.badge-green {
+  @apply bg-green-400 text-green-100;
+}
+.badge-yellow {
+  @apply bg-yellow-400 text-yellow-100;
+}
+.badge-indigo {
+  @apply bg-indigo-400 text-indigo-100;
+}
+.badge-purple {
+  @apply bg-purple-400 text-purple-100;
+}
+.badge-pink {
+  @apply bg-pink-400 text-pink-100;
+}

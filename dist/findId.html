@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- BOX ICONS -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- GOOGLE FONTS -->
+    <link rel="stylesheet" href="./assets/css/font.css" />
+    <!-- BASE -->
+    <link rel="stylesheet" href="./assets/css/base.css" />
+
+    <title>Bitypeer | Find Your ID</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full h-12">
+      <div class="section max-w-3xl">
+        <div class="h-12 flex items-center justify-between">
+          <div class="inline-flex justify-start gap-2 items-center">
+            <div>
+              <svg
+                style="color: #f3da35"
+                xmlns="http://www.w3.org/2000/svg"
+                width="35"
+                height="35"
+                fill="currentColor"
+                class="bi bi-hexagon-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M8.5.134a1 1 0 0 0-1 0l-6 3.577a1 1 0 0 0-.5.866v6.846a1 1 0 0 0 .5.866l6 3.577a1 1 0 0 0 1 0l6-3.577a1 1 0 0 0 .5-.866V4.577a1 1 0 0 0-.5-.866L8.5.134z"
+                  fill="#f3da35"
+                ></path>
+              </svg>
+            </div>
+            <div class="font-semibold text-xl tracking-tight">Bitypeer</div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="mt-8 lg:mt-12">
+      <section class="section">
+        <div class="pt-12 w-full md:max-w-md mx-auto">
+          <h3 class="p-5 border-gray-300 text-center text-3xl">Find ID</h3>
+          <div class="text-center text-2xl px-8 leading-10 mt-5">Enter your email and your ID will be sent to your email.</div>
+
+          <!-- Email Input Box -->
+
+          <form action="" class="mt-10">
+            <!-- Email -->
+            <div class="">
+              <label class="" for="">Email</label>
+              <input type="email" placeholder="Email" class="w-full border-2 mt-2 px-2.5 py-2 text-xl border-gray-300 rounded-xl" />
+              <p class="text-red-400 tracking-tighter text-xs px-3">Please enter in email format.</p>
+            </div>
+
+            <!-- Button -->
+            <div class="mt-10">
+              <button class="btn btn-exlarge btn-rounded w-full btn-default">Confirm</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>

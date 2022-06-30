@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- BOX ICONS -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="stylesheet" href="./assets/css/font.css" />
+    <!-- BASE -->
+    <link rel="stylesheet" href="./assets/css/base.css" />
+
+    <title>Bitypeer Coin buyers Registration Page</title>
+  </head>
+  <body class="smallBody">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full bg-white border-b-2 h-16 shadow-sm nav-header">
+      <!-- Top Navigation -->
+      <section class="section">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex justify-end px-12 w-full gap-5">
+            <div>Sign in</div>
+            <div>Sign up</div>
+          </div>
+
+          <div class="flex items-center">
+            <button
+              type="button"
+              class="flex items-center mr-3 text-sm rounded-full md:mr-0"
+              id="user-menu-button"
+              aria-expanded="false"
+              data-dropdown-toggle="dropdown"
+            >
+              <span class="sr-only">Open user menu</span>
+              <img class="w-6 h-6 md:w-8 md:h-8 border-none" src="./assets/img/flag/usa.png" alt="National Flag" />
+              <i class="bx bx-chevron-down bx-sm"></i>
+            </button>
+            <!-- Dropdown menu -->
+            <div
+              class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow-sm border"
+              id="dropdown"
+              style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate(1246px, 803px)"
+              data-popper-reference-hidden=""
+              data-popper-escaped=""
+              data-popper-placement="top"
+            >
+              <!-- Drop Down Contents | Start -->
+
+              <ul class="py-1 pr-5" aria-labelledby="dropdown">
+                <!-- National Flags | Start -->
+                <li>
+                  <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                    <img src="./assets/img/flag/china.png" alt="" class="w-8 h-8 border-none mr-2" />
+                    <span> China </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                    <img src="./assets/img/flag/germany.png" alt="" class="w-8 h-8 border-none mr-2" />
+                    <span> Germany </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                    <img src="./assets/img/flag/great-britain.png" alt="" class="w-8 h-8 border-none mr-2" />
+                    <span> Greate-britain </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                    <img src="./assets/img/flag/oman.png" alt="" class="w-8 h-8 border-none mr-2" />
+                    <span> Oman </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                    <img src="./assets/img/flag/france.png" alt="" class="w-8 h-8 border-none mr-2" />
+                    <span> France </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                    <img src="./assets/img/flag/spain.png" alt="" class="w-8 h-8 border-none mr-2" />
+                    <span> Spain </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                    <img src="./assets/img/flag/south-korea.png" alt="" class="w-8 h-8 border-none mr-2" />
+                    <span> Korea </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                    <img src="./assets/img/flag/singapore.png" alt="" class="w-8 h-8 border-none mr-2" />
+                    <span> Singapore </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                    <img src="./assets/img/flag/malaysia.png" alt="" class="w-8 h-8 border-none mr-2" />
+                    <span> Malyasia </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                    <img src="./assets/img/flag/new-zealand.png" alt="" class="w-8 h-8 border-none mr-2" />
+                    <span> New-zealand </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                    <img src="./assets/img/flag/usa.png" alt="" class="w-8 h-8 border-none mr-2" />
+                    <span> USA </span>
+                  </a>
+                </li>
+                <!-- National Flags | End -->
+              </ul>
+
+              <!-- Drop Down Contents | End -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <!-- Side Navi -->
+    <aside class="side-nav fixed left-0 top-0 h-screen bg-white border-r shadow-md" style="z-index: 100000">
+      <!-- Side Navigation Header -->
+      <div class="px-5">
+        <header class="h-16 flex items-center justify-between">
+          <img src="./assets/img/logo/hexagon.svg" class="h-8 w-8 mx-2" alt="" />
+
+          <div class="justify-between items-center w-full ml-5 gap-2 nav-brand__logo">
+            <div>Bitypeer</div>
+            <img src="./assets/img/logo/icons1.png" alt="" class="w-6 h-6" />
+          </div>
+        </header>
+        <!-- Side Menu List | Start -->
+        <nav class="px-2 pt-16 flex justify-start">
+          <ul class="flex flex-col gap-5">
+            <li>
+              <a href="#" class="inline-flex">
+                <img src="./assets/img/nav/sell.png" alt="" class="w-6 h-6" />
+                <span class="pl-3">Sell</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="inline-flex">
+                <img src="./assets/img/nav/buy.png" alt="" class="w-6 h-6" />
+                <span class="pl-3">Buy</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="inline-flex">
+                <img src="./assets/img/nav/affliation.png" alt="" class="w-6 h-6" />
+                <span class="pl-3">Affiliation</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="inline-flex">
+                <img src="./assets/img/nav/notice.png" alt="" class="w-6 h-6" />
+                <span class="pl-3">Notice</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="inline-flex">
+                <img src="./assets/img/nav/affiliateSell.png" alt="" class="w-6 h-6" />
+                <span class="pl-3">Affiliate Sell</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Side Menu List | End -->
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="p-0">
+      <!-- Sell Coins | Start -->
+      <section class="section">
+        <div class="pt-16">
+          <!-- Sell Header Area | Start -->
+          <div class="flex justify-between items-center">
+            <h4>Buy Coins</h4>
+            <div class="flex items-center gap-2 text-xs">
+              <div>HOME</div>
+              <div><i class="bx bx-chevron-right"></i></div>
+              <div>My page</div>
+              <div><i class="bx bx-chevron-right"></i></div>
+              <div>Coin Buys Registration</div>
+            </div>
+          </div>
+          <!-- Sell Header Area | End -->
+        </div>
+      </section>
+
+      <!-- Buyer Detail -->
+      <section class="section">
+        <div class="mt-8">
+          <div class="grid grid-cols-12 gap-5">
+            <!-- Item 1 -->
+            <div class="col-span-9">
+              <form action="" class="bg-white h-full px-5 py-2 shadow-md rounded-xl">
+                <!-- Buyer Information  -->
+                <div class="grid grid-cols-2 gap-2 text-sm">
+                  <div class="grid grid-cols-12 gap-5">
+                    <label class="col-span-4 rounded-xl border px-5 py-2.5 bg-gray-300 text-center h-fit" for="">Coin Name</label>
+                    <input class="col-span-8 rounded-xl border px-5 py-2.5" type="text" />
+                  </div>
+
+                  <div class="grid grid-cols-12 gap-5">
+                    <label class="col-span-4 rounded-xl border px-5 py-2.5 bg-gray-300 text-center h-fit" for="">Offer Country</label>
+                    <div class="col-span-8 w-full">
+                      <select name="" id="" class="w-full rounded-xl border px-5 py-2.5">
+                        <option value="">Choose your Country</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="grid grid-cols-12 gap-5">
+                    <label class="col-span-4 rounded-xl border px-5 py-2.5 bg-gray-300 text-center h-fit" for="">Amount of coins</label>
+                    <input class="col-span-8 rounded-xl border px-5 py-2.5" type="text" />
+                  </div>
+
+                  <div class="grid grid-cols-12 gap-5">
+                    <label class="col-span-4 rounded-xl border px-5 py-2.5 bg-gray-300 text-center h-fit" for="">Security</label>
+                    <div class="col-span-5 px-5 py-2.5 border-2 border-red-400 rounded-full text-center">Non-Escrow</div>
+                  </div>
+
+                  <div class="grid grid-cols-12 gap-5">
+                    <label class="col-span-4 rounded-xl border px-5 py-2.5 bg-gray-300 text-center h-fit" for="">Buy Price</label>
+                    <input class="col-span-8 rounded-xl border px-5 py-2.5" type="text" />
+                  </div>
+                  <div class="grid grid-cols-12 gap-5">
+                    <label class="col-span-4 rounded-xl border px-5 py-2.5 bg-gray-300 text-center h-fit" for="">currency</label>
+                    <input class="col-span-8 rounded-xl border px-5 py-2.5" type="text" />
+                  </div>
+                </div>
+
+                <div>
+                  <div class="py-2">
+                    <input type="checkbox" class="border-2" />
+                    <span class="font-semibold"> Terms Required</span>
+                  </div>
+                  <div class="px-5 pb-4">
+                    <ul class="list-decimal px-5">
+                      <li>
+                        When registering and transacting coins that are not escrow of Bitpeer affiliated coins, all legal responsibilities for the
+                        transaction are the (individaul) responsibility.
+                      </li>
+                      <li>I understand and agree that 1:1 coin personal transactions have nothing to do with Bitypeer.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="p-5 border rounded-xl">
+                  <div class="p-5 border bg-gray-200 rounded-lg">
+                    <div>Information</div>
+                    <ul>
+                      <li>Fill out this form to start chatting.</li>
+                      <li>Purchase request coin amount:</li>
+                      <li>Purchase request price:</li>
+                      <li>My wallet address:</li>
+                    </ul>
+                  </div>
+                  <div class="p-5 border mt-5 rounded-lg">
+                    <textarea name="" id="" cols="30" rows="20" style="resize: none"></textarea>
+                  </div>
+                </div>
+
+                <div class="pt-5">
+                  <div class="flex items-center justify-end gap-5">
+                    <a href="" class="block btn btn-dark">Registration</a>
+                    <a href="" class="block btn btn-red">Cancel</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="col-span-3">
+              <!-- Buyer Input Request -->
+
+              <div class="col-span-3">
+                <div class="bg-gray-200 rounded-md px-6 py-8">
+                  <h5 class="tracking-tighter">Set Selling time</h5>
+                  <div class="grid grid-cols-1 gap-2 text-sm pt-8">
+                    <!-- Sun -->
+                    <div class="flex items-center gap-2">
+                      <div class="flex items-center gap-2 sellingTimeInputBox">
+                        <input type="checkbox" class="w-6 h-6" />
+                        <div class="py-2 text-lg w-10">SUN</div>
+                      </div>
+                      <div class="flex justify-between items-center gap-2">
+                        <input
+                          class="py-2 w-full border rounded-md text-sm px-5"
+                          type="time"
+                          id="appt"
+                          name="appt"
+                          min="00:00"
+                          max="24:00"
+                          required
+                        />
+                        <input
+                          class="py-2 w-full border rounded-md text-sm px-5"
+                          type="time"
+                          id="appt"
+                          name="appt"
+                          min="00:00"
+                          max="24:00"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <!-- Mon -->
+                    <div class="flex items-center gap-2">
+                      <div class="flex items-center gap-2 sellingTimeInputBox">
+                        <input type="checkbox" class="w-6 h-6" />
+                        <div class="py-2 text-lg w-10">MON</div>
+                      </div>
+                      <div class="flex justify-between items-center gap-2">
+                        <input
+                          class="py-2 w-full border rounded-md text-sm px-5"
+                          type="time"
+                          id="appt"
+                          name="appt"
+                          min="00:00"
+                          max="24:00"
+                          required
+                        />
+                        <input
+                          class="py-2 w-full border rounded-md text-sm px-5"
+                          type="time"
+                          id="appt"
+                          name="appt"
+                          min="00:00"
+                          max="24:00"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <!-- TUE -->
+                    <div class="flex items-center gap-2">
+                      <div class="flex items-center gap-2 sellingTimeInputBox">
+                        <input type="checkbox" class="w-6 h-6" />
+                        <div class="py-2 text-lg w-10">TUE</div>
+                      </div>
+                      <div class="flex justify-between items-center gap-2">
+                        <input
+                          class="py-2 w-full border rounded-md text-sm px-5"
+                          type="time"
+                          id="appt"
+                          name="appt"
+                          min="00:00"
+                          max="24:00"
+                          required
+                        />
+                        <input
+                          class="py-2 w-full border rounded-md text-sm px-5"
+                          type="time"
+                          id="appt"
+                          name="appt"
+                          min="00:00"
+                          max="24:00"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <!-- WED -->
+                    <div class="flex items-center gap-2">
+                      <div class="flex items-center gap-2 sellingTimeInputBox">
+                        <input type="checkbox" class="w-6 h-6" />
+                        <div class="py-2 text-lg w-10">WED</div>
+                      </div>
+                      <div class="flex justify-between items-center gap-2">
+                        <input
+                          class="py-2 w-full border rounded-md text-sm px-5"
+                          type="time"
+                          id="appt"
+                          name="appt"
+                          min="00:00"
+                          max="24:00"
+                          required
+                        />
+                        <input
+                          class="py-2 w-full border rounded-md text-sm px-5"
+                          type="time"
+                          id="appt"
+                          name="appt"
+                          min="00:00"
+                          max="24:00"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <!-- THU -->
+                    <div class="flex items-center gap-2">
+                      <div class="flex items-center gap-2 sellingTimeInputBox">
+                        <input type="checkbox" class="w-6 h-6" />
+                        <div class="py-2 text-lg w-10">THU</div>
+                      </div>
+                      <div class="flex justify-between items-center gap-2">
+                        <input
+                          class="py-2 w-full border rounded-md text-sm px-5"
+                          type="time"
+                          id="appt"
+                          name="appt"
+                          min="00:00"
+                          max="24:00"
+                          required
+                        />
+                        <input
+                          class="py-2 w-full border rounded-md text-sm px-5"
+                          type="time"
+                          id="appt"
+                          name="appt"
+                          min="00:00"
+                          max="24:00"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <!-- Sun -->
+                    <div class="flex items-center gap-2">
+                      <div class="flex items-center gap-2 sellingTimeInputBox">
+                        <input type="checkbox" class="w-6 h-6" />
+                        <div class="py-2 text-lg w-10">SUN</div>
+                      </div>
+                      <div class="flex justify-between items-center gap-2">
+                        <input
+                          class="py-2 w-full border rounded-md text-sm px-5"
+                          type="time"
+                          id="appt"
+                          name="appt"
+                          min="00:00"
+                          max="24:00"
+                          required
+                        />
+                        <input
+                          class="py-2 w-full border rounded-md text-sm px-5"
+                          type="time"
+                          id="appt"
+                          name="appt"
+                          min="00:00"
+                          max="24:00"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <!-- FRI -->
+                    <div class="flex items-center gap-2">
+                      <div class="flex items-center gap-2 sellingTimeInputBox">
+                        <input type="checkbox" class="w-6 h-6" />
+                        <div class="py-2 text-lg w-10">FRI</div>
+                      </div>
+                      <div class="flex justify-between items-center gap-2">
+                        <input
+                          class="py-2 w-full border rounded-md text-sm px-5"
+                          type="time"
+                          id="appt"
+                          name="appt"
+                          min="00:00"
+                          max="24:00"
+                          required
+                        />
+                        <input
+                          class="py-2 w-full border rounded-md text-sm px-5"
+                          type="time"
+                          id="appt"
+                          name="appt"
+                          min="00:00"
+                          max="24:00"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <!-- SAT -->
+                    <div class="flex items-center gap-2">
+                      <div class="flex items-center gap-2 sellingTimeInputBox">
+                        <input type="checkbox" class="w-6 h-6" />
+                        <div class="py-2 text-lg w-10">SAT</div>
+                      </div>
+                      <div class="flex justify-between items-center gap-2">
+                        <input
+                          class="py-2 w-full border rounded-md text-sm px-5"
+                          type="time"
+                          id="appt"
+                          name="appt"
+                          min="00:00"
+                          max="24:00"
+                          required
+                        />
+                        <input
+                          class="py-2 w-full border rounded-md text-sm px-5"
+                          type="time"
+                          id="appt"
+                          name="appt"
+                          min="00:00"
+                          max="24:00"
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bg-white border rounded-md mt-5 shadow-md">
+                  <div class="px-3 pt-2 rounded-md text-red-500">
+                    <i class="bx bxs-alarm-exclamation bx-lg"></i>
+                  </div>
+                  <div class="px-5 py-1">
+                    <div class="text-sm tracking-tighter">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem rerum quas debitis.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Chatting Area -->
+            <div class="col-span-4"></div>
+          </div>
+        </div>
+      </section>
+      <!-- Sell Coins | End -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="px-5 py-5">
+      <section class="section">
+        <div class="px-5 pt-16">
+          <div class="grid grid-cols-12 pb-16 text-sm">
+            <div class="col-span-2">
+              <div class="flex items-center gap-5">
+                <img src="./assets/img/logo/hexagon.svg" alt="" class="h-10 w-10" />
+                <h5>Bitypeer</h5>
+              </div>
+            </div>
+            <div class="col-span-3 border-r px-10">
+              <div>
+                <ul class="flex flex-col gap-5">
+                  <li>Terms of Use</li>
+                  <li>Privacy Policy</li>
+                  <li>Open API Terms of Use</li>
+                  <li>FAQ</li>
+                  <li>Contact</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-span-3 border-r px-10">
+              <div>
+                <div class="">CONTACT</div>
+                <ul class="flex flex-col gap-5 pt-8">
+                  <li>Penc.case</li>
+                  <li>Aextexe 678191</li>
+                  <li>infoService@bitypeer.com</li>
+                  <li>+7 985648-48684-18381</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-span-3 px-10">
+              <div>
+                <div>NEWSLETTER</div>
+                <p class="pt-8">Subscribe our newseletter to get more free Cryto currency information and resource.</p>
+              </div>
+              <div>
+                <form class="pt-8">
+                  <div class="relative">
+                    <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                      <svg
+                        class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                      </svg>
+                    </div>
+                    <input
+                      type="email"
+                      id="default-search"
+                      class="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-full border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                      placeholder="Enter Your E-mail"
+                      required=""
+                    />
+                    <button
+                      type="submit"
+                      class="text-gray-300 absolute flex items-center justify-center right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm w-8 h-8"
+                    >
+                      <i class="bx bx-right-arrow-alt"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

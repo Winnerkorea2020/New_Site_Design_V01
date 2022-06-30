@@ -1,0 +1,75 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+/* components.css */
+@import "./components/badge.css";
+@import "./components/buttons.css";
+@import "./components/card.css";
+@import "./components/forget.css";
+
+.section {
+  @apply container xl:max-w-full xl:px-10 mx-auto;
+}
+
+.checking-password {
+  @apply text-red-400;
+}
+
+.largeBody {
+  @apply pt-16 pl-64 bg-gray-50;
+}
+
+.largeBody .nav-header {
+  @apply pl-64;
+}
+
+.largeBody aside {
+  @apply w-64;
+}
+
+.largeBody .nav-brand__logo {
+  @apply flex;
+}
+
+.largeBody .side-nav nav ul li span {
+  @apply block;
+}
+
+.smallBody {
+  @apply pt-16 pl-20 bg-gray-50;
+}
+
+.smallBody .nav-header {
+  @apply pl-20;
+}
+
+.smallBody aside {
+  @apply w-20;
+}
+
+.smallBody .nav-brand__logo {
+  @apply hidden;
+}
+
+.smallBody .side-nav nav ul li span {
+  @apply hidden;
+}
+
+h1 {
+  @apply text-5xl;
+}
+h2 {
+  @apply text-4xl;
+}
+h3 {
+  @apply text-3xl;
+}
+h4 {
+  @apply text-2xl;
+}
+h5 {
+  @apply text-xl;
+}
