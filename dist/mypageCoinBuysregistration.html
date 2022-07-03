@@ -13,7 +13,7 @@
     <!-- BASE -->
     <link rel="stylesheet" href="./assets/css/base.css" />
 
-    <title>Bitypeer Coin buyers Registration Page | affliation</title>
+    <title>Bitypeer Coin buyers Registration Page</title>
   </head>
   <body class="smallBody">
     <!-- Header -->
@@ -181,6 +181,152 @@
 
     <!-- Main -->
     <main class="p-0">
+      <!-- Tap Header -->
+      <section class="section">
+        <div class="pt-5 flex justify-start px-2">
+          <div class="text-sm font-medium text-center text-gray-500 border-b border-gray-200">
+            <ul class="flex flex-wrap -mb-px">
+              <li class="flex border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300">
+                <button
+                  id="dropdownNavbarLink"
+                  data-dropdown-toggle="dropdownNavbar"
+                  class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                >
+                  History
+                  <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div
+                  id="dropdownNavbar"
+                  class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-fit"
+                  style="transform: translate(972px, 2179px)"
+                  data-popper-reference-hidden=""
+                  data-popper-escaped=""
+                  data-popper-placement="top"
+                >
+                  <ul class="py-1 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-gray-100"> Sell History</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-gray-100">Buy History</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mr-2">
+                <a
+                  href="#"
+                  class="inline-block p-4 rounded-t-lg border-b-2 tab__nav_active border-transparent hover:text-gray-600 hover:border-gray-300"
+                  >Affiliate Wallet</a
+                >
+              </li>
+              <li class="flex border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300">
+                <button
+                  id="dropdownNavbarLink"
+                  data-dropdown-toggle="dropdownSell"
+                  class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                >
+                  Sell
+                  <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div
+                  id="dropdownSell"
+                  class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-fit"
+                  style="transform: translate(972px, 2179px)"
+                  data-popper-reference-hidden=""
+                  data-popper-escaped=""
+                  data-popper-placement="top"
+                >
+                  <ul class="py-1 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-start"> Sell registration</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-start">Sell Affiliate registration </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="flex border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300">
+                <button
+                  id="dropdownNavbarLink"
+                  data-dropdown-toggle="dropdwonBuy"
+                  class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                >
+                  Buy
+                  <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div
+                  id="dropdwonBuy"
+                  class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-fit"
+                  style="transform: translate(972px, 2179px)"
+                  data-popper-reference-hidden=""
+                  data-popper-escaped=""
+                  data-popper-placement="top"
+                >
+                  <ul class="py-1 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-start">Buy registration</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 text-start">Buy Affiliate registration </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mr-2">
+                <a
+                  href="#"
+                  class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300"
+                  >My Information</a
+                >
+              </li>
+              <li class="mr-2">
+                <a
+                  href="#"
+                  class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300"
+                  >Seller Certification</a
+                >
+              </li>
+              <li class="mr-2">
+                <a
+                  href="#"
+                  class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300"
+                  >Affiliate code registration</a
+                >
+              </li>
+              <li class="mr-2">
+                <a
+                  href="#"
+                  class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300"
+                  >Affiliate Sell registration</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
       <!-- Sell Coins | Start -->
       <section class="section">
         <div class="pt-16">
@@ -234,24 +380,11 @@
                   </div>
 
                   <div class="grid grid-cols-12 gap-5">
-                    <div class="col-span-4 rounded-xl border px-5 py-2.5 bg-gray-300 text-center h-fit relative">
-                      <div>Sales method</div>
-                      <div class="absolute right-3 top-2.5">
-                        <i class="bx bxs-alarm-exclamation bx-sm text-red-600"></i>
-                      </div>
-                    </div>
-
-                    <div class="col-span-5 inline-flex">
-                      <div class="flex items-center gap-3 text-lg px-5">
-                        <div class="flex items-center gap-2">
-                          <input type="radio" />
-                          <div>Auto</div>
-                        </div>
-                        <div class="flex items-center gap-2">
-                          <input type="radio" />
-                          <div>Manual</div>
-                        </div>
-                      </div>
+                    <label class="col-span-4 rounded-xl border px-5 py-2.5 bg-gray-300 text-center h-fit" for=""
+                      >Security</label
+                    >
+                    <div class="col-span-5 px-5 py-2.5 border-2 border-red-400 rounded-full text-center">
+                      Non-Escrow
                     </div>
                   </div>
 
@@ -261,16 +394,6 @@
                     >
                     <input class="col-span-8 rounded-xl border px-5 py-2.5" type="text" />
                   </div>
-
-                  <div class="grid grid-cols-12 gap-5">
-                    <label class="col-span-4 rounded-xl border px-5 py-2.5 bg-gray-300 text-center h-fit" for=""
-                      >Security</label
-                    >
-                    <div class="col-span-5 px-5 py-2.5 border-2 border-red-400 rounded-full text-center">
-                      Non-Escrow
-                    </div>
-                  </div>
-
                   <div class="grid grid-cols-12 gap-5">
                     <label class="col-span-4 rounded-xl border px-5 py-2.5 bg-gray-300 text-center h-fit" for=""
                       >currency</label
@@ -286,11 +409,12 @@
                   </div>
                   <div class="px-5 pb-4">
                     <ul class="list-decimal px-5">
-                      <li>Affiliate coins are automatically set in escrow in the Bitypeer mainnet system.</li>
-                      <li>Bitypeer's escrow is a free system.</li>
                       <li>
-                        Regardless of escrow, i agree that (the person) is responsibility for all transaction between
-                        individauls, and it has nothing to do with Bitypeer.
+                        When registering and transacting coins that are not escrow of Bitpeer affiliated coins, all
+                        legal responsibilities for the transaction are the (individaul) responsibility.
+                      </li>
+                      <li>
+                        I understand and agree that 1:1 coin personal transactions have nothing to do with Bitypeer.
                       </li>
                     </ul>
                   </div>
@@ -300,13 +424,10 @@
                   <div class="p-5 border bg-gray-200 rounded-lg">
                     <div>Information</div>
                     <ul>
-                      <li>
-                        Enter the details you wish to trade, such as quantity of sale to be provided to the buyer and
-                        the terms and conditions of sale.
-                      </li>
-                      <li>
-                        &#8251; The saller is automatically mapped when you select Auto Buy. Check it out with the app.
-                      </li>
+                      <li>Fill out this form to start chatting.</li>
+                      <li>Purchase request coin amount:</li>
+                      <li>Purchase request price:</li>
+                      <li>My wallet address:</li>
                     </ul>
                   </div>
                   <div class="p-5 border mt-5 rounded-lg">
@@ -551,9 +672,9 @@
                   <div class="px-3 pt-2 rounded-md text-red-500">
                     <i class="bx bxs-alarm-exclamation bx-lg"></i>
                   </div>
-                  <div class="px-5 pt-1 pb-5">
+                  <div class="px-5 py-1">
                     <div class="text-sm tracking-tighter">
-                      UTC basis. UTC is the standard time difference for each region based on the UK(UTC+0:00)
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem rerum quas debitis.
                     </div>
                   </div>
                 </div>
