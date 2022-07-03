@@ -13,7 +13,7 @@
     <!-- BASE -->
     <link rel="stylesheet" href="./assets/css/base.css" />
 
-    <title>Bitypeer Buy History Page</title>
+    <title>Bitypeer My Page | Sell History Page</title>
   </head>
   <body class="smallBody">
     <!-- Header -->
@@ -181,18 +181,82 @@
 
     <!-- Main -->
     <main class="p-0">
+      <!-- Tap Header -->
+      <section class="section">
+        <div class="pt-5 flex justify-start px-2">
+          <div class="text-sm font-medium text-center text-gray-500 border-b border-gray-200">
+            <ul class="flex flex-wrap -mb-px">
+              <li class="flex tab__nav_active">
+                <button
+                  id="dropdownNavbarLink"
+                  data-dropdown-toggle="dropdownNavbar"
+                  class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                >
+                  History
+                  <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div
+                  id="dropdownNavbar"
+                  class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-fit"
+                  style="transform: translate(972px, 2179px)"
+                  data-popper-reference-hidden=""
+                  data-popper-escaped=""
+                  data-popper-placement="top"
+                >
+                  <ul class="py-1 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-gray-100"> Sell History</a>
+                    </li>
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-gray-100">Buy History</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mr-2">
+                <a
+                  href="#"
+                  class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300"
+                  >Affiliate Wallet</a
+                >
+              </li>
+              <li class="mr-2">
+                <a
+                  href="#"
+                  class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300"
+                  >Settings</a
+                >
+              </li>
+              <li class="mr-2">
+                <a
+                  href="#"
+                  class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300"
+                  >Contacts</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
       <!-- Sell Coins | Start -->
       <section class="section">
         <div class="pt-16">
           <!-- Sell Header Area | Start -->
           <div class="flex justify-between items-center">
-            <h4>Buy History</h4>
+            <h4>Sell History</h4>
             <div class="flex items-center gap-2 text-xs">
               <div>HOME</div>
               <div><i class="bx bx-chevron-right"></i></div>
               <div>My Page</div>
               <div><i class="bx bx-chevron-right"></i></div>
-              <div>Buy History</div>
+              <div>Sell History</div>
             </div>
           </div>
           <!-- Sell Header Area | End -->
@@ -296,16 +360,16 @@
                   <table class="w-full text-sm text-left text-gray-500">
                     <thead class="text-xs text-gray-700 uppercase bg-gray-100">
                       <tr>
-                        <th scope="col" class="px-5 py-3">Date</th>
-                        <th scope="col" class="px-5 py-3">Selle ID</th>
-                        <th scope="col" class="px-5 py-3">Coin Name</th>
-                        <th scope="col" class="px-5 py-3">Amount of coins</th>
-                        <th scope="col" class="px-5 py-3">Price</th>
-                        <th scope="col" class="px-5 py-3">Offer Country</th>
-                        <th scope="col" class="px-5 py-3">Security</th>
-                        <th scope="col" class="px-5 py-3">Currency</th>
-                        <th scope="col" class="px-5 py-3">Fee(Gas)</th>
-                        <th scope="col" class="px-5 py-3">State</th>
+                        <th scope="col" class="px-5 py-3 truncate">Date</th>
+                        <th scope="col" class="px-5 py-3 truncate">Selle ID</th>
+                        <th scope="col" class="px-5 py-3 truncate">Coin Name</th>
+                        <th scope="col" class="px-5 py-3 truncate">Amount of coins</th>
+                        <th scope="col" class="px-5 py-3 truncate">Price</th>
+                        <th scope="col" class="px-5 py-3 truncate">Offer Country</th>
+                        <th scope="col" class="px-5 py-3 truncate">Security</th>
+                        <th scope="col" class="px-5 py-3 truncate">Currency</th>
+                        <th scope="col" class="px-5 py-3 truncate">Fee(Gas)</th>
+                        <th scope="col" class="px-5 py-3 truncate">State</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -547,7 +611,6 @@
           </div>
         </div>
       </section>
-      <!-- Sell Coins | End -->
     </main>
 
     <!-- Footer -->
