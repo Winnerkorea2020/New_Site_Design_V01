@@ -868,6 +868,14 @@ video {
   margin-left: 0.25rem;
 }
 
+.mr-5 {
+  margin-right: 1.25rem;
+}
+
+.mr-8 {
+  margin-right: 2rem;
+}
+
 .block {
   display: block;
 }
@@ -1060,6 +1068,18 @@ video {
   width: 10rem;
 }
 
+.w-5\/12 {
+  width: 41.666667%;
+}
+
+.w-8\/12 {
+  width: 66.666667%;
+}
+
+.w-11\/12 {
+  width: 91.666667%;
+}
+
 .max-w-xs {
   max-width: 20rem;
 }
@@ -1086,6 +1106,14 @@ video {
 
 .basis-8\/12 {
   flex-basis: 66.666667%;
+}
+
+.basis-10\/12 {
+  flex-basis: 83.333333%;
+}
+
+.basis-9\/12 {
+  flex-basis: 75%;
 }
 
 .table-auto {
