@@ -19,15 +19,15 @@
 }
 
 .largeBody {
-  @apply pt-16 pl-64 bg-gray-50;
+  @apply pt-16 pl-56 bg-white;
 }
 
 .largeBody .nav-header {
-  @apply pl-64;
+  @apply pl-56;
 }
 
 .largeBody aside {
-  @apply w-64;
+  @apply w-56;
 }
 
 .largeBody .nav-brand__logo {
@@ -39,7 +39,7 @@
 }
 
 .smallBody {
-  @apply pt-16 pl-20 bg-gray-50;
+  @apply pt-16 pl-20 bg-white;
 }
 
 .smallBody .nav-header {

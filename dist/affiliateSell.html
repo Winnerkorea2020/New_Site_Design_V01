@@ -13,21 +13,17 @@
     <!-- BASE -->
     <link rel="stylesheet" href="./assets/css/base.css" />
 
-    <title>Bitypeer Seller Page</title>
+    <title>Bitypeer affliation Seller Page</title>
   </head>
-  <body class="largeBody">
+  <body class="smallBody">
     <!-- Header -->
-    <header class="fixed top-0 left-0 w-full bg-white border-b-2 h-16 shadow-sm nav-header z-50">
+    <header class="fixed top-0 left-0 w-full bg-white border-b-2 h-16 shadow-sm nav-header">
       <!-- Top Navigation -->
       <section class="section">
         <div class="flex justify-between items-center h-16">
-          <div class="flex justify-end items-center px-12 w-full gap-5 text-sm">
+          <div class="flex justify-end px-12 w-full gap-5">
             <div>Sign in</div>
             <div>Sign up</div>
-            <div class="relative">
-              <i class="bx bxs-bell text-xl"></i>
-              <div class="absolute top-0 -right-0.5 w-3 h-3 bg-red-500 rounded-full"></div>
-            </div>
           </div>
 
           <div class="flex items-center">
@@ -135,51 +131,45 @@
     <aside class="side-nav fixed left-0 top-0 h-screen bg-white border-r shadow-md" style="z-index: 100000">
       <!-- Side Navigation Header -->
       <div class="px-5">
-        <a href="main.html" class="h-16 flex items-center justify-between">
+        <header class="h-16 flex items-center justify-between">
           <img src="./assets/img/logo/logo_small.png" class="h-8 w-8 mx-2" alt="" />
 
           <div class="justify-between items-center w-full ml-5 gap-2 nav-brand__logo">
             <div>Bitypeer</div>
             <img src="./assets/img/logo/icons1.png" alt="" class="w-6 h-6" />
           </div>
-        </a>
+        </header>
         <!-- Side Menu List | Start -->
         <nav class="px-2 pt-16 flex justify-start">
-          <ul class="flex flex-col gap-8 uppercase">
+          <ul class="flex flex-col gap-5">
             <li>
-              <a href="sell.html" class="inline-flex items-center">
-                <i class="bx bxs-cart-alt bx-sm"></i>
+              <a href="#" class="inline-flex">
+                <img src="./assets/img/nav/sell.png" alt="" class="w-6 h-6" />
                 <span class="pl-3">Sell</span>
               </a>
             </li>
             <li>
-              <a href="buy.html" class="inline-flex items-center">
-                <i class="bx bxs-wallet bx-sm"></i>
+              <a href="#" class="inline-flex">
+                <img src="./assets/img/nav/buy.png" alt="" class="w-6 h-6" />
                 <span class="pl-3">Buy</span>
               </a>
             </li>
             <li>
-              <a href="affiliate.html" class="inline-flex items-center">
-                <i class="bx bxs-buildings bx-sm"></i>
+              <a href="#" class="inline-flex">
+                <img src="./assets/img/nav/affliation.png" alt="" class="w-6 h-6" />
                 <span class="pl-3">Affiliation</span>
               </a>
             </li>
             <li>
-              <a href="notice.html" class="inline-flex items-center">
-                <i class="bx bxs-megaphone bx-sm"></i>
+              <a href="#" class="inline-flex">
+                <img src="./assets/img/nav/notice.png" alt="" class="w-6 h-6" />
                 <span class="pl-3">Notice</span>
               </a>
             </li>
             <li>
-              <a href="#" class="inline-flex items-center">
-                <i class="bx bxs-cart-add bx-sm"></i>
+              <a href="#" class="inline-flex">
+                <img src="./assets/img/nav/affiliateSell.png" alt="" class="w-6 h-6" />
                 <span class="pl-3">Affiliate Sell</span>
-              </a>
-            </li>
-            <li>
-              <a href="notice.html" class="inline-flex items-center">
-                <i class="bx bxs-user-rectangle bx-sm"></i>
-                <span class="pl-3">My Page</span>
               </a>
             </li>
           </ul>
@@ -196,11 +186,11 @@
         <div class="pt-16">
           <!-- Sell Header Area | Start -->
           <div class="flex justify-between items-center">
-            <h4>SELL Coins</h4>
+            <h4>Affiliate Sell</h4>
             <div class="flex items-center gap-2 text-xs">
               <div>HOME</div>
               <div><i class="bx bx-chevron-right"></i></div>
-              <div>Sell Coins</div>
+              <div>Affiliate Sell</div>
             </div>
           </div>
           <!-- Sell Header Area | End -->
@@ -217,12 +207,23 @@
                       id=""
                       class="w-full border-2 mt-2 px-2.5 py-2 border-gray-300 rounded-xl tracking-tighter"
                     >
-                      <option value="">WRC</option>
+                      <option value="">Select</option>
+                    </select>
+                  </div>
+                  <!-- Foundation -->
+                  <div class="">
+                    <label class="" for="">Foundation</label>
+                    <select
+                      name=""
+                      id=""
+                      class="w-full border-2 mt-2 px-2.5 py-2 border-gray-300 rounded-xl tracking-tighter"
+                    >
+                      <option value="">Select Foundation</option>
                     </select>
                   </div>
                   <!--Seller ID -->
                   <div class="">
-                    <label class="" for="">Seller ID</label>
+                    <label class="" for="">Seller</label>
                     <input
                       type="text"
                       placeholder="Enter seller ID"
@@ -230,41 +231,9 @@
                     />
                   </div>
 
-                  <!-- CURRENCY -->
-                  <div class="">
-                    <label class="" for="">Currency</label>
-                    <select
-                      name=""
-                      id=""
-                      class="w-full border-2 mt-2 pl-2.5 pr-10 py-2 border-gray-300 rounded-xl tracking-tighter"
-                    >
-                      <option value="">Currency Selection</option>
-                    </select>
-                  </div>
-
-                  <!--OFFER Country -->
-                  <div class="">
-                    <label class="" for="">Offer Country</label>
-                    <input
-                      type="text"
-                      placeholder="Choose your Country"
-                      class="w-full border-2 mt-2 px-2.5 py-2 border-gray-300 rounded-xl tracking-tighter"
-                    />
-                  </div>
-
-                  <!--OFFER Country -->
-                  <div class="">
-                    <label class="" for="">ESCROW</label>
-                    <input
-                      type="text"
-                      placeholder="Choice of escrow / non-escrow"
-                      class="w-full border-2 mt-2 px-2.5 py-2 border-gray-300 rounded-xl tracking-tighter"
-                    />
-                  </div>
-
                   <!--Seller ID -->
                   <div class="">
-                    <label class="" for="">Seller ID</label>
+                    <label class="" for="">Price</label>
                     <div class="flex items-center justify-between">
                       <input
                         type="text"
@@ -280,13 +249,6 @@
                         class="w-full border-2 mt-2 px-2.5 py-2 border-gray-300 rounded-xl tracking-tighter text-right placeholder:text-right"
                       />
                     </div>
-                    <select
-                      name=""
-                      id=""
-                      class="w-full border-2 mt-2 px-2.5 py-2 border-gray-300 rounded-xl tracking-tighter"
-                    >
-                      <option value="" class="">Select</option>
-                    </select>
                   </div>
                 </div>
                 <!-- Button -->
@@ -304,203 +266,133 @@
                   <table class="w-full text-sm text-left text-gray-500">
                     <thead class="text-xs text-gray-700 uppercase bg-gray-100">
                       <tr>
+                        <th scope="col" class="px-5 py-3">Foundation</th>
                         <th scope="col" class="px-5 py-3">Seller</th>
-                        <th scope="col" class="px-5 py-3">Coin Name</th>
-                        <th scope="col" class="px-5 py-3">Amount of coins</th>
+                        <th scope="col" class="px-5 py-3">CoinName</th>
+                        <th scope="col" class="px-5 py-3">Amount of Coins</th>
                         <th scope="col" class="px-5 py-3">Price</th>
-                        <th scope="col" class="px-5 py-3">Offer Country</th>
-                        <th scope="col" class="px-5 py-3">Security</th>
-                        <th scope="col" class="px-5 py-3">Currency</th>
-                        <th scope="col" class="px-5 py-3">Fee(Gas)</th>
-                        <th scope="col" class="px-5 py-3">State</th>
+                        <th scope="col" class="px-5 py-3">Purchase</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr class="bg-white border-b">
                         <th scope="row" class="px-5 py-4 font-medium text-gray-900 whitespace-nowrap">
-                          <a href="" class="inline-block underline">abcdefghijk111</a>
+                          <a href="" class="inline-block">WRC Foundation</a>
                         </th>
+                        <td class="px-5 py-4 whitespace-nowrap">WRC Foundation</td>
                         <td class="px-5 py-4">WRC</td>
-                        <td class="px-5 py-4">9,999,999,999,999</td>
                         <td class="px-5 py-4">90,000,000,000</td>
-                        <td class="px-5 py-4">United States of America</td>
+                        <td class="px-5 py-4">90,000,000,000</td>
                         <td class="px-5 py-4">
-                          <div class="badge badge-small badge-red whitespace-nowrap">Non-Escrow</div>
-                        </td>
-                        <td class="px-5 py-4">USD</td>
-                        <td class="px-5 py-4">FREE</td>
-                        <td class="px-5 py-4">
-                          <a href="sellDetail.html" class="inline-block btn btn-small btn-red">Buy</a>
+                          <a href="#" class="btn btn-small btn-red uppercase">buy</a>
                         </td>
                       </tr>
                       <tr class="bg-white border-b">
                         <th scope="row" class="px-5 py-4 font-medium text-gray-900 whitespace-nowrap">
-                          <a href="" class="inline-block underline">abcdefghijk111</a>
+                          <a href="" class="inline-block">WRC Foundation</a>
                         </th>
+                        <td class="px-5 py-4 whitespace-nowrap">WRC Foundation</td>
                         <td class="px-5 py-4">WRC</td>
-                        <td class="px-5 py-4">9,999,999,999,999</td>
                         <td class="px-5 py-4">90,000,000,000</td>
-                        <td class="px-5 py-4">United States of America</td>
+                        <td class="px-5 py-4">90,000,000,000</td>
                         <td class="px-5 py-4">
-                          <div class="badge badge-small badge-green">Escrow</div>
-                        </td>
-                        <td class="px-5 py-4">USD</td>
-                        <td class="px-5 py-4">FREE</td>
-                        <td class="px-5 py-4">
-                          <a href="sellDetailAffiliate.html" class="inline-block btn btn-small btn-red">Buy</a>
+                          <a href="#" class="btn btn-small btn-red uppercase">buy</a>
                         </td>
                       </tr>
                       <tr class="bg-white border-b">
                         <th scope="row" class="px-5 py-4 font-medium text-gray-900 whitespace-nowrap">
-                          <a href="" class="inline-block underline">abcdefghijk111</a>
+                          <a href="" class="inline-block">WRC Foundation</a>
                         </th>
+                        <td class="px-5 py-4 whitespace-nowrap">WRC Foundation</td>
                         <td class="px-5 py-4">WRC</td>
-                        <td class="px-5 py-4">9,999,999,999,999</td>
                         <td class="px-5 py-4">90,000,000,000</td>
-                        <td class="px-5 py-4">United States of America</td>
+                        <td class="px-5 py-4">90,000,000,000</td>
                         <td class="px-5 py-4">
-                          <div class="badge badge-small badge-green">Escrow</div>
-                        </td>
-                        <td class="px-5 py-4">USD</td>
-                        <td class="px-5 py-4">FREE</td>
-                        <td class="px-5 py-4">
-                          <a href="sellDetailAffiliate.html" class="inline-block btn btn-small btn-red">Buy</a>
+                          <a href="#" class="btn btn-small btn-red uppercase">buy</a>
                         </td>
                       </tr>
                       <tr class="bg-white border-b">
                         <th scope="row" class="px-5 py-4 font-medium text-gray-900 whitespace-nowrap">
-                          <a href="" class="inline-block underline">abcdefghijk111</a>
+                          <a href="" class="inline-block">WRC Foundation</a>
                         </th>
+                        <td class="px-5 py-4 whitespace-nowrap">WRC Foundation</td>
                         <td class="px-5 py-4">WRC</td>
-                        <td class="px-5 py-4">9,999,999,999,999</td>
                         <td class="px-5 py-4">90,000,000,000</td>
-                        <td class="px-5 py-4">United States of America</td>
+                        <td class="px-5 py-4">90,000,000,000</td>
                         <td class="px-5 py-4">
-                          <div class="badge badge-small badge-green">Escrow</div>
-                        </td>
-                        <td class="px-5 py-4">USD</td>
-                        <td class="px-5 py-4">FREE</td>
-                        <td class="px-5 py-4">
-                          <a href="sellDetailAffiliate.html" class="inline-block btn btn-small btn-red">Buy</a>
+                          <a href="#" class="btn btn-small btn-red uppercase">buy</a>
                         </td>
                       </tr>
                       <tr class="bg-white border-b">
                         <th scope="row" class="px-5 py-4 font-medium text-gray-900 whitespace-nowrap">
-                          <a href="" class="inline-block underline">abcdefghijk111</a>
+                          <a href="" class="inline-block">WRC Foundation</a>
                         </th>
+                        <td class="px-5 py-4 whitespace-nowrap">WRC Foundation</td>
                         <td class="px-5 py-4">WRC</td>
-                        <td class="px-5 py-4">9,999,999,999,999</td>
                         <td class="px-5 py-4">90,000,000,000</td>
-                        <td class="px-5 py-4">United States of America</td>
+                        <td class="px-5 py-4">90,000,000,000</td>
                         <td class="px-5 py-4">
-                          <div class="badge badge-small badge-green">Escrow</div>
-                        </td>
-                        <td class="px-5 py-4">USD</td>
-                        <td class="px-5 py-4">FREE</td>
-                        <td class="px-5 py-4">
-                          <a href="sellDetailAffiliate.html" class="inline-block btn btn-small btn-red">Buy</a>
+                          <a href="#" class="btn btn-small btn-red uppercase">buy</a>
                         </td>
                       </tr>
                       <tr class="bg-white border-b">
                         <th scope="row" class="px-5 py-4 font-medium text-gray-900 whitespace-nowrap">
-                          <a href="" class="inline-block underline">abcdefghijk111</a>
+                          <a href="" class="inline-block">WRC Foundation</a>
                         </th>
+                        <td class="px-5 py-4 whitespace-nowrap">WRC Foundation</td>
                         <td class="px-5 py-4">WRC</td>
-                        <td class="px-5 py-4">9,999,999,999,999</td>
                         <td class="px-5 py-4">90,000,000,000</td>
-                        <td class="px-5 py-4">United States of America</td>
+                        <td class="px-5 py-4">90,000,000,000</td>
                         <td class="px-5 py-4">
-                          <div class="badge badge-small badge-green">Escrow</div>
-                        </td>
-                        <td class="px-5 py-4">USD</td>
-                        <td class="px-5 py-4">FREE</td>
-                        <td class="px-5 py-4">
-                          <a href="sellDetailAffiliate.html" class="inline-block btn btn-small btn-red">Buy</a>
+                          <a href="#" class="btn btn-small btn-red uppercase">buy</a>
                         </td>
                       </tr>
                       <tr class="bg-white border-b">
                         <th scope="row" class="px-5 py-4 font-medium text-gray-900 whitespace-nowrap">
-                          <a href="" class="inline-block underline">abcdefghijk111</a>
+                          <a href="" class="inline-block">WRC Foundation</a>
                         </th>
+                        <td class="px-5 py-4 whitespace-nowrap">WRC Foundation</td>
                         <td class="px-5 py-4">WRC</td>
-                        <td class="px-5 py-4">9,999,999,999,999</td>
                         <td class="px-5 py-4">90,000,000,000</td>
-                        <td class="px-5 py-4">United States of America</td>
+                        <td class="px-5 py-4">90,000,000,000</td>
                         <td class="px-5 py-4">
-                          <div class="badge badge-small badge-green">Escrow</div>
-                        </td>
-                        <td class="px-5 py-4">USD</td>
-                        <td class="px-5 py-4">FREE</td>
-                        <td class="px-5 py-4">
-                          <a href="sellDetailAffiliate.html" class="inline-block btn btn-small btn-red">Buy</a>
+                          <a href="#" class="btn btn-small btn-red uppercase">buy</a>
                         </td>
                       </tr>
                       <tr class="bg-white border-b">
                         <th scope="row" class="px-5 py-4 font-medium text-gray-900 whitespace-nowrap">
-                          <a href="" class="inline-block underline">abcdefghijk111</a>
+                          <a href="" class="inline-block">WRC Foundation</a>
                         </th>
+                        <td class="px-5 py-4 whitespace-nowrap">WRC Foundation</td>
                         <td class="px-5 py-4">WRC</td>
-                        <td class="px-5 py-4">9,999,999,999,999</td>
                         <td class="px-5 py-4">90,000,000,000</td>
-                        <td class="px-5 py-4">United States of America</td>
+                        <td class="px-5 py-4">90,000,000,000</td>
                         <td class="px-5 py-4">
-                          <div class="badge badge-small badge-green">Escrow</div>
-                        </td>
-                        <td class="px-5 py-4">USD</td>
-                        <td class="px-5 py-4">FREE</td>
-                        <td class="px-5 py-4">
-                          <a href="sellDetailAffiliate.html" class="inline-block btn btn-small btn-red">Buy</a>
+                          <a href="#" class="btn btn-small btn-red uppercase">buy</a>
                         </td>
                       </tr>
                       <tr class="bg-white border-b">
                         <th scope="row" class="px-5 py-4 font-medium text-gray-900 whitespace-nowrap">
-                          <a href="" class="inline-block underline">abcdefghijk111</a>
+                          <a href="" class="inline-block">WRC Foundation</a>
                         </th>
+                        <td class="px-5 py-4 whitespace-nowrap">WRC Foundation</td>
                         <td class="px-5 py-4">WRC</td>
-                        <td class="px-5 py-4">9,999,999,999,999</td>
                         <td class="px-5 py-4">90,000,000,000</td>
-                        <td class="px-5 py-4">United States of America</td>
+                        <td class="px-5 py-4">90,000,000,000</td>
                         <td class="px-5 py-4">
-                          <div class="badge badge-small badge-green">Escrow</div>
-                        </td>
-                        <td class="px-5 py-4">USD</td>
-                        <td class="px-5 py-4">FREE</td>
-                        <td class="px-5 py-4">
-                          <a href="sellDetailAffiliate.html" class="inline-block btn btn-small btn-red">Buy</a>
+                          <a href="#" class="btn btn-small btn-red uppercase">buy</a>
                         </td>
                       </tr>
                       <tr class="bg-white border-b">
                         <th scope="row" class="px-5 py-4 font-medium text-gray-900 whitespace-nowrap">
-                          <a href="" class="inline-block underline">abcdefghijk111</a>
+                          <a href="" class="inline-block">WRC Foundation</a>
                         </th>
+                        <td class="px-5 py-4 whitespace-nowrap">WRC Foundation</td>
                         <td class="px-5 py-4">WRC</td>
-                        <td class="px-5 py-4">9,999,999,999,999</td>
                         <td class="px-5 py-4">90,000,000,000</td>
-                        <td class="px-5 py-4">United States of America</td>
-                        <td class="px-5 py-4">
-                          <div class="badge badge-small badge-green">Escrow</div>
-                        </td>
-                        <td class="px-5 py-4">USD</td>
-                        <td class="px-5 py-4">FREE</td>
-                        <td class="px-5 py-4">
-                          <a href="sellDetailAffiliate.html" class="inline-block btn btn-small btn-red">Buy</a>
-                        </td>
-                      </tr>
-                      <tr class="bg-white border-b">
-                        <th scope="row" class="px-5 py-4 font-medium text-gray-900 whitespace-nowrap">
-                          <a href="" class="inline-block underline">abcdefghijk111</a>
-                        </th>
-                        <td class="px-5 py-4">WRC</td>
-                        <td class="px-5 py-4">9,999,999,999,999</td>
                         <td class="px-5 py-4">90,000,000,000</td>
-                        <td class="px-5 py-4">United States of America</td>
                         <td class="px-5 py-4">
-                          <div class="badge badge-small badge-green">Escrow</div>
-                        </td>
-                        <td class="px-5 py-4">USD</td>
-                        <td class="px-5 py-4">FREE</td>
-                        <td class="px-5 py-4">
-                          <a href="sellDetailAffiliate.html" class="inline-block btn btn-small btn-red">Buy</a>
+                          <a href="#" class="btn btn-small btn-red uppercase">buy</a>
                         </td>
                       </tr>
                     </tbody>
