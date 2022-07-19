@@ -15,15 +15,158 @@
 
     <title>Bitypeer My page | Coin buyers Registration Page | affliation</title>
   </head>
-  <body class="smallBody">
+  <body class="largeBody">
     <!-- Header -->
-    <header class="fixed top-0 left-0 w-full bg-white border-b-2 h-16 shadow-sm nav-header">
+    <header class="fixed top-0 left-0 w-full bg-white border-b-2 h-16 shadow-sm nav-header z-50">
       <!-- Top Navigation -->
       <section class="section">
         <div class="flex justify-between items-center h-16">
-          <div class="flex justify-end px-12 w-full gap-5">
-            <div>Sign in</div>
-            <div>Sign up</div>
+          <div class="flex justify-between items-center w-full gap-5 text-sm">
+            <div class="basis-9/12">
+              <div class="flex">
+                <!-- Tap Header -->
+                <ul class="flex justify-between gap-5">
+                  <li class="flex border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300">
+                    <button
+                      id="dropdownNavbarLink"
+                      data-dropdown-toggle="dropdownNavbar"
+                      class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                    >
+                      History
+                      <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          fill-rule="evenodd"
+                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </button>
+                    <!-- Dropdown menu -->
+                    <div
+                      id="dropdownNavbar"
+                      class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-fit"
+                      style="transform: translate(972px, 2179px)"
+                      data-popper-reference-hidden=""
+                      data-popper-escaped=""
+                      data-popper-placement="top"
+                    >
+                      <ul class="py-1 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                        <li>
+                          <a href="mypageSellHistory.html" class="block px-4 py-2 hover:bg-gray-100"> Sell History</a>
+                        </li>
+                        <li>
+                          <a href="mypageBuyHistory.html" class="block px-4 py-2 hover:bg-gray-100">Buy History</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="">
+                    <a
+                      href="mypageAffiliateWallet.html"
+                      class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300"
+                      >Affiliate Wallet</a
+                    >
+                  </li>
+                  <li class="flex border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300">
+                    <button
+                      id="dropdownNavbarLink"
+                      data-dropdown-toggle="dropdownSell"
+                      class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                    >
+                      Sell/Buy registration
+                      <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          fill-rule="evenodd"
+                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </button>
+                    <!-- Dropdown menu -->
+                    <div
+                      id="dropdownSell"
+                      class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-fit"
+                      style="transform: translate(972px, 2179px)"
+                      data-popper-reference-hidden=""
+                      data-popper-escaped=""
+                      data-popper-placement="top"
+                    >
+                      <ul class="py-1 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                        <li>
+                          <a href="mypageCoinSellRegistration.html" class="block px-4 py-2 hover:bg-gray-100 text-start"> Sell registration</a>
+                        </li>
+                        <li>
+                          <a href="mypageCoinBuyRegistration.html" class="block px-4 py-2 hover:bg-gray-100 text-start">Buy registration </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+
+                  <li class="">
+                    <a
+                      href="mypageInformation.html"
+                      class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300"
+                      >My Information</a
+                    >
+                  </li>
+                  <li class="">
+                    <a
+                      href="mypageSellerCerification.html"
+                      class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300"
+                      >Seller Certification</a
+                    >
+                  </li>
+                  <li class="flex border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300">
+                    <button
+                      id="dropdownNavbarLink"
+                      data-dropdown-toggle="affiliateCodeSellResistration"
+                      class="whitespace-nowrap flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                    >
+                      Affiliate Code/Sell registration
+                      <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          fill-rule="evenodd"
+                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </button>
+                    <!-- Dropdown menu -->
+                    <div
+                      id="affiliateCodeSellResistration"
+                      class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-fit"
+                      style="transform: translate(972px, 2179px)"
+                      data-popper-reference-hidden=""
+                      data-popper-escaped=""
+                      data-popper-placement="top"
+                    >
+                      <ul class="py-1 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                        <li>
+                          <a href="mypageAffilicateCodeRegistration.html" class="block px-4 py-2 hover:bg-gray-100 text-start">
+                            Affiliate Code registration</a
+                          >
+                        </li>
+                        <li>
+                          <a href="mypageAffiliateSellRegistration.html" class="block px-4 py-2 hover:bg-gray-100 text-start"
+                            >Affiliate Sell registration
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="basis-3/12">
+              <div class="flex justify-end items-center w-full gap-5 text-sm">
+                <div>Sign in</div>
+                <div>Sign up</div>
+                <div class="relative">
+                  <i class="bx bxs-bell text-xl"></i>
+                  <div class="absolute top-0 -right-0.5 w-3 h-3 bg-red-500 rounded-full"></div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="flex items-center">
@@ -128,48 +271,54 @@
     </header>
 
     <!-- Side Navi -->
-    <aside class="side-nav fixed left-0 top-0 h-screen bg-white border-r shadow-md" style="z-index: 100000">
+    <aside class="side-nav fixed left-0 top-0 h-screen bg-white border-r shadow-md" style="z-index: 100">
       <!-- Side Navigation Header -->
       <div class="px-5">
-        <header class="h-16 flex items-center justify-between">
+        <a href="main.html" class="h-16 flex items-center justify-between">
           <img src="./assets/img/logo/logo_small.png" class="h-8 w-8 mx-2" alt="" />
 
-          <div class="justify-between items-center w-full ml-5 gap-2 nav-brand__logo">
+          <div class="justify-between items-center w-full ml-2 gap-2 nav-brand__logo">
             <div>Bitypeer</div>
             <img src="./assets/img/logo/icons1.png" alt="" class="w-6 h-6" />
           </div>
-        </header>
+        </a>
         <!-- Side Menu List | Start -->
         <nav class="px-2 pt-16 flex justify-start">
-          <ul class="flex flex-col gap-5">
+          <ul class="flex flex-col gap-8 uppercase">
             <li>
-              <a href="#" class="inline-flex">
-                <img src="./assets/img/nav/sell.png" alt="" class="w-6 h-6" />
+              <a href="sell.html" class="inline-flex items-center">
+                <i class="bx bxs-cart-alt bx-sm"></i>
                 <span class="pl-3">Sell</span>
               </a>
             </li>
             <li>
-              <a href="#" class="inline-flex">
-                <img src="./assets/img/nav/buy.png" alt="" class="w-6 h-6" />
+              <a href="buy.html" class="inline-flex items-center">
+                <i class="bx bxs-wallet bx-sm"></i>
                 <span class="pl-3">Buy</span>
               </a>
             </li>
             <li>
-              <a href="#" class="inline-flex">
-                <img src="./assets/img/nav/affliation.png" alt="" class="w-6 h-6" />
+              <a href="affiliate.html" class="inline-flex items-center">
+                <i class="bx bxs-buildings bx-sm"></i>
                 <span class="pl-3">Affiliation</span>
               </a>
             </li>
             <li>
-              <a href="#" class="inline-flex">
-                <img src="./assets/img/nav/notice.png" alt="" class="w-6 h-6" />
+              <a href="notice.html" class="inline-flex items-center">
+                <i class="bx bxs-megaphone bx-sm"></i>
                 <span class="pl-3">Notice</span>
               </a>
             </li>
             <li>
-              <a href="#" class="inline-flex">
-                <img src="./assets/img/nav/affiliateSell.png" alt="" class="w-6 h-6" />
+              <a href="affiliateSell.html" class="inline-flex items-center">
+                <i class="bx bxs-cart-add bx-sm"></i>
                 <span class="pl-3">Affiliate Sell</span>
+              </a>
+            </li>
+            <li>
+              <a href="mypageBuyHistory.html" class="inline-flex items-center">
+                <i class="bx bxs-user-rectangle bx-sm"></i>
+                <span class="pl-3">My Page</span>
               </a>
             </li>
           </ul>
@@ -296,30 +445,22 @@
                 </div>
               </li>
               <li class="mr-2">
-                <a
-                  href="#"
-                  class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300"
+                <a href="#" class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300"
                   >My Information</a
                 >
               </li>
               <li class="mr-2">
-                <a
-                  href="#"
-                  class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300"
+                <a href="#" class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300"
                   >Seller Certification</a
                 >
               </li>
               <li class="mr-2">
-                <a
-                  href="#"
-                  class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300"
+                <a href="#" class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300"
                   >Affiliate code registration</a
                 >
               </li>
               <li class="mr-2">
-                <a
-                  href="#"
-                  class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300"
+                <a href="#" class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300"
                   >Affiliate Sell registration</a
                 >
               </li>
@@ -355,16 +496,12 @@
                 <!-- Buyer Information  -->
                 <div class="grid grid-cols-2 gap-2 text-sm">
                   <div class="grid grid-cols-12 gap-5">
-                    <label class="col-span-4 rounded-xl border px-5 py-2.5 bg-gray-300 text-center h-fit" for=""
-                      >Coin Name</label
-                    >
+                    <label class="col-span-4 rounded-xl border px-5 py-2.5 bg-gray-300 text-center h-fit" for="">Coin Name</label>
                     <input class="col-span-8 rounded-xl border px-5 py-2.5" type="text" />
                   </div>
 
                   <div class="grid grid-cols-12 gap-5">
-                    <label class="col-span-4 rounded-xl border px-5 py-2.5 bg-gray-300 text-center h-fit" for=""
-                      >Offer Country</label
-                    >
+                    <label class="col-span-4 rounded-xl border px-5 py-2.5 bg-gray-300 text-center h-fit" for="">Offer Country</label>
                     <div class="col-span-8 w-full">
                       <select name="" id="" class="w-full rounded-xl border px-5 py-2.5">
                         <option value="">Choose your Country</option>
@@ -373,9 +510,7 @@
                   </div>
 
                   <div class="grid grid-cols-12 gap-5">
-                    <label class="col-span-4 rounded-xl border px-5 py-2.5 bg-gray-300 text-center h-fit" for=""
-                      >Amount of coins</label
-                    >
+                    <label class="col-span-4 rounded-xl border px-5 py-2.5 bg-gray-300 text-center h-fit" for="">Amount of coins</label>
                     <input class="col-span-8 rounded-xl border px-5 py-2.5" type="text" />
                   </div>
 
@@ -402,25 +537,17 @@
                   </div>
 
                   <div class="grid grid-cols-12 gap-5">
-                    <label class="col-span-4 rounded-xl border px-5 py-2.5 bg-gray-300 text-center h-fit" for=""
-                      >Buy Price</label
-                    >
+                    <label class="col-span-4 rounded-xl border px-5 py-2.5 bg-gray-300 text-center h-fit" for="">Buy Price</label>
                     <input class="col-span-8 rounded-xl border px-5 py-2.5" type="text" />
                   </div>
 
                   <div class="grid grid-cols-12 gap-5">
-                    <label class="col-span-4 rounded-xl border px-5 py-2.5 bg-gray-300 text-center h-fit" for=""
-                      >Security</label
-                    >
-                    <div class="col-span-5 px-5 py-2.5 border-2 border-red-400 rounded-full text-center">
-                      Non-Escrow
-                    </div>
+                    <label class="col-span-4 rounded-xl border px-5 py-2.5 bg-gray-300 text-center h-fit" for="">Security</label>
+                    <div class="col-span-5 px-5 py-2.5 border-2 border-red-400 rounded-full text-center">Non-Escrow</div>
                   </div>
 
                   <div class="grid grid-cols-12 gap-5">
-                    <label class="col-span-4 rounded-xl border px-5 py-2.5 bg-gray-300 text-center h-fit" for=""
-                      >currency</label
-                    >
+                    <label class="col-span-4 rounded-xl border px-5 py-2.5 bg-gray-300 text-center h-fit" for="">currency</label>
                     <input class="col-span-8 rounded-xl border px-5 py-2.5" type="text" />
                   </div>
                 </div>
@@ -435,8 +562,8 @@
                       <li>Affiliate coins are automatically set in escrow in the Bitypeer mainnet system.</li>
                       <li>Bitypeer's escrow is a free system.</li>
                       <li>
-                        Regardless of escrow, i agree that (the person) is responsibility for all transaction between
-                        individauls, and it has nothing to do with Bitypeer.
+                        Regardless of escrow, i agree that (the person) is responsibility for all transaction between individauls, and it has nothing
+                        to do with Bitypeer.
                       </li>
                     </ul>
                   </div>
@@ -447,12 +574,10 @@
                     <div>Information</div>
                     <ul>
                       <li>
-                        Enter the details you wish to trade, such as quantity of sale to be provided to the buyer and
-                        the terms and conditions of sale.
+                        Enter the details you wish to trade, such as quantity of sale to be provided to the buyer and the terms and conditions of
+                        sale.
                       </li>
-                      <li>
-                        &#8251; The saller is automatically mapped when you select Auto Buy. Check it out with the app.
-                      </li>
+                      <li>&#8251; The saller is automatically mapped when you select Auto Buy. Check it out with the app.</li>
                     </ul>
                   </div>
                   <div class="p-5 border mt-5 rounded-lg">
@@ -762,12 +887,7 @@
                         viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg"
                       >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                        ></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                       </svg>
                     </div>
                     <input
