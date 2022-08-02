@@ -12,7 +12,7 @@
 }
 
 .btn-large {
-  @apply px-5 py-3 text-base lg:text-lg;
+  @apply px-5 py-2 text-base lg:text-lg;
 }
 
 .btn-exlarge {

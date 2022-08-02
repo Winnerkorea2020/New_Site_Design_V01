@@ -15,17 +15,26 @@
 
     <title>Bitypeer Main Page</title>
   </head>
+  <!-- 모바일화면 시 LargeBody 삭제 -->
   <body class="largeBody">
     <!-- Header -->
     <header class="fixed top-0 left-0 w-full bg-white border-b h-16 nav-header z-50">
       <!-- Top Navigation -->
       <section class="section">
         <div class="flex justify-between items-center h-16">
-          <div class="flex justify-end items-center px-12 w-full gap-5 text-sm">
+          <div class="text-2xl md:hidden flex justify-center items-center">
+            <i class="bx bx-menu cursor-pointer nav-toggle"></i>
+          </div>
+
+          <a href="main.html" class="flex items-center justify-center md:hidden">
+            <img src="./assets/img/logo/logo_small.png" class="h-8 w-8 mx-2" alt="" />
+            <div class="nav-brand__logo">Bitypeer</div>
+          </a>
+          <div class="justify-end items-center px-12 w-full gap-5 text-sm hidden md:flex">
             <div>Sign in</div>
             <div>Sign up</div>
           </div>
-          <div class="relative w-20 pr-2 text-end mr-5 mt-1">
+          <div class="absolute right-12 mt-2 md:relative w-20 pr-2 text-end mr-5 md:mt-1">
             <div
               class="cursor-pointer hover:text-gray-800"
               id="user-menu-button"
@@ -129,7 +138,7 @@
             >
               <span class="sr-only">Open user menu</span>
               <img class="w-6 h-6 md:w-8 md:h-8 border-none" src="./assets/img/flag/usa.png" alt="National Flag" />
-              <i class="bx bx-chevron-down bx-sm"></i>
+              <i class="bx bx-chevron-down bx-sm hidden md:block"></i>
             </button>
             <!-- Dropdown menu -->
             <div
@@ -221,10 +230,14 @@
     </header>
 
     <!-- Side Navi -->
-    <aside class="side-nav fixed left-0 top-0 h-screen bg-white border-r" style="z-index: 100">
+    <aside
+      class="side-nav fixed -left-full md:left-0 duration-1000 ease-in-out top-0 h-full bg-white border-r nav-side"
+      style="z-index: 1000"
+    >
       <!-- Side Navigation Header -->
+
       <div class="px-5">
-        <a href="main.html" class="h-16 flex items-center justify-between">
+        <a href="main.html" class="h-16 hidden md:flex items-center justify-between">
           <img src="./assets/img/logo/logo_small.png" class="h-8 w-8 mx-2" alt="" />
 
           <div class="justify-between items-center w-full ml-2 gap-2 nav-brand__logo">
@@ -234,8 +247,13 @@
              -->
           </div>
         </a>
+        <!-- Close Button -->
+        <div class="absolute top-7 right-5 md:hidden">
+          <i class="bx bx-x-circle bx-sm cursor-pointer nav-close"></i>
+        </div>
+
         <!-- Side Menu List | Start -->
-        <nav class="px-2 pt-16 flex justify-start">
+        <nav class="px-2 pt-20 md:pt-16 flex flex-col justify-start">
           <ul class="flex flex-col gap-8 uppercase">
             <li>
               <a href="sell.html" class="inline-flex items-center">
@@ -261,12 +279,7 @@
                 <span class="pl-3">Notice</span>
               </a>
             </li>
-            <li>
-              <a href="affiliateSell.html" class="inline-flex items-center">
-                <i class="bx bxs-cart-add bx-sm"></i>
-                <span class="pl-3">Affiliate Sell</span>
-              </a>
-            </li>
+
             <li>
               <a href="mypageBuyHistory.html" class="inline-flex items-center">
                 <i class="bx bxs-user-rectangle bx-sm"></i>
@@ -274,6 +287,17 @@
               </a>
             </li>
           </ul>
+          <div class="absolute bottom-52 flex flex-col gap-5 ml-9 md:hidden">
+            <!-- Sign Up / Sign In Area -->
+            <div class="flex flex-col gap-5">
+              <a href="#" class="btn btn-dark text-center">Sign in</a>
+              <a href="#" class="btn btn-dark text-center">Sign up</a>
+            </div>
+            <!-- Log Out Area -->
+            <div>
+              <a href="#" class="btn btn-red">Log Out</a>
+            </div>
+          </div>
         </nav>
 
         <!-- Side Menu List | End -->
@@ -283,18 +307,20 @@
     <!-- Main -->
     <main class="p-0">
       <section class="section">
-        <div class="grid grid-cols-3 gap-5 w-full py-5">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 w-full py-5">
           <!-- Intro ITEM 1 -->
-          <div class="col-span-2 bg-white border rounded-xl">
-            <div class="flex justify-between items-center">
-              <div class="pl-10">
-                <p class="text-5xl">Buy & Sell <br />crypto in minutes</p>
-                <p class="text-xl mt-5">
+          <div class="col-span-1 md:col-span-2 bg-white border rounded-xl py-7 md:pt-9">
+            <div class="flex flex-col-reverse md:flex-row justify-between items-center">
+              <div class="pl-10 z-10 md:z-0">
+                <p class="text-lg md:text-5xl">Buy & Sell <br />crypto in minutes</p>
+                <p class="md:text-xl mt-5">
                   Trade Bitcon, Ethereum, USDT, and the top altcoins on the legendary crypto asset exchage.
                 </p>
-                <button class="btn btn-rounded mt-8 btn-default">Sign up for free</button>
+                <button class="btn btn-rounded mt-8 btn-default">
+                  <a href="signUp.html">Sign up for free</a>
+                </button>
               </div>
-              <img src="./assets/img/background.png" alt="" class="p-5" />
+              <img src="./assets/img/background.png" alt="" class="p-5 absolute w-48 right-5 md:relative" />
             </div>
           </div>
           <!-- Intro ITEM 2 -->
@@ -345,13 +371,13 @@
         </div>
       </section>
       <!-- Top Link 10  -->
-      <section class="section">
-        <div class="grid grid-cols-2 gap-5">
+      <section class="section hidden md:block">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
           <!-- Item 1 -->
           <div class="bg-white px-5 rounded-xl border">
             <div class="flex items-end justify-between py-5">
               <div>Sell Coin</div>
-              <a href="sell.html" class="text-sm underline tracking-tighter">View All</a>
+              <a href="sell.html" class="text-sm underline tracking-tighter">More</a>
             </div>
             <!-- Table -->
             <div class="overflow-x-auto">
@@ -545,7 +571,7 @@
           <div class="bg-white px-5 rounded-xl border">
             <div class="flex items-end justify-between py-5">
               <div>Buy Coin</div>
-              <a href="buy.html" class="text-sm underline tracking-tighter">View All</a>
+              <a href="buy.html" class="text-sm underline tracking-tighter">More</a>
             </div>
             <!-- Table -->
             <div class="overflow-x-auto">
@@ -723,6 +749,321 @@
           </div>
         </div>
       </section>
+
+      <!-- Mobile Contents -->
+      <section class="section md:hidden">
+        <!-- Sell Coin -->
+        <div>
+          <div class="flex items-end justify-between my-3">
+            <h3 class="text-lg tracking-tighter">Sell Coin</h3>
+            <div class="text-xs underline tracking-tighter">
+              <a href="#">More</a>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 gap-2">
+            <!-- Auto -->
+            <div class="">
+              <div class="text-sm w-full">
+                <div class="grid grid-cols-2 p-5 border rounded-lg gap-y-1.5 tracking-tighter">
+                  <div class="col-span-1">
+                    <a href="#" class="truncate underline">abcadeafeasfease123123</a>
+                  </div>
+                  <div class="col-span-1">
+                    <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">Coin</span></div>
+                  </div>
+                  <div class="col-span-1">WRC</div>
+                  <div class="col-span-1">
+                    <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">KRW</span></div>
+                  </div>
+                  <div class="col-span-1">
+                    <div class="badge badge-dark inline-block">AUTO</div>
+                  </div>
+                  <div class="col-span-1">
+                    <div class="flex justify-end items-center">
+                      <button class="btn btn-small btn-red text-center w-10/12">BUY</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Manual -->
+            <div class="">
+              <div class="text-sm w-full">
+                <div class="grid grid-cols-2 p-5 border rounded-lg gap-y-1.5 tracking-tighter">
+                  <div class="col-span-1">
+                    <a href="#" class="truncate underline">abcadeafeasfease123123</a>
+                  </div>
+                  <div class="col-span-1">
+                    <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">Coin</span></div>
+                  </div>
+                  <div class="col-span-1">WRC</div>
+                  <div class="col-span-1">
+                    <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">KRW</span></div>
+                  </div>
+                  <div class="col-span-1">
+                    <div class="badge badge-default inline-block">Manual</div>
+                  </div>
+                  <div class="col-span-1">
+                    <div class="flex justify-end items-center">
+                      <button class="btn btn-small btn-red text-center w-10/12">BUY</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Auto -->
+            <div class="">
+              <div class="text-sm w-full">
+                <div class="grid grid-cols-2 p-5 border rounded-lg gap-y-1.5 tracking-tighter">
+                  <div class="col-span-1">
+                    <a href="#" class="truncate underline">abcadeafeasfease123123</a>
+                  </div>
+                  <div class="col-span-1">
+                    <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">Coin</span></div>
+                  </div>
+                  <div class="col-span-1">WRC</div>
+                  <div class="col-span-1">
+                    <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">KRW</span></div>
+                  </div>
+                  <div class="col-span-1">
+                    <div class="badge badge-dark inline-block">AUTO</div>
+                  </div>
+                  <div class="col-span-1">
+                    <div class="flex justify-end items-center">
+                      <button class="btn btn-small btn-red text-center w-10/12">BUY</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Manual -->
+            <div class="">
+              <div class="text-sm w-full">
+                <div class="grid grid-cols-2 p-5 border rounded-lg gap-y-1.5 tracking-tighter">
+                  <div class="col-span-1">
+                    <a href="#" class="truncate underline">abcadeafeasfease123123</a>
+                  </div>
+                  <div class="col-span-1">
+                    <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">Coin</span></div>
+                  </div>
+                  <div class="col-span-1">WRC</div>
+                  <div class="col-span-1">
+                    <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">KRW</span></div>
+                  </div>
+                  <div class="col-span-1">
+                    <div class="badge badge-default inline-block">Manual</div>
+                  </div>
+                  <div class="col-span-1">
+                    <div class="flex justify-end items-center">
+                      <button class="btn btn-small btn-red text-center w-10/12">BUY</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Auto -->
+            <div class="">
+              <div class="text-sm w-full">
+                <div class="grid grid-cols-2 p-5 border rounded-lg gap-y-1.5 tracking-tighter">
+                  <div class="col-span-1">
+                    <a href="#" class="truncate underline">abcadeafeasfease123123</a>
+                  </div>
+                  <div class="col-span-1">
+                    <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">Coin</span></div>
+                  </div>
+                  <div class="col-span-1">WRC</div>
+                  <div class="col-span-1">
+                    <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">KRW</span></div>
+                  </div>
+                  <div class="col-span-1">
+                    <div class="badge badge-dark inline-block">AUTO</div>
+                  </div>
+                  <div class="col-span-1">
+                    <div class="flex justify-end items-center">
+                      <button class="btn btn-small btn-red text-center w-10/12">BUY</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Manual -->
+            <div class="">
+              <div class="text-sm w-full">
+                <div class="grid grid-cols-2 p-5 border rounded-lg gap-y-1.5 tracking-tighter">
+                  <div class="col-span-1">
+                    <a href="#" class="truncate underline">abcadeafeasfease123123</a>
+                  </div>
+                  <div class="col-span-1">
+                    <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">Coin</span></div>
+                  </div>
+                  <div class="col-span-1">WRC</div>
+                  <div class="col-span-1">
+                    <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">KRW</span></div>
+                  </div>
+                  <div class="col-span-1">
+                    <div class="badge badge-default inline-block">Manual</div>
+                  </div>
+                  <div class="col-span-1">
+                    <div class="flex justify-end items-center">
+                      <button class="btn btn-small btn-red text-center w-10/12">BUY</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Buy Coin -->
+        <div>
+          <div class="flex items-end justify-between my-3">
+            <h3 class="text-lg tracking-tighter">Buy Coin</h3>
+            <div class="text-xs underline tracking-tighter">
+              <a href="#">More</a>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 gap-2">
+            <div class="">
+              <div class="text-sm w-full">
+                <div class="grid grid-cols-2 p-5 border rounded-lg gap-y-1.5 tracking-tighter">
+                  <div class="col-span-1">
+                    <a href="#" class="truncate underline">abcadeafeasfease123123</a>
+                  </div>
+                  <div class="col-span-1">
+                    <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">Coin</span></div>
+                  </div>
+                  <div class="col-span-1">WRC</div>
+                  <div class="col-span-1">
+                    <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">KRW</span></div>
+                  </div>
+                  <div class="col-span-1"></div>
+                  <div class="col-span-1">
+                    <div class="flex justify-end items-center">
+                      <button class="btn btn-small btn-dark text-center w-10/12">sell</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="">
+              <div class="text-sm w-full">
+                <div class="grid grid-cols-2 p-5 border rounded-lg gap-y-1.5 tracking-tighter">
+                  <div class="col-span-1">
+                    <a href="#" class="truncate underline">abcadeafeasfease123123</a>
+                  </div>
+                  <div class="col-span-1">
+                    <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">Coin</span></div>
+                  </div>
+                  <div class="col-span-1">WRC</div>
+                  <div class="col-span-1">
+                    <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">KRW</span></div>
+                  </div>
+                  <div class="col-span-1"></div>
+                  <div class="col-span-1">
+                    <div class="flex justify-end items-center">
+                      <button class="btn btn-small btn-dark text-center w-10/12">sell</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="">
+              <div class="text-sm w-full">
+                <div class="grid grid-cols-2 p-5 border rounded-lg gap-y-1.5 tracking-tighter">
+                  <div class="col-span-1">
+                    <a href="#" class="truncate underline">abcadeafeasfease123123</a>
+                  </div>
+                  <div class="col-span-1">
+                    <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">Coin</span></div>
+                  </div>
+                  <div class="col-span-1">WRC</div>
+                  <div class="col-span-1">
+                    <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">KRW</span></div>
+                  </div>
+                  <div class="col-span-1"></div>
+                  <div class="col-span-1">
+                    <div class="flex justify-end items-center">
+                      <button class="btn btn-small btn-dark text-center w-10/12">sell</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="">
+              <div class="text-sm w-full">
+                <div class="grid grid-cols-2 p-5 border rounded-lg gap-y-1.5 tracking-tighter">
+                  <div class="col-span-1">
+                    <a href="#" class="truncate underline">abcadeafeasfease123123</a>
+                  </div>
+                  <div class="col-span-1">
+                    <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">Coin</span></div>
+                  </div>
+                  <div class="col-span-1">WRC</div>
+                  <div class="col-span-1">
+                    <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">KRW</span></div>
+                  </div>
+                  <div class="col-span-1"></div>
+                  <div class="col-span-1">
+                    <div class="flex justify-end items-center">
+                      <button class="btn btn-small btn-dark text-center w-10/12">sell</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="">
+              <div class="text-sm w-full">
+                <div class="grid grid-cols-2 p-5 border rounded-lg gap-y-1.5 tracking-tighter">
+                  <div class="col-span-1">
+                    <a href="#" class="truncate underline">abcadeafeasfease123123</a>
+                  </div>
+                  <div class="col-span-1">
+                    <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">Coin</span></div>
+                  </div>
+                  <div class="col-span-1">WRC</div>
+                  <div class="col-span-1">
+                    <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">KRW</span></div>
+                  </div>
+                  <div class="col-span-1"></div>
+                  <div class="col-span-1">
+                    <div class="flex justify-end items-center">
+                      <button class="btn btn-small btn-dark text-center w-10/12">sell</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="">
+              <div class="text-sm w-full">
+                <div class="grid grid-cols-2 p-5 border rounded-lg gap-y-1.5 tracking-tighter">
+                  <div class="col-span-1">
+                    <a href="#" class="truncate underline">abcadeafeasfease123123</a>
+                  </div>
+                  <div class="col-span-1">
+                    <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">Coin</span></div>
+                  </div>
+                  <div class="col-span-1">WRC</div>
+                  <div class="col-span-1">
+                    <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">KRW</span></div>
+                  </div>
+                  <div class="col-span-1"></div>
+                  <div class="col-span-1">
+                    <div class="flex justify-end items-center">
+                      <button class="btn btn-small btn-dark text-center w-10/12">sell</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Main Contents -->
       <section class="section">
         <div class="mt-8">
           <div class="pt-16">
@@ -734,7 +1075,7 @@
           </div>
           <!-- Card ITEMS -->
 
-          <div class="grid grid-cols-4 gap-5 px-16 pt-16">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-5 md:px-16 pt-16">
             <div class="border border-gray-200 rounded-lg text-center p-5">
               <div class="flex justify-center">
                 <img src="./assets/img/main/img01.png" alt="" class="w-44" />
@@ -796,16 +1137,16 @@
             </div>
           </div>
           <!-- Card Ites Description 2 -->
-          <div class="grid grid-cols-2 gap-5 pt-16">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-5 pt-16">
             <!-- Items 1 -->
-            <div class="flex items-center w-full gap-5 p-5">
-              <div class="basis-4/12">
+            <div class="flex items-center w-full gap-5 p-5 relative md:static">
+              <div class="absolute -z-10 right-4 top-3 md:static md:basis-4/12">
                 <img src="./assets/img/main/img05.png" alt="" />
               </div>
-              <div class="basis-8/12">
+              <div class="md:basis-8/12">
                 <div class="text-3xl tracking-tighter">Bitypeer Automapping</div>
                 <div class="mt-5">
-                  <p class="text-gray-400 text-xs">
+                  <p class="text-gray-600 md:text-gray-400 text-sm md:text-xs">
                     Auto mapping is provided only for company coins affiliated with us. When the buyer enters the
                     quantity and price, they can purchase coins by automatically mapping the appropriate seller. Only we
                     can do it.
@@ -814,14 +1155,14 @@
               </div>
             </div>
             <!-- Items 2 -->
-            <div class="flex flex-row-reverse items-center w-full gap-5 p-5">
-              <div class="basis-4/12">
+            <div class="flex flex-row-reverse items-center w-full gap-5 p-5 relative md:static">
+              <div class="absolute -z-10 right-4 top-3 md:static md:basis-4/12">
                 <img src="./assets/img/main/img06.png" alt="" />
               </div>
-              <div class="basis-8/12">
+              <div class="md:basis-8/12">
                 <div class="text-3xl tracking-tighter">Trusted platform anytime & anywhere</div>
                 <div class="mt-5">
-                  <p class="text-gray-400 text-xs">
+                  <p class="text-gray-600 md:text-gray-400 text-sm md:text-xs">
                     You can trade anytime and anywhere with the Bitypeer app for iOS and Android. Stay connected, and
                     gain instant access to the crytoeconomy, in the palm of your hand.
                   </p>
@@ -833,18 +1174,18 @@
       </section>
 
       <!-- App Download -->
-      <section class="section bg-gray-200 mt-12">
+      <section class="section bg-gray-200 mt-20 md:mt-12">
         <div class="text-center tracking-tighter pt-16">
           <h4 class="">Download Bitypeer moblie app</h4>
           <div class="pt-2 text-xs">Available for Android and iOS</div>
         </div>
-        <div class="grid grid-cols-2 items-center pt-5 pb-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 items-center pt-5 pb-16 gap-10 md:gap-0">
           <!-- Download Android -->
           <div class="flex justify-center items-center px-2.5">
             <div>
-              <img src="./assets/img/main/img07.png" alt="" class="w-full h-20" />
+              <img src="./assets/img/main/img07.png" alt="" class="w-full h-16 md:h-20" />
             </div>
-            <div class="flex items-center gap-5">
+            <div class="flex flex-col md:flex-row items-end md:items-center gap-5 mt-4 md:mt-0">
               <div>Download for Android</div>
               <a href="" class="btn btn-exsmall btn-rounded btn-default">Download</a>
             </div>
@@ -852,9 +1193,9 @@
           <!-- Download iOS -->
           <div class="flex justify-center items-center px-5">
             <div>
-              <img src="./assets/img/main/img08.png" alt="" class="w-full h-20" />
+              <img src="./assets/img/main/img08.png" alt="" class="w-full h-16 md:h-20" />
             </div>
-            <div class="flex items-center gap-5">
+            <div class="flex flex-col md:flex-row items-end md:items-center gap-5 mt-4 md:mt-0">
               <div>Download for iOS</div>
               <a href="" class="btn btn-exsmall btn-rounded btn-default">Download</a>
             </div>
@@ -873,14 +1214,14 @@
         </div>
         <!-- How it work Items -->
         <div class="px-14 pt-16">
-          <div class="grid grid-cols-4 gap-5">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-5">
             <!-- Item 1 -->
             <div class="">
               <div class="flex justify-center items-center">
                 <img src="./assets/img/main/img02.png" alt="" />
               </div>
               <div class="text-center">
-                <h5 class="pt-5">Step 1</h5>
+                <h5 class="pt-5 text-2xl md:text-base">Step 1</h5>
                 <div class="pt-5">Download</div>
               </div>
               <div class="pt-5">
@@ -896,7 +1237,7 @@
                 <img src="./assets/img/main/img03.png" alt="" />
               </div>
               <div class="text-center">
-                <h5 class="pt-5">Step 2</h5>
+                <h5 class="pt-5 text-2xl md:text-base">Step 2</h5>
                 <div class="pt-5">Connect wallet</div>
               </div>
               <div class="pt-5">
@@ -911,7 +1252,7 @@
                 <img src="./assets/img/main/img01.png" alt="" />
               </div>
               <div class="text-center">
-                <h5 class="pt-5">Step 3</h5>
+                <h5 class="pt-5 text-2xl md:text-base">Step 3</h5>
                 <div class="pt-5">Start trading</div>
               </div>
               <div class="pt-5">
@@ -927,7 +1268,7 @@
                 <img src="./assets/img/main/img04.png" alt="" />
               </div>
               <div class="text-center">
-                <h5 class="pt-5">Step 4</h5>
+                <h5 class="pt-5 text-2xl md:text-base">Step 4</h5>
                 <div class="pt-5">Earn money</div>
               </div>
               <div class="pt-5">
@@ -946,38 +1287,37 @@
     <footer class="px-5 py-5 bg-gray-100 pt-10 mt-16">
       <section class="section">
         <div class="px-5 pt-16">
-          <div class="grid grid-cols-12 pb-16 text-sm">
+          <div class="grid grid-cols-1 md:grid-cols-12 pb-16 text-sm gap-10 md:gap-0">
             <div class="col-span-2">
-              <div class="flex items-center gap-5">
+              <div class="flex items-center gap-2 md:gap-5">
                 <img src="./assets/img/logo/logo_small.png" alt="" class="h-10 w-10" />
                 <h5>Bitypeer</h5>
               </div>
             </div>
-            <div class="col-span-3 border-r px-10">
+            <div class="col-span-3 md:border-r md:px-10">
               <div>
-                <ul class="flex flex-col gap-5">
+                <div class="text-xl uppercase">About</div>
+                <ul class="flex flex-col gap-2 md:gap-4 pt-8">
                   <li>Terms of Use</li>
                   <li>Privacy Policy</li>
-                  <li>Open API Terms of Use</li>
+                  <li>Open API</li>
                   <li>FAQ</li>
                   <li>Guide</li>
                 </ul>
               </div>
             </div>
-            <div class="col-span-3 border-r px-10">
+            <div class="col-span-3 md:border-r md:px-10">
               <div>
-                <div class="">CONTACT</div>
-                <ul class="flex flex-col gap-5 pt-8">
-                  <li>Penc.case</li>
-                  <li>Aextexe 678191</li>
+                <div class="text-xl uppercase">Contact</div>
+                <ul class="flex flex-col gap-2 md:gap-4 pt-8 tracking-tighter">
+                  <li>3 квартал, д.31, Новая Игирма, Иркутская обл., 665685</li>
                   <li>infoService@bitypeer.com</li>
-                  <li>+7 985648-48684-18381</li>
                 </ul>
               </div>
             </div>
-            <div class="col-span-3 px-10">
+            <div class="col-span-3 md:px-10">
               <div>
-                <div>NEWSLETTER</div>
+                <div class="text-xl uppercase">NEWSLETTER</div>
                 <p class="pt-8">Subscribe our newseletter to get more free Cryto currency information and resource.</p>
               </div>
               <div>
@@ -1020,6 +1360,7 @@
         </div>
       </section>
     </footer>
+    <script src="./assets/js/sideNav.js"></script>
     <script src="./assets/js/main.js"></script>
   </body>
 </html>

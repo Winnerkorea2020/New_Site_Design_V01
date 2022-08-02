@@ -13,21 +13,120 @@
     <!-- BASE -->
     <link rel="stylesheet" href="./assets/css/base.css" />
 
+    <script src="//unpkg.com/alpinejs" defer></script>
+
     <title>Bitypeer Notice Page</title>
   </head>
   <body class="largeBody">
     <!-- Header -->
-    <header class="fixed top-0 left-0 w-full bg-white border-b-2 h-16 shadow-sm nav-header z-50">
+    <header class="fixed top-0 left-0 w-full bg-white border-b h-16 nav-header z-50">
       <!-- Top Navigation -->
       <section class="section">
         <div class="flex justify-between items-center h-16">
-          <div class="flex justify-end items-center px-12 w-full gap-5 text-sm">
+          <div class="text-2xl md:hidden flex justify-center items-center">
+            <i class="bx bx-menu cursor-pointer nav-toggle"></i>
+          </div>
+
+          <a href="main.html" class="flex items-center justify-center md:hidden">
+            <img src="./assets/img/logo/logo_small.png" class="h-8 w-8 mx-2" alt="" />
+            <div class="nav-brand__logo">Bitypeer</div>
+          </a>
+          <div class="justify-end items-center px-12 w-full gap-5 text-sm hidden md:flex">
             <div>Sign in</div>
             <div>Sign up</div>
-            <div class="relative">
-              <i class="bx bxs-bell text-xl"></i>
-              <div class="absolute top-0 -right-0.5 w-3 h-3 bg-red-500 rounded-full"></div>
+          </div>
+          <div class="absolute right-12 mt-2 md:relative w-20 pr-2 text-end mr-5 md:mt-1">
+            <div
+              class="cursor-pointer hover:text-gray-800"
+              id="user-menu-button"
+              aria-expanded="false"
+              data-dropdown-toggle="dropdownAlarm"
+            >
+              <i class="bx bxs-bell bx-sm"></i>
             </div>
+
+            <!-- Alam Signal -->
+
+            <div class="absolute top-0 right-1 w-4 h-4 bg-red-500 rounded-full">
+              <div
+                class="flex justify-center items-center text-white text-xs tracking-tighter"
+                style="font-size: 0.2rem"
+              >
+                <span>10</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Alam DropDwon Menu -->
+
+          <!-- Dropdown menu -->
+          <div
+            class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow-sm border w-80"
+            id="dropdownAlarm"
+            style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate(1246px, 803px)"
+            data-popper-reference-hidden=""
+            data-popper-escaped=""
+            data-popper-placement="top"
+          >
+            <!-- Drop Down Contents | Start -->
+
+            <ul class="py-1 pr-5" aria-labelledby="dropdownAlarm">
+              <!-- National Flags | Start -->
+              <li>
+                <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                  <span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, voluptatibus. </span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                  <span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, voluptatibus. </span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                  <span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, voluptatibus. </span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                  <span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, voluptatibus. </span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                  <span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, voluptatibus. </span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                  <span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, voluptatibus. </span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                  <span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, voluptatibus. </span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                  <span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, voluptatibus. </span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                  <span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, voluptatibus. </span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                  <span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, voluptatibus. </span>
+                </a>
+              </li>
+
+              <!-- National Flags | End -->
+            </ul>
+
+            <!-- Drop Down Contents | End -->
           </div>
 
           <div class="flex items-center">
@@ -40,7 +139,7 @@
             >
               <span class="sr-only">Open user menu</span>
               <img class="w-6 h-6 md:w-8 md:h-8 border-none" src="./assets/img/flag/usa.png" alt="National Flag" />
-              <i class="bx bx-chevron-down bx-sm"></i>
+              <i class="bx bx-chevron-down bx-sm hidden md:block"></i>
             </button>
             <!-- Dropdown menu -->
             <div
@@ -132,19 +231,30 @@
     </header>
 
     <!-- Side Navi -->
-    <aside class="side-nav fixed left-0 top-0 h-screen bg-white border-r shadow-md" style="z-index: 100">
+    <aside
+      class="side-nav fixed -left-full md:left-0 duration-1000 ease-in-out top-0 h-full bg-white border-r nav-side"
+      style="z-index: 1000"
+    >
       <!-- Side Navigation Header -->
+
       <div class="px-5">
-        <a href="main.html" class="h-16 flex items-center justify-between">
+        <a href="main.html" class="h-16 hidden md:flex items-center justify-between">
           <img src="./assets/img/logo/logo_small.png" class="h-8 w-8 mx-2" alt="" />
 
           <div class="justify-between items-center w-full ml-2 gap-2 nav-brand__logo">
             <div>Bitypeer</div>
+            <!-- 
             <img src="./assets/img/logo/icons1.png" alt="" class="w-6 h-6" />
+             -->
           </div>
         </a>
+        <!-- Close Button -->
+        <div class="absolute top-7 right-5 md:hidden">
+          <i class="bx bx-x-circle bx-sm cursor-pointer nav-close"></i>
+        </div>
+
         <!-- Side Menu List | Start -->
-        <nav class="px-2 pt-16 flex justify-start">
+        <nav class="px-2 pt-20 md:pt-16 flex flex-col justify-start">
           <ul class="flex flex-col gap-8 uppercase">
             <li>
               <a href="sell.html" class="inline-flex items-center">
@@ -170,12 +280,7 @@
                 <span class="pl-3">Notice</span>
               </a>
             </li>
-            <li>
-              <a href="affiliateSell.html" class="inline-flex items-center">
-                <i class="bx bxs-cart-add bx-sm"></i>
-                <span class="pl-3">Affiliate Sell</span>
-              </a>
-            </li>
+
             <li>
               <a href="mypageBuyHistory.html" class="inline-flex items-center">
                 <i class="bx bxs-user-rectangle bx-sm"></i>
@@ -183,6 +288,17 @@
               </a>
             </li>
           </ul>
+          <div class="absolute bottom-52 flex flex-col gap-5 ml-9 md:hidden">
+            <!-- Sign Up / Sign In Area -->
+            <div class="flex flex-col gap-5">
+              <a href="#" class="btn btn-dark text-center">Sign in</a>
+              <a href="#" class="btn btn-dark text-center">Sign up</a>
+            </div>
+            <!-- Log Out Area -->
+            <div>
+              <a href="#" class="btn btn-red">Log Out</a>
+            </div>
+          </div>
         </nav>
 
         <!-- Side Menu List | End -->
@@ -193,90 +309,24 @@
     <main class="p-0">
       <!-- Buy Coins | Start -->
       <section class="section">
-        <div class="pt-16">
+        <div class="pt-5 md:pt-16">
           <!-- Buy Header Area | Start -->
           <div class="flex justify-between items-center">
             <h4>Notice</h4>
-            <div class="flex items-center gap-2 text-xs">
+            <div class="hidden md:flex items-center gap-2 text-xs">
               <div>HOME</div>
               <div><i class="bx bx-chevron-right"></i></div>
               <div>Notice</div>
             </div>
           </div>
           <!-- Buy Header Area | End -->
-          <div class="grid grid-cols-12 gap-5 mt-8">
-            <!-- Search Coins | Start -->
-            <div class="col-span-3">
-              <form action="" class="bg-white px-3 py-8 h-full rounded-xl shadow-md">
-                <div class="grid grid-cols-1 gap-2">
-                  <!-- Date Name -->
-                  <div class="col-span-1 w-full">
-                    <div date-rangepicker="" class="flex items-center">
-                      <div class="relative">
-                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                          <svg
-                            class="w-5 h-5 text-gray-500 dark:text-gray-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                        </div>
-                        <input
-                          name="start"
-                          type="text"
-                          class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5"
-                          placeholder="2022-10-30"
-                        />
-                      </div>
-                      <span class="mx-4 text-gray-500">to</span>
-                      <div class="relative">
-                        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                          <svg
-                            class="w-5 h-5 text-gray-500 dark:text-gray-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                        </div>
-                        <input
-                          name="end"
-                          type="text"
-                          class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5"
-                          placeholder="2022-11-30"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-span-1 w-full">
-                    <input type="text" class="border py-2.5 rounded-md px-5 w-full" placeholder="Enter Registrant" />
-                  </div>
-                  <div></div>
-                </div>
-                <!-- Button -->
-                <div class="mt-5">
-                  <button class="btn btn-exlarge btn-rounded w-full btn-default">Search</button>
-                </div>
-              </form>
-            </div>
-            <!-- Search Coins | END -->
+          <div class="grid grid-cols-1 gap-5 mt-5 md:mt-8">
             <!-- Buyer Table | Start -->
-            <div class="col-span-9">
+            <div class="col-span-1 hidden md:block">
               <!-- Table -->
-              <div class="shadow-md bg-white h-full rounded-xl p-5">
+              <div class="border bg-white h-full rounded-xl p-5">
                 <div class="overflow-x-auto">
-                  <table class="w-full text-sm text-left text-gray-500">
+                  <table class="w-full md:text-sm text-left text-gray-500 text-xs">
                     <colgroup>
                       <col width="15%" />
                       <col width="auto" />
@@ -291,15 +341,17 @@
                     </thead>
                     <tbody>
                       <tr class="bg-white border-b relative h-fit">
-                        <td class="px-5 py-4 underline">2022-01-11 12:00</td>
+                        <td class="px-5 py-4">2022-01-11 12:00</td>
                         <td class="px-5 py-4 h-full">
                           <details>
                             <summary>Bitypeer System Monthly Diagnostic Notice</summary>
                             <div class="px-3 py-5">
-                              Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope
-                              there is no mistake in the transaction.Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00
-                              to 06:00 in the morning, so I hope there is no mistake in the transaction.Hello, a regular checkup is conducted every
-                              month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope there is no mistake in the transaction.
+                              Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00 to 06:00
+                              in the morning, so I hope there is no mistake in the transaction.Hello, a regular checkup
+                              is conducted every month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I
+                              hope there is no mistake in the transaction.Hello, a regular checkup is conducted every
+                              month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope there is no
+                              mistake in the transaction.
                             </div>
                           </details>
                         </td>
@@ -307,15 +359,17 @@
                       </tr>
 
                       <tr class="bg-white border-b relative h-fit">
-                        <td class="px-5 py-4 underline">2022-01-11 12:00</td>
+                        <td class="px-5 py-4">2022-01-11 12:00</td>
                         <td class="px-5 py-4 h-full">
                           <details>
                             <summary>Bitypeer System Monthly Diagnostic Notice</summary>
                             <div class="px-3 py-5">
-                              Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope
-                              there is no mistake in the transaction.Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00
-                              to 06:00 in the morning, so I hope there is no mistake in the transaction.Hello, a regular checkup is conducted every
-                              month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope there is no mistake in the transaction.
+                              Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00 to 06:00
+                              in the morning, so I hope there is no mistake in the transaction.Hello, a regular checkup
+                              is conducted every month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I
+                              hope there is no mistake in the transaction.Hello, a regular checkup is conducted every
+                              month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope there is no
+                              mistake in the transaction.
                             </div>
                           </details>
                         </td>
@@ -323,15 +377,17 @@
                       </tr>
 
                       <tr class="bg-white border-b relative h-fit">
-                        <td class="px-5 py-4 underline">2022-01-11 12:00</td>
+                        <td class="px-5 py-4">2022-01-11 12:00</td>
                         <td class="px-5 py-4 h-full">
                           <details>
                             <summary>Bitypeer System Monthly Diagnostic Notice</summary>
                             <div class="px-3 py-5">
-                              Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope
-                              there is no mistake in the transaction.Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00
-                              to 06:00 in the morning, so I hope there is no mistake in the transaction.Hello, a regular checkup is conducted every
-                              month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope there is no mistake in the transaction.
+                              Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00 to 06:00
+                              in the morning, so I hope there is no mistake in the transaction.Hello, a regular checkup
+                              is conducted every month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I
+                              hope there is no mistake in the transaction.Hello, a regular checkup is conducted every
+                              month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope there is no
+                              mistake in the transaction.
                             </div>
                           </details>
                         </td>
@@ -339,15 +395,17 @@
                       </tr>
 
                       <tr class="bg-white border-b relative h-fit">
-                        <td class="px-5 py-4 underline">2022-01-11 12:00</td>
+                        <td class="px-5 py-4">2022-01-11 12:00</td>
                         <td class="px-5 py-4 h-full">
                           <details>
                             <summary>Bitypeer System Monthly Diagnostic Notice</summary>
                             <div class="px-3 py-5">
-                              Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope
-                              there is no mistake in the transaction.Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00
-                              to 06:00 in the morning, so I hope there is no mistake in the transaction.Hello, a regular checkup is conducted every
-                              month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope there is no mistake in the transaction.
+                              Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00 to 06:00
+                              in the morning, so I hope there is no mistake in the transaction.Hello, a regular checkup
+                              is conducted every month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I
+                              hope there is no mistake in the transaction.Hello, a regular checkup is conducted every
+                              month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope there is no
+                              mistake in the transaction.
                             </div>
                           </details>
                         </td>
@@ -355,15 +413,17 @@
                       </tr>
 
                       <tr class="bg-white border-b relative h-fit">
-                        <td class="px-5 py-4 underline">2022-01-11 12:00</td>
+                        <td class="px-5 py-4">2022-01-11 12:00</td>
                         <td class="px-5 py-4 h-full">
                           <details>
                             <summary>Bitypeer System Monthly Diagnostic Notice</summary>
                             <div class="px-3 py-5">
-                              Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope
-                              there is no mistake in the transaction.Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00
-                              to 06:00 in the morning, so I hope there is no mistake in the transaction.Hello, a regular checkup is conducted every
-                              month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope there is no mistake in the transaction.
+                              Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00 to 06:00
+                              in the morning, so I hope there is no mistake in the transaction.Hello, a regular checkup
+                              is conducted every month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I
+                              hope there is no mistake in the transaction.Hello, a regular checkup is conducted every
+                              month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope there is no
+                              mistake in the transaction.
                             </div>
                           </details>
                         </td>
@@ -371,15 +431,17 @@
                       </tr>
 
                       <tr class="bg-white border-b relative h-fit">
-                        <td class="px-5 py-4 underline">2022-01-11 12:00</td>
+                        <td class="px-5 py-4">2022-01-11 12:00</td>
                         <td class="px-5 py-4 h-full">
                           <details>
                             <summary>Bitypeer System Monthly Diagnostic Notice</summary>
                             <div class="px-3 py-5">
-                              Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope
-                              there is no mistake in the transaction.Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00
-                              to 06:00 in the morning, so I hope there is no mistake in the transaction.Hello, a regular checkup is conducted every
-                              month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope there is no mistake in the transaction.
+                              Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00 to 06:00
+                              in the morning, so I hope there is no mistake in the transaction.Hello, a regular checkup
+                              is conducted every month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I
+                              hope there is no mistake in the transaction.Hello, a regular checkup is conducted every
+                              month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope there is no
+                              mistake in the transaction.
                             </div>
                           </details>
                         </td>
@@ -387,15 +449,17 @@
                       </tr>
 
                       <tr class="bg-white border-b relative h-fit">
-                        <td class="px-5 py-4 underline">2022-01-11 12:00</td>
+                        <td class="px-5 py-4">2022-01-11 12:00</td>
                         <td class="px-5 py-4 h-full">
                           <details>
                             <summary>Bitypeer System Monthly Diagnostic Notice</summary>
                             <div class="px-3 py-5">
-                              Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope
-                              there is no mistake in the transaction.Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00
-                              to 06:00 in the morning, so I hope there is no mistake in the transaction.Hello, a regular checkup is conducted every
-                              month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope there is no mistake in the transaction.
+                              Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00 to 06:00
+                              in the morning, so I hope there is no mistake in the transaction.Hello, a regular checkup
+                              is conducted every month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I
+                              hope there is no mistake in the transaction.Hello, a regular checkup is conducted every
+                              month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope there is no
+                              mistake in the transaction.
                             </div>
                           </details>
                         </td>
@@ -403,15 +467,17 @@
                       </tr>
 
                       <tr class="bg-white border-b relative h-fit">
-                        <td class="px-5 py-4 underline">2022-01-11 12:00</td>
+                        <td class="px-5 py-4">2022-01-11 12:00</td>
                         <td class="px-5 py-4 h-full">
                           <details>
                             <summary>Bitypeer System Monthly Diagnostic Notice</summary>
                             <div class="px-3 py-5">
-                              Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope
-                              there is no mistake in the transaction.Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00
-                              to 06:00 in the morning, so I hope there is no mistake in the transaction.Hello, a regular checkup is conducted every
-                              month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope there is no mistake in the transaction.
+                              Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00 to 06:00
+                              in the morning, so I hope there is no mistake in the transaction.Hello, a regular checkup
+                              is conducted every month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I
+                              hope there is no mistake in the transaction.Hello, a regular checkup is conducted every
+                              month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope there is no
+                              mistake in the transaction.
                             </div>
                           </details>
                         </td>
@@ -419,15 +485,17 @@
                       </tr>
 
                       <tr class="bg-white border-b relative h-fit">
-                        <td class="px-5 py-4 underline">2022-01-11 12:00</td>
+                        <td class="px-5 py-4">2022-01-11 12:00</td>
                         <td class="px-5 py-4 h-full">
                           <details>
                             <summary>Bitypeer System Monthly Diagnostic Notice</summary>
                             <div class="px-3 py-5">
-                              Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope
-                              there is no mistake in the transaction.Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00
-                              to 06:00 in the morning, so I hope there is no mistake in the transaction.Hello, a regular checkup is conducted every
-                              month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope there is no mistake in the transaction.
+                              Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00 to 06:00
+                              in the morning, so I hope there is no mistake in the transaction.Hello, a regular checkup
+                              is conducted every month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I
+                              hope there is no mistake in the transaction.Hello, a regular checkup is conducted every
+                              month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope there is no
+                              mistake in the transaction.
                             </div>
                           </details>
                         </td>
@@ -435,15 +503,17 @@
                       </tr>
 
                       <tr class="bg-white border-b relative h-fit">
-                        <td class="px-5 py-4 underline">2022-01-11 12:00</td>
+                        <td class="px-5 py-4">2022-01-11 12:00</td>
                         <td class="px-5 py-4 h-full">
                           <details>
                             <summary>Bitypeer System Monthly Diagnostic Notice</summary>
                             <div class="px-3 py-5">
-                              Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope
-                              there is no mistake in the transaction.Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00
-                              to 06:00 in the morning, so I hope there is no mistake in the transaction.Hello, a regular checkup is conducted every
-                              month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope there is no mistake in the transaction.
+                              Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00 to 06:00
+                              in the morning, so I hope there is no mistake in the transaction.Hello, a regular checkup
+                              is conducted every month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I
+                              hope there is no mistake in the transaction.Hello, a regular checkup is conducted every
+                              month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope there is no
+                              mistake in the transaction.
                             </div>
                           </details>
                         </td>
@@ -454,7 +524,9 @@
                 </div>
                 <div class="mt-5">
                   <ul class="flex items-center justify-center">
-                    <li class="px-3 py-2 hover:bg-blue-300 cursor-pointer border-l border-y rounded-l-xl bg-gray-100">PREVIOUS</li>
+                    <li class="px-3 py-2 hover:bg-blue-300 cursor-pointer border-l border-y rounded-l-xl bg-gray-100">
+                      PREVIOUS
+                    </li>
                     <li class="px-3 py-2 hover:bg-blue-300 cursor-pointer border-l border-y">1</li>
                     <li class="px-3 py-2 hover:bg-blue-300 cursor-pointer border-l border-y">2</li>
                     <li class="px-3 py-2 hover:bg-blue-300 cursor-pointer border-l border-y">3</li>
@@ -466,29 +538,297 @@
               </div>
             </div>
             <!-- Buyer Table | END -->
+
+            <!-- Seller Card | Start -->
+            <div class="col-span-1 md:hidden">
+              <div>
+                <div>
+                  <div class="grid grid-cols-1 gap-2">
+                    <!-- Item -->
+                    <details class="col-span-1">
+                      <summary class="flex flex-col items-start border rounded-lg px-3 tracking-tighter py-3">
+                        <div class="flex items-center w-full">
+                          <span class="mr-5 basis-6/12">2022-01-11</span>
+                          <div class="text-end basis-6/12 text-ellipsis overflow-hidden">Bitypeer administrator</div>
+                        </div>
+                        <div class="py-2">Lorem ipsum dolor sit amet.</div>
+                      </summary>
+                      <div class="px-3 py-5">
+                        Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00 to 06:00 in
+                        the morning, so I hope there is no mistake in the transaction.Hello, a regular checkup is
+                        conducted every month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope there
+                        is no mistake in the transaction.Hello, a regular checkup is conducted every month at Bitypeer.
+                        It runs from 24:00 to 06:00 in the morning, so I hope there is no mistake in the transaction.
+                      </div>
+                    </details>
+                    <!-- Item -->
+                    <details class="col-span-1">
+                      <summary class="flex flex-col items-start border rounded-lg px-3 tracking-tighter py-3">
+                        <div class="flex items-center w-full">
+                          <span class="mr-5 basis-6/12">2022-01-11</span>
+                          <div class="text-end basis-6/12 text-ellipsis overflow-hidden">Bitypeer administrator</div>
+                        </div>
+                        <div class="py-2">Lorem ipsum dolor sit amet.</div>
+                      </summary>
+                      <div class="px-3 py-5">
+                        Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00 to 06:00 in
+                        the morning, so I hope there is no mistake in the transaction.Hello, a regular checkup is
+                        conducted every month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope there
+                        is no mistake in the transaction.Hello, a regular checkup is conducted every month at Bitypeer.
+                        It runs from 24:00 to 06:00 in the morning, so I hope there is no mistake in the transaction.
+                      </div>
+                    </details>
+                    <!-- Item -->
+                    <details class="col-span-1">
+                      <summary class="flex flex-col items-start border rounded-lg px-3 tracking-tighter py-3">
+                        <div class="flex items-center w-full">
+                          <span class="mr-5 basis-6/12">2022-01-11</span>
+                          <div class="text-end basis-6/12 text-ellipsis overflow-hidden">Bitypeer administrator</div>
+                        </div>
+                        <div class="py-2">Lorem ipsum dolor sit amet.</div>
+                      </summary>
+                      <div class="px-3 py-5">
+                        Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00 to 06:00 in
+                        the morning, so I hope there is no mistake in the transaction.Hello, a regular checkup is
+                        conducted every month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope there
+                        is no mistake in the transaction.Hello, a regular checkup is conducted every month at Bitypeer.
+                        It runs from 24:00 to 06:00 in the morning, so I hope there is no mistake in the transaction.
+                      </div>
+                    </details>
+                    <!-- Item -->
+                    <details class="col-span-1">
+                      <summary class="flex flex-col items-start border rounded-lg px-3 tracking-tighter py-3">
+                        <div class="flex items-center w-full">
+                          <span class="mr-5 basis-6/12">2022-01-11</span>
+                          <div class="text-end basis-6/12 text-ellipsis overflow-hidden">Bitypeer administrator</div>
+                        </div>
+                        <div class="py-2">Lorem ipsum dolor sit amet.</div>
+                      </summary>
+                      <div class="px-3 py-5">
+                        Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00 to 06:00 in
+                        the morning, so I hope there is no mistake in the transaction.Hello, a regular checkup is
+                        conducted every month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope there
+                        is no mistake in the transaction.Hello, a regular checkup is conducted every month at Bitypeer.
+                        It runs from 24:00 to 06:00 in the morning, so I hope there is no mistake in the transaction.
+                      </div>
+                    </details>
+                    <!-- Item -->
+                    <details class="col-span-1">
+                      <summary class="flex flex-col items-start border rounded-lg px-3 tracking-tighter py-3">
+                        <div class="flex items-center w-full">
+                          <span class="mr-5 basis-6/12">2022-01-11</span>
+                          <div class="text-end basis-6/12 text-ellipsis overflow-hidden">Bitypeer administrator</div>
+                        </div>
+                        <div class="py-2">Lorem ipsum dolor sit amet.</div>
+                      </summary>
+                      <div class="px-3 py-5">
+                        Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00 to 06:00 in
+                        the morning, so I hope there is no mistake in the transaction.Hello, a regular checkup is
+                        conducted every month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope there
+                        is no mistake in the transaction.Hello, a regular checkup is conducted every month at Bitypeer.
+                        It runs from 24:00 to 06:00 in the morning, so I hope there is no mistake in the transaction.
+                      </div>
+                    </details>
+                    <!-- Item -->
+                    <details class="col-span-1">
+                      <summary class="flex flex-col items-start border rounded-lg px-3 tracking-tighter py-3">
+                        <div class="flex items-center w-full">
+                          <span class="mr-5 basis-6/12">2022-01-11</span>
+                          <div class="text-end basis-6/12 text-ellipsis overflow-hidden">Bitypeer administrator</div>
+                        </div>
+                        <div class="py-2">Lorem ipsum dolor sit amet.</div>
+                      </summary>
+                      <div class="px-3 py-5">
+                        Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00 to 06:00 in
+                        the morning, so I hope there is no mistake in the transaction.Hello, a regular checkup is
+                        conducted every month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope there
+                        is no mistake in the transaction.Hello, a regular checkup is conducted every month at Bitypeer.
+                        It runs from 24:00 to 06:00 in the morning, so I hope there is no mistake in the transaction.
+                      </div>
+                    </details>
+                    <!-- Item -->
+                    <details class="col-span-1">
+                      <summary class="flex flex-col items-start border rounded-lg px-3 tracking-tighter py-3">
+                        <div class="flex items-center w-full">
+                          <span class="mr-5 basis-6/12">2022-01-11</span>
+                          <div class="text-end basis-6/12 text-ellipsis overflow-hidden">Bitypeer administrator</div>
+                        </div>
+                        <div class="py-2">Lorem ipsum dolor sit amet.</div>
+                      </summary>
+                      <div class="px-3 py-5">
+                        Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00 to 06:00 in
+                        the morning, so I hope there is no mistake in the transaction.Hello, a regular checkup is
+                        conducted every month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope there
+                        is no mistake in the transaction.Hello, a regular checkup is conducted every month at Bitypeer.
+                        It runs from 24:00 to 06:00 in the morning, so I hope there is no mistake in the transaction.
+                      </div>
+                    </details>
+                    <!-- Item -->
+                    <details class="col-span-1">
+                      <summary class="flex flex-col items-start border rounded-lg px-3 tracking-tighter py-3">
+                        <div class="flex items-center w-full">
+                          <span class="mr-5 basis-6/12">2022-01-11</span>
+                          <div class="text-end basis-6/12 text-ellipsis overflow-hidden">Bitypeer administrator</div>
+                        </div>
+                        <div class="py-2">Lorem ipsum dolor sit amet.</div>
+                      </summary>
+                      <div class="px-3 py-5">
+                        Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00 to 06:00 in
+                        the morning, so I hope there is no mistake in the transaction.Hello, a regular checkup is
+                        conducted every month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope there
+                        is no mistake in the transaction.Hello, a regular checkup is conducted every month at Bitypeer.
+                        It runs from 24:00 to 06:00 in the morning, so I hope there is no mistake in the transaction.
+                      </div>
+                    </details>
+                    <!-- Item -->
+                    <details class="col-span-1">
+                      <summary class="flex flex-col items-start border rounded-lg px-3 tracking-tighter py-3">
+                        <div class="flex items-center w-full">
+                          <span class="mr-5 basis-6/12">2022-01-11</span>
+                          <div class="text-end basis-6/12 text-ellipsis overflow-hidden">Bitypeer administrator</div>
+                        </div>
+                        <div class="py-2">Lorem ipsum dolor sit amet.</div>
+                      </summary>
+                      <div class="px-3 py-5">
+                        Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00 to 06:00 in
+                        the morning, so I hope there is no mistake in the transaction.Hello, a regular checkup is
+                        conducted every month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope there
+                        is no mistake in the transaction.Hello, a regular checkup is conducted every month at Bitypeer.
+                        It runs from 24:00 to 06:00 in the morning, so I hope there is no mistake in the transaction.
+                      </div>
+                    </details>
+                    <!-- Item -->
+                    <details class="col-span-1">
+                      <summary class="flex flex-col items-start border rounded-lg px-3 tracking-tighter py-3">
+                        <div class="flex items-center w-full">
+                          <span class="mr-5 basis-6/12">2022-01-11</span>
+                          <div class="text-end basis-6/12 text-ellipsis overflow-hidden">Bitypeer administrator</div>
+                        </div>
+                        <div class="py-2">Lorem ipsum dolor sit amet.</div>
+                      </summary>
+                      <div class="px-3 py-5">
+                        Hello, a regular checkup is conducted every month at Bitypeer. It runs from 24:00 to 06:00 in
+                        the morning, so I hope there is no mistake in the transaction.Hello, a regular checkup is
+                        conducted every month at Bitypeer. It runs from 24:00 to 06:00 in the morning, so I hope there
+                        is no mistake in the transaction.Hello, a regular checkup is conducted every month at Bitypeer.
+                        It runs from 24:00 to 06:00 in the morning, so I hope there is no mistake in the transaction.
+                      </div>
+                    </details>
+                  </div>
+                </div>
+                <div>
+                  <div class="mt-5 flex justify-center items-center">
+                    <nav>
+                      <ul class="inline-flex items-center -space-x-px">
+                        <li>
+                          <a
+                            href="#"
+                            class="block py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
+                          >
+                            <span class="sr-only">Previous</span>
+                            <svg
+                              aria-hidden="true"
+                              class="w-5 h-5"
+                              fill="currentColor"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                                clip-rule="evenodd"
+                              ></path>
+                            </svg>
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
+                            >1</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
+                            >2</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            aria-current="page"
+                            class="z-10 py-2 px-3 leading-tight text-blue-600 bg-blue-50 border border-blue-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white"
+                            >3</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
+                            >4</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
+                            >5</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="block py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
+                          >
+                            <span class="sr-only">Next</span>
+                            <svg
+                              aria-hidden="true"
+                              class="w-5 h-5"
+                              fill="currentColor"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                clip-rule="evenodd"
+                              ></path>
+                            </svg>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Seller Card | END -->
           </div>
         </div>
       </section>
       <!-- Buy Coins | End -->
-      <section class="section bg-gray-100 mt-16">
-        <div class="px-5 pt-16">
-          <div class="flex justify-between">
-            <div class="basis-3/12 pb-5">
+      <section class="section md:bg-gray-100 mt-16">
+        <div class="px-5 pt-8 md:pt-16 border rounded-xl md:border-none md:rounded-none">
+          <div class="grid md:flex justify-between">
+            <div class="md:basis-3/12 pb-5 hidden md:block">
               <div class="px-5 flex justify-center">
                 <img src="./assets/img/main/img05.png" alt="" class="h-fit" />
               </div>
             </div>
-            <div class="basis-5/12 pb-5">
+            <div class="md:basis-5/12 pb-5">
               <div class="">
                 <div class="badge badge-purple w-fit">TRUSTED PLATFORM</div>
                 <h5 class="pt-5">Trusted Platform anytime & anywhere</h5>
                 <p class="pt-5 tracking-tighter">
-                  You can trade anytime and anywhere with the Bitypeer App for iOS and Android. Stay connected, and gain instant access to the
-                  crytoeconomy, in the palm of your hand.
+                  You can trade anytime and anywhere with the Bitypeer App for iOS and Android. Stay connected, and gain
+                  instant access to the crytoeconomy, in the palm of your hand.
                 </p>
               </div>
             </div>
-            <div class="basis-4/12 pb-5">
+            <div class="md:basis-4/12 pb-2 md:pb-5">
               <div class="flex justify-end items-end h-full pb-5">
                 <div>
                   <img src="./assets/img/main/img07.png" alt="" class="w-24" />
@@ -504,41 +844,40 @@
     </main>
 
     <!-- Footer -->
-    <footer class="px-5 py-5">
+    <footer class="px-5 py-5 bg-gray-100 pt-10 mt-16">
       <section class="section">
         <div class="px-5 pt-16">
-          <div class="grid grid-cols-12 pb-16 text-sm">
+          <div class="grid grid-cols-1 md:grid-cols-12 pb-16 text-sm gap-10 md:gap-0">
             <div class="col-span-2">
-              <div class="flex items-center gap-5">
+              <div class="flex items-center gap-2 md:gap-5">
                 <img src="./assets/img/logo/logo_small.png" alt="" class="h-10 w-10" />
                 <h5>Bitypeer</h5>
               </div>
             </div>
-            <div class="col-span-3 border-r px-10">
+            <div class="col-span-3 md:border-r md:px-10">
               <div>
-                <ul class="flex flex-col gap-5">
+                <div class="text-xl uppercase">About</div>
+                <ul class="flex flex-col gap-2 md:gap-4 pt-8">
                   <li>Terms of Use</li>
                   <li>Privacy Policy</li>
-                  <li>Open API Terms of Use</li>
+                  <li>Open API</li>
                   <li>FAQ</li>
-                  <li>Contact</li>
+                  <li>Guide</li>
                 </ul>
               </div>
             </div>
-            <div class="col-span-3 border-r px-10">
+            <div class="col-span-3 md:border-r md:px-10">
               <div>
-                <div class="">CONTACT</div>
-                <ul class="flex flex-col gap-5 pt-8">
-                  <li>Penc.case</li>
-                  <li>Aextexe 678191</li>
+                <div class="text-xl uppercase">Contact</div>
+                <ul class="flex flex-col gap-2 md:gap-4 pt-8 tracking-tighter">
+                  <li>3 квартал, д.31, Новая Игирма, Иркутская обл., 665685</li>
                   <li>infoService@bitypeer.com</li>
-                  <li>+7 985648-48684-18381</li>
                 </ul>
               </div>
             </div>
-            <div class="col-span-3 px-10">
+            <div class="col-span-3 md:px-10">
               <div>
-                <div>NEWSLETTER</div>
+                <div class="text-xl uppercase">NEWSLETTER</div>
                 <p class="pt-8">Subscribe our newseletter to get more free Cryto currency information and resource.</p>
               </div>
               <div>
@@ -552,7 +891,12 @@
                         viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg"
                       >
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                        ></path>
                       </svg>
                     </div>
                     <input
@@ -576,6 +920,7 @@
         </div>
       </section>
     </footer>
+    <script src="./assets/js/sideNav.js"></script>
     <script src="./assets/js/main.js"></script>
   </body>
 </html>
