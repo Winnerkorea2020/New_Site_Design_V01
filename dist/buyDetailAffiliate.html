@@ -15,19 +15,15 @@
 
     <title>Bitypeer Buyer Detail Affiliate Page</title>
   </head>
-  <body class="largeBody">
+  <body class="smallBody">
     <!-- Header -->
-    <header class="fixed top-0 left-0 w-full bg-white border-b-2 h-16 shadow-sm nav-header z-50">
+    <header class="fixed top-0 left-0 w-full bg-white border-b-2 h-16 shadow-sm nav-header">
       <!-- Top Navigation -->
       <section class="section">
         <div class="flex justify-between items-center h-16">
-          <div class="flex justify-end items-center px-12 w-full gap-5 text-sm">
+          <div class="flex justify-end px-12 w-full gap-5">
             <div>Sign in</div>
             <div>Sign up</div>
-            <div class="relative">
-              <i class="bx bxs-bell text-xl"></i>
-              <div class="absolute top-0 -right-0.5 w-3 h-3 bg-red-500 rounded-full"></div>
-            </div>
           </div>
 
           <div class="flex items-center">
@@ -132,54 +128,48 @@
     </header>
 
     <!-- Side Navi -->
-    <aside class="side-nav fixed left-0 top-0 h-screen bg-white border-r shadow-md" style="z-index: 100">
+    <aside class="side-nav fixed left-0 top-0 h-screen bg-white border-r shadow-md" style="z-index: 100000">
       <!-- Side Navigation Header -->
       <div class="px-5">
-        <a href="main.html" class="h-16 flex items-center justify-between">
+        <header class="h-16 flex items-center justify-between">
           <img src="./assets/img/logo/logo_small.png" class="h-8 w-8 mx-2" alt="" />
 
-          <div class="justify-between items-center w-full ml-2 gap-2 nav-brand__logo">
+          <div class="justify-between items-center w-full ml-5 gap-2 nav-brand__logo">
             <div>Bitypeer</div>
             <img src="./assets/img/logo/icons1.png" alt="" class="w-6 h-6" />
           </div>
-        </a>
+        </header>
         <!-- Side Menu List | Start -->
         <nav class="px-2 pt-16 flex justify-start">
-          <ul class="flex flex-col gap-8 uppercase">
+          <ul class="flex flex-col gap-5">
             <li>
-              <a href="sell.html" class="inline-flex items-center">
-                <i class="bx bxs-cart-alt bx-sm"></i>
+              <a href="#" class="inline-flex">
+                <img src="./assets/img/nav/sell.png" alt="" class="w-6 h-6" />
                 <span class="pl-3">Sell</span>
               </a>
             </li>
             <li>
-              <a href="buy.html" class="inline-flex items-center">
-                <i class="bx bxs-wallet bx-sm"></i>
+              <a href="#" class="inline-flex">
+                <img src="./assets/img/nav/buy.png" alt="" class="w-6 h-6" />
                 <span class="pl-3">Buy</span>
               </a>
             </li>
             <li>
-              <a href="affiliate.html" class="inline-flex items-center">
-                <i class="bx bxs-buildings bx-sm"></i>
+              <a href="#" class="inline-flex">
+                <img src="./assets/img/nav/affliation.png" alt="" class="w-6 h-6" />
                 <span class="pl-3">Affiliation</span>
               </a>
             </li>
             <li>
-              <a href="notice.html" class="inline-flex items-center">
-                <i class="bx bxs-megaphone bx-sm"></i>
+              <a href="#" class="inline-flex">
+                <img src="./assets/img/nav/notice.png" alt="" class="w-6 h-6" />
                 <span class="pl-3">Notice</span>
               </a>
             </li>
             <li>
-              <a href="affiliateSell.html" class="inline-flex items-center">
-                <i class="bx bxs-cart-add bx-sm"></i>
+              <a href="#" class="inline-flex">
+                <img src="./assets/img/nav/affiliateSell.png" alt="" class="w-6 h-6" />
                 <span class="pl-3">Affiliate Sell</span>
-              </a>
-            </li>
-            <li>
-              <a href="mypageBuyHistory.html" class="inline-flex items-center">
-                <i class="bx bxs-user-rectangle bx-sm"></i>
-                <span class="pl-3">My Page</span>
               </a>
             </li>
           </ul>
@@ -196,13 +186,13 @@
         <div class="pt-16">
           <!-- Sell Header Area | Start -->
           <div class="flex justify-between items-center">
-            <h4>Buy Coins Detail(Affiliate)</h4>
+            <h4>Buy Coins</h4>
             <div class="flex items-center gap-2 text-xs">
               <div>HOME</div>
               <div><i class="bx bx-chevron-right"></i></div>
               <div>Buy Coins</div>
               <div><i class="bx bx-chevron-right"></i></div>
-              <div>Buy Coins Detail(Affiliate)</div>
+              <div>Buy Coins Detail</div>
             </div>
           </div>
           <!-- Sell Header Area | End -->
@@ -227,12 +217,14 @@
                   <!-- Item 2 -->
                   <div class="grid grid-cols-2 text-sm gap-5">
                     <div class="col-span-1 rounded border px-5 py-2.5 bg-gray-300 text-start h-fit">Offer country</div>
-                    <div class="col-span-1 rounded px-5 py-2.5 text-start h-fit">Japan</div>
+                    <div class="col-span-1 rounded px-5 py-2.5 text-start h-fit">Non-Escrow</div>
                   </div>
 
                   <!-- Item 3 -->
                   <div class="grid grid-cols-2 text-sm gap-5">
-                    <div class="col-span-1 rounded border px-5 py-2.5 bg-gray-300 text-start h-fit">Amount of coins</div>
+                    <div class="col-span-1 rounded border px-5 py-2.5 bg-gray-300 text-start h-fit">
+                      Amount of coins
+                    </div>
                     <div class="col-span-1 rounded px-5 py-2.5 text-start h-fit">9,999,999,999,999,000</div>
                   </div>
 
@@ -270,7 +262,7 @@
 
                   <!-- Item 9 -->
                   <div class="grid grid-cols-2 text-sm gap-5">
-                    <div class="col-span-1 rounded border px-5 py-2.5 bg-gray-300 text-start h-fit">Registration Date</div>
+                    <div class="col-span-1 rounded border px-5 py-2.5 bg-gray-300 text-start h-fit">Registration</div>
                     <div class="col-span-1 rounded px-5 py-2.5 text-start h-fit">2021-01-31</div>
                   </div>
                 </div>
@@ -279,10 +271,18 @@
                 <div class="grid grid-cols-12 gap-5 mt-5 relative">
                   <div class="pt-2 flex items-center gap-2 absolute left-5 top-3 text-sm">
                     <div class="w-5 h-5 bg-red-500"></div>
-                    <div class="tracking-tight">The Coin is an affiliate coin and is escrowed for safe transactions.</div>
+                    <div class="tracking-tight">
+                      The Coin is an affiliate coin and is escrowed for safe transactions.
+                    </div>
                   </div>
                   <div class="col-span-9">
-                    <textarea name="" id="" cols="30" rows="10" class="border resize-none rounded-md h-full w-full p-8"></textarea>
+                    <textarea
+                      name=""
+                      id=""
+                      cols="30"
+                      rows="10"
+                      class="border resize-none rounded-md h-full w-full p-8"
+                    ></textarea>
                   </div>
                   <div class="col-span-3">
                     <div class="bg-gray-200 rounded-md px-6 py-8">
@@ -320,11 +320,13 @@
                     </div>
                     <div class="bg-white border rounded-md mt-5">
                       <div class="p-3 rounded-md">
-                        <h4 class="px-5 text-xl bg-red-500 text-white w-full text-center py-2 rounded">Caution</h4>
-                        <p class="px-2 mt-5 text-base tracking-tighter">
-                          Please note that 1:1 transactions are person-to-person transactions and have nothing to do with Bitypeer. For individual
-                          transactions, please meet in person and do 1:1 direct transactions.
-                        </p>
+                        <img src="" alt="" class="h-56 bg-blue-400" />
+                      </div>
+                      <div class="p-5">
+                        <div class="text-sm tracking-tighter">
+                          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem rerum quas debitis.
+                        </div>
+                        <div class="mt-5">$ 18.37</div>
                       </div>
                     </div>
                   </div>
@@ -349,22 +351,9 @@
                     id="messages"
                     class="flex flex-col space-y-4 p-3 overflow-y-auto scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-track-blue-lighter scrollbar-w-2 scrolling-touch"
                   >
-                    <div class="chat-information">
-                      <div class="bg-gray-200 p-5 rounded-md">
-                        <div class="tracking-tighter font-semibold">Information</div>
-                        <div class="pt-5">
-                          <ul>
-                            <li>Fill out this form to start chatting.</li>
-                            <li>Purchase request coin amount:</li>
-                            <li>Purchase request price:</li>
-                            <li>My wallet address:</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
                     <div class="chat-message">
                       <div class="flex items-end">
-                        <div class="flex flex-col space-y-2 text-base max-w-xs mx-2 order-2 items-start">
+                        <div class="flex flex-col space-y-2 text-xs max-w-xs mx-2 order-2 items-start">
                           <div>
                             <span class="px-4 py-2 rounded-lg inline-block rounded-bl-none bg-gray-300 text-gray-600"
                               >Can be verified on any platform using docker</span
@@ -380,10 +369,11 @@
                     </div>
                     <div class="chat-message">
                       <div class="flex items-end justify-end">
-                        <div class="flex flex-col space-y-2 text-base max-w-xs mx-2 order-1 items-end">
+                        <div class="flex flex-col space-y-2 text-xs max-w-xs mx-2 order-1 items-end">
                           <div>
                             <span class="px-4 py-2 rounded-lg inline-block rounded-br-none bg-blue-600 text-white"
-                              >Your error message says permission denied, npm global installs must be given root privileges.</span
+                              >Your error message says permission denied, npm global installs must be given root
+                              privileges.</span
                             >
                           </div>
                         </div>
@@ -396,7 +386,7 @@
                     </div>
                     <div class="chat-message">
                       <div class="flex items-end">
-                        <div class="flex flex-col space-y-2 text-base max-w-xs mx-2 order-2 items-start">
+                        <div class="flex flex-col space-y-2 text-xs max-w-xs mx-2 order-2 items-start">
                           <div>
                             <span class="px-4 py-2 rounded-lg inline-block bg-gray-300 text-gray-600"
                               >Command was run with root privileges. I'm sure about that.</span
@@ -408,7 +398,9 @@
                             >
                           </div>
                           <div>
-                            <span class="px-4 py-2 rounded-lg inline-block bg-gray-300 text-gray-600">FYI https://askubuntu.com/a/700266/510172</span>
+                            <span class="px-4 py-2 rounded-lg inline-block bg-gray-300 text-gray-600"
+                              >FYI https://askubuntu.com/a/700266/510172</span
+                            >
                           </div>
                           <div>
                             <span class="px-4 py-2 rounded-lg inline-block rounded-bl-none bg-gray-300 text-gray-600">
@@ -426,10 +418,11 @@
                     </div>
                     <div class="chat-message">
                       <div class="flex items-end justify-end">
-                        <div class="flex flex-col space-y-2 text-base max-w-xs mx-2 order-1 items-end">
+                        <div class="flex flex-col space-y-2 text-xs max-w-xs mx-2 order-1 items-end">
                           <div>
                             <span class="px-4 py-2 rounded-lg inline-block rounded-br-none bg-blue-600 text-white"
-                              >Any updates on this issue? I'm getting the same error when trying to install devtools. Thanks</span
+                              >Any updates on this issue? I'm getting the same error when trying to install devtools.
+                              Thanks</span
                             >
                           </div>
                         </div>
@@ -442,10 +435,11 @@
                     </div>
                     <div class="chat-message">
                       <div class="flex items-end">
-                        <div class="flex flex-col space-y-2 text-base max-w-xs mx-2 order-2 items-start">
+                        <div class="flex flex-col space-y-2 text-xs max-w-xs mx-2 order-2 items-start">
                           <div>
                             <span class="px-4 py-2 rounded-lg inline-block rounded-bl-none bg-gray-300 text-gray-600"
-                              >Thanks for your message David. I thought I'm alone with this issue. Please, ? the issue to support it :)</span
+                              >Thanks for your message David. I thought I'm alone with this issue. Please, ? the issue
+                              to support it :)</span
                             >
                           </div>
                         </div>
@@ -458,14 +452,16 @@
                     </div>
                     <div class="chat-message">
                       <div class="flex items-end justify-end">
-                        <div class="flex flex-col space-y-2 text-base max-w-xs mx-2 order-1 items-end">
+                        <div class="flex flex-col space-y-2 text-xs max-w-xs mx-2 order-1 items-end">
                           <div>
-                            <span class="px-4 py-2 rounded-lg inline-block bg-blue-600 text-white">Are you using sudo?</span>
+                            <span class="px-4 py-2 rounded-lg inline-block bg-blue-600 text-white"
+                              >Are you using sudo?</span
+                            >
                           </div>
                           <div>
                             <span class="px-4 py-2 rounded-lg inline-block rounded-br-none bg-blue-600 text-white"
-                              >Run this command sudo chown -R `whoami` /Users/{{your_user_profile}}/.npm-global/ then install the package globally
-                              without using sudo</span
+                              >Run this command sudo chown -R `whoami` /Users/{{your_user_profile}}/.npm-global/ then
+                              install the package globally without using sudo</span
                             >
                           </div>
                         </div>
@@ -478,7 +474,7 @@
                     </div>
                     <div class="chat-message">
                       <div class="flex items-end">
-                        <div class="flex flex-col space-y-2 text-base max-w-xs mx-2 order-2 items-start">
+                        <div class="flex flex-col space-y-2 text-xs max-w-xs mx-2 order-2 items-start">
                           <div>
                             <span class="px-4 py-2 rounded-lg inline-block bg-gray-300 text-gray-600"
                               >It seems like you are from Mac OS world. There is no /Users/ folder on linux ?</span
@@ -499,10 +495,11 @@
                     </div>
                     <div class="chat-message">
                       <div class="flex items-end justify-end">
-                        <div class="flex flex-col space-y-2 text-base max-w-xs mx-2 order-1 items-end">
+                        <div class="flex flex-col space-y-2 text-xs max-w-xs mx-2 order-1 items-end">
                           <div>
                             <span class="px-4 py-2 rounded-lg inline-block rounded-br-none bg-blue-600 text-white"
-                              >yes, I have a mac. I never had issues with root permission as well, but this helped me to solve the problem</span
+                              >yes, I have a mac. I never had issues with root permission as well, but this helped me to
+                              solve the problem</span
                             >
                           </div>
                         </div>
@@ -515,7 +512,7 @@
                     </div>
                     <div class="chat-message">
                       <div class="flex items-end">
-                        <div class="flex flex-col space-y-2 text-base max-w-xs mx-2 order-2 items-start">
+                        <div class="flex flex-col space-y-2 text-xs max-w-xs mx-2 order-2 items-start">
                           <div>
                             <span class="px-4 py-2 rounded-lg inline-block bg-gray-300 text-gray-600"
                               >I get the same error on Arch Linux (also with sudo)</span
@@ -527,7 +524,9 @@
                             >
                           </div>
                           <div>
-                            <span class="px-4 py-2 rounded-lg inline-block rounded-bl-none bg-gray-300 text-gray-600">even i am facing</span>
+                            <span class="px-4 py-2 rounded-lg inline-block rounded-bl-none bg-gray-300 text-gray-600"
+                              >even i am facing</span
+                            >
                           </div>
                         </div>
                         <img
@@ -540,6 +539,27 @@
                   </div>
                   <div class="border-t-2 border-gray-200 px-4 pt-4 mb-2 sm:mb-0">
                     <div class="relative flex">
+                      <span class="absolute inset-y-0 flex items-center">
+                        <button
+                          type="button"
+                          class="inline-flex items-center justify-center rounded-full h-12 w-12 transition duration-500 ease-in-out text-gray-500 hover:bg-gray-300 focus:outline-none"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            class="h-6 w-6 text-gray-600"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
+                            ></path>
+                          </svg>
+                        </button>
+                      </span>
                       <input
                         type="text"
                         placeholder="Write your message!"
@@ -548,10 +568,78 @@
                       <div class="absolute right-0 items-center inset-y-0 hidden sm:flex">
                         <button
                           type="button"
+                          class="inline-flex items-center justify-center rounded-full h-10 w-10 transition duration-500 ease-in-out text-gray-500 hover:bg-gray-300 focus:outline-none"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            class="h-6 w-6 text-gray-600"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"
+                            ></path>
+                          </svg>
+                        </button>
+                        <button
+                          type="button"
+                          class="inline-flex items-center justify-center rounded-full h-10 w-10 transition duration-500 ease-in-out text-gray-500 hover:bg-gray-300 focus:outline-none"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            class="h-6 w-6 text-gray-600"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
+                            ></path>
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"
+                            ></path>
+                          </svg>
+                        </button>
+                        <button
+                          type="button"
+                          class="inline-flex items-center justify-center rounded-full h-10 w-10 transition duration-500 ease-in-out text-gray-500 hover:bg-gray-300 focus:outline-none"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            class="h-6 w-6 text-gray-600"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                            ></path>
+                          </svg>
+                        </button>
+                        <button
+                          type="button"
                           class="inline-flex items-center justify-center rounded-lg px-4 py-3 transition duration-500 ease-in-out text-white bg-blue-500 hover:bg-blue-400 focus:outline-none"
                         >
                           <span class="font-bold">Send</span>
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-6 w-6 ml-2 transform rotate-90">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            class="h-6 w-6 ml-2 transform rotate-90"
+                          >
                             <path
                               d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"
                             ></path>
@@ -618,7 +706,12 @@
                         viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg"
                       >
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                        ></path>
                       </svg>
                     </div>
                     <input

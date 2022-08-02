@@ -15,19 +15,15 @@
 
     <title>Bitypeer Main Page</title>
   </head>
-  <body class="largeBody">
+  <body class="smallBody">
     <!-- Header -->
-    <header class="fixed top-0 left-0 w-full bg-white border-b-2 h-16 shadow-sm nav-header z-50">
+    <header class="fixed top-0 left-0 w-full bg-white border-b-2 h-16 shadow-sm nav-header">
       <!-- Top Navigation -->
       <section class="section">
         <div class="flex justify-between items-center h-16">
-          <div class="flex justify-end items-center px-12 w-full gap-5 text-sm">
+          <div class="flex justify-end px-12 w-full gap-5">
             <div>Sign in</div>
             <div>Sign up</div>
-            <div class="relative">
-              <i class="bx bxs-bell text-xl"></i>
-              <div class="absolute top-0 -right-0.5 w-3 h-3 bg-red-500 rounded-full"></div>
-            </div>
           </div>
 
           <div class="flex items-center">
@@ -132,54 +128,48 @@
     </header>
 
     <!-- Side Navi -->
-    <aside class="side-nav fixed left-0 top-0 h-screen bg-white border-r shadow-md" style="z-index: 100">
+    <aside class="side-nav fixed left-0 top-0 h-screen bg-white border-r shadow-md" style="z-index: 100000">
       <!-- Side Navigation Header -->
       <div class="px-5">
-        <a href="main.html" class="h-16 flex items-center justify-between">
+        <header class="h-16 flex items-center justify-between">
           <img src="./assets/img/logo/logo_small.png" class="h-8 w-8 mx-2" alt="" />
 
-          <div class="justify-between items-center w-full ml-2 gap-2 nav-brand__logo">
+          <div class="justify-between items-center w-full ml-5 gap-2 nav-brand__logo">
             <div>Bitypeer</div>
             <img src="./assets/img/logo/icons1.png" alt="" class="w-6 h-6" />
           </div>
-        </a>
+        </header>
         <!-- Side Menu List | Start -->
         <nav class="px-2 pt-16 flex justify-start">
-          <ul class="flex flex-col gap-8 uppercase">
+          <ul class="flex flex-col gap-5">
             <li>
-              <a href="sell.html" class="inline-flex items-center">
-                <i class="bx bxs-cart-alt bx-sm"></i>
+              <a href="#" class="inline-flex">
+                <img src="./assets/img/nav/sell.png" alt="" class="w-6 h-6" />
                 <span class="pl-3">Sell</span>
               </a>
             </li>
             <li>
-              <a href="buy.html" class="inline-flex items-center">
-                <i class="bx bxs-wallet bx-sm"></i>
+              <a href="#" class="inline-flex">
+                <img src="./assets/img/nav/buy.png" alt="" class="w-6 h-6" />
                 <span class="pl-3">Buy</span>
               </a>
             </li>
             <li>
-              <a href="affiliate.html" class="inline-flex items-center">
-                <i class="bx bxs-buildings bx-sm"></i>
+              <a href="#" class="inline-flex">
+                <img src="./assets/img/nav/affliation.png" alt="" class="w-6 h-6" />
                 <span class="pl-3">Affiliation</span>
               </a>
             </li>
             <li>
-              <a href="notice.html" class="inline-flex items-center">
-                <i class="bx bxs-megaphone bx-sm"></i>
+              <a href="#" class="inline-flex">
+                <img src="./assets/img/nav/notice.png" alt="" class="w-6 h-6" />
                 <span class="pl-3">Notice</span>
               </a>
             </li>
             <li>
-              <a href="affiliateSell.html" class="inline-flex items-center">
-                <i class="bx bxs-cart-add bx-sm"></i>
+              <a href="#" class="inline-flex">
+                <img src="./assets/img/nav/affiliateSell.png" alt="" class="w-6 h-6" />
                 <span class="pl-3">Affiliate Sell</span>
-              </a>
-            </li>
-            <li>
-              <a href="mypageBuyHistory.html" class="inline-flex items-center">
-                <i class="bx bxs-user-rectangle bx-sm"></i>
-                <span class="pl-3">My Page</span>
               </a>
             </li>
           </ul>
@@ -192,53 +182,55 @@
     <!-- Main -->
     <main class="p-0">
       <section class="section">
-        <div class="grid grid-cols-3 gap-5 w-full py-5">
+        <div class="flex items-center gap-5 w-full py-5">
           <!-- Intro ITEM 1 -->
-          <div class="col-span-2 bg-white border rounded-xl shadow-lg">
-            <div class="flex justify-between items-center">
-              <div class="pl-10">
+          <div class="basis-8/12 pl-24">
+            <div class="flex items-center justify-between gap-5 pr-44">
+              <div>
                 <p class="text-5xl">Buy & Sell <br />crypto in minutes</p>
-                <p class="text-xl mt-5">Trade Bitcon, Ethereum, USDT, and the top altcoins on the legendary crypto asset exchage.</p>
+                <p class="text-xl">
+                  Trade Bitcon, Ethereum, USDT, and the top altcoins on the legendary crypto asset exchage.
+                </p>
                 <button class="btn btn-rounded mt-8 btn-default">Sign up for free</button>
               </div>
-              <img src="./assets/img/background.png" alt="" class="p-5" />
+              <img src="./assets/img/background.png" alt="" />
             </div>
           </div>
           <!-- Intro ITEM 2 -->
-          <div class="col-span-1">
+          <div class="basis-4/12">
             <div class="grid grid-cols-2 gap-5">
               <!-- Item 1 -->
-              <div class="rounded-xl shadow-lg p-5 border">
+              <div class="rounded-xl shadow-lg p-5">
                 <img src="./assets/img/main/badge02.png" alt="" class="h-8 w-8" />
                 <div class="flex items-center gap-2">
                   <div class="text-xs">BTC/USDT</div>
                   <div class="badge bgdge-large badge-rounded badge-green">0.79%</div>
                 </div>
-                <div class="text-xl font-semibold">36,641.20</div>
+                <div class="text-2xl font-semibold">36,641.20</div>
                 <div class="text-lg tracking-tighter">36,641.20</div>
               </div>
               <!-- Item 2 -->
-              <div class="rounded-xl shadow-lg p-5 border">
+              <div class="rounded-xl shadow-lg p-5">
                 <img src="./assets/img/main/badge01.png" alt="" class="h-8 w-8" />
                 <div class="flex items-center gap-2">
                   <div class="text-xs">BTC/USDT</div>
                   <div class="badge bgdge-large badge-rounded badge-green">0.79%</div>
                 </div>
-                <div class="text-xl font-semibold">36,641.20</div>
+                <div class="text-2xl font-semibold">36,641.20</div>
                 <div class="text-lg tracking-tighter">36,641.20</div>
               </div>
               <!-- Item 3 -->
-              <div class="rounded-xl shadow-lg p-5 border">
+              <div class="rounded-xl shadow-lg p-5">
                 <img src="./assets/img/main/badge03.png" alt="" class="h-8 w-8" />
                 <div class="flex items-center gap-2">
                   <div class="text-xs">BTC/USDT</div>
                   <div class="badge bgdge-large badge-rounded badge-green">0.79%</div>
                 </div>
-                <div class="text-xl font-semibold">36,641.20</div>
+                <div class="text-2xl font-semibold">36,641.20</div>
                 <div class="text-lg tracking-tighter">36,641.20</div>
               </div>
               <!-- Item 4 -->
-              <div class="rounded-xl shadow-lg p-5 border">
+              <div class="rounded-xl shadow-lg p-5">
                 <img src="./assets/img/main/badge04.png" alt="" class="h-8 w-8" />
                 <div class="flex items-center gap-2">
                   <div class="text-xs">BTC/USDT</div>
@@ -255,154 +247,154 @@
       <section class="section">
         <div class="grid grid-cols-2 gap-5">
           <!-- Item 1 -->
-          <div class="bg-white px-5 shadow-xl rounded-xl border">
-            <div class="flex items-end justify-between py-5">
+          <div class="shadow-md">
+            <div class="flex items-end justify-between p-5">
               <div>Sell Coin</div>
-              <a href="sell.html" class="text-sm underline tracking-tighter">View All</a>
+              <a href="" class="text-xs underline">View All</a>
             </div>
             <!-- Table -->
-            <div class="overflow-x-auto">
+            <div class="overflow-x-auto shadow-md">
               <table class="w-full text-sm text-left text-gray-500">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-100">
                   <tr>
-                    <th scope="col" class="px-2.5 py-3">Seller</th>
-                    <th scope="col" class="px-2.5 py-3">Coin Name</th>
-                    <th scope="col" class="px-2.5 py-3">Amount of coins</th>
-                    <th scope="col" class="px-2.5 py-3">Price</th>
-                    <th scope="col" class="px-2.5 py-3">Currency</th>
-                    <th scope="col" class="px-2.5 py-3">State</th>
+                    <th scope="col" class="px-5 py-3">Seller</th>
+                    <th scope="col" class="px-5 py-3">Coin Name</th>
+                    <th scope="col" class="px-5 py-3">Amount of coins</th>
+                    <th scope="col" class="px-5 py-3">Price</th>
+                    <th scope="col" class="px-5 py-3">Currency</th>
+                    <th scope="col" class="px-5 py-3">State</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr class="bg-white border-b">
-                    <th scope="row" class="px-2.5 py-3 font-medium text-gray-900 whitespace-nowrap">
+                    <th scope="row" class="px-5 py-4 font-medium text-gray-900 whitespace-nowrap">
                       <a href="" class="inline-block underline">abcdefghijk111</a>
                     </th>
-                    <td class="px-2.5 py-3">WRC</td>
-                    <td class="px-2.5 py-3">9,999,999,999,999</td>
-                    <td class="px-2.5 py-3">90,000,000,000</td>
-                    <td class="px-2.5 py-3">KRW</td>
-                    <td class="px-2.5 py-3">
+                    <td class="px-5 py-4">WRC</td>
+                    <td class="px-5 py-4">9,999,999,999,999</td>
+                    <td class="px-5 py-4">90,000,000,000</td>
+                    <td class="px-5 py-4">KRW</td>
+                    <td class="px-5 py-4">
                       <a href="" class="inline-block btn btn-small btn-red">Buy</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
-                    <th scope="row" class="px-2.5 py-3 font-medium text-gray-900 whitespace-nowrap">
+                    <th scope="row" class="px-5 py-4 font-medium text-gray-900 whitespace-nowrap">
                       <a href="" class="inline-block underline">abcdefghijk111</a>
                     </th>
-                    <td class="px-2.5 py-3">WRC</td>
-                    <td class="px-2.5 py-3">9,999,999,999,999</td>
-                    <td class="px-2.5 py-3">90,000,000,000</td>
-                    <td class="px-2.5 py-3">KRW</td>
-                    <td class="px-2.5 py-3">
+                    <td class="px-5 py-4">WRC</td>
+                    <td class="px-5 py-4">9,999,999,999,999</td>
+                    <td class="px-5 py-4">90,000,000,000</td>
+                    <td class="px-5 py-4">KRW</td>
+                    <td class="px-5 py-4">
                       <a href="" class="inline-block btn btn-small btn-red">Buy</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
-                    <th scope="row" class="px-2.5 py-3 font-medium text-gray-900 whitespace-nowrap">
+                    <th scope="row" class="px-5 py-4 font-medium text-gray-900 whitespace-nowrap">
                       <a href="" class="inline-block underline">abcdefghijk111</a>
                     </th>
-                    <td class="px-2.5 py-3">WRC</td>
-                    <td class="px-2.5 py-3">9,999,999,999,999</td>
-                    <td class="px-2.5 py-3">90,000,000,000</td>
-                    <td class="px-2.5 py-3">KRW</td>
-                    <td class="px-2.5 py-3">
+                    <td class="px-5 py-4">WRC</td>
+                    <td class="px-5 py-4">9,999,999,999,999</td>
+                    <td class="px-5 py-4">90,000,000,000</td>
+                    <td class="px-5 py-4">KRW</td>
+                    <td class="px-5 py-4">
                       <a href="" class="inline-block btn btn-small btn-red">Buy</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
-                    <th scope="row" class="px-2.5 py-3 font-medium text-gray-900 whitespace-nowrap">
+                    <th scope="row" class="px-5 py-4 font-medium text-gray-900 whitespace-nowrap">
                       <a href="" class="inline-block underline">abcdefghijk111</a>
                     </th>
-                    <td class="px-2.5 py-3">WRC</td>
-                    <td class="px-2.5 py-3">9,999,999,999,999</td>
-                    <td class="px-2.5 py-3">90,000,000,000</td>
-                    <td class="px-2.5 py-3">KRW</td>
-                    <td class="px-2.5 py-3">
+                    <td class="px-5 py-4">WRC</td>
+                    <td class="px-5 py-4">9,999,999,999,999</td>
+                    <td class="px-5 py-4">90,000,000,000</td>
+                    <td class="px-5 py-4">KRW</td>
+                    <td class="px-5 py-4">
                       <a href="" class="inline-block btn btn-small btn-red">Buy</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
-                    <th scope="row" class="px-2.5 py-3 font-medium text-gray-900 whitespace-nowrap">
+                    <th scope="row" class="px-5 py-4 font-medium text-gray-900 whitespace-nowrap">
                       <a href="" class="inline-block underline">abcdefghijk111</a>
                     </th>
-                    <td class="px-2.5 py-3">WRC</td>
-                    <td class="px-2.5 py-3">9,999,999,999,999</td>
-                    <td class="px-2.5 py-3">90,000,000,000</td>
-                    <td class="px-2.5 py-3">KRW</td>
-                    <td class="px-2.5 py-3">
+                    <td class="px-5 py-4">WRC</td>
+                    <td class="px-5 py-4">9,999,999,999,999</td>
+                    <td class="px-5 py-4">90,000,000,000</td>
+                    <td class="px-5 py-4">KRW</td>
+                    <td class="px-5 py-4">
                       <a href="" class="inline-block btn btn-small btn-red">Buy</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
-                    <th scope="row" class="px-2.5 py-3 font-medium text-gray-900 whitespace-nowrap">
+                    <th scope="row" class="px-5 py-4 font-medium text-gray-900 whitespace-nowrap">
                       <a href="" class="inline-block underline">abcdefghijk111</a>
                     </th>
-                    <td class="px-2.5 py-3">WRC</td>
-                    <td class="px-2.5 py-3">9,999,999,999,999</td>
-                    <td class="px-2.5 py-3">90,000,000,000</td>
-                    <td class="px-2.5 py-3">KRW</td>
-                    <td class="px-2.5 py-3">
+                    <td class="px-5 py-4">WRC</td>
+                    <td class="px-5 py-4">9,999,999,999,999</td>
+                    <td class="px-5 py-4">90,000,000,000</td>
+                    <td class="px-5 py-4">KRW</td>
+                    <td class="px-5 py-4">
                       <a href="" class="inline-block btn btn-small btn-red">Buy</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
-                    <th scope="row" class="px-2.5 py-3 font-medium text-gray-900 whitespace-nowrap">
+                    <th scope="row" class="px-5 py-4 font-medium text-gray-900 whitespace-nowrap">
                       <a href="" class="inline-block underline">abcdefghijk111</a>
                     </th>
-                    <td class="px-2.5 py-3">WRC</td>
-                    <td class="px-2.5 py-3">9,999,999,999,999</td>
-                    <td class="px-2.5 py-3">90,000,000,000</td>
-                    <td class="px-2.5 py-3">KRW</td>
-                    <td class="px-2.5 py-3">
+                    <td class="px-5 py-4">WRC</td>
+                    <td class="px-5 py-4">9,999,999,999,999</td>
+                    <td class="px-5 py-4">90,000,000,000</td>
+                    <td class="px-5 py-4">KRW</td>
+                    <td class="px-5 py-4">
                       <a href="" class="inline-block btn btn-small btn-red">Buy</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
-                    <th scope="row" class="px-2.5 py-3 font-medium text-gray-900 whitespace-nowrap">
+                    <th scope="row" class="px-5 py-4 font-medium text-gray-900 whitespace-nowrap">
                       <a href="" class="inline-block underline">abcdefghijk111</a>
                     </th>
-                    <td class="px-2.5 py-3">WRC</td>
-                    <td class="px-2.5 py-3">9,999,999,999,999</td>
-                    <td class="px-2.5 py-3">90,000,000,000</td>
-                    <td class="px-2.5 py-3">KRW</td>
-                    <td class="px-2.5 py-3">
+                    <td class="px-5 py-4">WRC</td>
+                    <td class="px-5 py-4">9,999,999,999,999</td>
+                    <td class="px-5 py-4">90,000,000,000</td>
+                    <td class="px-5 py-4">KRW</td>
+                    <td class="px-5 py-4">
                       <a href="" class="inline-block btn btn-small btn-red">Buy</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
-                    <th scope="row" class="px-2.5 py-3 font-medium text-gray-900 whitespace-nowrap">
+                    <th scope="row" class="px-5 py-4 font-medium text-gray-900 whitespace-nowrap">
                       <a href="" class="inline-block underline">abcdefghijk111</a>
                     </th>
-                    <td class="px-2.5 py-3">WRC</td>
-                    <td class="px-2.5 py-3">9,999,999,999,999</td>
-                    <td class="px-2.5 py-3">90,000,000,000</td>
-                    <td class="px-2.5 py-3">KRW</td>
-                    <td class="px-2.5 py-3">
+                    <td class="px-5 py-4">WRC</td>
+                    <td class="px-5 py-4">9,999,999,999,999</td>
+                    <td class="px-5 py-4">90,000,000,000</td>
+                    <td class="px-5 py-4">KRW</td>
+                    <td class="px-5 py-4">
                       <a href="" class="inline-block btn btn-small btn-red">Buy</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
-                    <th scope="row" class="px-2.5 py-3 font-medium text-gray-900 whitespace-nowrap">
+                    <th scope="row" class="px-5 py-4 font-medium text-gray-900 whitespace-nowrap">
                       <a href="" class="inline-block underline">abcdefghijk111</a>
                     </th>
-                    <td class="px-2.5 py-3">WRC</td>
-                    <td class="px-2.5 py-3">9,999,999,999,999</td>
-                    <td class="px-2.5 py-3">90,000,000,000</td>
-                    <td class="px-2.5 py-3">KRW</td>
-                    <td class="px-2.5 py-3">
+                    <td class="px-5 py-4">WRC</td>
+                    <td class="px-5 py-4">9,999,999,999,999</td>
+                    <td class="px-5 py-4">90,000,000,000</td>
+                    <td class="px-5 py-4">KRW</td>
+                    <td class="px-5 py-4">
                       <a href="" class="inline-block btn btn-small btn-red">Buy</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
-                    <th scope="row" class="px-2.5 py-3 font-medium text-gray-900 whitespace-nowrap">
+                    <th scope="row" class="px-5 py-4 font-medium text-gray-900 whitespace-nowrap">
                       <a href="" class="inline-block underline">abcdefghijk111</a>
                     </th>
-                    <td class="px-2.5 py-3">WRC</td>
-                    <td class="px-2.5 py-3">9,999,999,999,999</td>
-                    <td class="px-2.5 py-3">90,000,000,000</td>
-                    <td class="px-2.5 py-3">KRW</td>
-                    <td class="px-2.5 py-3">
+                    <td class="px-5 py-4">WRC</td>
+                    <td class="px-5 py-4">9,999,999,999,999</td>
+                    <td class="px-5 py-4">90,000,000,000</td>
+                    <td class="px-5 py-4">KRW</td>
+                    <td class="px-5 py-4">
                       <a href="" class="inline-block btn btn-small btn-red">Buy</a>
                     </td>
                   </tr>
@@ -411,154 +403,154 @@
             </div>
           </div>
           <!-- Item 2 -->
-          <div class="bg-white px-5 shadow-xl rounded-xl border">
-            <div class="flex items-end justify-between py-5">
+          <div class="shadow-md">
+            <div class="flex items-end justify-between p-5">
               <div>Buy Coin</div>
-              <a href="buy.html" class="text-sm underline tracking-tighter">View All</a>
+              <a href="" class="text-xs underline">View All</a>
             </div>
             <!-- Table -->
-            <div class="overflow-x-auto">
+            <div class="overflow-x-auto shadow-md">
               <table class="w-full text-sm text-left text-gray-500">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-100">
                   <tr>
-                    <th scope="col" class="px-2.5 py-3">Seller</th>
-                    <th scope="col" class="px-2.5 py-3">Coin Name</th>
-                    <th scope="col" class="px-2.5 py-3">Amount of coins</th>
-                    <th scope="col" class="px-2.5 py-3">Price</th>
-                    <th scope="col" class="px-2.5 py-3">Currency</th>
-                    <th scope="col" class="px-2.5 py-3">State</th>
+                    <th scope="col" class="px-5 py-3">Seller</th>
+                    <th scope="col" class="px-5 py-3">Coin Name</th>
+                    <th scope="col" class="px-5 py-3">Amount of coins</th>
+                    <th scope="col" class="px-5 py-3">Price</th>
+                    <th scope="col" class="px-5 py-3">Currency</th>
+                    <th scope="col" class="px-5 py-3">State</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr class="bg-white border-b">
-                    <th scope="row" class="px-2.5 py-3 font-medium text-gray-900 whitespace-nowrap">
+                    <th scope="row" class="px-5 py-4 font-medium text-gray-900 whitespace-nowrap">
                       <a href="" class="inline-block underline">abcdefghijk111</a>
                     </th>
-                    <td class="px-2.5 py-3">WRC</td>
-                    <td class="px-2.5 py-3">9,999,999,999,999</td>
-                    <td class="px-2.5 py-3">90,000,000,000</td>
-                    <td class="px-2.5 py-3">KRW</td>
-                    <td class="px-2.5 py-3">
+                    <td class="px-5 py-4">WRC</td>
+                    <td class="px-5 py-4">9,999,999,999,999</td>
+                    <td class="px-5 py-4">90,000,000,000</td>
+                    <td class="px-5 py-4">KRW</td>
+                    <td class="px-5 py-4">
                       <a href="" class="inline-block btn btn-small btn-dark">Sell</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
-                    <th scope="row" class="px-2.5 py-3 font-medium text-gray-900 whitespace-nowrap">
+                    <th scope="row" class="px-5 py-4 font-medium text-gray-900 whitespace-nowrap">
                       <a href="" class="inline-block underline">abcdefghijk111</a>
                     </th>
-                    <td class="px-2.5 py-3">WRC</td>
-                    <td class="px-2.5 py-3">9,999,999,999,999</td>
-                    <td class="px-2.5 py-3">90,000,000,000</td>
-                    <td class="px-2.5 py-3">KRW</td>
-                    <td class="px-2.5 py-3">
+                    <td class="px-5 py-4">WRC</td>
+                    <td class="px-5 py-4">9,999,999,999,999</td>
+                    <td class="px-5 py-4">90,000,000,000</td>
+                    <td class="px-5 py-4">KRW</td>
+                    <td class="px-5 py-4">
                       <a href="" class="inline-block btn btn-small btn-dark">Sell</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
-                    <th scope="row" class="px-2.5 py-3 font-medium text-gray-900 whitespace-nowrap">
+                    <th scope="row" class="px-5 py-4 font-medium text-gray-900 whitespace-nowrap">
                       <a href="" class="inline-block underline">abcdefghijk111</a>
                     </th>
-                    <td class="px-2.5 py-3">WRC</td>
-                    <td class="px-2.5 py-3">9,999,999,999,999</td>
-                    <td class="px-2.5 py-3">90,000,000,000</td>
-                    <td class="px-2.5 py-3">KRW</td>
-                    <td class="px-2.5 py-3">
+                    <td class="px-5 py-4">WRC</td>
+                    <td class="px-5 py-4">9,999,999,999,999</td>
+                    <td class="px-5 py-4">90,000,000,000</td>
+                    <td class="px-5 py-4">KRW</td>
+                    <td class="px-5 py-4">
                       <a href="" class="inline-block btn btn-small btn-dark">Sell</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
-                    <th scope="row" class="px-2.5 py-3 font-medium text-gray-900 whitespace-nowrap">
+                    <th scope="row" class="px-5 py-4 font-medium text-gray-900 whitespace-nowrap">
                       <a href="" class="inline-block underline">abcdefghijk111</a>
                     </th>
-                    <td class="px-2.5 py-3">WRC</td>
-                    <td class="px-2.5 py-3">9,999,999,999,999</td>
-                    <td class="px-2.5 py-3">90,000,000,000</td>
-                    <td class="px-2.5 py-3">KRW</td>
-                    <td class="px-2.5 py-3">
+                    <td class="px-5 py-4">WRC</td>
+                    <td class="px-5 py-4">9,999,999,999,999</td>
+                    <td class="px-5 py-4">90,000,000,000</td>
+                    <td class="px-5 py-4">KRW</td>
+                    <td class="px-5 py-4">
                       <a href="" class="inline-block btn btn-small btn-dark">Sell</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
-                    <th scope="row" class="px-2.5 py-3 font-medium text-gray-900 whitespace-nowrap">
+                    <th scope="row" class="px-5 py-4 font-medium text-gray-900 whitespace-nowrap">
                       <a href="" class="inline-block underline">abcdefghijk111</a>
                     </th>
-                    <td class="px-2.5 py-3">WRC</td>
-                    <td class="px-2.5 py-3">9,999,999,999,999</td>
-                    <td class="px-2.5 py-3">90,000,000,000</td>
-                    <td class="px-2.5 py-3">KRW</td>
-                    <td class="px-2.5 py-3">
+                    <td class="px-5 py-4">WRC</td>
+                    <td class="px-5 py-4">9,999,999,999,999</td>
+                    <td class="px-5 py-4">90,000,000,000</td>
+                    <td class="px-5 py-4">KRW</td>
+                    <td class="px-5 py-4">
                       <a href="" class="inline-block btn btn-small btn-dark">Sell</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
-                    <th scope="row" class="px-2.5 py-3 font-medium text-gray-900 whitespace-nowrap">
+                    <th scope="row" class="px-5 py-4 font-medium text-gray-900 whitespace-nowrap">
                       <a href="" class="inline-block underline">abcdefghijk111</a>
                     </th>
-                    <td class="px-2.5 py-3">WRC</td>
-                    <td class="px-2.5 py-3">9,999,999,999,999</td>
-                    <td class="px-2.5 py-3">90,000,000,000</td>
-                    <td class="px-2.5 py-3">KRW</td>
-                    <td class="px-2.5 py-3">
+                    <td class="px-5 py-4">WRC</td>
+                    <td class="px-5 py-4">9,999,999,999,999</td>
+                    <td class="px-5 py-4">90,000,000,000</td>
+                    <td class="px-5 py-4">KRW</td>
+                    <td class="px-5 py-4">
                       <a href="" class="inline-block btn btn-small btn-dark">Sell</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
-                    <th scope="row" class="px-2.5 py-3 font-medium text-gray-900 whitespace-nowrap">
+                    <th scope="row" class="px-5 py-4 font-medium text-gray-900 whitespace-nowrap">
                       <a href="" class="inline-block underline">abcdefghijk111</a>
                     </th>
-                    <td class="px-2.5 py-3">WRC</td>
-                    <td class="px-2.5 py-3">9,999,999,999,999</td>
-                    <td class="px-2.5 py-3">90,000,000,000</td>
-                    <td class="px-2.5 py-3">KRW</td>
-                    <td class="px-2.5 py-3">
+                    <td class="px-5 py-4">WRC</td>
+                    <td class="px-5 py-4">9,999,999,999,999</td>
+                    <td class="px-5 py-4">90,000,000,000</td>
+                    <td class="px-5 py-4">KRW</td>
+                    <td class="px-5 py-4">
                       <a href="" class="inline-block btn btn-small btn-dark">Sell</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
-                    <th scope="row" class="px-2.5 py-3 font-medium text-gray-900 whitespace-nowrap">
+                    <th scope="row" class="px-5 py-4 font-medium text-gray-900 whitespace-nowrap">
                       <a href="" class="inline-block underline">abcdefghijk111</a>
                     </th>
-                    <td class="px-2.5 py-3">WRC</td>
-                    <td class="px-2.5 py-3">9,999,999,999,999</td>
-                    <td class="px-2.5 py-3">90,000,000,000</td>
-                    <td class="px-2.5 py-3">KRW</td>
-                    <td class="px-2.5 py-3">
+                    <td class="px-5 py-4">WRC</td>
+                    <td class="px-5 py-4">9,999,999,999,999</td>
+                    <td class="px-5 py-4">90,000,000,000</td>
+                    <td class="px-5 py-4">KRW</td>
+                    <td class="px-5 py-4">
                       <a href="" class="inline-block btn btn-small btn-dark">Sell</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
-                    <th scope="row" class="px-2.5 py-3 font-medium text-gray-900 whitespace-nowrap">
+                    <th scope="row" class="px-5 py-4 font-medium text-gray-900 whitespace-nowrap">
                       <a href="" class="inline-block underline">abcdefghijk111</a>
                     </th>
-                    <td class="px-2.5 py-3">WRC</td>
-                    <td class="px-2.5 py-3">9,999,999,999,999</td>
-                    <td class="px-2.5 py-3">90,000,000,000</td>
-                    <td class="px-2.5 py-3">KRW</td>
-                    <td class="px-2.5 py-3">
+                    <td class="px-5 py-4">WRC</td>
+                    <td class="px-5 py-4">9,999,999,999,999</td>
+                    <td class="px-5 py-4">90,000,000,000</td>
+                    <td class="px-5 py-4">KRW</td>
+                    <td class="px-5 py-4">
                       <a href="" class="inline-block btn btn-small btn-dark">Sell</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
-                    <th scope="row" class="px-2.5 py-3 font-medium text-gray-900 whitespace-nowrap">
+                    <th scope="row" class="px-5 py-4 font-medium text-gray-900 whitespace-nowrap">
                       <a href="" class="inline-block underline">abcdefghijk111</a>
                     </th>
-                    <td class="px-2.5 py-3">WRC</td>
-                    <td class="px-2.5 py-3">9,999,999,999,999</td>
-                    <td class="px-2.5 py-3">90,000,000,000</td>
-                    <td class="px-2.5 py-3">KRW</td>
-                    <td class="px-2.5 py-3">
+                    <td class="px-5 py-4">WRC</td>
+                    <td class="px-5 py-4">9,999,999,999,999</td>
+                    <td class="px-5 py-4">90,000,000,000</td>
+                    <td class="px-5 py-4">KRW</td>
+                    <td class="px-5 py-4">
                       <a href="" class="inline-block btn btn-small btn-dark">Sell</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
-                    <th scope="row" class="px-2.5 py-3 font-medium text-gray-900 whitespace-nowrap">
+                    <th scope="row" class="px-5 py-4 font-medium text-gray-900 whitespace-nowrap">
                       <a href="" class="inline-block underline">abcdefghijk111</a>
                     </th>
-                    <td class="px-2.5 py-3">WRC</td>
-                    <td class="px-2.5 py-3">9,999,999,999,999</td>
-                    <td class="px-2.5 py-3">90,000,000,000</td>
-                    <td class="px-2.5 py-3">KRW</td>
-                    <td class="px-2.5 py-3">
+                    <td class="px-5 py-4">WRC</td>
+                    <td class="px-5 py-4">9,999,999,999,999</td>
+                    <td class="px-5 py-4">90,000,000,000</td>
+                    <td class="px-5 py-4">KRW</td>
+                    <td class="px-5 py-4">
                       <a href="" class="inline-block btn btn-small btn-dark">Sell</a>
                     </td>
                   </tr>
@@ -569,13 +561,13 @@
         </div>
       </section>
       <section class="section">
-        <div class="mt-8">
+        <div>
           <div class="pt-16">
             <h2 class="text-center">
               Become a cryto <br />
               trader in seconds
             </h2>
-            <p class="text-center mt-2">We've got everthing you need to start trading.</p>
+            <p class="text-center">We've got everthing you need to start trading.</p>
           </div>
           <!-- Card ITEMS -->
 
@@ -584,14 +576,14 @@
               <div class="flex justify-center">
                 <img src="./assets/img/main/img01.png" alt="" class="w-44" />
               </div>
-              <div class="w-full">
-                <h4 class="tracking-tighter py-8 h-28">Buy & Sell Crypto Security</h4>
-                <p class="text-gray-500 tracking-tighter h-36">
-                  We use best-in-class tools and practices like data analytics to maintain the highest level of security for our users and combat
-                  money lanundering and fraud.
+              <div>
+                <h4 class="tracking-tighter py-8">Buy & Sell Crypto Security</h4>
+                <p class="text-gray-500 tracking-tighter h-32">
+                  We use best-in-class tools and practices like data analytics to maintain the highest level of security
+                  for our users and combat money lanundering and fraud.
                 </p>
-                <div class="mt-5">
-                  <a href="" class="btn btn-exsmall btn-rounded btn-light">Buy crypto</a>
+                <div class="px-20 mt-5">
+                  <a href="" class="block btn btn-rounded btn-light">Buy crypto</a>
                 </div>
               </div>
             </div>
@@ -600,13 +592,13 @@
                 <img src="./assets/img/main/img02.png" alt="" class="w-44" />
               </div>
               <div>
-                <h4 class="tracking-tighter py-8 h-28">Exchange</h4>
-                <p class="text-gray-500 tracking-tighter h-36">
-                  Bitypeer provides order books with the highest liquidity to allow users to easily exchange Bitcoin, Ethereum and many other
-                  affiliated digital assets in a minimal way.
+                <h4 class="tracking-tighter py-8">Exchange</h4>
+                <p class="text-gray-500 tracking-tighter h-32">
+                  Bitypeer provides order books with the highest liquidity to allow users to easily exchange Bitcoin,
+                  Ethereum and many other affiliated digital assets in a minimal way.
                 </p>
-                <div class="mt-5">
-                  <a href="" class="btn btn-exsmall btn-rounded btn-light">Trade now</a>
+                <div class="px-20 mt-5">
+                  <a href="" class="block btn btn-rounded btn-light">Trade now</a>
                 </div>
               </div>
             </div>
@@ -615,12 +607,13 @@
                 <img src="./assets/img/main/img03.png" alt="" class="w-44" />
               </div>
               <div>
-                <h4 class="tracking-tighter py-8 h-28">No Fee</h4>
-                <p class="text-gray-500 tracking-tighter h-36">
-                  There are no fees when transacting with counterparties at the price and payment method you want on Bitypeer.
+                <h4 class="tracking-tighter py-8">No Fee</h4>
+                <p class="text-gray-500 tracking-tighter h-32">
+                  There are no fees when transacting with counterparties at the price and payment method you want on
+                  Bitypeer.
                 </p>
-                <div class="mt-5">
-                  <a href="" class="btn btn-exsmall btn-rounded btn-light">Learn now</a>
+                <div class="px-20 mt-5">
+                  <a href="" class="block btn btn-rounded btn-light">Learn now</a>
                 </div>
               </div>
             </div>
@@ -629,12 +622,12 @@
                 <img src="./assets/img/main/img04.png" alt="" class="w-44" />
               </div>
               <div>
-                <h4 class="tracking-tighter py-8 h-28">Affiliate Auto Escrow</h4>
-                <p class="text-gray-500 tracking-tighter h-36">
+                <h4 class="tracking-tighter py-8">Affiliate Auto Escrow</h4>
+                <p class="text-gray-500 tracking-tighter h-32">
                   We automatically escrow the coins of our affiliated companies. So you can trade with confidence.
                 </p>
-                <div class="mt-5">
-                  <a href="" class="btn btn-exsmall btn-rounded btn-light">Learn now</a>
+                <div class="px-20 mt-5">
+                  <a href="" class="block btn btn-rounded btn-light">Learn now</a>
                 </div>
               </div>
             </div>
@@ -642,22 +635,23 @@
           <!-- Card Ites Description 2 -->
           <div class="grid grid-cols-2 gap-5 pt-16">
             <!-- Items 1 -->
-            <div class="flex items-center w-full gap-5 p-5">
+            <div class="flex items-center w-full gap-5 border shadow-md p-5">
               <div class="basis-4/12">
                 <img src="./assets/img/main/img05.png" alt="" />
               </div>
               <div class="basis-8/12">
-                <div class="text-3xl tracking-tighter">Bitypeer Automapping</div>
+                <div class="text-3xl tracking-tighter">Bitpeer Automapping</div>
                 <div class="mt-5">
                   <p class="text-gray-400 text-xs">
-                    Auto mapping is provided only for company coins affiliated with us. When the buyer enters the quantity and price, they can
-                    purchase coins by automatically mapping the appropriate seller. Only we can do it.
+                    Auto mapping is provided only for company coins affiliated with us. When the buyer enters the
+                    quantity and price, they can purchase coins by automatically mapping the appropriate seller. Only we
+                    can do it.
                   </p>
                 </div>
               </div>
             </div>
             <!-- Items 2 -->
-            <div class="flex flex-row-reverse items-center w-full gap-5 p-5">
+            <div class="flex flex-row-reverse items-center w-full gap-5 border shadow-md p-5">
               <div class="basis-4/12">
                 <img src="./assets/img/main/img06.png" alt="" />
               </div>
@@ -665,8 +659,8 @@
                 <div class="text-3xl tracking-tighter">Trusted platform anytime & anywhere</div>
                 <div class="mt-5">
                   <p class="text-gray-400 text-xs">
-                    You can trade anytime and anywhere with the Bitypeer app for iOS and Android. Stay connected, and gain instant access to the
-                    crytoeconomy, in the palm of your hand.
+                    You can trade anytime and anywhere with the Bitypeer app for iOS and Android. Stay connected, and
+                    gain instant access to the crytoeconomy, in the palm of your hand.
                   </p>
                 </div>
               </div>
@@ -676,14 +670,14 @@
       </section>
 
       <!-- App Download -->
-      <section class="section bg-gray-200 mt-12">
+      <section class="section bg-gray-200">
         <div class="text-center tracking-tighter pt-16">
           <h4 class="">Download Bitypeer moblie app</h4>
           <div class="pt-2 text-xs">Available for Android and iOS</div>
         </div>
         <div class="grid grid-cols-2 items-center pt-5 pb-16">
           <!-- Download Android -->
-          <div class="flex justify-center items-center px-2.5">
+          <div class="flex justify-center items-center px-5">
             <div>
               <img src="./assets/img/main/img07.png" alt="" class="w-full h-20" />
             </div>
@@ -705,11 +699,13 @@
         </div>
       </section>
 
-      <section class="section bg-white">
+      <section class="section">
         <div class="px-5">
           <div class="text-center">
             <h3 class="pt-16">How it work</h3>
-            <p class="pt-8">Bitpeer is an instant tradable, peerable content block libray built on the Bore 1.0 Mainnet.</p>
+            <p class="pt-8">
+              Bitpeer is an instant tradable, peerable content block libray built on the Bore 1.0 Mainnet.
+            </p>
           </div>
         </div>
         <!-- How it work Items -->
@@ -726,8 +722,8 @@
               </div>
               <div class="pt-5">
                 <p class="tracking-tighter text-center">
-                  Bitypeer can be download as a free Android app or iOS for instant trading. Of course, you can also trade on the PC web and mobile
-                  web.
+                  Bitypeer can be download as a free Android app or iOS for instant trading. Of course, you can also
+                  trade on the PC web and mobile web.
                 </p>
               </div>
             </div>
@@ -757,7 +753,8 @@
               </div>
               <div class="pt-5">
                 <p class="tracking-tighter text-center">
-                  You can buy or sell, and we provied free escrow for safer transactions. You can also directly trade major coins(BTC, ETC, TRX, etc.)
+                  You can buy or sell, and we provied free escrow for safer transactions. You can also directly trade
+                  major coins(BTC, ETC, TRX, etc.)
                 </p>
               </div>
             </div>
@@ -772,8 +769,8 @@
               </div>
               <div class="pt-5">
                 <p class="tracking-tighter text-center">
-                  When the 1:1 transaction is completed. you can use the escow platform to receive the coin sale amount into your bankbook. Of course,
-                  you can also trade your own coins, so you can get paid.
+                  When the 1:1 transaction is completed. you can use the escow platform to receive the coin sale amount
+                  into your bankbook. Of course, you can also trade your own coins, so you can get paid.
                 </p>
               </div>
             </div>
@@ -783,7 +780,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="px-5 py-5 bg-white pt-10">
+    <footer class="px-5 py-5">
       <section class="section">
         <div class="px-5 pt-16">
           <div class="grid grid-cols-12 pb-16 text-sm">
@@ -831,7 +828,12 @@
                         viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg"
                       >
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                        ></path>
                       </svg>
                     </div>
                     <input

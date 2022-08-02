@@ -15,19 +15,15 @@
 
     <title>Bitypeer Buy Page</title>
   </head>
-  <body class="largeBody">
+  <body class="smallBody">
     <!-- Header -->
-    <header class="fixed top-0 left-0 w-full bg-white border-b-2 h-16 shadow-sm nav-header z-50">
+    <header class="fixed top-0 left-0 w-full bg-white border-b-2 h-16 shadow-sm nav-header">
       <!-- Top Navigation -->
       <section class="section">
         <div class="flex justify-between items-center h-16">
-          <div class="flex justify-end items-center px-12 w-full gap-5 text-sm">
+          <div class="flex justify-end px-12 w-full gap-5">
             <div>Sign in</div>
             <div>Sign up</div>
-            <div class="relative">
-              <i class="bx bxs-bell text-xl"></i>
-              <div class="absolute top-0 -right-0.5 w-3 h-3 bg-red-500 rounded-full"></div>
-            </div>
           </div>
 
           <div class="flex items-center">
@@ -132,54 +128,48 @@
     </header>
 
     <!-- Side Navi -->
-    <aside class="side-nav fixed left-0 top-0 h-screen bg-white border-r shadow-md" style="z-index: 100">
+    <aside class="side-nav fixed left-0 top-0 h-screen bg-white border-r shadow-md" style="z-index: 100000">
       <!-- Side Navigation Header -->
       <div class="px-5">
-        <a href="main.html" class="h-16 flex items-center justify-between">
+        <header class="h-16 flex items-center justify-between">
           <img src="./assets/img/logo/logo_small.png" class="h-8 w-8 mx-2" alt="" />
 
-          <div class="justify-between items-center w-full ml-2 gap-2 nav-brand__logo">
+          <div class="justify-between items-center w-full ml-5 gap-2 nav-brand__logo">
             <div>Bitypeer</div>
             <img src="./assets/img/logo/icons1.png" alt="" class="w-6 h-6" />
           </div>
-        </a>
+        </header>
         <!-- Side Menu List | Start -->
         <nav class="px-2 pt-16 flex justify-start">
-          <ul class="flex flex-col gap-8 uppercase">
+          <ul class="flex flex-col gap-5">
             <li>
-              <a href="sell.html" class="inline-flex items-center">
-                <i class="bx bxs-cart-alt bx-sm"></i>
+              <a href="#" class="inline-flex">
+                <img src="./assets/img/nav/sell.png" alt="" class="w-6 h-6" />
                 <span class="pl-3">Sell</span>
               </a>
             </li>
             <li>
-              <a href="buy.html" class="inline-flex items-center">
-                <i class="bx bxs-wallet bx-sm"></i>
+              <a href="#" class="inline-flex">
+                <img src="./assets/img/nav/buy.png" alt="" class="w-6 h-6" />
                 <span class="pl-3">Buy</span>
               </a>
             </li>
             <li>
-              <a href="affiliate.html" class="inline-flex items-center">
-                <i class="bx bxs-buildings bx-sm"></i>
+              <a href="#" class="inline-flex">
+                <img src="./assets/img/nav/affliation.png" alt="" class="w-6 h-6" />
                 <span class="pl-3">Affiliation</span>
               </a>
             </li>
             <li>
-              <a href="notice.html" class="inline-flex items-center">
-                <i class="bx bxs-megaphone bx-sm"></i>
+              <a href="#" class="inline-flex">
+                <img src="./assets/img/nav/notice.png" alt="" class="w-6 h-6" />
                 <span class="pl-3">Notice</span>
               </a>
             </li>
             <li>
-              <a href="affiliateSell.html" class="inline-flex items-center">
-                <i class="bx bxs-cart-add bx-sm"></i>
+              <a href="#" class="inline-flex">
+                <img src="./assets/img/nav/affiliateSell.png" alt="" class="w-6 h-6" />
                 <span class="pl-3">Affiliate Sell</span>
-              </a>
-            </li>
-            <li>
-              <a href="mypageBuyHistory.html" class="inline-flex items-center">
-                <i class="bx bxs-user-rectangle bx-sm"></i>
-                <span class="pl-3">My Page</span>
               </a>
             </li>
           </ul>
@@ -212,7 +202,11 @@
                   <!-- Coin Name -->
                   <div class="">
                     <label class="" for="">Coin Name</label>
-                    <select name="" id="" class="w-full border-2 mt-2 px-2.5 py-2 border-gray-300 rounded-xl tracking-tighter">
+                    <select
+                      name=""
+                      id=""
+                      class="w-full border-2 mt-2 px-2.5 py-2 border-gray-300 rounded-xl tracking-tighter"
+                    >
                       <option value="">WRC</option>
                     </select>
                   </div>
@@ -229,7 +223,11 @@
                   <!-- CURRENCY -->
                   <div class="">
                     <label class="" for="">Currency</label>
-                    <select name="" id="" class="w-full border-2 mt-2 pl-2.5 pr-10 py-2 border-gray-300 rounded-xl tracking-tighter">
+                    <select
+                      name=""
+                      id=""
+                      class="w-full border-2 mt-2 pl-2.5 pr-10 py-2 border-gray-300 rounded-xl tracking-tighter"
+                    >
                       <option value="">Currency Selection</option>
                     </select>
                   </div>
@@ -272,7 +270,11 @@
                         class="w-full border-2 mt-2 px-2.5 py-2 border-gray-300 rounded-xl tracking-tighter text-right placeholder:text-right"
                       />
                     </div>
-                    <select name="" id="" class="w-full border-2 mt-2 px-2.5 py-2 border-gray-300 rounded-xl tracking-tighter">
+                    <select
+                      name=""
+                      id=""
+                      class="w-full border-2 mt-2 px-2.5 py-2 border-gray-300 rounded-xl tracking-tighter"
+                    >
                       <option value="" class="">Select</option>
                     </select>
                   </div>
@@ -313,12 +315,12 @@
                         <td class="px-5 py-4">90,000,000,000</td>
                         <td class="px-5 py-4">United States of America</td>
                         <td class="px-5 py-4">
-                          <div class="badge badge-small badge-red whitespace-nowrap">Non-Escrow</div>
+                          <div class="badge badge-small badge-green">Escrow</div>
                         </td>
                         <td class="px-5 py-4">USD</td>
                         <td class="px-5 py-4">FREE</td>
                         <td class="px-5 py-4">
-                          <a href="buyDetail.html" class="inline-block btn btn-small btn-red">Buy</a>
+                          <a href="" class="inline-block btn btn-small btn-red">Buy</a>
                         </td>
                       </tr>
                       <tr class="bg-white border-b">
@@ -335,7 +337,7 @@
                         <td class="px-5 py-4">USD</td>
                         <td class="px-5 py-4">FREE</td>
                         <td class="px-5 py-4">
-                          <a href="buyDetailAffiliate.html" class="inline-block btn btn-small btn-red">Buy</a>
+                          <a href="" class="inline-block btn btn-small btn-red">Buy</a>
                         </td>
                       </tr>
                       <tr class="bg-white border-b">
@@ -352,7 +354,7 @@
                         <td class="px-5 py-4">USD</td>
                         <td class="px-5 py-4">FREE</td>
                         <td class="px-5 py-4">
-                          <a href="buyDetailAffiliate.html" class="inline-block btn btn-small btn-red">Buy</a>
+                          <a href="" class="inline-block btn btn-small btn-red">Buy</a>
                         </td>
                       </tr>
                       <tr class="bg-white border-b">
@@ -369,7 +371,7 @@
                         <td class="px-5 py-4">USD</td>
                         <td class="px-5 py-4">FREE</td>
                         <td class="px-5 py-4">
-                          <a href="buyDetailAffiliate.html" class="inline-block btn btn-small btn-red">Buy</a>
+                          <a href="" class="inline-block btn btn-small btn-red">Buy</a>
                         </td>
                       </tr>
                       <tr class="bg-white border-b">
@@ -386,7 +388,7 @@
                         <td class="px-5 py-4">USD</td>
                         <td class="px-5 py-4">FREE</td>
                         <td class="px-5 py-4">
-                          <a href="buyDetailAffiliate.html" class="inline-block btn btn-small btn-red">Buy</a>
+                          <a href="" class="inline-block btn btn-small btn-red">Buy</a>
                         </td>
                       </tr>
                       <tr class="bg-white border-b">
@@ -403,7 +405,7 @@
                         <td class="px-5 py-4">USD</td>
                         <td class="px-5 py-4">FREE</td>
                         <td class="px-5 py-4">
-                          <a href="buyDetailAffiliate.html" class="inline-block btn btn-small btn-red">Buy</a>
+                          <a href="" class="inline-block btn btn-small btn-red">Buy</a>
                         </td>
                       </tr>
                       <tr class="bg-white border-b">
@@ -420,7 +422,7 @@
                         <td class="px-5 py-4">USD</td>
                         <td class="px-5 py-4">FREE</td>
                         <td class="px-5 py-4">
-                          <a href="buyDetailAffiliate.html" class="inline-block btn btn-small btn-red">Buy</a>
+                          <a href="" class="inline-block btn btn-small btn-red">Buy</a>
                         </td>
                       </tr>
                       <tr class="bg-white border-b">
@@ -437,7 +439,7 @@
                         <td class="px-5 py-4">USD</td>
                         <td class="px-5 py-4">FREE</td>
                         <td class="px-5 py-4">
-                          <a href="buyDetailAffiliate.html" class="inline-block btn btn-small btn-red">Buy</a>
+                          <a href="" class="inline-block btn btn-small btn-red">Buy</a>
                         </td>
                       </tr>
                       <tr class="bg-white border-b">
@@ -454,7 +456,7 @@
                         <td class="px-5 py-4">USD</td>
                         <td class="px-5 py-4">FREE</td>
                         <td class="px-5 py-4">
-                          <a href="buyDetailAffiliate.html" class="inline-block btn btn-small btn-red">Buy</a>
+                          <a href="" class="inline-block btn btn-small btn-red">Buy</a>
                         </td>
                       </tr>
                       <tr class="bg-white border-b">
@@ -471,7 +473,7 @@
                         <td class="px-5 py-4">USD</td>
                         <td class="px-5 py-4">FREE</td>
                         <td class="px-5 py-4">
-                          <a href="buyDetailAffiliate.html" class="inline-block btn btn-small btn-red">Buy</a>
+                          <a href="" class="inline-block btn btn-small btn-red">Buy</a>
                         </td>
                       </tr>
                       <tr class="bg-white border-b">
@@ -488,7 +490,7 @@
                         <td class="px-5 py-4">USD</td>
                         <td class="px-5 py-4">FREE</td>
                         <td class="px-5 py-4">
-                          <a href="buyDetailAffiliate.html" class="inline-block btn btn-small btn-red">Buy</a>
+                          <a href="" class="inline-block btn btn-small btn-red">Buy</a>
                         </td>
                       </tr>
                     </tbody>
@@ -496,7 +498,9 @@
                 </div>
                 <div class="mt-5">
                   <ul class="flex items-center justify-center">
-                    <li class="px-3 py-2 hover:bg-blue-300 cursor-pointer border-l border-y rounded-l-xl bg-gray-100">PREVIOUS</li>
+                    <li class="px-3 py-2 hover:bg-blue-300 cursor-pointer border-l border-y rounded-l-xl bg-gray-100">
+                      PREVIOUS
+                    </li>
                     <li class="px-3 py-2 hover:bg-blue-300 cursor-pointer border-l border-y">1</li>
                     <li class="px-3 py-2 hover:bg-blue-300 cursor-pointer border-l border-y">2</li>
                     <li class="px-3 py-2 hover:bg-blue-300 cursor-pointer border-l border-y">3</li>
@@ -525,8 +529,8 @@
                 <div class="badge badge-purple w-fit">TRUSTED PLATFORM</div>
                 <h5 class="pt-5">Trusted Platform anytime & anywhere</h5>
                 <p class="pt-5 tracking-tighter">
-                  You can trade anytime and anywhere with the Bitypeer App for iOS and Android. Stay connected, and gain instant access to the
-                  crytoeconomy, in the palm of your hand.
+                  You can trade anytime and anywhere with the Bitypeer App for iOS and Android. Stay connected, and gain
+                  instant access to the crytoeconomy, in the palm of your hand.
                 </p>
               </div>
             </div>
@@ -594,7 +598,12 @@
                         viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg"
                       >
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                        ></path>
                       </svg>
                     </div>
                     <input
