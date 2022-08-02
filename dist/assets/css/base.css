@@ -848,6 +848,10 @@ video {
   margin-right: 1.25rem;
 }
 
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
 .ml-1 {
   margin-left: 0.25rem;
 }
@@ -930,6 +934,10 @@ video {
   height: 0.5rem;
 }
 
+.h-4 {
+  height: 1rem;
+}
+
 .h-28 {
   height: 7rem;
 }
@@ -940,10 +948,6 @@ video {
 
 .h-20 {
   height: 5rem;
-}
-
-.h-4 {
-  height: 1rem;
 }
 
 .h-40 {
@@ -1008,12 +1012,16 @@ video {
   width: 5rem;
 }
 
+.w-4 {
+  width: 1rem;
+}
+
 .w-80 {
   width: 20rem;
 }
 
-.w-4 {
-  width: 1rem;
+.w-16 {
+  width: 4rem;
 }
 
 .w-36 {
@@ -1453,6 +1461,11 @@ video {
 .bg-gray-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+}
+
+.bg-gray-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-50 {
@@ -2311,6 +2324,14 @@ video {
 .btn-purple:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(216 180 254 / var(--tw-ring-opacity));
+}
+
+.btn-disable {
+  cursor: none;
+  --tw-bg-opacity: 1;
+  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(249 250 251 / var(--tw-text-opacity));
 }
 
 /* components/card.css */

@@ -17,7 +17,7 @@
   </head>
   <body class="largeBody">
     <!-- Header -->
-    <header class="fixed top-0 left-0 w-full bg-white border-b-2 h-16 shadow-sm nav-header z-50">
+    <header class="fixed top-0 left-0 w-full bg-white border-b h-16 nav-header z-50">
       <!-- Top Navigation -->
       <section class="section">
         <div class="flex justify-between items-center h-16">
@@ -25,15 +25,23 @@
             <div>Sign in</div>
             <div>Sign up</div>
           </div>
-          <div class="relative w-20 pr-2 text-end mr-5">
-            <div class="cursor-pointer hover:text-gray-800" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="dropdownAlarm">
-              <i class="bx bxs-bell bx-md"></i>
+          <div class="relative w-20 pr-2 text-end mr-5 mt-1">
+            <div
+              class="cursor-pointer hover:text-gray-800"
+              id="user-menu-button"
+              aria-expanded="false"
+              data-dropdown-toggle="dropdownAlarm"
+            >
+              <i class="bx bxs-bell bx-sm"></i>
             </div>
 
             <!-- Alam Signal -->
 
-            <div class="absolute top-0 right-0 w-6 h-6 bg-red-500 rounded-full">
-              <div class="flex justify-center items-center text-white text-xs py-1 tracking-tighter">
+            <div class="absolute top-0 right-1 w-4 h-4 bg-red-500 rounded-full">
+              <div
+                class="flex justify-center items-center text-white text-xs tracking-tighter"
+                style="font-size: 0.2rem"
+              >
                 <span>10</span>
               </div>
             </div>
@@ -213,7 +221,7 @@
     </header>
 
     <!-- Side Navi -->
-    <aside class="side-nav fixed left-0 top-0 h-screen bg-white border-r shadow-md" style="z-index: 100">
+    <aside class="side-nav fixed left-0 top-0 h-screen bg-white border-r" style="z-index: 100">
       <!-- Side Navigation Header -->
       <div class="px-5">
         <a href="main.html" class="h-16 flex items-center justify-between">
@@ -221,7 +229,9 @@
 
           <div class="justify-between items-center w-full ml-2 gap-2 nav-brand__logo">
             <div>Bitypeer</div>
+            <!-- 
             <img src="./assets/img/logo/icons1.png" alt="" class="w-6 h-6" />
+             -->
           </div>
         </a>
         <!-- Side Menu List | Start -->
@@ -275,11 +285,13 @@
       <section class="section">
         <div class="grid grid-cols-3 gap-5 w-full py-5">
           <!-- Intro ITEM 1 -->
-          <div class="col-span-2 bg-white border rounded-xl shadow-lg">
+          <div class="col-span-2 bg-white border rounded-xl">
             <div class="flex justify-between items-center">
               <div class="pl-10">
                 <p class="text-5xl">Buy & Sell <br />crypto in minutes</p>
-                <p class="text-xl mt-5">Trade Bitcon, Ethereum, USDT, and the top altcoins on the legendary crypto asset exchage.</p>
+                <p class="text-xl mt-5">
+                  Trade Bitcon, Ethereum, USDT, and the top altcoins on the legendary crypto asset exchage.
+                </p>
                 <button class="btn btn-rounded mt-8 btn-default">Sign up for free</button>
               </div>
               <img src="./assets/img/background.png" alt="" class="p-5" />
@@ -289,7 +301,7 @@
           <div class="col-span-1">
             <div class="grid grid-cols-2 gap-5">
               <!-- Item 1 -->
-              <div class="rounded-xl shadow-lg p-5 border">
+              <div class="rounded-xl p-5 border">
                 <img src="./assets/img/main/badge02.png" alt="" class="h-8 w-8" />
                 <div class="flex items-center gap-2">
                   <div class="text-xs">BTC/USDT</div>
@@ -299,7 +311,7 @@
                 <div class="text-lg tracking-tighter">36,641.20</div>
               </div>
               <!-- Item 2 -->
-              <div class="rounded-xl shadow-lg p-5 border">
+              <div class="rounded-xl p-5 border">
                 <img src="./assets/img/main/badge01.png" alt="" class="h-8 w-8" />
                 <div class="flex items-center gap-2">
                   <div class="text-xs">BTC/USDT</div>
@@ -309,7 +321,7 @@
                 <div class="text-lg tracking-tighter">36,641.20</div>
               </div>
               <!-- Item 3 -->
-              <div class="rounded-xl shadow-lg p-5 border">
+              <div class="rounded-xl p-5 border">
                 <img src="./assets/img/main/badge03.png" alt="" class="h-8 w-8" />
                 <div class="flex items-center gap-2">
                   <div class="text-xs">BTC/USDT</div>
@@ -319,7 +331,7 @@
                 <div class="text-lg tracking-tighter">36,641.20</div>
               </div>
               <!-- Item 4 -->
-              <div class="rounded-xl shadow-lg p-5 border">
+              <div class="rounded-xl p-5 border">
                 <img src="./assets/img/main/badge04.png" alt="" class="h-8 w-8" />
                 <div class="flex items-center gap-2">
                   <div class="text-xs">BTC/USDT</div>
@@ -336,7 +348,7 @@
       <section class="section">
         <div class="grid grid-cols-2 gap-5">
           <!-- Item 1 -->
-          <div class="bg-white px-5 shadow-xl rounded-xl border">
+          <div class="bg-white px-5 rounded-xl border">
             <div class="flex items-end justify-between py-5">
               <div>Sell Coin</div>
               <a href="sell.html" class="text-sm underline tracking-tighter">View All</a>
@@ -346,12 +358,13 @@
               <table class="w-full text-sm text-left text-gray-500">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-100">
                   <tr>
-                    <th scope="col" class="px-2.5 py-3">Seller</th>
-                    <th scope="col" class="px-2.5 py-3">Coin Name</th>
-                    <th scope="col" class="px-2.5 py-3">Amount of coins</th>
-                    <th scope="col" class="px-2.5 py-3">Price</th>
-                    <th scope="col" class="px-2.5 py-3">Currency</th>
-                    <th scope="col" class="px-2.5 py-3">State</th>
+                    <th scope="col" class="px-2.5 py-3 whitespace-nowrap">Seller</th>
+                    <th scope="col" class="px-2.5 py-3 whitespace-nowrap">Coin Name</th>
+                    <th scope="col" class="px-2.5 py-3 whitespace-nowrap">Amount of coins</th>
+                    <th scope="col" class="px-2.5 py-3 whitespace-nowrap">Price</th>
+                    <th scope="col" class="px-2.5 py-3 whitespace-nowrap">Currency</th>
+                    <th scope="col" class="px-2.5 py-3 whitespace-nowrap">Type</th>
+                    <th scope="col" class="px-2.5 py-3 whitespace-nowrap">State</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -363,8 +376,9 @@
                     <td class="px-2.5 py-3">9,999,999,999,999</td>
                     <td class="px-2.5 py-3">90,000,000,000</td>
                     <td class="px-2.5 py-3">KRW</td>
+                    <td class="px-2.5 py-3">Manual</td>
                     <td class="px-2.5 py-3">
-                      <a href="" class="inline-block btn btn-small btn-red">Buy</a>
+                      <a href="" class="inline-block btn btn-exsmall w-16 text-center btn-red">Buy</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
@@ -375,8 +389,9 @@
                     <td class="px-2.5 py-3">9,999,999,999,999</td>
                     <td class="px-2.5 py-3">90,000,000,000</td>
                     <td class="px-2.5 py-3">KRW</td>
+                    <td class="px-2.5 py-3">Manual</td>
                     <td class="px-2.5 py-3">
-                      <a href="" class="inline-block btn btn-small btn-red">Buy</a>
+                      <a href="" class="inline-block btn btn-exsmall w-16 text-center btn-red">Buy</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
@@ -387,8 +402,9 @@
                     <td class="px-2.5 py-3">9,999,999,999,999</td>
                     <td class="px-2.5 py-3">90,000,000,000</td>
                     <td class="px-2.5 py-3">KRW</td>
+                    <td class="px-2.5 py-3">Manual</td>
                     <td class="px-2.5 py-3">
-                      <a href="" class="inline-block btn btn-small btn-red">Buy</a>
+                      <a href="" class="inline-block btn btn-exsmall w-16 text-center btn-red">Buy</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
@@ -399,8 +415,9 @@
                     <td class="px-2.5 py-3">9,999,999,999,999</td>
                     <td class="px-2.5 py-3">90,000,000,000</td>
                     <td class="px-2.5 py-3">KRW</td>
+                    <td class="px-2.5 py-3">Manual</td>
                     <td class="px-2.5 py-3">
-                      <a href="" class="inline-block btn btn-small btn-red">Buy</a>
+                      <a href="" class="inline-block btn btn-exsmall w-16 text-center btn-red">Buy</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
@@ -411,8 +428,9 @@
                     <td class="px-2.5 py-3">9,999,999,999,999</td>
                     <td class="px-2.5 py-3">90,000,000,000</td>
                     <td class="px-2.5 py-3">KRW</td>
+                    <td class="px-2.5 py-3">Manual</td>
                     <td class="px-2.5 py-3">
-                      <a href="" class="inline-block btn btn-small btn-red">Buy</a>
+                      <a href="" class="inline-block btn btn-exsmall w-16 text-center btn-red">Buy</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
@@ -423,8 +441,9 @@
                     <td class="px-2.5 py-3">9,999,999,999,999</td>
                     <td class="px-2.5 py-3">90,000,000,000</td>
                     <td class="px-2.5 py-3">KRW</td>
+                    <td class="px-2.5 py-3">AUTO</td>
                     <td class="px-2.5 py-3">
-                      <a href="" class="inline-block btn btn-small btn-red">Buy</a>
+                      <a href="" class="inline-block btn btn-exsmall w-16 text-center btn-disable">Auto</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
@@ -435,8 +454,9 @@
                     <td class="px-2.5 py-3">9,999,999,999,999</td>
                     <td class="px-2.5 py-3">90,000,000,000</td>
                     <td class="px-2.5 py-3">KRW</td>
+                    <td class="px-2.5 py-3">AUTO</td>
                     <td class="px-2.5 py-3">
-                      <a href="" class="inline-block btn btn-small btn-red">Buy</a>
+                      <a href="" class="inline-block btn btn-exsmall w-16 text-center btn-disable">Auto</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
@@ -447,8 +467,9 @@
                     <td class="px-2.5 py-3">9,999,999,999,999</td>
                     <td class="px-2.5 py-3">90,000,000,000</td>
                     <td class="px-2.5 py-3">KRW</td>
+                    <td class="px-2.5 py-3">AUTO</td>
                     <td class="px-2.5 py-3">
-                      <a href="" class="inline-block btn btn-small btn-red">Buy</a>
+                      <a href="" class="inline-block btn btn-exsmall w-16 text-center btn-disable">Auto</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
@@ -459,8 +480,9 @@
                     <td class="px-2.5 py-3">9,999,999,999,999</td>
                     <td class="px-2.5 py-3">90,000,000,000</td>
                     <td class="px-2.5 py-3">KRW</td>
+                    <td class="px-2.5 py-3">AUTO</td>
                     <td class="px-2.5 py-3">
-                      <a href="" class="inline-block btn btn-small btn-red">Buy</a>
+                      <a href="" class="inline-block btn btn-exsmall w-16 text-center btn-disable">Auto</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
@@ -471,8 +493,9 @@
                     <td class="px-2.5 py-3">9,999,999,999,999</td>
                     <td class="px-2.5 py-3">90,000,000,000</td>
                     <td class="px-2.5 py-3">KRW</td>
+                    <td class="px-2.5 py-3">AUTO</td>
                     <td class="px-2.5 py-3">
-                      <a href="" class="inline-block btn btn-small btn-red">Buy</a>
+                      <a href="" class="inline-block btn btn-exsmall w-16 text-center btn-disable">Auto</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
@@ -483,8 +506,35 @@
                     <td class="px-2.5 py-3">9,999,999,999,999</td>
                     <td class="px-2.5 py-3">90,000,000,000</td>
                     <td class="px-2.5 py-3">KRW</td>
+                    <td class="px-2.5 py-3">AUTO</td>
                     <td class="px-2.5 py-3">
-                      <a href="" class="inline-block btn btn-small btn-red">Buy</a>
+                      <a href="" class="inline-block btn btn-exsmall w-16 text-center btn-disable">Auto</a>
+                    </td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                    <th scope="row" class="px-2.5 py-3 font-medium text-gray-900 whitespace-nowrap">
+                      <a href="" class="inline-block underline">abcdefghijk111</a>
+                    </th>
+                    <td class="px-2.5 py-3">WRC</td>
+                    <td class="px-2.5 py-3">9,999,999,999,999</td>
+                    <td class="px-2.5 py-3">90,000,000,000</td>
+                    <td class="px-2.5 py-3">KRW</td>
+                    <td class="px-2.5 py-3">Manual</td>
+                    <td class="px-2.5 py-3">
+                      <a href="" class="inline-block btn btn-exsmall w-16 text-center btn-red">Buy</a>
+                    </td>
+                  </tr>
+                  <tr class="bg-white">
+                    <th scope="row" class="px-2.5 py-3 font-medium text-gray-900 whitespace-nowrap">
+                      <a href="" class="inline-block underline">abcdefghijk111</a>
+                    </th>
+                    <td class="px-2.5 py-3">WRC</td>
+                    <td class="px-2.5 py-3">9,999,999,999,999</td>
+                    <td class="px-2.5 py-3">90,000,000,000</td>
+                    <td class="px-2.5 py-3">KRW</td>
+                    <td class="px-2.5 py-3">Manual</td>
+                    <td class="px-2.5 py-3">
+                      <a href="" class="inline-block btn btn-exsmall w-16 text-center btn-red">Buy</a>
                     </td>
                   </tr>
                 </tbody>
@@ -492,7 +542,7 @@
             </div>
           </div>
           <!-- Item 2 -->
-          <div class="bg-white px-5 shadow-xl rounded-xl border">
+          <div class="bg-white px-5 rounded-xl border">
             <div class="flex items-end justify-between py-5">
               <div>Buy Coin</div>
               <a href="buy.html" class="text-sm underline tracking-tighter">View All</a>
@@ -520,7 +570,7 @@
                     <td class="px-2.5 py-3">90,000,000,000</td>
                     <td class="px-2.5 py-3">KRW</td>
                     <td class="px-2.5 py-3">
-                      <a href="" class="inline-block btn btn-small btn-dark">Sell</a>
+                      <a href="" class="inline-block btn btn-exsmall w-16 text-center btn-dark">Sell</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
@@ -532,7 +582,7 @@
                     <td class="px-2.5 py-3">90,000,000,000</td>
                     <td class="px-2.5 py-3">KRW</td>
                     <td class="px-2.5 py-3">
-                      <a href="" class="inline-block btn btn-small btn-dark">Sell</a>
+                      <a href="" class="inline-block btn btn-exsmall w-16 text-center btn-dark">Sell</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
@@ -544,7 +594,7 @@
                     <td class="px-2.5 py-3">90,000,000,000</td>
                     <td class="px-2.5 py-3">KRW</td>
                     <td class="px-2.5 py-3">
-                      <a href="" class="inline-block btn btn-small btn-dark">Sell</a>
+                      <a href="" class="inline-block btn btn-exsmall w-16 text-center btn-dark">Sell</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
@@ -556,7 +606,7 @@
                     <td class="px-2.5 py-3">90,000,000,000</td>
                     <td class="px-2.5 py-3">KRW</td>
                     <td class="px-2.5 py-3">
-                      <a href="" class="inline-block btn btn-small btn-dark">Sell</a>
+                      <a href="" class="inline-block btn btn-exsmall w-16 text-center btn-dark">Sell</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
@@ -568,7 +618,7 @@
                     <td class="px-2.5 py-3">90,000,000,000</td>
                     <td class="px-2.5 py-3">KRW</td>
                     <td class="px-2.5 py-3">
-                      <a href="" class="inline-block btn btn-small btn-dark">Sell</a>
+                      <a href="" class="inline-block btn btn-exsmall w-16 text-center btn-dark">Sell</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
@@ -580,7 +630,7 @@
                     <td class="px-2.5 py-3">90,000,000,000</td>
                     <td class="px-2.5 py-3">KRW</td>
                     <td class="px-2.5 py-3">
-                      <a href="" class="inline-block btn btn-small btn-dark">Sell</a>
+                      <a href="" class="inline-block btn btn-exsmall w-16 text-center btn-dark">Sell</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
@@ -592,7 +642,7 @@
                     <td class="px-2.5 py-3">90,000,000,000</td>
                     <td class="px-2.5 py-3">KRW</td>
                     <td class="px-2.5 py-3">
-                      <a href="" class="inline-block btn btn-small btn-dark">Sell</a>
+                      <a href="" class="inline-block btn btn-exsmall w-16 text-center btn-dark">Sell</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
@@ -604,7 +654,7 @@
                     <td class="px-2.5 py-3">90,000,000,000</td>
                     <td class="px-2.5 py-3">KRW</td>
                     <td class="px-2.5 py-3">
-                      <a href="" class="inline-block btn btn-small btn-dark">Sell</a>
+                      <a href="" class="inline-block btn btn-exsmall w-16 text-center btn-dark">Sell</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
@@ -616,7 +666,7 @@
                     <td class="px-2.5 py-3">90,000,000,000</td>
                     <td class="px-2.5 py-3">KRW</td>
                     <td class="px-2.5 py-3">
-                      <a href="" class="inline-block btn btn-small btn-dark">Sell</a>
+                      <a href="" class="inline-block btn btn-exsmall w-16 text-center btn-dark">Sell</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
@@ -628,7 +678,7 @@
                     <td class="px-2.5 py-3">90,000,000,000</td>
                     <td class="px-2.5 py-3">KRW</td>
                     <td class="px-2.5 py-3">
-                      <a href="" class="inline-block btn btn-small btn-dark">Sell</a>
+                      <a href="" class="inline-block btn btn-exsmall w-16 text-center btn-dark">Sell</a>
                     </td>
                   </tr>
                   <tr class="bg-white border-b">
@@ -640,7 +690,31 @@
                     <td class="px-2.5 py-3">90,000,000,000</td>
                     <td class="px-2.5 py-3">KRW</td>
                     <td class="px-2.5 py-3">
-                      <a href="" class="inline-block btn btn-small btn-dark">Sell</a>
+                      <a href="" class="inline-block btn btn-exsmall w-16 text-center btn-dark">Sell</a>
+                    </td>
+                  </tr>
+                  <tr class="bg-white border-b">
+                    <th scope="row" class="px-2.5 py-3 font-medium text-gray-900 whitespace-nowrap">
+                      <a href="" class="inline-block underline">abcdefghijk111</a>
+                    </th>
+                    <td class="px-2.5 py-3">WRC</td>
+                    <td class="px-2.5 py-3">9,999,999,999,999</td>
+                    <td class="px-2.5 py-3">90,000,000,000</td>
+                    <td class="px-2.5 py-3">KRW</td>
+                    <td class="px-2.5 py-3">
+                      <a href="" class="inline-block btn btn-exsmall w-16 text-center btn-dark">Sell</a>
+                    </td>
+                  </tr>
+                  <tr class="bg-white">
+                    <th scope="row" class="px-2.5 py-3 font-medium text-gray-900 whitespace-nowrap">
+                      <a href="" class="inline-block underline">abcdefghijk111</a>
+                    </th>
+                    <td class="px-2.5 py-3">WRC</td>
+                    <td class="px-2.5 py-3">9,999,999,999,999</td>
+                    <td class="px-2.5 py-3">90,000,000,000</td>
+                    <td class="px-2.5 py-3">KRW</td>
+                    <td class="px-2.5 py-3">
+                      <a href="" class="inline-block btn btn-exsmall w-16 text-center btn-dark">Sell</a>
                     </td>
                   </tr>
                 </tbody>
@@ -668,8 +742,8 @@
               <div class="w-full">
                 <h4 class="tracking-tighter py-8 h-28">Buy & Sell Crypto Security</h4>
                 <p class="text-gray-500 tracking-tighter h-36">
-                  We use best-in-class tools and practices like data analytics to maintain the highest level of security for our users and combat
-                  money lanundering and fraud.
+                  We use best-in-class tools and practices like data analytics to maintain the highest level of security
+                  for our users and combat money lanundering and fraud.
                 </p>
                 <div class="mt-5">
                   <a href="" class="btn btn-exsmall btn-rounded btn-light">Buy crypto</a>
@@ -683,8 +757,8 @@
               <div>
                 <h4 class="tracking-tighter py-8 h-28">Exchange</h4>
                 <p class="text-gray-500 tracking-tighter h-36">
-                  Bitypeer provides order books with the highest liquidity to allow users to easily exchange Bitcoin, Ethereum and many other
-                  affiliated digital assets in a minimal way.
+                  Bitypeer provides order books with the highest liquidity to allow users to easily exchange Bitcoin,
+                  Ethereum and many other affiliated digital assets in a minimal way.
                 </p>
                 <div class="mt-5">
                   <a href="" class="btn btn-exsmall btn-rounded btn-light">Trade now</a>
@@ -698,7 +772,8 @@
               <div>
                 <h4 class="tracking-tighter py-8 h-28">No Fee</h4>
                 <p class="text-gray-500 tracking-tighter h-36">
-                  There are no fees when transacting with counterparties at the price and payment method you want on Bitypeer.
+                  There are no fees when transacting with counterparties at the price and payment method you want on
+                  Bitypeer.
                 </p>
                 <div class="mt-5">
                   <a href="" class="btn btn-exsmall btn-rounded btn-light">Learn now</a>
@@ -731,8 +806,9 @@
                 <div class="text-3xl tracking-tighter">Bitypeer Automapping</div>
                 <div class="mt-5">
                   <p class="text-gray-400 text-xs">
-                    Auto mapping is provided only for company coins affiliated with us. When the buyer enters the quantity and price, they can
-                    purchase coins by automatically mapping the appropriate seller. Only we can do it.
+                    Auto mapping is provided only for company coins affiliated with us. When the buyer enters the
+                    quantity and price, they can purchase coins by automatically mapping the appropriate seller. Only we
+                    can do it.
                   </p>
                 </div>
               </div>
@@ -746,8 +822,8 @@
                 <div class="text-3xl tracking-tighter">Trusted platform anytime & anywhere</div>
                 <div class="mt-5">
                   <p class="text-gray-400 text-xs">
-                    You can trade anytime and anywhere with the Bitypeer app for iOS and Android. Stay connected, and gain instant access to the
-                    crytoeconomy, in the palm of your hand.
+                    You can trade anytime and anywhere with the Bitypeer app for iOS and Android. Stay connected, and
+                    gain instant access to the crytoeconomy, in the palm of your hand.
                   </p>
                 </div>
               </div>
@@ -790,7 +866,9 @@
         <div class="px-5">
           <div class="text-center">
             <h3 class="pt-16">How it work</h3>
-            <p class="pt-8">Bitpeer is an instant tradable, peerable content block libray built on the Bore 1.0 Mainnet.</p>
+            <p class="pt-8">
+              Bitpeer is an instant tradable, peerable content block libray built on the Bore 1.0 Mainnet.
+            </p>
           </div>
         </div>
         <!-- How it work Items -->
@@ -807,8 +885,8 @@
               </div>
               <div class="pt-5">
                 <p class="tracking-tighter text-center">
-                  Bitypeer can be download as a free Android app or iOS for instant trading. Of course, you can also trade on the PC web and mobile
-                  web.
+                  Bitypeer can be download as a free Android app or iOS for instant trading. Of course, you can also
+                  trade on the PC web and mobile web.
                 </p>
               </div>
             </div>
@@ -838,7 +916,8 @@
               </div>
               <div class="pt-5">
                 <p class="tracking-tighter text-center">
-                  You can buy or sell, and we provied free escrow for safer transactions. You can also directly trade major coins(BTC, ETC, TRX, etc.)
+                  You can buy or sell, and we provied free escrow for safer transactions. You can also directly trade
+                  major coins(BTC, ETC, TRX, etc.)
                 </p>
               </div>
             </div>
@@ -853,8 +932,8 @@
               </div>
               <div class="pt-5">
                 <p class="tracking-tighter text-center">
-                  When the 1:1 transaction is completed. you can use the escow platform to receive the coin sale amount into your bankbook. Of course,
-                  you can also trade your own coins, so you can get paid.
+                  When the 1:1 transaction is completed. you can use the escow platform to receive the coin sale amount
+                  into your bankbook. Of course, you can also trade your own coins, so you can get paid.
                 </p>
               </div>
             </div>
@@ -864,7 +943,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="px-5 py-5 bg-white pt-10">
+    <footer class="px-5 py-5 bg-gray-100 pt-10 mt-16">
       <section class="section">
         <div class="px-5 pt-16">
           <div class="grid grid-cols-12 pb-16 text-sm">
@@ -881,7 +960,7 @@
                   <li>Privacy Policy</li>
                   <li>Open API Terms of Use</li>
                   <li>FAQ</li>
-                  <li>Contact</li>
+                  <li>Guide</li>
                 </ul>
               </div>
             </div>
@@ -912,7 +991,12 @@
                         viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg"
                       >
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                        ></path>
                       </svg>
                     </div>
                     <input
