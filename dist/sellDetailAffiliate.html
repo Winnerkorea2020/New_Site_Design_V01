@@ -17,17 +17,114 @@
   </head>
   <body class="largeBody">
     <!-- Header -->
-    <header class="fixed top-0 left-0 w-full bg-white border-b-2 h-16 shadow-sm nav-header z-50">
+    <header class="fixed top-0 left-0 w-full bg-white border-b h-16 nav-header z-50">
       <!-- Top Navigation -->
       <section class="section">
         <div class="flex justify-between items-center h-16">
-          <div class="flex justify-end items-center px-12 w-full gap-5 text-sm">
+          <div class="text-2xl md:hidden flex justify-center items-center">
+            <i class="bx bx-menu cursor-pointer nav-toggle"></i>
+          </div>
+
+          <a href="main.html" class="flex items-center justify-center md:hidden">
+            <img src="./assets/img/logo/logo_small.png" class="h-8 w-8 mx-2" alt="" />
+            <div class="nav-brand__logo">Bitypeer</div>
+          </a>
+          <div class="justify-end items-center px-12 w-full gap-5 text-sm hidden md:flex">
             <div>Sign in</div>
             <div>Sign up</div>
-            <div class="relative">
-              <i class="bx bxs-bell text-xl"></i>
-              <div class="absolute top-0 -right-0.5 w-3 h-3 bg-red-500 rounded-full"></div>
+          </div>
+          <div class="absolute right-12 mt-2 md:relative w-20 pr-2 text-end mr-5 md:mt-1">
+            <div
+              class="cursor-pointer hover:text-gray-800"
+              id="user-menu-button"
+              aria-expanded="false"
+              data-dropdown-toggle="dropdownAlarm"
+            >
+              <i class="bx bxs-bell bx-sm"></i>
             </div>
+
+            <!-- Alam Signal -->
+
+            <div class="absolute top-0 right-1 w-4 h-4 bg-red-500 rounded-full">
+              <div
+                class="flex justify-center items-center text-white text-xs tracking-tighter"
+                style="font-size: 0.2rem"
+              >
+                <span>10</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Alam DropDwon Menu -->
+
+          <!-- Dropdown menu -->
+          <div
+            class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow-sm border w-80"
+            id="dropdownAlarm"
+            style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate(1246px, 803px)"
+            data-popper-reference-hidden=""
+            data-popper-escaped=""
+            data-popper-placement="top"
+          >
+            <!-- Drop Down Contents | Start -->
+
+            <ul class="py-1 pr-5" aria-labelledby="dropdownAlarm">
+              <!-- National Flags | Start -->
+              <li>
+                <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                  <span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, voluptatibus. </span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                  <span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, voluptatibus. </span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                  <span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, voluptatibus. </span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                  <span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, voluptatibus. </span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                  <span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, voluptatibus. </span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                  <span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, voluptatibus. </span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                  <span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, voluptatibus. </span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                  <span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, voluptatibus. </span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                  <span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, voluptatibus. </span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                  <span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, voluptatibus. </span>
+                </a>
+              </li>
+
+              <!-- National Flags | End -->
+            </ul>
+
+            <!-- Drop Down Contents | End -->
           </div>
 
           <div class="flex items-center">
@@ -40,7 +137,7 @@
             >
               <span class="sr-only">Open user menu</span>
               <img class="w-6 h-6 md:w-8 md:h-8 border-none" src="./assets/img/flag/usa.png" alt="National Flag" />
-              <i class="bx bx-chevron-down bx-sm"></i>
+              <i class="bx bx-chevron-down bx-sm hidden md:block"></i>
             </button>
             <!-- Dropdown menu -->
             <div
@@ -132,19 +229,30 @@
     </header>
 
     <!-- Side Navi -->
-    <aside class="side-nav fixed left-0 top-0 h-screen bg-white border-r shadow-md" style="z-index: 100">
+    <aside
+      class="side-nav fixed -left-full md:left-0 duration-1000 ease-in-out top-0 h-full bg-white border-r nav-side"
+      style="z-index: 1000"
+    >
       <!-- Side Navigation Header -->
+
       <div class="px-5">
-        <a href="main.html" class="h-16 flex items-center justify-between">
+        <a href="main.html" class="h-16 hidden md:flex items-center justify-between">
           <img src="./assets/img/logo/logo_small.png" class="h-8 w-8 mx-2" alt="" />
 
           <div class="justify-between items-center w-full ml-2 gap-2 nav-brand__logo">
             <div>Bitypeer</div>
-            <img src="./assets/img/logo/icons1.png" alt="" class="w-6 h-6" />
+            <!-- 
+        <img src="./assets/img/logo/icons1.png" alt="" class="w-6 h-6" />
+         -->
           </div>
         </a>
+        <!-- Close Button -->
+        <div class="absolute top-7 right-5 md:hidden">
+          <i class="bx bx-x-circle bx-sm cursor-pointer nav-close"></i>
+        </div>
+
         <!-- Side Menu List | Start -->
-        <nav class="px-2 pt-16 flex justify-start">
+        <nav class="px-2 pt-20 md:pt-16 flex flex-col justify-start">
           <ul class="flex flex-col gap-8 uppercase">
             <li>
               <a href="sell.html" class="inline-flex items-center">
@@ -170,12 +278,7 @@
                 <span class="pl-3">Notice</span>
               </a>
             </li>
-            <li>
-              <a href="affiliateSell.html" class="inline-flex items-center">
-                <i class="bx bxs-cart-add bx-sm"></i>
-                <span class="pl-3">Affiliate Sell</span>
-              </a>
-            </li>
+
             <li>
               <a href="mypageBuyHistory.html" class="inline-flex items-center">
                 <i class="bx bxs-user-rectangle bx-sm"></i>
@@ -183,6 +286,17 @@
               </a>
             </li>
           </ul>
+          <div class="absolute bottom-52 flex flex-col gap-5 ml-9 md:hidden">
+            <!-- Sign Up / Sign In Area -->
+            <div class="flex flex-col gap-5">
+              <a href="#" class="btn btn-dark text-center">Sign in</a>
+              <a href="#" class="btn btn-dark text-center">Sign up</a>
+            </div>
+            <!-- Log Out Area -->
+            <div>
+              <a href="#" class="btn btn-red">Log Out</a>
+            </div>
+          </div>
         </nav>
 
         <!-- Side Menu List | End -->
@@ -193,11 +307,11 @@
     <main class="p-0">
       <!-- Sell Coins | Start -->
       <section class="section">
-        <div class="pt-16">
+        <div class="pt-5 md:pt-16">
           <!-- Sell Header Area | Start -->
           <div class="flex justify-between items-center">
             <h4>SELL Coins Detail (Affiliate)</h4>
-            <div class="flex items-center gap-2 text-xs">
+            <div class="hidden md:flex items-center gap-2 text-xs">
               <div>HOME</div>
               <div><i class="bx bx-chevron-right"></i></div>
               <div>Sell Coins</div>
@@ -212,79 +326,71 @@
       <!-- Seller Detail -->
       <section class="section">
         <div class="mt-8">
-          <div class="grid grid-cols-12 gap-5">
+          <div class="relative grid grid-cols-1 md:grid-cols-11 gap-5">
+            <!-- Chatting Alam Icons -->
+            <div class="absolute -top-10 right-0 animate-bounce chatting-alam md:hidden">
+              <div class="px-2 h-8 bg-blue-600 flex items-center justify-center text-white border rounded relative">
+                <span>Chat</span>
+                <div
+                  class="w-5 h-5 absolute bg-red-500 rounded-full -top-2.5 -right-2 text-white flex justify-center items-center text-xs"
+                >
+                  99
+                </div>
+              </div>
+            </div>
+
             <!-- Item 1 -->
-            <div class="col-span-7">
-              <form action="" class="bg-white h-full p-5 shadow-md rounded-xl">
+            <div class="md:col-span-7">
+              <form action="" class="bg-white p-5 border rounded-xl">
                 <!-- Seller Information  -->
-                <div class="grid grid-cols-2 gap-2">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
                   <!-- Item 1 -->
-                  <div class="grid grid-cols-2 text-sm gap-5">
+                  <div
+                    class="grid grid-cols-1 border md:border-none rounded md:rounded-none md:grid-cols-2 text-sm md:gap-5"
+                  >
                     <div class="col-span-1 rounded border px-5 py-2.5 bg-gray-300 text-start h-fit">Coin Name</div>
-                    <div class="col-span-1 rounded px-5 py-2.5 text-start h-fit">BTC</div>
+                    <div class="col-span-1 rounded px-5 py-2.5 text-start md:h-fit">BTC</div>
                   </div>
 
                   <!-- Item 2 -->
-                  <div class="grid grid-cols-2 text-sm gap-5">
-                    <div class="col-span-1 rounded border px-5 py-2.5 bg-gray-300 text-start h-fit">Offer country</div>
-                    <div class="col-span-1 rounded px-5 py-2.5 text-start h-fit">Non-Escrow</div>
-                  </div>
-
-                  <!-- Item 3 -->
-                  <div class="grid grid-cols-2 text-sm gap-5">
-                    <div class="col-span-1 rounded border px-5 py-2.5 bg-gray-300 text-start h-fit">Amount of coins</div>
-                    <div class="col-span-1 rounded px-5 py-2.5 text-start h-fit">9,999,999,999,999,000</div>
+                  <div
+                    class="grid grid-cols-1 border md:border-none rounded md:rounded-none md:grid-cols-2 text-sm md:gap-5"
+                  >
+                    <div class="col-span-1 rounded border px-5 py-2.5 bg-gray-300 text-start h-fit">
+                      Amount of coins
+                    </div>
+                    <div class="col-span-1 rounded px-5 py-2.5 text-start md:h-fit">9,999,999,999,999,000</div>
                   </div>
 
                   <!-- Item 4 -->
-                  <div class="grid grid-cols-2 text-sm gap-5">
-                    <div class="col-span-1 rounded border px-5 py-2.5 bg-gray-300 text-start h-fit">Security</div>
-                    <div class="col-span-1 rounded px-5 py-2.5 text-start h-fit">
-                      <span class="badge badge-green badge-rounded">Escrow</span>
-                    </div>
+                  <div
+                    class="grid grid-cols-1 border md:border-none rounded md:rounded-none md:grid-cols-2 text-sm md:gap-5"
+                  >
+                    <div class="col-span-1 rounded border px-5 py-2.5 bg-gray-300 text-start h-fit">Price</div>
+                    <div class="col-span-1 rounded px-5 py-2.5 text-start md:h-fit">999,999,999,999,999,000</div>
                   </div>
 
                   <!-- Item 5 -->
-                  <div class="grid grid-cols-2 text-sm gap-5">
-                    <div class="col-span-1 rounded border px-5 py-2.5 bg-gray-300 text-start h-fit">Price</div>
-                    <div class="col-span-1 rounded px-5 py-2.5 text-start h-fit">999,999,999,999,999,000</div>
-                  </div>
-
-                  <!-- Item 6 -->
-                  <div class="grid grid-cols-2 text-sm gap-5">
-                    <div class="col-span-1 rounded border px-5 py-2.5 bg-gray-300 text-start h-fit">Currency</div>
-                    <div class="col-span-1 rounded px-5 py-2.5 text-start h-fit">USD</div>
-                  </div>
-
-                  <!-- Item 7 -->
-                  <div class="grid grid-cols-2 text-sm gap-5">
-                    <div class="col-span-1 rounded border px-5 py-2.5 bg-gray-300 text-start h-fit">Seller</div>
-                    <div class="col-span-1 rounded px-5 py-2.5 text-start h-fit">Jonyleong</div>
-                  </div>
-
-                  <!-- Item 8 -->
-                  <div class="grid grid-cols-2 text-sm gap-5">
-                    <div class="col-span-1 rounded border px-5 py-2.5 bg-gray-300 text-start h-fit">Fee(Gas)</div>
-                    <div class="col-span-1 rounded px-5 py-2.5 text-start h-fit">facearea</div>
-                  </div>
-
-                  <!-- Item 9 -->
-                  <div class="grid grid-cols-2 text-sm gap-5">
-                    <div class="col-span-1 rounded border px-5 py-2.5 bg-gray-300 text-start h-fit">Registration</div>
-                    <div class="col-span-1 rounded px-5 py-2.5 text-start h-fit">2021-01-31</div>
+                  <div
+                    class="grid grid-cols-1 border md:border-none rounded md:rounded-none md:grid-cols-2 text-sm md:gap-5"
+                  >
+                    <div class="col-span-1 rounded border px-5 py-2.5 bg-gray-300 text-start h-fit">Buyer</div>
+                    <div class="col-span-1 rounded px-5 py-2.5 text-start md:h-fit">Jonyleong</div>
                   </div>
                 </div>
 
                 <!-- Seller Input Request -->
-                <div class="grid grid-cols-12 gap-5 mt-5 relative">
-                  <div class="pt-2 flex items-center gap-2 absolute left-5 top-3 text-sm">
-                    <div class="w-5 h-5 bg-red-500"></div>
-                    <div class="tracking-tight">The Coin is an affiliate coin and is escrowed for safe transactions.</div>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-5 mt-5">
+                  <div class="col-span-1 md:col-span-9">
+                    <textarea
+                      name=""
+                      id=""
+                      cols="30"
+                      rows="35"
+                      class="border resize-none rounded-md h-full w-full p-8 text-xs"
+                    ></textarea>
                   </div>
-                  <div class="col-span-9">
-                    <textarea name="" id="" cols="30" rows="10" class="border resize-none rounded-md h-full w-full pt-12 px-8"></textarea>
-                  </div>
-                  <div class="col-span-3">
+                  <div class="col-span-1 md:col-span-3">
                     <div class="bg-gray-200 rounded-md px-6 py-8">
                       <h5 class="tracking-tighter">Seller Hours</h5>
                       <div class="grid grid-cols-1 gap-2 text-sm pt-8">
@@ -322,46 +428,36 @@
                       <div class="p-3 rounded-md">
                         <h4 class="px-5 text-xl bg-red-500 text-white w-full text-center py-2 rounded">Caution</h4>
                         <p class="px-2 mt-5 text-base tracking-tighter">
-                          Please note that 1:1 transactions are person-to-person transactions and have nothing to do with Bitypeer. For individual
-                          transactions, please meet in person and do 1:1 direct transactions.
+                          Please note that 1:1 transactions are person-to-person transactions and have nothing to do
+                          with Bitypeer. For individual transactions, please meet in person and do 1:1 direct
+                          transactions.
                         </p>
                       </div>
                     </div>
                   </div>
                 </div>
-
-                <div class="pt-5">
-                  <div class="flex items-center justify-end gap-5">
-                    <a href="" class="block btn btn-dark">Purchase Complete</a>
-                    <a href="" class="block btn btn-red">Cancel</a>
-                  </div>
-                </div>
               </form>
+              <div class="pt-2 w-full">
+                <div class="flex items-center justify-end gap-5">
+                  <a href="" class="basis-8/12 md:basis-3/12 tracking-tighter text-center btn btn-dark"
+                    >Purchase Complete</a
+                  >
+                  <a href="" class="basis-4/12 md:basis-2/12 text-center btn btn-red">Cancel</a>
+                </div>
+              </div>
             </div>
             <!-- Chatting Area -->
-            <div class="col-span-5">
-              <div class="bg-white p-2 shadow-md rounded-xl">
-                <div class="flex-1 p:2 sm:p-6 justify-between flex flex-col h-screen">
+            <div class="absolute -top-32 md:top-0 md:static md:col-span-3 z-50 md:z-0 chatting-message hidden md:block">
+              <div class="bg-white p-2 border rounded-xl">
+                <div class="fixed md:hidden top-0 left-0 h-full w-full bg-gray-900/80 -z-10"></div>
+                <div class="justify-between flex flex-col h-[90vh] md:h-[79vh]">
                   <div class="flex sm:items-center justify-between py-3 border-b-2 border-gray-200">
-                    <div class="relative flex items-center space-x-4">Bitypeer Real Chatting message</div>
-                  </div>
-                  <div
-                    id="messages"
-                    class="flex flex-col space-y-4 p-3 overflow-y-auto scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-track-blue-lighter scrollbar-w-2 scrolling-touch"
-                  >
-                    <div class="chat-information">
-                      <div class="bg-gray-200 p-5 rounded-md">
-                        <div class="tracking-tighter font-semibold">Information</div>
-                        <div class="pt-5">
-                          <ul>
-                            <li>Fill out this form to start chatting.</li>
-                            <li>Purchase request coin amount:</li>
-                            <li>Purchase request price:</li>
-                            <li>My wallet address:</li>
-                          </ul>
-                        </div>
-                      </div>
+                    <div class="relative flex items-center justify-between w-full px-5">
+                      <div class="tracking-tighter text-lg">Bitypeer Real Chatting message</div>
+                      <div class="cursor-pointer md:hidden"><i class="bx bx-arrow-back chatting-close"></i></div>
                     </div>
+                  </div>
+                  <div id="messages" class="flex flex-col-reverse space-y-4 p-3 overflow-y-auto gap-2">
                     <div class="chat-message">
                       <div class="flex items-end">
                         <div class="flex flex-col space-y-2 text-base max-w-xs mx-2 order-2 items-start">
@@ -383,7 +479,8 @@
                         <div class="flex flex-col space-y-2 text-base max-w-xs mx-2 order-1 items-end">
                           <div>
                             <span class="px-4 py-2 rounded-lg inline-block rounded-br-none bg-blue-600 text-white"
-                              >Your error message says permission denied, npm global installs must be given root privileges.</span
+                              >Your error message says permission denied, npm global installs must be given root
+                              privileges.</span
                             >
                           </div>
                         </div>
@@ -394,58 +491,13 @@
                         />
                       </div>
                     </div>
-                    <div class="chat-message">
-                      <div class="flex items-end">
-                        <div class="flex flex-col space-y-2 text-base max-w-xs mx-2 order-2 items-start">
-                          <div>
-                            <span class="px-4 py-2 rounded-lg inline-block bg-gray-300 text-gray-600"
-                              >Command was run with root privileges. I'm sure about that.</span
-                            >
-                          </div>
-                          <div>
-                            <span class="px-4 py-2 rounded-lg inline-block bg-gray-300 text-gray-600"
-                              >I've update the description so it's more obviously now</span
-                            >
-                          </div>
-                          <div>
-                            <span class="px-4 py-2 rounded-lg inline-block bg-gray-300 text-gray-600">FYI https://askubuntu.com/a/700266/510172</span>
-                          </div>
-                          <div>
-                            <span class="px-4 py-2 rounded-lg inline-block rounded-bl-none bg-gray-300 text-gray-600">
-                              Check the line above (it ends with a # so, I'm running it as root )
-                              <pre># npm install -g @vue/devtools</pre>
-                            </span>
-                          </div>
-                        </div>
-                        <img
-                          src="https://images.unsplash.com/photo-1549078642-b2ba4bda0cdb?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=3&amp;w=144&amp;h=144"
-                          alt="My profile"
-                          class="w-6 h-6 rounded-full order-1"
-                        />
-                      </div>
-                    </div>
-                    <div class="chat-message">
-                      <div class="flex items-end justify-end">
-                        <div class="flex flex-col space-y-2 text-base max-w-xs mx-2 order-1 items-end">
-                          <div>
-                            <span class="px-4 py-2 rounded-lg inline-block rounded-br-none bg-blue-600 text-white"
-                              >Any updates on this issue? I'm getting the same error when trying to install devtools. Thanks</span
-                            >
-                          </div>
-                        </div>
-                        <img
-                          src="https://images.unsplash.com/photo-1590031905470-a1a1feacbb0b?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=3&amp;w=144&amp;h=144"
-                          alt="My profile"
-                          class="w-6 h-6 rounded-full order-2"
-                        />
-                      </div>
-                    </div>
+
                     <div class="chat-message">
                       <div class="flex items-end">
                         <div class="flex flex-col space-y-2 text-base max-w-xs mx-2 order-2 items-start">
                           <div>
                             <span class="px-4 py-2 rounded-lg inline-block rounded-bl-none bg-gray-300 text-gray-600"
-                              >Thanks for your message David. I thought I'm alone with this issue. Please, ? the issue to support it :)</span
+                              >Can be verified on any platform using docker</span
                             >
                           </div>
                         </div>
@@ -460,12 +512,9 @@
                       <div class="flex items-end justify-end">
                         <div class="flex flex-col space-y-2 text-base max-w-xs mx-2 order-1 items-end">
                           <div>
-                            <span class="px-4 py-2 rounded-lg inline-block bg-blue-600 text-white">Are you using sudo?</span>
-                          </div>
-                          <div>
                             <span class="px-4 py-2 rounded-lg inline-block rounded-br-none bg-blue-600 text-white"
-                              >Run this command sudo chown -R `whoami` /Users/{{your_user_profile}}/.npm-global/ then install the package globally
-                              without using sudo</span
+                              >Your error message says permission denied, npm global installs must be given root
+                              privileges.</span
                             >
                           </div>
                         </div>
@@ -476,17 +525,13 @@
                         />
                       </div>
                     </div>
+
                     <div class="chat-message">
                       <div class="flex items-end">
                         <div class="flex flex-col space-y-2 text-base max-w-xs mx-2 order-2 items-start">
-                          <div>
-                            <span class="px-4 py-2 rounded-lg inline-block bg-gray-300 text-gray-600"
-                              >It seems like you are from Mac OS world. There is no /Users/ folder on linux ?</span
-                            >
-                          </div>
                           <div>
                             <span class="px-4 py-2 rounded-lg inline-block rounded-bl-none bg-gray-300 text-gray-600"
-                              >I have no issue with any other packages installed with root permission globally.</span
+                              >Can be verified on any platform using docker</span
                             >
                           </div>
                         </div>
@@ -502,7 +547,8 @@
                         <div class="flex flex-col space-y-2 text-base max-w-xs mx-2 order-1 items-end">
                           <div>
                             <span class="px-4 py-2 rounded-lg inline-block rounded-br-none bg-blue-600 text-white"
-                              >yes, I have a mac. I never had issues with root permission as well, but this helped me to solve the problem</span
+                              >Your error message says permission denied, npm global installs must be given root
+                              privileges.</span
                             >
                           </div>
                         </div>
@@ -513,21 +559,14 @@
                         />
                       </div>
                     </div>
+
                     <div class="chat-message">
                       <div class="flex items-end">
                         <div class="flex flex-col space-y-2 text-base max-w-xs mx-2 order-2 items-start">
                           <div>
-                            <span class="px-4 py-2 rounded-lg inline-block bg-gray-300 text-gray-600"
-                              >I get the same error on Arch Linux (also with sudo)</span
+                            <span class="px-4 py-2 rounded-lg inline-block rounded-bl-none bg-gray-300 text-gray-600"
+                              >Can be verified on any platform using docker</span
                             >
-                          </div>
-                          <div>
-                            <span class="px-4 py-2 rounded-lg inline-block bg-gray-300 text-gray-600"
-                              >I also have this issue, Here is what I was doing until now: #1076</span
-                            >
-                          </div>
-                          <div>
-                            <span class="px-4 py-2 rounded-lg inline-block rounded-bl-none bg-gray-300 text-gray-600">even i am facing</span>
                           </div>
                         </div>
                         <img
@@ -535,6 +574,71 @@
                           alt="My profile"
                           class="w-6 h-6 rounded-full order-1"
                         />
+                      </div>
+                    </div>
+                    <div class="chat-message">
+                      <div class="flex items-end justify-end">
+                        <div class="flex flex-col space-y-2 text-base max-w-xs mx-2 order-1 items-end">
+                          <div>
+                            <span class="px-4 py-2 rounded-lg inline-block rounded-br-none bg-blue-600 text-white"
+                              >Your error message says permission denied, npm global installs must be given root
+                              privileges.</span
+                            >
+                          </div>
+                        </div>
+                        <img
+                          src="https://images.unsplash.com/photo-1590031905470-a1a1feacbb0b?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=3&amp;w=144&amp;h=144"
+                          alt="My profile"
+                          class="w-6 h-6 rounded-full order-2"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="chat-message">
+                      <div class="flex items-end">
+                        <div class="flex flex-col space-y-2 text-base max-w-xs mx-2 order-2 items-start">
+                          <div>
+                            <span class="px-4 py-2 rounded-lg inline-block rounded-bl-none bg-gray-300 text-gray-600"
+                              >Can be verified on any platform using docker</span
+                            >
+                          </div>
+                        </div>
+                        <img
+                          src="https://images.unsplash.com/photo-1549078642-b2ba4bda0cdb?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=3&amp;w=144&amp;h=144"
+                          alt="My profile"
+                          class="w-6 h-6 rounded-full order-1"
+                        />
+                      </div>
+                    </div>
+                    <div class="chat-message">
+                      <div class="flex items-end justify-end">
+                        <div class="flex flex-col space-y-2 text-base max-w-xs mx-2 order-1 items-end">
+                          <div>
+                            <span class="px-4 py-2 rounded-lg inline-block rounded-br-none bg-blue-600 text-white"
+                              >Your error message says permission denied, npm global installs must be given root
+                              privileges.</span
+                            >
+                          </div>
+                        </div>
+                        <img
+                          src="https://images.unsplash.com/photo-1590031905470-a1a1feacbb0b?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=3&amp;w=144&amp;h=144"
+                          alt="My profile"
+                          class="w-6 h-6 rounded-full order-2"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="chat-information">
+                      <div class="bg-gray-200 p-5 rounded-md">
+                        <div class="tracking-tighter font-semibold">Information</div>
+                        <div class="pt-5">
+                          <ul>
+                            <li>Fill out this form to start chatting.</li>
+                            <li>Purchase request coin amount:</li>
+                            <li>Purchase request price:</li>
+                            <li>My wallet address:</li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -545,17 +649,14 @@
                         placeholder="Write your message!"
                         class="w-full focus:outline-none focus:placeholder-gray-400 text-gray-600 placeholder-gray-600 pl-12 bg-gray-200 rounded-md py-3"
                       />
-                      <div class="absolute right-0 items-center inset-y-0 hidden sm:flex">
+                      <div class="absolute right-0 items-center inset-y-0 sm:flex">
                         <button
                           type="button"
                           class="inline-flex items-center justify-center rounded-lg px-4 py-3 transition duration-500 ease-in-out text-white bg-blue-500 hover:bg-blue-400 focus:outline-none"
                         >
-                          <span class="font-bold">Send</span>
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-6 w-6 ml-2 transform rotate-90">
-                            <path
-                              d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"
-                            ></path>
-                          </svg>
+                          <div>
+                            <span class="font-bold"><i class="bx bxs-send"></i></span>
+                          </div>
                         </button>
                       </div>
                     </div>
@@ -570,41 +671,40 @@
     </main>
 
     <!-- Footer -->
-    <footer class="px-5 py-5">
+    <footer class="px-5 py-5 bg-gray-100 pt-10 mt-16">
       <section class="section">
         <div class="px-5 pt-16">
-          <div class="grid grid-cols-12 pb-16 text-sm">
+          <div class="grid grid-cols-1 md:grid-cols-12 pb-16 text-sm gap-10 md:gap-0">
             <div class="col-span-2">
-              <div class="flex items-center gap-5">
+              <div class="flex items-center gap-2 md:gap-5">
                 <img src="./assets/img/logo/logo_small.png" alt="" class="h-10 w-10" />
                 <h5>Bitypeer</h5>
               </div>
             </div>
-            <div class="col-span-3 border-r px-10">
+            <div class="col-span-3 md:border-r md:px-10">
               <div>
-                <ul class="flex flex-col gap-5">
+                <div class="text-xl uppercase">About</div>
+                <ul class="flex flex-col gap-2 md:gap-4 pt-8">
                   <li>Terms of Use</li>
                   <li>Privacy Policy</li>
-                  <li>Open API Terms of Use</li>
+                  <li>Open API</li>
                   <li>FAQ</li>
-                  <li>Contact</li>
+                  <li>Guide</li>
                 </ul>
               </div>
             </div>
-            <div class="col-span-3 border-r px-10">
+            <div class="col-span-3 md:border-r md:px-10">
               <div>
-                <div class="">CONTACT</div>
-                <ul class="flex flex-col gap-5 pt-8">
-                  <li>Penc.case</li>
-                  <li>Aextexe 678191</li>
+                <div class="text-xl uppercase">Contact</div>
+                <ul class="flex flex-col gap-2 md:gap-4 pt-8 tracking-tighter">
+                  <li>3 квартал, д.31, Новая Игирма, Иркутская обл., 665685</li>
                   <li>infoService@bitypeer.com</li>
-                  <li>+7 985648-48684-18381</li>
                 </ul>
               </div>
             </div>
-            <div class="col-span-3 px-10">
+            <div class="col-span-3 md:px-10">
               <div>
-                <div>NEWSLETTER</div>
+                <div class="text-xl uppercase">NEWSLETTER</div>
                 <p class="pt-8">Subscribe our newseletter to get more free Cryto currency information and resource.</p>
               </div>
               <div>
@@ -618,7 +718,12 @@
                         viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg"
                       >
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                        ></path>
                       </svg>
                     </div>
                     <input
@@ -642,6 +747,8 @@
         </div>
       </section>
     </footer>
+    <script src="./assets/js/sideNav.js"></script>
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/chatting.js"></script>
   </body>
 </html>

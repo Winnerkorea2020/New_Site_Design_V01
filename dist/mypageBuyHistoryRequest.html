@@ -13,7 +13,7 @@
     <!-- BASE -->
     <link rel="stylesheet" href="./assets/css/base.css" />
 
-    <title>Bitypeer My page | Affilicate Code Registration Page</title>
+    <title>Bitypeer My Page | Buy History Page</title>
   </head>
   <body class="largeBody">
     <!-- Header -->
@@ -242,8 +242,8 @@
           <div class="justify-between items-center w-full ml-2 gap-2 nav-brand__logo">
             <div>Bitypeer</div>
             <!-- 
-  <img src="./assets/img/logo/icons1.png" alt="" class="w-6 h-6" />
-   -->
+    <img src="./assets/img/logo/icons1.png" alt="" class="w-6 h-6" />
+     -->
           </div>
         </a>
         <!-- Close Button -->
@@ -454,58 +454,134 @@
           });
         </script>
       </section>
-      <!-- Sell Coins | Start -->
+      <!-- Buy Coins | Start -->
       <section class="section">
         <div class="pt-5 md:pt-16">
-          <!-- Sell Header Area | Start -->
+          <!-- Buy Header Area | Start -->
           <div class="flex justify-between items-center">
-            <h4>Affilicate Code Registration</h4>
+            <h4>Buy Request History</h4>
 
             <div class="hidden md:flex items-center gap-2 text-xs">
               <div>HOME</div>
               <div><i class="bx bx-chevron-right"></i></div>
-              <div>My page</div>
+              <div>MY PAGE</div>
               <div><i class="bx bx-chevron-right"></i></div>
-              <div>Affilicate Code Registration</div>
+              <div>Buy Request History</div>
             </div>
           </div>
-          <!-- Sell Header Area | End -->
+          <!-- Buy Header Area | End -->
+          <div class="grid grid-cols-12 gap-5 mt-5 md:mt-8">
+            <!-- Search Coins | Start -->
+            <!-- Search Coins | END -->
+            <!-- Buyer Table | Start -->
+            <div class="col-span-12">
+              <!-- Table -->
+              <div class="border bg-white h-full rounded-xl p-5">
+                <div class="overflow-x-auto">
+                  <table class="w-full text-sm text-left text-gray-500">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+                      <tr>
+                        <th scope="col" class="px-2 py-1.5 md:px-5 md:py-3 text-xs font-thin md:font-normal truncate">
+                          Date
+                        </th>
+                        <th scope="col" class="px-2 py-1.5 md:px-5 md:py-3 text-xs font-thin md:font-normal truncate">
+                          Seller ID
+                        </th>
+                        <th scope="col" class="px-2 py-1.5 md:px-5 md:py-3 text-xs font-thin md:font-normal truncate">
+                          Coin Name
+                        </th>
+                        <th scope="col" class="px-2 py-1.5 md:px-5 md:py-3 text-xs font-thin md:font-normal truncate">
+                          Amount of coins
+                        </th>
+                        <th scope="col" class="px-2 py-1.5 md:px-5 md:py-3 text-xs font-thin md:font-normal truncate">
+                          Price
+                        </th>
+                        <th scope="col" class="px-2 py-1.5 md:px-5 md:py-3 text-xs font-thin md:font-normal truncate">
+                          Currency
+                        </th>
+                        <th scope="col" class="px-2 py-1.5 md:px-5 md:py-3 text-xs font-thin md:font-normal truncate">
+                          State
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="bg-white border-b">
+                        <td class="px-2 py-1.5 md:px-5 md:py-4 truncate">2022-08-03 16:26:31</td>
+                        <th scope="row" class="px-2 py-1.5 md:px-5 md:py-4 font-medium text-gray-900 whitespace-nowrap">
+                          <a href="javascript:void(0);" class="inline-block underline" onclick="buyDetail('276');"
+                            >seller1</a
+                          >
+                        </th>
+                        <td class="px-2 py-1.5 md:px-5 md:py-4">WRC</td>
+                        <td class="px-2 py-1.5 md:px-5 md:py-4">5</td>
+                        <td class="px-2 py-1.5 md:px-5 md:py-4">1000</td>
+                        <td class="px-2 py-1.5 md:px-5 md:py-4">KRW</td>
+                        <td class="px-2 py-1.5 md:px-5 md:py-4">trading</td>
+                      </tr>
+
+                      <tr class="bg-white border-b">
+                        <td class="px-2 py-1.5 md:px-5 md:py-4 truncate">2022-08-02 20:24:06</td>
+                        <th scope="row" class="px-2 py-1.5 md:px-5 md:py-4 font-medium text-gray-900 whitespace-nowrap">
+                          <a
+                            href="javascript:void(0);"
+                            class="inline-block underline"
+                            onclick="buyDetailLog('277','375');"
+                            >seller1</a
+                          >
+                        </th>
+                        <td class="px-2 py-1.5 md:px-5 md:py-4">ETH</td>
+                        <td class="px-2 py-1.5 md:px-5 md:py-4">2</td>
+                        <td class="px-2 py-1.5 md:px-5 md:py-4">1000000</td>
+                        <td class="px-2 py-1.5 md:px-5 md:py-4">KRW</td>
+                        <td class="px-2 py-1.5 md:px-5 md:py-4">transaction cancellation</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="mt-5">
+                  <ul class="flex items-center justify-center">
+                    <!--            <a href="javascript:void(0);" class="page"><span class="page active">1</span></a>-->
+                    <li class="px-3 py-2 hover:bg-blue-300 cursor-pointer border-l border-r border-y">1</li>
+                  </ul>
+                </div>
+                <input type="hidden" id="pageIndex" value="1" />
+              </div>
+            </div>
+            <!-- Seller Table | END -->
+          </div>
         </div>
       </section>
-
-      <!-- Buyer Detail -->
-      <section class="section">
-        <div class="mt-8">
-          <div class="grid grid-cols-1 md:grid-cols-12 gap-5">
-            <div class="col-span-2 py-2.5 px-5 border rounded-lg bg-gray-200 text-center">Code Number</div>
-
-            <div class="md:col-span-2 relative">
-              <input type="text" class="h-full w-full py-2.5 px-5 border rounded-lg" id="affiliate_code" />
-              <div class="absolute -bottom-8 text-red-400">Uncertified</div>
+      <section class="section md:bg-gray-100 mt-5 md:mt-16">
+        <div class="px-5 pt-8 md:pt-16 border rounded-xl md:border-none md:rounded-none">
+          <div class="grid md:flex justify-between">
+            <div class="md:basis-3/12 pb-5 hidden md:block">
+              <div class="px-5 flex justify-center">
+                <img src="./assets/img/main/img05.png" alt="" class="h-fit" />
+              </div>
             </div>
-            <div
-              class="md:col-span-1 inline-flex items-center justify-center btn btn-dark"
-              style="cursor: pointer"
-              onclick="insertAffiCode();"
-            >
-              Registration
+            <div class="md:basis-5/12 pb-5">
+              <div class="">
+                <div class="badge badge-purple w-fit">TRUSTED PLATFORM</div>
+                <h5 class="pt-5">Trusted Platform anytime & anywhere</h5>
+                <p class="pt-5 tracking-tighter">
+                  You can trade anytime and anywhere with the Bitypeer App for iOS and Android. Stay connected, and gain
+                  instant access to the crytoeconomy, in the palm of your hand.
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="py-10">The code you entered is the Wastey Recycle Foundation with WRC as an affiliate coin.</div>
-          <div class="grid grid-cols-1 md:grid-cols-12 gap-5">
-            <div class="col-span-1 md:col-span-2 py-2.5 px-5 border rounded-lg bg-gray-200 text-center">
-              API Documentation
+            <div class="md:basis-4/12 pb-2 md:pb-5">
+              <div class="flex justify-end items-end h-full pb-5">
+                <div>
+                  <img src="./assets/img/main/img07.png" alt="" class="w-24" />
+                </div>
+                <div>
+                  <img src="./assets/img/main/img08.png" alt="" class="w-24" />
+                </div>
+              </div>
             </div>
-            <a
-              href="javascript:void(0);"
-              class="col-span-1 md:col-span-1 inline-flex items-center justify-center btn btn-dark"
-              onclick="openApi();"
-              >Donwload</a
-            >
           </div>
         </div>
       </section>
-      <!-- Sell Coins | End -->
     </main>
 
     <!-- Footer -->
