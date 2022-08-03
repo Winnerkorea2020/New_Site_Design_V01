@@ -12,7 +12,7 @@
 }
 
 .btn-large {
-  @apply px-5 py-3 text-base lg:text-lg;
+  @apply px-5 py-2 text-base lg:text-lg;
 }
 
 .btn-exlarge {
@@ -51,4 +51,8 @@
 }
 .btn-purple {
   @apply text-white bg-purple-700 focus:ring-purple-300 hover:bg-purple-800;
+}
+
+.btn-disable {
+  @apply text-gray-50 bg-gray-400 cursor-none;
 }

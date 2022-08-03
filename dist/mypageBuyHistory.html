@@ -17,156 +17,114 @@
   </head>
   <body class="largeBody">
     <!-- Header -->
-    <header class="fixed top-0 left-0 w-full bg-white border-b-2 h-16 shadow-sm nav-header z-50">
+    <header class="fixed top-0 left-0 w-full bg-white border-b h-16 nav-header z-50">
       <!-- Top Navigation -->
       <section class="section">
         <div class="flex justify-between items-center h-16">
-          <div class="flex justify-between items-center w-full gap-5 text-sm">
-            <div class="basis-9/12">
-              <div class="flex">
-                <!-- Tap Header -->
-                <ul class="flex justify-between gap-5">
-                  <li class="flex border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300">
-                    <button
-                      id="dropdownNavbarLink"
-                      data-dropdown-toggle="dropdownNavbar"
-                      class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
-                    >
-                      History
-                      <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          fill-rule="evenodd"
-                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                          clip-rule="evenodd"
-                        ></path>
-                      </svg>
-                    </button>
-                    <!-- Dropdown menu -->
-                    <div
-                      id="dropdownNavbar"
-                      class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-fit"
-                      style="transform: translate(972px, 2179px)"
-                      data-popper-reference-hidden=""
-                      data-popper-escaped=""
-                      data-popper-placement="top"
-                    >
-                      <ul class="py-1 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
-                        <li>
-                          <a href="mypageSellHistory.html" class="block px-4 py-2 hover:bg-gray-100"> Sell History</a>
-                        </li>
-                        <li>
-                          <a href="mypageBuyHistory.html" class="block px-4 py-2 hover:bg-gray-100">Buy History</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li class="">
-                    <a
-                      href="mypageAffiliateWallet.html"
-                      class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300"
-                      >Affiliate Wallet</a
-                    >
-                  </li>
-                  <li class="flex border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300">
-                    <button
-                      id="dropdownNavbarLink"
-                      data-dropdown-toggle="dropdownSell"
-                      class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
-                    >
-                      Sell/Buy registration
-                      <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          fill-rule="evenodd"
-                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                          clip-rule="evenodd"
-                        ></path>
-                      </svg>
-                    </button>
-                    <!-- Dropdown menu -->
-                    <div
-                      id="dropdownSell"
-                      class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-fit"
-                      style="transform: translate(972px, 2179px)"
-                      data-popper-reference-hidden=""
-                      data-popper-escaped=""
-                      data-popper-placement="top"
-                    >
-                      <ul class="py-1 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
-                        <li>
-                          <a href="mypageCoinSellRegistration.html" class="block px-4 py-2 hover:bg-gray-100 text-start"> Sell registration</a>
-                        </li>
-                        <li>
-                          <a href="mypageCoinBuyRegistration.html" class="block px-4 py-2 hover:bg-gray-100 text-start">Buy registration </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
+          <div class="text-2xl md:hidden flex justify-center items-center">
+            <i class="bx bx-menu cursor-pointer nav-toggle"></i>
+          </div>
 
-                  <li class="">
-                    <a
-                      href="mypageInformation.html"
-                      class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300"
-                      >My Information</a
-                    >
-                  </li>
-                  <li class="">
-                    <a
-                      href="mypageSellerCerification.html"
-                      class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300"
-                      >Seller Certification</a
-                    >
-                  </li>
-                  <li class="flex border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300">
-                    <button
-                      id="dropdownNavbarLink"
-                      data-dropdown-toggle="affiliateCodeSellResistration"
-                      class="whitespace-nowrap flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
-                    >
-                      Affiliate Code/Sell registration
-                      <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          fill-rule="evenodd"
-                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                          clip-rule="evenodd"
-                        ></path>
-                      </svg>
-                    </button>
-                    <!-- Dropdown menu -->
-                    <div
-                      id="affiliateCodeSellResistration"
-                      class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-fit"
-                      style="transform: translate(972px, 2179px)"
-                      data-popper-reference-hidden=""
-                      data-popper-escaped=""
-                      data-popper-placement="top"
-                    >
-                      <ul class="py-1 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
-                        <li>
-                          <a href="mypageAffilicateCodeRegistration.html" class="block px-4 py-2 hover:bg-gray-100 text-start">
-                            Affiliate Code registration</a
-                          >
-                        </li>
-                        <li>
-                          <a href="mypageAffiliateSellRegistration.html" class="block px-4 py-2 hover:bg-gray-100 text-start"
-                            >Affiliate Sell registration
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                </ul>
+          <a href="main.html" class="flex items-center justify-center md:hidden">
+            <img src="./assets/img/logo/logo_small.png" class="h-8 w-8 mx-2" alt="" />
+            <div class="nav-brand__logo">Bitypeer</div>
+          </a>
+          <div class="justify-end items-center px-12 w-full gap-5 text-sm hidden md:flex">
+            <div>Sign in</div>
+            <div>Sign up</div>
+          </div>
+          <div class="absolute right-12 mt-2 md:relative w-20 pr-2 text-end mr-5 md:mt-1">
+            <div
+              class="cursor-pointer hover:text-gray-800"
+              id="user-menu-button"
+              aria-expanded="false"
+              data-dropdown-toggle="dropdownAlarm"
+            >
+              <i class="bx bxs-bell bx-sm"></i>
+            </div>
+
+            <!-- Alam Signal -->
+
+            <div class="absolute top-0 right-1 w-4 h-4 bg-red-500 rounded-full">
+              <div
+                class="flex justify-center items-center text-white text-xs tracking-tighter"
+                style="font-size: 0.2rem"
+              >
+                <span>10</span>
               </div>
             </div>
-            <div class="basis-3/12">
-              <div class="flex justify-end items-center w-full gap-5 text-sm">
-                <div>Sign in</div>
-                <div>Sign up</div>
-                <div class="relative">
-                  <i class="bx bxs-bell text-xl"></i>
-                  <div class="absolute top-0 -right-0.5 w-3 h-3 bg-red-500 rounded-full"></div>
-                </div>
-              </div>
-            </div>
+          </div>
+
+          <!-- Alam DropDwon Menu -->
+
+          <!-- Dropdown menu -->
+          <div
+            class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow-sm border w-80"
+            id="dropdownAlarm"
+            style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate(1246px, 803px)"
+            data-popper-reference-hidden=""
+            data-popper-escaped=""
+            data-popper-placement="top"
+          >
+            <!-- Drop Down Contents | Start -->
+
+            <ul class="py-1 pr-5" aria-labelledby="dropdownAlarm">
+              <!-- National Flags | Start -->
+              <li>
+                <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                  <span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, voluptatibus. </span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                  <span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, voluptatibus. </span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                  <span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, voluptatibus. </span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                  <span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, voluptatibus. </span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                  <span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, voluptatibus. </span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                  <span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, voluptatibus. </span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                  <span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, voluptatibus. </span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                  <span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, voluptatibus. </span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                  <span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, voluptatibus. </span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">
+                  <span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, voluptatibus. </span>
+                </a>
+              </li>
+
+              <!-- National Flags | End -->
+            </ul>
+
+            <!-- Drop Down Contents | End -->
           </div>
 
           <div class="flex items-center">
@@ -179,7 +137,7 @@
             >
               <span class="sr-only">Open user menu</span>
               <img class="w-6 h-6 md:w-8 md:h-8 border-none" src="./assets/img/flag/usa.png" alt="National Flag" />
-              <i class="bx bx-chevron-down bx-sm"></i>
+              <i class="bx bx-chevron-down bx-sm hidden md:block"></i>
             </button>
             <!-- Dropdown menu -->
             <div
@@ -271,19 +229,30 @@
     </header>
 
     <!-- Side Navi -->
-    <aside class="side-nav fixed left-0 top-0 h-screen bg-white border-r shadow-md" style="z-index: 100">
+    <aside
+      class="side-nav fixed -left-full md:left-0 duration-1000 ease-in-out top-0 h-full bg-white border-r nav-side"
+      style="z-index: 1000"
+    >
       <!-- Side Navigation Header -->
+
       <div class="px-5">
-        <a href="main.html" class="h-16 flex items-center justify-between">
+        <a href="main.html" class="h-16 hidden md:flex items-center justify-between">
           <img src="./assets/img/logo/logo_small.png" class="h-8 w-8 mx-2" alt="" />
 
           <div class="justify-between items-center w-full ml-2 gap-2 nav-brand__logo">
             <div>Bitypeer</div>
-            <img src="./assets/img/logo/icons1.png" alt="" class="w-6 h-6" />
+            <!-- 
+    <img src="./assets/img/logo/icons1.png" alt="" class="w-6 h-6" />
+     -->
           </div>
         </a>
+        <!-- Close Button -->
+        <div class="absolute top-7 right-5 md:hidden">
+          <i class="bx bx-x-circle bx-sm cursor-pointer nav-close"></i>
+        </div>
+
         <!-- Side Menu List | Start -->
-        <nav class="px-2 pt-16 flex justify-start">
+        <nav class="px-2 pt-20 md:pt-16 flex flex-col justify-start">
           <ul class="flex flex-col gap-8 uppercase">
             <li>
               <a href="sell.html" class="inline-flex items-center">
@@ -309,12 +278,7 @@
                 <span class="pl-3">Notice</span>
               </a>
             </li>
-            <li>
-              <a href="affiliateSell.html" class="inline-flex items-center">
-                <i class="bx bxs-cart-add bx-sm"></i>
-                <span class="pl-3">Affiliate Sell</span>
-              </a>
-            </li>
+
             <li>
               <a href="mypageBuyHistory.html" class="inline-flex items-center">
                 <i class="bx bxs-user-rectangle bx-sm"></i>
@@ -322,6 +286,17 @@
               </a>
             </li>
           </ul>
+          <div class="absolute bottom-52 flex flex-col gap-5 ml-9 md:hidden">
+            <!-- Sign Up / Sign In Area -->
+            <div class="flex flex-col gap-5">
+              <a href="#" class="btn btn-dark text-center">Sign in</a>
+              <a href="#" class="btn btn-dark text-center">Sign up</a>
+            </div>
+            <!-- Log Out Area -->
+            <div>
+              <a href="#" class="btn btn-red">Log Out</a>
+            </div>
+          </div>
         </nav>
 
         <!-- Side Menu List | End -->
@@ -330,13 +305,164 @@
 
     <!-- Main -->
     <main class="p-0">
+      <!-- Tap Menu -->
+      <section class="section">
+        <div class="pt-2 flex justify-start">
+          <div class="text-sm font-medium text-center text-gray-500 border-b border-gray-200">
+            <ul class="flex flex-wrap -mb-px">
+              <li class="flex border-b-2 border-transparent hover:text-gray-600 hover:border-blue-500">
+                <button
+                  id="dropdownNavbarLink"
+                  data-dropdown-toggle="dropdownNavbar"
+                  class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                >
+                  History
+                  <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div
+                  id="dropdownNavbar"
+                  class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-fit menuClass history tab__nav_active"
+                  style="
+                    transform: translate3d(338px, 146px, 0px);
+                    position: absolute;
+                    inset: 0px auto auto 0px;
+                    margin: 0px;
+                  "
+                  data-popper-placement="bottom"
+                >
+                  <ul class="py-1 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                    <li>
+                      <a href="/m/sellHistory" class="block px-4 py-2 hover:bg-gray-100">Sell History</a>
+                    </li>
+                    <li>
+                      <a href="/m/buyHistory" class="block px-4 py-2 hover:bg-gray-100">Buy History</a>
+                    </li>
+                    <li>
+                      <a href="/m/sellRegistView" class="block px-4 py-2 hover:bg-gray-100">Sell Request History</a>
+                    </li>
+                    <li>
+                      <a href="/m/buyRegistView" class="block px-4 py-2 hover:bg-gray-100">Buy Request History</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mr-2">
+                <a
+                  href="/m/affiliateWallet"
+                  class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-blue-500 menuClass wallet"
+                  >Affiliate Wallet</a
+                >
+              </li>
+
+              <li class="mr-2">
+                <a
+                  href="/m/sellRegister"
+                  class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-blue-500 menuClass sell"
+                  >Sell</a
+                >
+              </li>
+
+              <li class="mr-2">
+                <a
+                  href="/m/buyRegister"
+                  class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-blue-500 menuClass buy"
+                  >Buy</a
+                >
+              </li>
+              <li class="mr-2">
+                <a
+                  href="/m/info"
+                  class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-blue-500 menuClass info"
+                  >My Information</a
+                >
+              </li>
+              <li class="mr-2">
+                <a
+                  href="/m/sellercertification"
+                  class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-blue-500 menuClass certification"
+                  >Seller Certification</a
+                >
+              </li>
+
+              <li class="flex border-b-2 border-transparent hover:text-gray-600 hover:border-blue-500">
+                <button
+                  id="dropdownNavbarLink"
+                  data-dropdown-toggle="Affiliate"
+                  class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                >
+                  Affiliate Code/Sell registration
+                  <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div
+                  id="Affiliate"
+                  class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-fit menuClass history tab__nav_active"
+                  style="
+                    transform: translate3d(1050.5px, 146px, 0px);
+                    position: absolute;
+                    inset: 0px auto auto 0px;
+                    margin: 0px;
+                  "
+                  data-popper-placement="bottom"
+                >
+                  <ul class="py-1 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                    <li>
+                      <a href="/m/affiliateCode" class="block px-4 py-2 hover:bg-gray-100"
+                        >Affiliate code registration</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <input type="hidden" id="menu" value="sellHistory" />
+        <script>
+          //todo[limsy820] dropdown 메뉴 active 안먹음
+          $(function () {
+            $(".menuClass").removeClass("tab__nav_active");
+            let menu = $("#menu").val();
+            if (menu == "sellHistory" || menu == "buyHistory") {
+              $(".history").addClass("tab__nav_active"); // not active
+            } else if (menu == "affiliateWallet" || menu == "send" || menu == "receive") {
+              $(".wallet").addClass("tab__nav_active");
+            } else if (menu == "sellRegister" || menu == "sellRegisterAffiliate") {
+              $(".sell").addClass("tab__nav_active"); // not active
+            } else if (menu == "buyRegister" || menu == "buyRegisterAffiliate") {
+              $(".buy").addClass("tab__nav_active"); // not active
+            } else if (menu == "info") {
+              $(".info").addClass("tab__nav_active");
+            } else if (menu == "sellerCertification") {
+              $(".certification").addClass("tab__nav_active");
+            } else if (menu == "affiliateCode" || menu == "affiliateSell") {
+              $(".code").addClass("tab__nav_active");
+            }
+          });
+        </script>
+      </section>
+
       <!-- Sell Coins | Start -->
       <section class="section">
-        <div class="pt-16">
-          <!-- Sell Header Area | Start -->
+        <div class="pt-5 md:pt-16">
+          <!-- Buy Header Area | Start -->
           <div class="flex justify-between items-center">
             <h4>Buy History</h4>
-            <div class="flex items-center gap-2 text-xs">
+
+            <div class="hidden md:flex items-center gap-2 text-xs">
               <div>HOME</div>
               <div><i class="bx bx-chevron-right"></i></div>
               <div>My Page</div>
@@ -344,105 +470,69 @@
               <div>Buy History</div>
             </div>
           </div>
-          <!-- Sell Header Area | End -->
-          <div class="grid grid-cols-12 gap-5 mt-8">
+          <!-- Buy Header Area | End -->
+          <div class="grid grid-cols-1 md:grid-cols-10 gap-5 mt-5 md:mt-8">
             <!-- Search Coins | Start -->
-            <div class="col-span-3">
-              <form action="" class="bg-white px-3 py-8 h-full rounded-xl shadow-md">
+            <div class="col-span-1 md:col-span-2">
+              <div class="bg-white px-3 py-8 h-full rounded-xl border">
                 <div class="grid grid-cols-1 gap-5">
                   <!-- Coin Name -->
                   <div class="">
                     <label class="" for="">Coin Name</label>
-                    <select name="" id="" class="w-full border-2 mt-2 px-2.5 py-2 border-gray-300 rounded-xl tracking-tighter">
-                      <option value="">WRC</option>
-                    </select>
-                  </div>
-                  <!--Seller ID -->
-                  <div class="">
-                    <label class="" for="">Seller ID</label>
                     <input
                       type="text"
+                      id="coin_nm"
+                      class="w-full border mt-2 px-2.5 py-2 border-gray-300 rounded-xl tracking-tighter"
+                      style=""
+                      value=""
+                    />
+                    <select
+                      name=""
+                      id="coin_typ"
+                      class="w-full border mt-2 px-2.5 py-2 border-gray-300 rounded-xl tracking-tighter"
+                      onchange="selectCoin();"
+                    >
+                      <option value="">select</option>
+                      <option data-affi="N" value="CMDT00000000000071">normal</option>
+
+                      <option data-affi="Y" value="CMDT00000000000064">WRC</option>
+                    </select>
+                  </div>
+                  <!--seller ID -->
+                  <div class="">
+                    <label class="" for="">seller ID</label>
+                    <input
+                      type="text"
+                      id="seller_id"
                       placeholder="Enter seller ID"
-                      class="w-full border-2 mt-2 px-2.5 py-2 border-gray-300 rounded-xl tracking-tighter"
+                      class="w-full border mt-2 px-2.5 py-2 border-gray-300 rounded-xl tracking-tighter"
+                      value=""
                     />
-                  </div>
-
-                  <!-- CURRENCY -->
-                  <div class="">
-                    <label class="" for="">Currency</label>
-                    <select name="" id="" class="w-full border-2 mt-2 pl-2.5 pr-10 py-2 border-gray-300 rounded-xl tracking-tighter">
-                      <option value="">Currency Selection</option>
-                    </select>
-                  </div>
-
-                  <!--OFFER Country -->
-                  <div class="">
-                    <label class="" for="">Offer Country</label>
-                    <input
-                      type="text"
-                      placeholder="Choose your Country"
-                      class="w-full border-2 mt-2 px-2.5 py-2 border-gray-300 rounded-xl tracking-tighter"
-                    />
-                  </div>
-
-                  <!--OFFER Country -->
-                  <div class="">
-                    <label class="" for="">ESCROW</label>
-                    <input
-                      type="text"
-                      placeholder="Choice of escrow / non-escrow"
-                      class="w-full border-2 mt-2 px-2.5 py-2 border-gray-300 rounded-xl tracking-tighter"
-                    />
-                  </div>
-
-                  <!--Seller ID -->
-                  <div class="">
-                    <label class="" for="">Seller ID</label>
-                    <div class="flex items-center justify-between">
-                      <input
-                        type="text"
-                        placeholder="0"
-                        pattern="[0-9]+"
-                        class="w-full border-2 mt-2 px-2.5 py-2 border-gray-300 rounded-xl tracking-tighter text-right placeholder:text-right"
-                      />
-                      <div class="px-2">~</div>
-                      <input
-                        type="text"
-                        placeholder="0"
-                        pattern="[0-9]+"
-                        class="w-full border-2 mt-2 px-2.5 py-2 border-gray-300 rounded-xl tracking-tighter text-right placeholder:text-right"
-                      />
-                    </div>
-                    <select name="" id="" class="w-full border-2 mt-2 px-2.5 py-2 border-gray-300 rounded-xl tracking-tighter">
-                      <option value="" class="">Select</option>
-                    </select>
                   </div>
                 </div>
                 <!-- Button -->
                 <div class="mt-5">
-                  <button class="btn btn-exlarge btn-rounded w-full btn-default">Search</button>
+                  <button class="btn btn-large btn-rounded w-full btn-default" onclick="fnSearch();">Search</button>
                 </div>
-              </form>
+              </div>
             </div>
             <!-- Search Coins | END -->
-            <!-- Seller Table | Start -->
-            <div class="col-span-9">
+            <!-- Buyer Table | Start -->
+            <div class="hidden md:block col-span-1 md:col-span-8">
               <!-- Table -->
-              <div class="shadow-md bg-white h-full rounded-xl p-5">
+              <div class="border bg-white h-full rounded-xl p-5">
                 <div class="overflow-x-auto">
                   <table class="w-full text-sm text-left text-gray-500">
                     <thead class="text-xs text-gray-700 uppercase bg-gray-100">
                       <tr>
-                        <th scope="col" class="px-3 py-3 truncate">Date</th>
-                        <th scope="col" class="px-3 py-3 truncate">Selle ID</th>
-                        <th scope="col" class="px-3 py-3 truncate">Coin Name</th>
-                        <th scope="col" class="px-3 py-3 truncate">Amount of coins</th>
-                        <th scope="col" class="px-3 py-3 truncate">Price</th>
-                        <th scope="col" class="px-3 py-3 truncate">Offer Country</th>
-                        <th scope="col" class="px-3 py-3 truncate">Security</th>
-                        <th scope="col" class="px-3 py-3 truncate">Currency</th>
-                        <th scope="col" class="px-3 py-3 truncate">Fee(Gas)</th>
-                        <th scope="col" class="px-3 py-3 truncate">State</th>
+                        <th scope="col" class="px-5 py-3 truncate">Date</th>
+                        <th scope="col" class="px-5 py-3 truncate">Seller ID</th>
+                        <th scope="col" class="px-5 py-3 truncate">Coin Name</th>
+                        <th scope="col" class="px-5 py-3 truncate">Amount of coins</th>
+                        <th scope="col" class="px-5 py-3 truncate">Price</th>
+                        <th scope="col" class="px-5 py-3 truncate">Currency</th>
+                        <th scope="col" class="px-5 py-3 truncate">State</th>
+                        <th scope="col" class="px-5 py-3 truncate"></th>
                       </tr>
                     </thead>
                     <tbody>
@@ -454,12 +544,7 @@
                         <td class="px-3 py-4">WRC</td>
                         <td class="px-3 py-4">9,999,999,999,999</td>
                         <td class="px-3 py-4">90,000,000,000</td>
-                        <td class="px-3 py-4">United States of America</td>
-                        <td class="px-3 py-4">
-                          <div class="badge badge-small badge-green">Escrow</div>
-                        </td>
                         <td class="px-3 py-4">USD</td>
-                        <td class="px-3 py-4">FREE</td>
                         <td class="px-3 py-4">
                           <a href="" class="inline-block btn btn-small btn-default">completed</a>
                         </td>
@@ -472,12 +557,7 @@
                         <td class="px-3 py-4">WRC</td>
                         <td class="px-3 py-4">9,999,999,999,999</td>
                         <td class="px-3 py-4">90,000,000,000</td>
-                        <td class="px-3 py-4">United States of America</td>
-                        <td class="px-3 py-4">
-                          <div class="badge badge-small badge-green">Escrow</div>
-                        </td>
                         <td class="px-3 py-4">USD</td>
-                        <td class="px-3 py-4">FREE</td>
                         <td class="px-3 py-4">
                           <a href="" class="inline-block btn btn-small btn-default">completed</a>
                         </td>
@@ -490,12 +570,7 @@
                         <td class="px-3 py-4">WRC</td>
                         <td class="px-3 py-4">9,999,999,999,999</td>
                         <td class="px-3 py-4">90,000,000,000</td>
-                        <td class="px-3 py-4">United States of America</td>
-                        <td class="px-3 py-4">
-                          <div class="badge badge-small badge-green">Escrow</div>
-                        </td>
                         <td class="px-3 py-4">USD</td>
-                        <td class="px-3 py-4">FREE</td>
                         <td class="px-3 py-4">
                           <a href="" class="inline-block btn btn-small btn-default">completed</a>
                         </td>
@@ -508,12 +583,7 @@
                         <td class="px-3 py-4">WRC</td>
                         <td class="px-3 py-4">9,999,999,999,999</td>
                         <td class="px-3 py-4">90,000,000,000</td>
-                        <td class="px-3 py-4">United States of America</td>
-                        <td class="px-3 py-4">
-                          <div class="badge badge-small badge-green">Escrow</div>
-                        </td>
                         <td class="px-3 py-4">USD</td>
-                        <td class="px-3 py-4">FREE</td>
                         <td class="px-3 py-4">
                           <a href="" class="inline-block btn btn-small btn-default">completed</a>
                         </td>
@@ -526,12 +596,7 @@
                         <td class="px-3 py-4">WRC</td>
                         <td class="px-3 py-4">9,999,999,999,999</td>
                         <td class="px-3 py-4">90,000,000,000</td>
-                        <td class="px-3 py-4">United States of America</td>
-                        <td class="px-3 py-4">
-                          <div class="badge badge-small badge-green">Escrow</div>
-                        </td>
                         <td class="px-3 py-4">USD</td>
-                        <td class="px-3 py-4">FREE</td>
                         <td class="px-3 py-4">
                           <a href="" class="inline-block btn btn-small btn-default">completed</a>
                         </td>
@@ -544,12 +609,7 @@
                         <td class="px-3 py-4">WRC</td>
                         <td class="px-3 py-4">9,999,999,999,999</td>
                         <td class="px-3 py-4">90,000,000,000</td>
-                        <td class="px-3 py-4">United States of America</td>
-                        <td class="px-3 py-4">
-                          <div class="badge badge-small badge-green">Escrow</div>
-                        </td>
                         <td class="px-3 py-4">USD</td>
-                        <td class="px-3 py-4">FREE</td>
                         <td class="px-3 py-4">
                           <a href="" class="inline-block btn btn-small btn-default">completed</a>
                         </td>
@@ -562,12 +622,7 @@
                         <td class="px-3 py-4">WRC</td>
                         <td class="px-3 py-4">9,999,999,999,999</td>
                         <td class="px-3 py-4">90,000,000,000</td>
-                        <td class="px-3 py-4">United States of America</td>
-                        <td class="px-3 py-4">
-                          <div class="badge badge-small badge-green">Escrow</div>
-                        </td>
                         <td class="px-3 py-4">USD</td>
-                        <td class="px-3 py-4">FREE</td>
                         <td class="px-3 py-4">
                           <a href="" class="inline-block btn btn-small btn-default">completed</a>
                         </td>
@@ -580,12 +635,7 @@
                         <td class="px-3 py-4">WRC</td>
                         <td class="px-3 py-4">9,999,999,999,999</td>
                         <td class="px-3 py-4">90,000,000,000</td>
-                        <td class="px-3 py-4">United States of America</td>
-                        <td class="px-3 py-4">
-                          <div class="badge badge-small badge-green">Escrow</div>
-                        </td>
                         <td class="px-3 py-4">USD</td>
-                        <td class="px-3 py-4">FREE</td>
                         <td class="px-3 py-4">
                           <a href="" class="inline-block btn btn-small btn-default">completed</a>
                         </td>
@@ -598,12 +648,7 @@
                         <td class="px-3 py-4">WRC</td>
                         <td class="px-3 py-4">9,999,999,999,999</td>
                         <td class="px-3 py-4">90,000,000,000</td>
-                        <td class="px-3 py-4">United States of America</td>
-                        <td class="px-3 py-4">
-                          <div class="badge badge-small badge-green">Escrow</div>
-                        </td>
                         <td class="px-3 py-4">USD</td>
-                        <td class="px-3 py-4">FREE</td>
                         <td class="px-3 py-4">
                           <a href="" class="inline-block btn btn-small btn-default">completed</a>
                         </td>
@@ -616,12 +661,7 @@
                         <td class="px-3 py-4">WRC</td>
                         <td class="px-3 py-4">9,999,999,999,999</td>
                         <td class="px-3 py-4">90,000,000,000</td>
-                        <td class="px-3 py-4">United States of America</td>
-                        <td class="px-3 py-4">
-                          <div class="badge badge-small badge-green">Escrow</div>
-                        </td>
                         <td class="px-3 py-4">USD</td>
-                        <td class="px-3 py-4">FREE</td>
                         <td class="px-3 py-4">
                           <a href="" class="inline-block btn btn-small btn-default">completed</a>
                         </td>
@@ -634,12 +674,7 @@
                         <td class="px-3 py-4">WRC</td>
                         <td class="px-3 py-4">9,999,999,999,999</td>
                         <td class="px-3 py-4">90,000,000,000</td>
-                        <td class="px-3 py-4">United States of America</td>
-                        <td class="px-3 py-4">
-                          <div class="badge badge-small badge-green">Escrow</div>
-                        </td>
                         <td class="px-3 py-4">USD</td>
-                        <td class="px-3 py-4">FREE</td>
                         <td class="px-3 py-4">
                           <a href="" class="inline-block btn btn-small btn-default">completed</a>
                         </td>
@@ -652,12 +687,7 @@
                         <td class="px-3 py-4">WRC</td>
                         <td class="px-3 py-4">9,999,999,999,999</td>
                         <td class="px-3 py-4">90,000,000,000</td>
-                        <td class="px-3 py-4">United States of America</td>
-                        <td class="px-3 py-4">
-                          <div class="badge badge-small badge-green">Escrow</div>
-                        </td>
                         <td class="px-3 py-4">USD</td>
-                        <td class="px-3 py-4">FREE</td>
                         <td class="px-3 py-4">
                           <a href="" class="inline-block btn btn-small btn-default">completed</a>
                         </td>
@@ -667,7 +697,9 @@
                 </div>
                 <div class="mt-5">
                   <ul class="flex items-center justify-center">
-                    <li class="px-3 py-2 hover:bg-blue-300 cursor-pointer border-l border-y rounded-l-xl bg-gray-100">PREVIOUS</li>
+                    <li class="px-3 py-2 hover:bg-blue-300 cursor-pointer border-l border-y rounded-l-xl bg-gray-100">
+                      PREVIOUS
+                    </li>
                     <li class="px-3 py-2 hover:bg-blue-300 cursor-pointer border-l border-y">1</li>
                     <li class="px-3 py-2 hover:bg-blue-300 cursor-pointer border-l border-y">2</li>
                     <li class="px-3 py-2 hover:bg-blue-300 cursor-pointer border-l border-y">3</li>
@@ -678,7 +710,364 @@
                 </div>
               </div>
             </div>
-            <!-- Seller Table | END -->
+            <!-- Buyer Table | END -->
+
+            <!-- Buyer Card | Start -->
+            <div class="col-span-1 md:hidden">
+              <div>
+                <div>
+                  <div class="grid grid-cols-1 gap-2">
+                    <!-- Auto -->
+                    <div class="">
+                      <div class="text-sm w-full">
+                        <div class="grid grid-cols-2 p-5 border rounded-lg gap-y-1.5 tracking-tighter">
+                          <div class="col-span-1 w-full truncate">
+                            <a href="#" class="truncate underline">abcadeafeasfease123123</a>
+                          </div>
+                          <div class="col-span-1">
+                            <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">Coin</span></div>
+                          </div>
+                          <div class="col-span-1">WRC</div>
+                          <div class="col-span-1">
+                            <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">KRW</span></div>
+                          </div>
+                          <div class="col-span-1">
+                            <div class="badge badge-dark inline-block">AUTO</div>
+                            <div class="badge badge-green inline-block uppercase">escow</div>
+                          </div>
+                          <div class="col-span-1">
+                            <div class="flex justify-end items-center">
+                              <button class="btn btn-small btn-default text-center w-10/12">SELL</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Manual -->
+                    <div class="">
+                      <div class="text-sm w-full">
+                        <div class="grid grid-cols-2 p-5 border rounded-lg gap-y-1.5 tracking-tighter">
+                          <div class="col-span-1 w-full truncate">
+                            <a href="#" class="truncate underline">abcadeafeasfease123123</a>
+                          </div>
+                          <div class="col-span-1">
+                            <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">Coin</span></div>
+                          </div>
+                          <div class="col-span-1">WRC</div>
+                          <div class="col-span-1">
+                            <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">KRW</span></div>
+                          </div>
+                          <div class="col-span-1">
+                            <div class="badge badge-default inline-block">Manual</div>
+                            <div class="badge badge-red inline-block uppercase">Non-ESCOW</div>
+                          </div>
+                          <div class="col-span-1">
+                            <div class="flex justify-end items-center">
+                              <button class="btn btn-small btn-default text-center w-10/12">SELL</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Auto -->
+                    <div class="">
+                      <div class="text-sm w-full">
+                        <div class="grid grid-cols-2 p-5 border rounded-lg gap-y-1.5 tracking-tighter">
+                          <div class="col-span-1 w-full truncate">
+                            <a href="#" class="truncate underline">abcadeafeasfease123123</a>
+                          </div>
+                          <div class="col-span-1">
+                            <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">Coin</span></div>
+                          </div>
+                          <div class="col-span-1">WRC</div>
+                          <div class="col-span-1">
+                            <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">KRW</span></div>
+                          </div>
+                          <div class="col-span-1">
+                            <div class="badge badge-dark inline-block">AUTO</div>
+                            <div class="badge badge-green inline-block uppercase">escow</div>
+                          </div>
+                          <div class="col-span-1">
+                            <div class="flex justify-end items-center">
+                              <button class="btn btn-small btn-default text-center w-10/12">SELL</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Manual -->
+                    <div class="">
+                      <div class="text-sm w-full">
+                        <div class="grid grid-cols-2 p-5 border rounded-lg gap-y-1.5 tracking-tighter">
+                          <div class="col-span-1 w-full truncate">
+                            <a href="#" class="truncate underline">abcadeafeasfease123123</a>
+                          </div>
+                          <div class="col-span-1">
+                            <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">Coin</span></div>
+                          </div>
+                          <div class="col-span-1">WRC</div>
+                          <div class="col-span-1">
+                            <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">KRW</span></div>
+                          </div>
+                          <div class="col-span-1">
+                            <div class="badge badge-default inline-block">Manual</div>
+                            <div class="badge badge-red inline-block uppercase">Non-ESCOW</div>
+                          </div>
+                          <div class="col-span-1">
+                            <div class="flex justify-end items-center">
+                              <button class="btn btn-small btn-default text-center w-10/12">SELL</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Auto -->
+                    <div class="">
+                      <div class="text-sm w-full">
+                        <div class="grid grid-cols-2 p-5 border rounded-lg gap-y-1.5 tracking-tighter">
+                          <div class="col-span-1 w-full truncate">
+                            <a href="#" class="truncate underline">abcadeafeasfease123123</a>
+                          </div>
+                          <div class="col-span-1">
+                            <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">Coin</span></div>
+                          </div>
+                          <div class="col-span-1">WRC</div>
+                          <div class="col-span-1">
+                            <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">KRW</span></div>
+                          </div>
+                          <div class="col-span-1">
+                            <div class="badge badge-dark inline-block">AUTO</div>
+                            <div class="badge badge-green inline-block uppercase">escow</div>
+                          </div>
+                          <div class="col-span-1">
+                            <div class="flex justify-end items-center">
+                              <button class="btn btn-small btn-default text-center w-10/12">SELL</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Manual -->
+                    <div class="">
+                      <div class="text-sm w-full">
+                        <div class="grid grid-cols-2 p-5 border rounded-lg gap-y-1.5 tracking-tighter">
+                          <div class="col-span-1 w-full truncate">
+                            <a href="#" class="truncate underline">abcadeafeasfease123123</a>
+                          </div>
+                          <div class="col-span-1">
+                            <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">Coin</span></div>
+                          </div>
+                          <div class="col-span-1">WRC</div>
+                          <div class="col-span-1">
+                            <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">KRW</span></div>
+                          </div>
+                          <div class="col-span-1">
+                            <div class="badge badge-default inline-block">Manual</div>
+                            <div class="badge badge-red inline-block uppercase">Non-ESCOW</div>
+                          </div>
+                          <div class="col-span-1">
+                            <div class="flex justify-end items-center">
+                              <button class="btn btn-small btn-default text-center w-10/12">SELL</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Auto -->
+                    <div class="">
+                      <div class="text-sm w-full">
+                        <div class="grid grid-cols-2 p-5 border rounded-lg gap-y-1.5 tracking-tighter">
+                          <div class="col-span-1 w-full truncate">
+                            <a href="#" class="truncate underline">abcadeafeasfease123123</a>
+                          </div>
+                          <div class="col-span-1">
+                            <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">Coin</span></div>
+                          </div>
+                          <div class="col-span-1">WRC</div>
+                          <div class="col-span-1">
+                            <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">KRW</span></div>
+                          </div>
+                          <div class="col-span-1">
+                            <div class="badge badge-dark inline-block">AUTO</div>
+                            <div class="badge badge-green inline-block uppercase">escow</div>
+                          </div>
+                          <div class="col-span-1">
+                            <div class="flex justify-end items-center">
+                              <button class="btn btn-small btn-default text-center w-10/12">SELL</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Manual -->
+                    <div class="">
+                      <div class="text-sm w-full">
+                        <div class="grid grid-cols-2 p-5 border rounded-lg gap-y-1.5 tracking-tighter">
+                          <div class="col-span-1 w-full truncate">
+                            <a href="#" class="truncate underline">abcadeafeasfease123123</a>
+                          </div>
+                          <div class="col-span-1">
+                            <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">Coin</span></div>
+                          </div>
+                          <div class="col-span-1">WRC</div>
+                          <div class="col-span-1">
+                            <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">KRW</span></div>
+                          </div>
+                          <div class="col-span-1">
+                            <div class="badge badge-default inline-block">Manual</div>
+                            <div class="badge badge-red inline-block uppercase">Non-ESCOW</div>
+                          </div>
+                          <div class="col-span-1">
+                            <div class="flex justify-end items-center">
+                              <button class="btn btn-small btn-default text-center w-10/12">SELL</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Auto -->
+                    <div class="">
+                      <div class="text-sm w-full">
+                        <div class="grid grid-cols-2 p-5 border rounded-lg gap-y-1.5 tracking-tighter">
+                          <div class="col-span-1 w-full truncate">
+                            <a href="#" class="truncate underline">abcadeafeasfease123123</a>
+                          </div>
+                          <div class="col-span-1">
+                            <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">Coin</span></div>
+                          </div>
+                          <div class="col-span-1">WRC</div>
+                          <div class="col-span-1">
+                            <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">KRW</span></div>
+                          </div>
+                          <div class="col-span-1">
+                            <div class="badge badge-dark inline-block">AUTO</div>
+                            <div class="badge badge-green inline-block uppercase">escow</div>
+                          </div>
+                          <div class="col-span-1">
+                            <div class="flex justify-end items-center">
+                              <button class="btn btn-small btn-default text-center w-10/12">SELL</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Manual -->
+                    <div class="">
+                      <div class="text-sm w-full">
+                        <div class="grid grid-cols-2 p-5 border rounded-lg gap-y-1.5 tracking-tighter">
+                          <div class="col-span-1 w-full truncate">
+                            <a href="#" class="truncate underline">abcadeafeasfease123123</a>
+                          </div>
+                          <div class="col-span-1">
+                            <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">Coin</span></div>
+                          </div>
+                          <div class="col-span-1">WRC</div>
+                          <div class="col-span-1">
+                            <div class="text-end">999,999,999,999,999 <span class="ml-2 font-semibold">KRW</span></div>
+                          </div>
+                          <div class="col-span-1">
+                            <div class="badge badge-default inline-block">Manual</div>
+                            <div class="badge badge-red inline-block uppercase">Non-ESCOW</div>
+                          </div>
+                          <div class="col-span-1">
+                            <div class="flex justify-end items-center">
+                              <button class="btn btn-small btn-default text-center w-10/12">SELL</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="mt-5 flex justify-center items-center">
+                    <nav>
+                      <ul class="inline-flex items-center -space-x-px">
+                        <li>
+                          <a
+                            href="#"
+                            class="block py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
+                          >
+                            <span class="sr-only">Previous</span>
+                            <svg
+                              aria-hidden="true"
+                              class="w-5 h-5"
+                              fill="currentColor"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                                clip-rule="evenodd"
+                              ></path>
+                            </svg>
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
+                            >1</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
+                            >2</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            aria-current="page"
+                            class="z-10 py-2 px-3 leading-tight text-blue-600 bg-blue-50 border border-blue-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white"
+                            >3</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
+                            >4</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
+                            >5</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="block py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
+                          >
+                            <span class="sr-only">Next</span>
+                            <svg
+                              aria-hidden="true"
+                              class="w-5 h-5"
+                              fill="currentColor"
+                              viewBox="0 0 20 20"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                clip-rule="evenodd"
+                              ></path>
+                            </svg>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- SELLer Card | END -->
           </div>
         </div>
       </section>
@@ -686,41 +1075,40 @@
     </main>
 
     <!-- Footer -->
-    <footer class="px-5 py-5">
+    <footer class="px-5 py-5 bg-gray-100 pt-10 mt-16">
       <section class="section">
         <div class="px-5 pt-16">
-          <div class="grid grid-cols-12 pb-16 text-sm">
+          <div class="grid grid-cols-1 md:grid-cols-12 pb-16 text-sm gap-10 md:gap-0">
             <div class="col-span-2">
-              <div class="flex items-center gap-5">
+              <div class="flex items-center gap-2 md:gap-5">
                 <img src="./assets/img/logo/logo_small.png" alt="" class="h-10 w-10" />
                 <h5>Bitypeer</h5>
               </div>
             </div>
-            <div class="col-span-3 border-r px-10">
+            <div class="col-span-3 md:border-r md:px-10">
               <div>
-                <ul class="flex flex-col gap-5">
+                <div class="text-xl uppercase">About</div>
+                <ul class="flex flex-col gap-2 md:gap-4 pt-8">
                   <li>Terms of Use</li>
                   <li>Privacy Policy</li>
-                  <li>Open API Terms of Use</li>
+                  <li>Open API</li>
                   <li>FAQ</li>
-                  <li>Contact</li>
+                  <li>Guide</li>
                 </ul>
               </div>
             </div>
-            <div class="col-span-3 border-r px-10">
+            <div class="col-span-3 md:border-r md:px-10">
               <div>
-                <div class="">CONTACT</div>
-                <ul class="flex flex-col gap-5 pt-8">
-                  <li>Penc.case</li>
-                  <li>Aextexe 678191</li>
+                <div class="text-xl uppercase">Contact</div>
+                <ul class="flex flex-col gap-2 md:gap-4 pt-8 tracking-tighter">
+                  <li>3 квартал, д.31, Новая Игирма, Иркутская обл., 665685</li>
                   <li>infoService@bitypeer.com</li>
-                  <li>+7 985648-48684-18381</li>
                 </ul>
               </div>
             </div>
-            <div class="col-span-3 px-10">
+            <div class="col-span-3 md:px-10">
               <div>
-                <div>NEWSLETTER</div>
+                <div class="text-xl uppercase">NEWSLETTER</div>
                 <p class="pt-8">Subscribe our newseletter to get more free Cryto currency information and resource.</p>
               </div>
               <div>
@@ -734,7 +1122,12 @@
                         viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg"
                       >
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                        ></path>
                       </svg>
                     </div>
                     <input
@@ -758,6 +1151,9 @@
         </div>
       </section>
     </footer>
+    <script src="./assets/js/sideNav.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/chatting.js"></script>
     <script src="./assets/js/main.js"></script>
   </body>
 </html>

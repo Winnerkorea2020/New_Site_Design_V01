@@ -1,5 +1,5 @@
 .badge {
-  @apply text-xs font-semibold  px-2.5 py-0.5 rounded;
+  @apply text-xs font-medium  px-2.5 py-0.5 rounded;
 }
 
 .bgdge-large {
