@@ -25,7 +25,8 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="fixed top-0 left-0 w-full h-12">
+    <!-- 수정 8.04 | START remove fixed -->
+    <header class="top-0 left-0 w-full h-12">
       <div class="section max-w-3xl">
         <div class="h-12 flex items-center justify-between">
           <div class="inline-flex justify-start gap-2 items-center mt-10">
@@ -37,76 +38,53 @@
     </header>
     <main class="mt-8 lg:mt-12">
       <section class="section">
-        <div class="pt-12 w-full md:max-w-md mx-auto">
+        <!-- 수정 8.04 | START  add pb-10-->
+        <div class="pt-12 w-full md:max-w-md mx-auto pb-10">
           <h3 class="p-5 border-gray-300 text-center text-3xl">Sign Up</h3>
           <form action="">
             <div class="grid grid-cols-1 gap-5">
               <!-- ID -->
               <div class="">
                 <label class="" for="">ID</label>
-                <input
-                  type="text"
-                  placeholder="ID"
-                  class="w-full border-2 mt-2 px-2.5 py-2 text-xl border-gray-300 rounded-xl"
-                />
+                <input type="text" placeholder="ID" class="w-full border-2 mt-2 px-2.5 py-2 text-xl border-gray-300 rounded-xl" />
                 <p class="text-red-400 tracking-tighter text-xs px-3">The email address was entered incorrectly.</p>
               </div>
 
               <!-- Email -->
               <div class="">
                 <label class="" for="">Email</label>
-                <input
-                  type="Email"
-                  placeholder="Passwords"
-                  class="w-full border-2 mt-2 pl-2.5 pr-10 py-2 text-xl border-gray-300 rounded-xl"
-                />
+                <input type="Email" placeholder="Passwords" class="w-full border-2 mt-2 pl-2.5 pr-10 py-2 text-xl border-gray-300 rounded-xl" />
 
-                <p class="text-red-400 tracking-tighter text-xs px-3">
-                  Password format(including English, numbers, and special characters).
-                </p>
+                <p class="text-red-400 tracking-tighter text-xs px-3">Password format(including English, numbers, and special characters).</p>
               </div>
 
               <!-- Password -->
               <div class="">
                 <label class="" for="">PASSWORD</label>
                 <div class="relative">
-                  <input
-                    type="text"
-                    placeholder="Passwords"
-                    class="w-full border-2 mt-2 pl-2.5 pr-10 py-2 text-xl border-gray-300 rounded-xl"
-                  />
+                  <input type="text" placeholder="Passwords" class="w-full border-2 mt-2 pl-2.5 pr-10 py-2 text-xl border-gray-300 rounded-xl" />
                   <div class="absolute right-3 bottom-3">
                     <i class="fa-regular fa-eye"></i>
                   </div>
                 </div>
-                <p class="text-red-400 tracking-tighter text-xs px-3">
-                  Password format (including English, nubmers, and special characters)
-                </p>
+                <p class="text-red-400 tracking-tighter text-xs px-3">Password format (including English, nubmers, and special characters)</p>
                 <ul class="px-5 list-decimal text-xs mt-2">
                   <li class="tracking-tighter checking-password">Your password must contain at least 8 characters.</li>
                   <li class="tracking-tighter">Your password can't contain more than 128 characters.</li>
                   <li class="tracking-tighter">Your password can't be entirely numeric.</li>
-                  <li class="tracking-tighter">
-                    Your password must include English, numbers, and special characters.4.
-                  </li>
+                  <li class="tracking-tighter">Your password must include English, numbers, and special characters.4.</li>
                 </ul>
               </div>
               <!-- Password -->
               <div class="relative">
                 <label class="" for="">PASSWORD(AGAIN)</label>
                 <div class="relative">
-                  <input
-                    type="text"
-                    placeholder="Passwords"
-                    class="w-full border-2 mt-2 pl-2.5 pr-10 py-2 text-xl border-gray-300 rounded-xl"
-                  />
+                  <input type="text" placeholder="Passwords" class="w-full border-2 mt-2 pl-2.5 pr-10 py-2 text-xl border-gray-300 rounded-xl" />
                   <div class="absolute right-3 bottom-3">
                     <i class="fa-regular fa-eye"></i>
                   </div>
                 </div>
-                <p class="text-red-400 tracking-tighter text-xs px-3">
-                  Paswword format (including English, numbers, and special characters).
-                </p>
+                <p class="text-red-400 tracking-tighter text-xs px-3">Paswword format (including English, numbers, and special characters).</p>
               </div>
               <!-- Password -->
             </div>
@@ -117,8 +95,10 @@
               <div class="h-24 border-2 rounded-lg"></div>
             </div>
             <!-- Button -->
-            <div class="mt-5">
-              <button class="btn btn-exlarge btn-rounded w-full btn-default">Login</button>
+            <!-- 수정 : 8.4 : 버튼 및 Btn-exlarge  -->
+            <div class="mt-5 grid grid-cols-2 gap-4">
+              <a href="signUpcongraturation.html" class="btn btn-rounded w-full btn-default">Comfirm</a>
+              <a href="signin.html" class="btn btn-rounded w-full btn-red">Cancel</a>
             </div>
           </form>
         </div>
