@@ -432,64 +432,34 @@
             <div class="absolute -top-32 md:top-0 md:static md:col-span-3 z-50 md:z-0 chatting-message hidden md:block">
               <div class="bg-white p-2 border rounded-xl">
                 <div class="fixed md:hidden top-0 left-0 h-full w-full bg-gray-900/80 -z-10"></div>
-                <div class="justify-between flex flex-col h-[90vh] md:h-[79vh]">
-                  <div class="flex sm:items-center justify-between py-3 border-b-2 border-gray-200">
+                <!-- 수정 8.5 -->
+                <div class="flex flex-col justify-start h-[90vh] md:h-[79vh] relative">
+                  <!-- 수정 8.5 -->
+                  <div
+                    class="absolute top-0 left-0 w-full flex sm:items-center justify-between py-3 border-b-2 border-gray-200 z-50 bg-white"
+                  >
+                    <!-- 수정 8.4 -->
                     <div class="relative flex items-center justify-between w-full px-5">
                       <div class="tracking-tighter text-lg">Bitypeer Real Chatting message</div>
                       <div class="cursor-pointer md:hidden"><i class="bx bx-arrow-back chatting-close"></i></div>
                     </div>
                   </div>
-                  <div id="messages" class="flex flex-col-reverse space-y-4 p-3 overflow-y-auto gap-2">
-                    <div class="chat-message">
-                      <div class="flex items-end">
-                        <div class="flex flex-col space-y-2 text-base max-w-xs mx-2 order-2 items-start">
-                          <div>
-                            <span class="px-4 py-2 rounded-lg inline-block rounded-bl-none bg-gray-300 text-gray-600"
-                              >Can be verified on any platform using docker</span
-                            >
-                          </div>
-                        </div>
-                        <img
-                          src="https://images.unsplash.com/photo-1549078642-b2ba4bda0cdb?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=3&amp;w=144&amp;h=144"
-                          alt="My profile"
-                          class="w-6 h-6 rounded-full order-1"
-                        />
+                  <!-- 수정 8.5 -->
+                  <div class="chat-information">
+                    <div class="bg-gray-200 p-5 rounded-md">
+                      <div class="tracking-tighter font-semibold">Information</div>
+                      <div class="pt-5">
+                        <ul>
+                          <li>Fill out this form to start chatting.</li>
+                          <li>Purchase request coin amount:</li>
+                          <li>Purchase request price:</li>
+                          <li>My wallet address:</li>
+                        </ul>
                       </div>
                     </div>
-                    <div class="chat-message">
-                      <div class="flex items-end justify-end">
-                        <div class="flex flex-col space-y-2 text-base max-w-xs mx-2 order-1 items-end">
-                          <div>
-                            <span class="px-4 py-2 rounded-lg inline-block rounded-br-none bg-blue-600 text-white"
-                              >Your error message says permission denied, npm global installs must be given root
-                              privileges.</span
-                            >
-                          </div>
-                        </div>
-                        <img
-                          src="https://images.unsplash.com/photo-1590031905470-a1a1feacbb0b?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=3&amp;w=144&amp;h=144"
-                          alt="My profile"
-                          class="w-6 h-6 rounded-full order-2"
-                        />
-                      </div>
-                    </div>
-
-                    <div class="chat-message">
-                      <div class="flex items-end">
-                        <div class="flex flex-col space-y-2 text-base max-w-xs mx-2 order-2 items-start">
-                          <div>
-                            <span class="px-4 py-2 rounded-lg inline-block rounded-bl-none bg-gray-300 text-gray-600"
-                              >Can be verified on any platform using docker</span
-                            >
-                          </div>
-                        </div>
-                        <img
-                          src="https://images.unsplash.com/photo-1549078642-b2ba4bda0cdb?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=3&amp;w=144&amp;h=144"
-                          alt="My profile"
-                          class="w-6 h-6 rounded-full order-1"
-                        />
-                      </div>
-                    </div>
+                  </div>
+                  <!-- 수정 8.5 -->
+                  <div id="messages" class="flex flex-col-reverse p-3 overflow-y-auto gap-2">
                     <div class="chat-message">
                       <div class="flex items-end justify-end">
                         <div class="flex flex-col space-y-2 text-base max-w-xs mx-2 order-1 items-end">
@@ -610,17 +580,54 @@
                       </div>
                     </div>
 
-                    <div class="chat-information">
-                      <div class="bg-gray-200 p-5 rounded-md">
-                        <div class="tracking-tighter font-semibold">Information</div>
-                        <div class="pt-5">
-                          <ul>
-                            <li>Fill out this form to start chatting.</li>
-                            <li>Purchase request coin amount:</li>
-                            <li>Purchase request price:</li>
-                            <li>My wallet address:</li>
-                          </ul>
+                    <div class="chat-message">
+                      <div class="flex items-end">
+                        <div class="flex flex-col space-y-2 text-base max-w-xs mx-2 order-2 items-start">
+                          <div>
+                            <span class="px-4 py-2 rounded-lg inline-block rounded-bl-none bg-gray-300 text-gray-600"
+                              >Can be verified on any platform using docker</span
+                            >
+                          </div>
                         </div>
+                        <img
+                          src="https://images.unsplash.com/photo-1549078642-b2ba4bda0cdb?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=3&amp;w=144&amp;h=144"
+                          alt="My profile"
+                          class="w-6 h-6 rounded-full order-1"
+                        />
+                      </div>
+                    </div>
+                    <div class="chat-message">
+                      <div class="flex items-end justify-end">
+                        <div class="flex flex-col space-y-2 text-base max-w-xs mx-2 order-1 items-end">
+                          <div>
+                            <span class="px-4 py-2 rounded-lg inline-block rounded-br-none bg-blue-600 text-white"
+                              >Your error message says permission denied, npm global installs must be given root
+                              privileges.</span
+                            >
+                          </div>
+                        </div>
+                        <img
+                          src="https://images.unsplash.com/photo-1590031905470-a1a1feacbb0b?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=3&amp;w=144&amp;h=144"
+                          alt="My profile"
+                          class="w-6 h-6 rounded-full order-2"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="chat-message">
+                      <div class="flex items-end">
+                        <div class="flex flex-col space-y-2 text-base max-w-xs mx-2 order-2 items-start">
+                          <div>
+                            <span class="px-4 py-2 rounded-lg inline-block rounded-bl-none bg-gray-300 text-gray-600"
+                              >Can be verified on any platform using docker</span
+                            >
+                          </div>
+                        </div>
+                        <img
+                          src="https://images.unsplash.com/photo-1549078642-b2ba4bda0cdb?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=3&amp;w=144&amp;h=144"
+                          alt="My profile"
+                          class="w-6 h-6 rounded-full order-1"
+                        />
                       </div>
                     </div>
                   </div>

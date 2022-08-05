@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- BOX ICONS -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="stylesheet" href="./assets/css/font.css" />
+    <!-- BASE -->
+    <link rel="stylesheet" href="./assets/css/base.css" />
+
+    <title>Bitypeer My page | Seller Certification Page</title>
+  </head>
+  <body class="largeBody" style="position: relative; min-height: 100%; top: 0px" cz-shortcut-listen="true">
+    <!-- Header -->
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full bg-white border-b h-16 nav-header z-50">
+      <!-- Top Navigation -->
+      <section class="section">
+        <div class="flex justify-between items-center h-16">
+          <div class="text-2xl md:hidden flex justify-center items-center">
+            <i class="bx bx-menu cursor-pointer nav-toggle"></i>
+          </div>
+
+          <a href="/" class="flex items-center justify-center md:hidden">
+            <img src="/img/logo/logo_small.png" class="h-8 w-8 mx-2" alt="" />
+            <div class="nav-brand__logo">Bitypeer</div>
+          </a>
+          <div class="justify-end items-center px-12 w-full gap-5 text-sm hidden md:flex">
+            <div><a href="/h/logout">Logout</a></div>
+          </div>
+
+          <!-- TODO: [퍼블] 주석처리 된 알람벨로 수정해야함 -->
+          <!-- <div class="absolute right-12 mt-2 md:relative w-20 pr-2 text-end mr-5 md:mt-1">
+				<div class="cursor-pointer hover:text-gray-800" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="dropdownAlarm">
+					<i class="bx bxs-bell bx-sm"></i>
+				</div>
+
+				<div class="absolute top-0 right-1 w-4 h-4 bg-red-500 rounded-full">
+					<div class="flex justify-center items-center text-white text-xs tracking-tighter" style="font-size: 0.2rem">
+						<span>10</span>
+					</div>
+				</div>
+			</div> -->
+
+          <div class="absolute right-12 mt-2 md:relative w-fit pr-2 text-end mr-5 md:mt-1">
+            <div
+              class="cursor-pointer hover:text-gray-800"
+              id="user-menu-button"
+              aria-expanded="false"
+              data-dropdown-toggle="dropdownAlarm"
+            >
+              <i class="bx bxs-bell bx-sm"></i>
+            </div>
+
+            <div class="absolute top-0 right-1 w-4 h-4 bg-red-500 rounded-full" id="alarmYn" style="display: none">
+              <div
+                class="flex justify-center items-center text-white text-xs py-1 tracking-tighter"
+                style="font-size: 0.2rem"
+              ></div>
+            </div>
+          </div>
+
+          <div
+            class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow-sm border w-80"
+            id="dropdownAlarm"
+            style="
+              position: absolute;
+              inset: 0px auto auto 0px;
+              margin: 0px;
+              transform: translate3d(341.5px, 460px, 0px);
+            "
+            data-popper-placement="bottom"
+          >
+            <ul class="py-1 pr-5" aria-labelledby="dropdownAlarm" id="alarmMessage"></ul>
+          </div>
+
+          <div id="google_translate_element" style="display: none">
+            <div class="skiptranslate goog-te-gadget" dir="ltr" style="">
+              <div id=":0.targetLanguage">
+                <select class="goog-te-combo" aria-label="언어 번역 위젯">
+                  <option value="">언어 선택</option>
+                  <option value="ko">한국어</option>
+                  <option value="gl">갈리시아어</option>
+                  <option value="gn">과라니어</option>
+                  <option value="gu">구자라트어</option>
+                  <option value="el">그리스어</option>
+                  <option value="nl">네덜란드어</option>
+                  <option value="ne">네팔어</option>
+                  <option value="no">노르웨이어</option>
+                  <option value="da">덴마크어</option>
+                  <option value="doi">도그리어</option>
+                  <option value="de">독일어</option>
+                  <option value="dv">디베히어</option>
+                  <option value="lo">라오어</option>
+                  <option value="lv">라트비아어</option>
+                  <option value="la">라틴어</option>
+                  <option value="ru">러시아어</option>
+                  <option value="lg">루간다어</option>
+                  <option value="ro">루마니아어</option>
+                  <option value="lb">룩셈부르크어</option>
+                  <option value="lt">리투아니아어</option>
+                  <option value="ln">링갈라어</option>
+                  <option value="mr">마라티어</option>
+                  <option value="mi">마오리어</option>
+                  <option value="mai">마이틸어</option>
+                  <option value="mk">마케도니아어</option>
+                  <option value="mg">말라가시어</option>
+                  <option value="ml">말라얄람어</option>
+                  <option value="ms">말레이어</option>
+                  <option value="mni-Mtei">메이테이어(마니푸르어)</option>
+                  <option value="mt">몰타어</option>
+                  <option value="mn">몽골어</option>
+                  <option value="hmn">몽어</option>
+                  <option value="my">미얀마어(버마어)</option>
+                  <option value="lus">미조어</option>
+                  <option value="eu">바스크어</option>
+                  <option value="bm">밤바라어</option>
+                  <option value="vi">베트남어</option>
+                  <option value="be">벨라루스어</option>
+                  <option value="bn">벵골어</option>
+                  <option value="bs">보스니아어</option>
+                  <option value="bho">보즈푸리어</option>
+                  <option value="nso">북소토어</option>
+                  <option value="bg">불가리아어</option>
+                  <option value="sm">사모아어</option>
+                  <option value="sa">산스크리트</option>
+                  <option value="sr">세르비아어</option>
+                  <option value="ceb">세부아노어</option>
+                  <option value="st">세소토어</option>
+                  <option value="so">소말리아어</option>
+                  <option value="sn">쇼나어</option>
+                  <option value="su">순다어</option>
+                  <option value="sw">스와힐리어</option>
+                  <option value="sv">스웨덴어</option>
+                  <option value="gd">스코틀랜드 게일어</option>
+                  <option value="es">스페인어</option>
+                  <option value="sk">슬로바키아어</option>
+                  <option value="sl">슬로베니아어</option>
+                  <option value="sd">신디어</option>
+                  <option value="si">싱할라어</option>
+                  <option value="ar">아랍어</option>
+                  <option value="hy">아르메니아어</option>
+                  <option value="as">아삼어</option>
+                  <option value="ay">아이마라어</option>
+                  <option value="is">아이슬란드어</option>
+                  <option value="ht">아이티 크리올어</option>
+                  <option value="ga">아일랜드어</option>
+                  <option value="az">아제르바이잔어</option>
+                  <option value="af">아프리칸스어</option>
+                  <option value="sq">알바니아어</option>
+                  <option value="am">암하라어</option>
+                  <option value="et">에스토니아어</option>
+                  <option value="eo">에스페란토어</option>
+                  <option value="ee">에웨어</option>
+                  <option value="om">오로모어</option>
+                  <option value="or">오리야어</option>
+                  <option value="yo">요루바어</option>
+                  <option value="ur">우르두어</option>
+                  <option value="uz">우즈베크어</option>
+                  <option value="uk">우크라이나어</option>
+                  <option value="cy">웨일즈어</option>
+                  <option value="ug">위구르어</option>
+                  <option value="ig">이그보어</option>
+                  <option value="yi">이디시어</option>
+                  <option value="it">이탈리아어</option>
+                  <option value="id">인도네시아어</option>
+                  <option value="ilo">일로카노어</option>
+                  <option value="ja">일본어</option>
+                  <option value="jw">자바어</option>
+                  <option value="ka">조지아어</option>
+                  <option value="zu">줄루어</option>
+                  <option value="zh-CN">중국어(간체)</option>
+                  <option value="zh-TW">중국어(번체)</option>
+                  <option value="ny">체와어</option>
+                  <option value="cs">체코어</option>
+                  <option value="ts">총가어</option>
+                  <option value="kk">카자흐어</option>
+                  <option value="ca">카탈로니아어</option>
+                  <option value="kn">칸나다어</option>
+                  <option value="qu">케추아어</option>
+                  <option value="co">코르시카어</option>
+                  <option value="xh">코사어</option>
+                  <option value="gom">콘칸어</option>
+                  <option value="ckb">쿠르드어(소라니)</option>
+                  <option value="ku">쿠르드어(쿠르만지)</option>
+                  <option value="hr">크로아티아어</option>
+                  <option value="kri">크리오어</option>
+                  <option value="km">크메르어</option>
+                  <option value="rw">키냐르완다어</option>
+                  <option value="ky">키르기스어</option>
+                  <option value="ta">타밀어</option>
+                  <option value="tg">타지크어</option>
+                  <option value="tt">타타르어</option>
+                  <option value="th">태국어</option>
+                  <option value="tr">터키어</option>
+                  <option value="te">텔루구어</option>
+                  <option value="tk">투르크멘어</option>
+                  <option value="ak">트위어</option>
+                  <option value="ti">티그리냐어</option>
+                  <option value="ps">파슈토어</option>
+                  <option value="pa">펀자브어</option>
+                  <option value="fa">페르시아어</option>
+                  <option value="pt">포르투갈어</option>
+                  <option value="pl">폴란드어</option>
+                  <option value="fr">프랑스어</option>
+                  <option value="fy">프리지아어</option>
+                  <option value="fi">핀란드어</option>
+                  <option value="tl">필리핀어</option>
+                  <option value="haw">하와이어</option>
+                  <option value="ha">하우사어</option>
+                  <option value="hu">헝가리어</option>
+                  <option value="iw">히브리어</option>
+                  <option value="hi">힌디어</option>
+                </select>
+              </div>
+              <span style="white-space: nowrap"
+                ><a class="goog-logo-link" href="https://translate.google.com" target="_blank"
+                  ><img
+                    src="https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png"
+                    width="37px"
+                    height="14px"
+                    style="padding-right: 3px"
+                    alt="Google 번역"
+                  />번역</a
+                ></span
+              >에서 제공
+            </div>
+          </div>
+
+          <!-- Alam DropDwon Menu -->
+
+          <!-- Dropdown menu -->
+          <div
+            class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow-sm border w-80"
+            id="dropdown"
+            style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(386px, 454px, 0px)"
+            data-popper-placement="bottom"
+          >
+            <!-- Drop Down Contents | Start -->
+
+            <ul class="py-1 pr-5" aria-labelledby="dropdownAlarm">
+              <!-- National Flags | Start -->
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  onclick="changeLang('zh-CN', this)"
+                >
+                  <img src="/img/flag/china.png" alt="" class="w-8 h-8 border-none mr-2" />
+                  <span>China</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  onclick="changeLang('de', this)"
+                >
+                  <img src="/img/flag/germany.png" alt="" class="w-8 h-8 border-none mr-2" />
+                  <span>Germany</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  onclick="changeLang('en', this)"
+                >
+                  <img src="/img/flag/great-britain.png" alt="" class="w-8 h-8 border-none mr-2" />
+                  <span>Greate-britain</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  onclick="changeLang('ar', this)"
+                >
+                  <img src="/img/flag/oman.png" alt="" class="w-8 h-8 border-none mr-2" />
+                  <span>Oman</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  onclick="changeLang('fr', this)"
+                >
+                  <img src="/img/flag/france.png" alt="" class="w-8 h-8 border-none mr-2" />
+                  <span>France</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  onclick="changeLang('es', this)"
+                >
+                  <img src="/img/flag/spain.png" alt="" class="w-8 h-8 border-none mr-2" />
+                  <span>Spain</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  onclick="changeLang('ko', this)"
+                >
+                  <img src="/img/flag/south-korea.png" alt="" class="w-8 h-8 border-none mr-2" />
+                  <span>Korea</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  onclick="changeLang('ms', this)"
+                >
+                  <img src="/img/flag/singapore.png" alt="" class="w-8 h-8 border-none mr-2" />
+                  <span>Singapore</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  onclick="changeLang('ms', this)"
+                >
+                  <img src="/img/flag/malaysia.png" alt="" class="w-8 h-8 border-none mr-2" />
+                  <span>Malyasia</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  onclick="changeLang('en', this)"
+                >
+                  <img src="/img/flag/new-zealand.png" alt="" class="w-8 h-8 border-none mr-2" />
+                  <span>New-zealand</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  onclick="changeLang('en', this)"
+                >
+                  <img src="/img/flag/usa.png" alt="" class="w-8 h-8 border-none mr-2" />
+                  <span>USA</span>
+                </a>
+              </li>
+              <!-- National Flags | End -->
+            </ul>
+
+            <!-- Drop Down Contents | End -->
+          </div>
+
+          <div class="flex items-center">
+            <button
+              type="button"
+              class="flex items-center mr-3 text-sm rounded-full md:mr-0"
+              id="user-menu-button"
+              aria-expanded="false"
+              data-dropdown-toggle="dropdown"
+            >
+              <span class="sr-only">Open user menu</span>
+              <img class="w-6 h-6 md:w-8 md:h-8 border-none" src="/img/flag/usa.png" alt="National Flag" />
+              <i class="bx bx-chevron-down bx-sm hidden md:block"></i>
+            </button>
+            <!-- Dropdown menu -->
+            <div
+              class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow-sm border"
+              id="dropdown"
+              style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate(1246px, 803px)"
+              data-popper-reference-hidden=""
+              data-popper-escaped=""
+              data-popper-placement="top"
+            >
+              <!-- Drop Down Contents | Start -->
+
+              <ul class="py-1 pr-5" aria-labelledby="dropdown">
+                <!-- National Flags | Start -->
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    <img src="/img/flag/china.png" alt="" class="w-8 h-8 border-none mr-2" />
+                    <span> China </span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    <img src="/img/flag/germany.png" alt="" class="w-8 h-8 border-none mr-2" />
+                    <span> Germany </span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    <img src="/img/flag/great-britain.png" alt="" class="w-8 h-8 border-none mr-2" />
+                    <span> Greate-britain </span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    <img src="/img/flag/oman.png" alt="" class="w-8 h-8 border-none mr-2" />
+                    <span> Oman </span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    <img src="/img/flag/france.png" alt="" class="w-8 h-8 border-none mr-2" />
+                    <span> France </span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    <img src="/img/flag/spain.png" alt="" class="w-8 h-8 border-none mr-2" />
+                    <span> Spain </span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    <img src="/img/flag/south-korea.png" alt="" class="w-8 h-8 border-none mr-2" />
+                    <span> Korea </span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    <img src="/img/flag/singapore.png" alt="" class="w-8 h-8 border-none mr-2" />
+                    <span> Singapore </span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    <img src="/img/flag/malaysia.png" alt="" class="w-8 h-8 border-none mr-2" />
+                    <span> Malyasia </span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    <img src="/img/flag/new-zealand.png" alt="" class="w-8 h-8 border-none mr-2" />
+                    <span> New-zealand </span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    <img src="/img/flag/usa.png" alt="" class="w-8 h-8 border-none mr-2" />
+                    <span> USA </span>
+                  </a>
+                </li>
+                <!-- National Flags | End -->
+              </ul>
+
+              <!-- Drop Down Contents | End -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <style>
+      .goog-te-banner-frame.skiptranslate {
+        display: none !important;
+      }
+      .skiptranslate {
+        display: none !important;
+      }
+    </style>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript">
+      /* 구글 번역 초기화 */
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({ pageLanguage: "en", autoDisplay: true }, "google_translate_element");
+      }
+    </script>
+    <script>
+      $(function () {
+        if (getCookie("countryImg")) {
+          $("#countryImg").attr("src", getCookie("countryImg"));
+        }
+        let userId = "pub";
+        if (userId) {
+          getAlarm();
+        }
+      });
+
+      function changeLang(lang, obj) {
+        const gtcombo = document.querySelector(".goog-te-combo");
+        gtcombo.value = lang; // 변경할 언어 적용
+        gtcombo.dispatchEvent(new Event("change")); // 변경 이벤트 트리거
+        $("#countryImg").attr("src", $(obj).children("img").attr("src"));
+        setCookie("countryImg", $(obj).children("img").attr("src"));
+      }
+
+      function setCookie(cookie_name, value, days) {
+        var exdate = new Date();
+        exdate.setDate(exdate.getDate() + days);
+
+        var cookie_value = escape(value) + (days == null ? "" : "; expires=" + exdate.toUTCString());
+        document.cookie = cookie_name + "=" + cookie_value;
+      }
+
+      function getCookie(cookie_name) {
+        var x, y;
+        var val = document.cookie.split(";");
+
+        for (var i = 0; i < val.length; i++) {
+          x = val[i].substr(0, val[i].indexOf("="));
+          y = val[i].substr(val[i].indexOf("=") + 1);
+          x = x.replace(/^\s+|\s+$/g, ""); // 앞과 뒤의 공백 제거하기
+          if (x == cookie_name) {
+            return unescape(y); // unescape로 디코딩 후 값 리턴
+          }
+        }
+      }
+
+      function getAlarm() {
+        let data = {};
+
+        $.ajax({
+          url: "/h/getAlarm",
+          dataType: "json",
+          type: "POST",
+          data: data,
+          success: function (result) {
+            console.log(result);
+            if (result.success) {
+              if (result.data.chat_count > 0) {
+                $("#alarmYn").show();
+                let html = "<li>";
+                html +=
+                  '<a href="/m/info" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">';
+                html += "<span>There are unread messages. (" + result.data.chat_count + ")</span>";
+                html += "</a>";
+                html += "</li>";
+                $("#alarmMessage").append(html);
+                send("There are unread messages. (" + result.data.chat_count + ")");
+              }
+            } else {
+              fnAlertMessage("It was not processed normally. Please try again!");
+            }
+          },
+          error: function (XMLHttpRequest, textStatus, errorThrown) {
+            fnAlertMessage("It was not processed normally. Please try again!");
+          },
+        });
+      }
+    </script>
+
+    <!-- Side Navi -->
+    <aside
+      class="side-nav fixed -left-full md:left-0 duration-1000 ease-in-out top-0 h-full bg-white border-r nav-side"
+      style="z-index: 1000"
+    >
+      <!-- Side Navigation Header -->
+      <div class="px-5">
+        <a href="/" class="h-16 hidden md:flex items-center justify-between">
+          <img src="/img/logo/logo_small.png" class="h-8 w-8 mx-2" alt="" />
+
+          <div class="justify-between items-center w-full ml-2 gap-2 nav-brand__logo">
+            <div>Bitypeer</div>
+          </div>
+        </a>
+        <!-- Close Button -->
+        <div class="absolute top-7 right-5 md:hidden">
+          <i class="bx bx-x-circle bx-sm cursor-pointer nav-close"></i>
+        </div>
+
+        <!-- Side Menu List | Start -->
+        <nav class="px-2 pt-20 md:pt-16 flex flex-col justify-start">
+          <ul class="flex flex-col gap-8 uppercase">
+            <li>
+              <a href="/s/view" class="inline-flex items-center">
+                <i class="bx bxs-cart-alt bx-sm"></i>
+                <span class="pl-3">Sell</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="/h/affiliate" class="inline-flex items-center">
+                <i class="bx bxs-buildings bx-sm"></i>
+                <span class="pl-3">Affiliation</span>
+              </a>
+            </li>
+            <li>
+              <a href="/h/notice" class="inline-flex items-center">
+                <i class="bx bxs-megaphone bx-sm"></i>
+                <span class="pl-3">Notice</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="/m/info" class="inline-flex items-center items-center">
+                <i class="bx bxs-user-rectangle bx-sm"></i>
+                <span class="pl-3">My Page</span>
+              </a>
+            </li>
+          </ul>
+          <div class="absolute bottom-52 flex flex-col gap-5 ml-9 md:hidden">
+            <!-- Sign Up / Sign In Area -->
+            <div class="flex flex-col gap-5"></div>
+            <!-- Log Out Area -->
+
+            <div>
+              <a href="/h/logout" class="btn btn-red">Log Out</a>
+            </div>
+          </div>
+        </nav>
+        <!-- Side Menu List | End -->
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="p-0">
+      <!-- Tap Menu -->
+      <section class="section">
+        <div class="pt-2 flex justify-start">
+          <div class="text-sm font-medium text-center text-gray-500 border-b border-gray-200">
+            <ul class="flex flex-wrap -mb-px">
+              <li class="flex border-b-2 border-transparent hover:text-gray-600 hover:border-blue-500">
+                <button
+                  id="dropdownNavbarLink"
+                  data-dropdown-toggle="dropdownNavbar"
+                  class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                >
+                  History
+                  <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div
+                  id="dropdownNavbar"
+                  class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-fit menuClass history tab__nav_active"
+                  style="
+                    transform: translate3d(68px, 134px, 0px);
+                    position: absolute;
+                    inset: 0px auto auto 0px;
+                    margin: 0px;
+                  "
+                  data-popper-placement="bottom"
+                  data-popper-reference-hidden=""
+                  data-popper-escaped=""
+                >
+                  <ul class="py-1 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                    <li>
+                      <a href="/m/sellHistory" class="block px-4 py-2 hover:bg-gray-100">Sell History</a>
+                    </li>
+                    <li>
+                      <a href="/m/buyHistory" class="block px-4 py-2 hover:bg-gray-100">Buy History</a>
+                    </li>
+                    <li>
+                      <a href="/m/sellRegistView" class="block px-4 py-2 hover:bg-gray-100">Sell Request History</a>
+                    </li>
+                    <li>
+                      <a href="/m/buyRegistView" class="block px-4 py-2 hover:bg-gray-100">Buy Request History</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mr-2">
+                <a
+                  href="/m/affiliateWallet"
+                  class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-blue-500 menuClass wallet"
+                  >Affiliate Wallet</a
+                >
+              </li>
+
+              <li class="mr-2">
+                <a
+                  href="/m/sellRegister"
+                  class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-blue-500 menuClass sell"
+                  >Sell</a
+                >
+              </li>
+
+              <li class="mr-2">
+                <a
+                  href="/m/buyRegister"
+                  class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-blue-500 menuClass buy"
+                  >Buy</a
+                >
+              </li>
+              <li class="mr-2">
+                <a
+                  href="/m/info"
+                  class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-blue-500 menuClass info"
+                  >My Information</a
+                >
+              </li>
+              <li class="mr-2">
+                <a
+                  href="/m/sellercertification"
+                  class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-blue-500 menuClass certification"
+                  >Seller Certification</a
+                >
+              </li>
+
+              <li class="flex border-b-2 border-transparent hover:text-gray-600 hover:border-blue-500">
+                <button
+                  id="dropdownNavbarLink"
+                  data-dropdown-toggle="Affiliate"
+                  class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                >
+                  Affiliate Code/Sell registration
+                  <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div
+                  id="Affiliate"
+                  class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-fit menuClass history tab__nav_active"
+                  style="
+                    transform: translate3d(143px, 227px, 0px);
+                    position: absolute;
+                    inset: 0px auto auto 0px;
+                    margin: 0px;
+                  "
+                  data-popper-placement="bottom"
+                  data-popper-reference-hidden=""
+                  data-popper-escaped=""
+                >
+                  <ul class="py-1 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                    <li>
+                      <a href="/m/affiliateCode" class="block px-4 py-2 hover:bg-gray-100"
+                        >Affiliate code registration</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <input type="hidden" id="menu" value="sellHistory" />
+        <script>
+          //todo[limsy820] dropdown 메뉴 active 안먹음
+          $(function () {
+            $(".menuClass").removeClass("tab__nav_active");
+            let menu = $("#menu").val();
+            if (menu == "sellHistory" || menu == "buyHistory") {
+              $(".history").addClass("tab__nav_active"); // not active
+            } else if (menu == "affiliateWallet" || menu == "send" || menu == "receive") {
+              $(".wallet").addClass("tab__nav_active");
+            } else if (menu == "sellRegister" || menu == "sellRegisterAffiliate") {
+              $(".sell").addClass("tab__nav_active"); // not active
+            } else if (menu == "buyRegister" || menu == "buyRegisterAffiliate") {
+              $(".buy").addClass("tab__nav_active"); // not active
+            } else if (menu == "info") {
+              $(".info").addClass("tab__nav_active");
+            } else if (menu == "sellerCertification") {
+              $(".certification").addClass("tab__nav_active");
+            } else if (menu == "affiliateCode" || menu == "affiliateSell") {
+              $(".code").addClass("tab__nav_active");
+            }
+          });
+        </script>
+      </section>
+
+      <!-- Sell Coins | Start -->
+      <section class="section">
+        <div class="pt-5 md:pt-16">
+          <!-- Sell Header Area | Start -->
+          <div class="flex justify-between items-center">
+            <h4>Seller Certification</h4>
+
+            <div class="hidden md:flex items-center gap-2 text-xs">
+              <div>HOME</div>
+              <div><i class="bx bx-chevron-right"></i></div>
+              <div>My page</div>
+              <div><i class="bx bx-chevron-right"></i></div>
+              <div>Seller Certification</div>
+            </div>
+          </div>
+          <!-- Sell Header Area | End -->
+        </div>
+      </section>
+
+      <!-- Buyer Detail -->
+      <section class="section">
+        <div class="mt-5 md:mt-8">
+          <div class="grid grid-cols-1 md:grid-cols-12 md:gap-5">
+            <!-- Item 1 -->
+            <div class="col-span-1 md:col-span-12">
+              <div>
+                <h5 class="py-2.5">Recommender</h5>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-2 md:gap-5">
+                  <div class="md:col-span-2 py-2.5 px-5 border rounded-lg bg-gray-200 text-center">Recommender ID</div>
+
+                  <div class="md:col-span-2 relative flex">
+                    <input type="text" class="h-full w-full py-2.5 px-5 border" id="recommender" />
+                    <!-- TODO: [퍼블] 아래 Registration 버튼 수정  -->
+                    <div
+                      class="col-span-1 inline-flex items-center justify-center btn btn-dark"
+                      style="cursor: pointer"
+                      onclick="insertRecommender();"
+                    >
+                      Registration
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="mt-5 md:8">
+          <div class="grid grid-cols-1">
+            <div class="">
+              <h5 class="py-2.5">KYC Certification</h5>
+              <div class="flex flex-col md:flex-row justify-start items-center gap-5">
+                <div class="">
+                  <img src="/img/mypage/certificationID.png" alt="" class="h-40 rounded-md bg-white w-full" />
+                </div>
+                <div class="px-5">
+                  <div class="pb-6">
+                    <ul class="list-disc px-5">
+                      <li>
+                        Please upload one of your passport, drive's license, or goverment ID card along with a copy of
+                        your bankbook.
+                      </li>
+                      <li>Approval will be processed after registration is confirmed.</li>
+                    </ul>
+                  </div>
+
+                  <div class="flex justify-start items-center gap-2">
+                    <form id="kycForm" method="post" enctype="multipart/form-data" accept-charset="UTF-8">
+                      <label
+                        for="kycFile"
+                        id="kycFileName"
+                        class="h-full w-full py-2.5 px-5 border btn cursor-pointer border"
+                        >Click to select file</label
+                      >
+                      <input
+                        id="kycFile"
+                        name="kycFile"
+                        type="file"
+                        lang="en-US"
+                        accept=".jpg, .jpeg, .png, .pdf"
+                        class="hidden border-2 h-full text-lg"
+                      />
+                    </form>
+
+                    <div class="">
+                      <button id="kycRegistration" class="btn btn-dark">Registration</button>
+                    </div>
+                  </div>
+                  <div class="py-2.5 text-end md:text-start text-red-400">Uncertified</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="grid grid-cols-1">
+            <h5 class="py-2.5">Google OTP</h5>
+            <!-- 수정 : 8.4  -->
+            <div class="flex flex-col md:flex-row justify-start items-center gap-5">
+              <div class="p-8 bg-gray-200 rounded-xl md:w-2/12">
+                <!-- 수정 : 8.4  -->
+                <img
+                  src="data:image/png;base64,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"
+                  alt=""
+                  class="rounded-md bg-white w-full"
+                />
+              </div>
+              <!-- 수정 : 8.4 -->
+              <div class="px-5 md:w-10/12">
+                <!-- 수정 : 8.4 -->
+                <div class="grid grid-cols-1 gap-5">
+                  <!-- 수정 : 8.4 -->
+                  <div class="grid grid-col-1 md:grid-cols-12 gap-5">
+                    <!-- 수정 : 8.4 -->
+                    <label class="col-span-2 basis-5/12 text-start px-5 bg-gray-300 py-2" for=""
+                      >Google OTP Number</label
+                    >
+                    <input
+                      type="text"
+                      class="col-span-2 border-2 h-full text-lg py-1.5"
+                      id="otpNum"
+                      onkeyup="chkNum(this);"
+                    />
+                    <a
+                      href="javascript:void(0);"
+                      class="col-span-2 text-center block btn btn-dark"
+                      onclick="insertOtp();"
+                      >Registration</a
+                    >
+                  </div>
+                </div>
+                <div class="text-red-400">Uncertified</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Sell Coins | End -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="px-5 py-5 bg-gray-100 pt-10 mt-16">
+      <section class="section">
+        <div class="px-5 pt-16">
+          <div class="grid grid-cols-1 md:grid-cols-12 pb-16 text-sm gap-10 md:gap-0">
+            <div class="col-span-2">
+              <div class="flex items-center gap-2 md:gap-5">
+                <img src="/img/logo/logo_small.png" alt="" class="h-10 w-10" />
+                <h5>Bitypeer</h5>
+              </div>
+            </div>
+            <div class="col-span-3 md:border-r md:px-10">
+              <div>
+                <div class="text-xl uppercase">About</div>
+                <ul class="flex flex-col gap-2 md:gap-4 pt-8">
+                  <li>Terms of Use</li>
+                  <li>Privacy Policy</li>
+                  <li>Open API</li>
+                  <li>FAQ</li>
+                  <li>Guide</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-span-3 md:border-r md:px-10">
+              <div>
+                <div class="text-xl uppercase">Contact</div>
+                <ul class="flex flex-col gap-2 md:gap-4 pt-8 tracking-tighter">
+                  <li>Telegram</li>
+                  <li>@Bitypeer</li>
+                  <li>Email</li>
+                  <li>infoservice@bitypeer.com</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-span-3 md:px-10">
+              <div>
+                <div class="text-xl uppercase">NEWSLETTER</div>
+                <p class="pt-8">Subscribe our newseletter to get more free Cryto currency information and resource.</p>
+              </div>
+              <div>
+                <form class="pt-8">
+                  <div class="relative">
+                    <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                      <svg
+                        class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <input
+                      type="text"
+                      id="email"
+                      class="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-full border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                      placeholder="Enter Your E-mail"
+                    />
+                    <button
+                      onclick="emailValidator()"
+                      type="submit"
+                      class="text-gray-300 absolute flex items-center justify-center right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm w-8 h-8"
+                    >
+                      <i class="bx bx-right-arrow-alt"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <script>
+        function emailValidator() {
+          let emailRegExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+          if (!emailRegExp.test($("#email").val())) {
+            return fnAlertRefreshMessage(
+              "Mail has been registered. We will send you a newsletter when it becomes available."
+            );
+          }
+        }
+      </script>
+    </footer>
+    <input type="hidden" id="alertMessage" value="" />
+    <script>
+      $(document).ready(function () {
+        if ($("#alertMessage").val() != "") {
+          fnAlertMessage($("#alertMessage").val());
+        }
+      });
+    </script>
+    <script src="/js/sideNav.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/chatting.js"></script>
+    <script>
+      $("#kycFile").change(function () {
+        filename = this.files[0].name;
+        $("#kycFileName").html(filename);
+      });
+
+      $("#kycRegistration").click(function (event) {
+        event.preventDefault();
+
+        if ($("#kycFileName").html() === "Click to select file") {
+          fnAlertMessage("Please select file first.");
+        } else {
+          const form = $("#kycForm")[0];
+          console.log(form);
+          const data = new FormData(form);
+
+          console.log(data);
+          $.ajax({
+            url: "/m/kycCertificationUpload",
+            type: "POST",
+            enctype: "multipart/form-data",
+            contentType: false,
+            processData: false,
+            data: data,
+
+            success: function (result) {
+              if (result.success) {
+                fnAlertMessage(result.message);
+              } else {
+              }
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+              console.log("실패");
+            }, //function끝
+          });
+        }
+      });
+
+      function insertOtp() {
+        let data = {
+          otpNum: $("#otpNum").val(),
+        };
+
+        $.ajax({
+          url: "/m/insertOtp",
+          dataType: "json",
+          type: "POST",
+          data: data,
+          success: function (result) {
+            if (result.success) {
+              fnAlertRefreshMessage(result.message);
+            } else {
+              fnAlertMessage(result.message);
+            }
+          },
+          error: function (XMLHttpRequest, textStatus, errorThrown) {
+            fnAlertMessage("It was not processed normally. Please try again!");
+          },
+        });
+      }
+
+      function insertRecommender() {
+        fnAlertConfirmMessage("Would you like to register?", kycCert);
+      }
+
+      function kycCert() {
+        let data = {
+          recommender: $("#recommender").val(),
+        };
+        $.ajax({
+          url: "/m/insertRecommender",
+          dataType: "json",
+          type: "POST",
+          data: data,
+          success: function (result) {
+            wrapWindowByMaskHide();
+            if (result.success) {
+              fnAlertRefreshMessage(result.message);
+            } else {
+              fnAlertMessage(result.message);
+            }
+          },
+          error: function (XMLHttpRequest, textStatus, errorThrown) {
+            wrapWindowByMaskHide();
+            fnAlertMessage("It was not processed normally. Please try again!");
+          },
+        });
+      }
+    </script>
+    <div id="goog-gt-tt" class="skiptranslate" dir="ltr">
+      <div style="padding: 8px">
+        <div>
+          <div class="logo">
+            <img
+              src="https://www.gstatic.com/images/branding/product/1x/translate_24dp.png"
+              width="20"
+              height="20"
+              alt="Google 번역"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="top" style="padding: 8px; float: left; width: 100%"><h1 class="title gray">원본 텍스트</h1></div>
+      <div class="middle" style="padding: 8px"><div class="original-text"></div></div>
+      <div class="bottom" style="padding: 8px">
+        <div class="activity-links">
+          <span class="activity-link">번역 제안하기</span><span class="activity-link"></span>
+        </div>
+        <div class="started-activity-container">
+          <hr style="color: #ccc; background-color: #ccc; height: 1px; border: none" />
+          <div class="activity-root"></div>
+        </div>
+      </div>
+      <div class="status-message" style="display: none"></div>
+    </div>
+
+    <div class="goog-te-spinner-pos">
+      <div class="goog-te-spinner-animation">
+        <svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66">
+          <circle
+            class="goog-te-spinner-path"
+            fill="none"
+            stroke-width="6"
+            stroke-linecap="round"
+            cx="33"
+            cy="33"
+            r="30"
+          ></circle>
+        </svg>
+      </div>
+    </div>
+  </body>
+</html>
