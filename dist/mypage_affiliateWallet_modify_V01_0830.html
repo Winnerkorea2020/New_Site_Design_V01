@@ -709,7 +709,7 @@
 
     <!-- Main -->
     <main class="p-0">
-      <!-- Tap Header -->
+      <!-- Tap Menu -->
       <section class="section">
         <div class="pt-2 flex justify-start">
           <div
@@ -882,7 +882,7 @@
             </ul>
           </div>
         </div>
-        <input type="hidden" id="menu" value="sellHistory" />
+        <input type="hidden" id="menu" value="affiliateWallet" />
         <script>
           //todo[limsy820] dropdown 메뉴 active 안먹음
           $(function () {
@@ -922,199 +922,413 @@
         <div class="pt-5 xl:pt-16">
           <!-- Sell Header Area | Start -->
           <div class="flex justify-between items-center">
-            <h4>Sell History</h4>
+            <h4>Affiliate Wallet</h4>
 
             <div class="hidden xl:flex items-center gap-2 text-xs">
               <div>HOME</div>
               <div><i class="bx bx-chevron-right"></i></div>
               <div>My Page</div>
               <div><i class="bx bx-chevron-right"></i></div>
-              <div>Sell History</div>
+              <div>Affiliate Wallet</div>
             </div>
           </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="mt-5 xl:mt-8">
           <!-- Sell Header Area | End -->
-          <div class="grid grid-cols-1 xl:grid-cols-11 gap-5 mt-5 xl:mt-8">
-            <!-- Search Coins | Start -->
-
-            <div class="col-span-1 xl:col-span-3">
-              <div class="bg-white px-3 py-8 h-full rounded-xl border">
-                <div class="grid grid-cols-1 gap-5">
-                  <!-- Coin Name -->
-                  <div class="">
-                    <label class="" for="">Coin Name</label>
-                    <input
-                      type="text"
-                      1
-                      id="coin_nm"
-                      class="w-full border mt-2 px-2.5 py-2 border-gray-300 rounded-xl tracking-tighter"
-                      style="display: none"
-                      value=""
-                    />
-                    <select
-                      name=""
-                      id="coin_typ"
-                      class="w-full border mt-2 px-2.5 py-2 border-gray-300 rounded-xl tracking-tighter"
-                      onchange="selectCoin();"
-                    >
-                      <option value="">select</option>
-                      <option data-affi="N" value="CMDT00000000000071">
-                        normal
-                      </option>
-
-                      <option data-affi="Y" value="CMDT00000000000064">
-                        GGR
-                      </option>
-                    </select>
-                  </div>
-                  <!--Buyer ID -->
-                  <div class="">
-                    <label class="" for="">Buyer ID</label>
-                    <input
-                      type="text"
-                      id="buyer_id"
-                      placeholder="Enter seller ID"
-                      class="w-full border mt-2 px-2.5 py-2 border-gray-300 rounded-xl tracking-tighter"
-                      value=""
-                    />
-                  </div>
-                </div>
-                <!-- Button -->
-                <div class="mt-5">
-                  <button
-                    class="btn btn-exlarge btn-rounded w-full btn-default"
-                    onclick="fnSearch();"
-                  >
-                    Search
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Search Coins | END -->
-            <!-- Buyer Table | Start -->
-            <div class="hidden xl:block col-span-1 xl:col-span-8">
+          <div class="grid grid-cols-12 gap-5">
+            <!-- Coin List Table | Start -->
+            <div class="col-span-12">
               <!-- Table -->
               <div class="border bg-white h-full rounded-xl p-5">
+                <h5 class="pb-5 tracking-tighter">Coin List</h5>
                 <div class="overflow-x-auto">
                   <table class="w-full text-sm text-left text-gray-500">
                     <thead class="text-xs text-gray-700 uppercase bg-gray-100">
                       <tr>
-                        <th scope="col" class="px-5 py-3 truncate">Date</th>
-                        <th scope="col" class="px-5 py-3 truncate">Buyer ID</th>
-                        <th scope="col" class="px-5 py-3 truncate">
+                        <th scope="col" class="px-2 py-3 truncate">
                           Coin Name
                         </th>
-                        <th scope="col" class="px-5 py-3 truncate">
-                          Amount of coins
+                        <th scope="col" class="px-2 py-3 truncate">Address</th>
+                        <th scope="col" class="px-2 py-3 truncate">Balance</th>
+                        <th scope="col" class="px-2 py-3 truncate">
+                          Lock Blance
                         </th>
-                        <th scope="col" class="px-5 py-3 truncate">Price</th>
-                        <th scope="col" class="px-5 py-3 truncate">Currency</th>
-                        <th scope="col" class="px-5 py-3 truncate">State</th>
-                        <th scope="col" class="px-5 py-3 truncate"></th>
-                        <th scope="col" class="px-5 py-3 truncate"></th>
-                        <th scope="col" class="px-5 py-3 truncate"></th>
+                        <th scope="col" class="px-2 py-3 truncate">
+                          <div></div>
+                        </th>
+                        <th scope="col" class="px-2 py-3 truncate"></th>
+                      </tr>
+                    </thead>
+                    <tbody id="dataBody">
+                      <tr class="bg-white border-b">
+                        <td class="px-2 py-4">GGR</td>
+                        <td class="px-2 py-4">
+                          <a href="#" class="underline"
+                            >0xb271a2207057fa3db2df9f6cb1253ed4ff358ba8</a
+                          >
+                        </td>
+                        <td class="px-2 py-4">loading</td>
+                        <td class="px-2 py-4">loading</td>
+                        <td class="px-2 py-4">
+                          <a
+                            href="/m/send"
+                            class="inline-block btn btn-default w-28 text-center"
+                            >Send</a
+                          >
+                        </td>
+                        <td class="px-2 py-4">
+                          <a
+                            href="/m/receive"
+                            class="inline-block btn btn-dark w-28 text-center"
+                            >Receive</a
+                          >
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <!-- Coin List Table | END -->
+
+            <!-- Coin Transaction Table | Start -->
+            <div class="col-span-12">
+              <!-- Table -->
+              <div class="border bg-white h-full rounded-xl p-5">
+                <div
+                  class="flex flex-col xl:flex-row justify-between xl:items-center"
+                >
+                  <h5 class="pb-5 tracking-tighter">Coin Transaction List</h5>
+                  <select
+                    name=""
+                    id="coin_type_idx"
+                    class="border py-2.5 px-4 rounded-md text-sm"
+                    onchange="selectCoin();"
+                  >
+                    <option value="CMDT00000000000064" selected>GGR</option>
+                  </select>
+                </div>
+                <div class="overflow-x-auto mt-2">
+                  <table class="w-full text-sm text-left text-gray-500">
+                    <thead class="text-xs text-gray-700 bg-gray-100">
+                      <colgroup>
+                        <col width="" />
+                        <col width="" />
+                        <col width="" />
+                        <col width="" />
+                        <col width="" />
+                        <col width="" />
+                      </colgroup>
+                      <tr>
+                        <th scope="col" class="px-2 py-3 truncate">Date</th>
+                        <th scope="col" class="px-2 py-3 truncate">
+                          Coin Name
+                        </th>
+                        <th scope="col" class="px-2 py-3 truncate">From</th>
+                        <th scope="col" class="px-2 py-3 truncate">To</th>
+                        <th scope="col" class="px-2 py-3 truncate">Balance</th>
+                        <th scope="col" class="px-2 py-3 truncate">Txid</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr class="bg-white border-b">
-                        <td class="px-3 py-4 truncate">2022-08-16 15:50:23</td>
-                        <td
-                          class="px-3 py-4 font-medium text-gray-900 whitespace-nowrap"
-                        >
+                        <td class="px-2 py-4 truncate">13 day ago</td>
+                        <td class="px-2 py-4">GGR</td>
+                        <td class="px-2 py-4">
                           <a
-                            href="javascript:void(0);"
-                            class="inline-block underline cursor-pointer"
-                            onclick="fnUserDetailModal('')"
-                          ></a>
-                        </td>
-                        <td class="px-3 py-4">WRC</td>
-                        <td class="px-3 py-4">2</td>
-                        <td class="px-3 py-4">1,000</td>
-                        <td class="px-3 py-4">KRW</td>
-                        <td class="px-3 py-4">Trade waiting</td>
-                        <td class="px-3">
-                          <a
-                            href="javascript:void(0);"
-                            class="inline-block w-full btn btn-small btn-dark"
-                            onclick="showDetail('414', 'sell');"
-                            >Detail</a
-                          >
-
-                          <a
-                            href="javascript:void(0);"
-                            class="inline-block w-full btn btn-small btn-red"
-                            onclick="sellCancel('414','');"
-                            >Cancel</a
+                            href="https://scan.wa-recycle.com/search/0xc5c575bf1d355c3e5cd6f3534be512fc6aab14e8"
+                            target="_blank"
+                            class="underline truncate"
+                            >0xc5c575bf1d355c3e5cd6f3534be512fc6aab14e8</a
                           >
                         </td>
-                        <td class="">
+                        <td class="px-2 py-4">
                           <a
-                            href="javascript:void(0);"
-                            class="inline-block w-full h-full btn btn-small btn-default"
-                            onclick="showLogList('414', 'sell');"
-                            >transaction history</a
+                            href="https://scan.wa-recycle.com/search/0xb271a2207057fa3db2df9f6cb1253ed4ff358ba8"
+                            target="_blank"
+                            class="underline truncate"
+                            >0xb271a2207057fa3db2df9f6cb1253ed4ff358ba8</a
+                          >
+                        </td>
+                        <td class="px-2 py-4">0.0005</td>
+                        <td class="px-2 py-4">
+                          <a
+                            href="https://scan.wa-recycle.com/search/0x9a131aec8a2ee1df9e32ec415221591b734739c529736c01185bcbb1fa037926"
+                            target="_blank"
+                            class="underline text-ellipsis"
+                            >0x9a131aec8a2ee1df9e32ec415221591b734739c529736c01185bcbb1fa037926</a
                           >
                         </td>
                       </tr>
 
                       <tr class="bg-white border-b">
-                        <td class="px-3 py-4 truncate">
+                        <td class="px-2 py-4 truncate">13 day ago</td>
+                        <td class="px-2 py-4">GGR</td>
+                        <td class="px-2 py-4">
                           <a
-                            href="javascript:void(0);"
-                            class="inline-block underline"
-                            onclick="fnDetailLog('413','871');"
-                            >2022-08-16 15:45:03</a
+                            href="https://scan.wa-recycle.com/search/0xb271a2207057fa3db2df9f6cb1253ed4ff358ba8"
+                            target="_blank"
+                            class="underline truncate"
+                            >0xb271a2207057fa3db2df9f6cb1253ed4ff358ba8</a
                           >
                         </td>
-                        <td
-                          class="px-3 py-4 font-medium text-gray-900 whitespace-nowrap"
-                        >
+                        <td class="px-2 py-4">
                           <a
-                            href="javascript:void(0);"
-                            class="inline-block underline cursor-pointer"
-                            onclick="fnUserDetailModal('seller1')"
-                            >seller1</a
+                            href="https://scan.wa-recycle.com/search/0xc28c365a0aaca12050544953d7c48ca12ed64dc7"
+                            target="_blank"
+                            class="underline truncate"
+                            >0xc28c365a0aaca12050544953d7c48ca12ed64dc7</a
                           >
                         </td>
-                        <td class="px-3 py-4">WRC</td>
-                        <td class="px-3 py-4"></td>
-                        <td class="px-3 py-4">10,000</td>
-                        <td class="px-3 py-4">KRW</td>
-                        <td class="px-3 py-4">Transaction completed</td>
-                        <td class="px-3"></td>
-                        <td class="">
+                        <td class="px-2 py-4">1</td>
+                        <td class="px-2 py-4">
                           <a
-                            href="javascript:void(0);"
-                            class="inline-block w-full h-full btn btn-small btn-default"
-                            onclick="showLogList('413', 'sell');"
-                            >transaction history</a
+                            href="https://scan.wa-recycle.com/search/0xee729a4578a5959590ca01e02eb00b23ac2e8ae1d2e55f5794f94c6a47a5cd11"
+                            target="_blank"
+                            class="underline text-ellipsis"
+                            >0xee729a4578a5959590ca01e02eb00b23ac2e8ae1d2e55f5794f94c6a47a5cd11</a
                           >
                         </td>
                       </tr>
 
                       <tr class="bg-white border-b">
-                        <td class="px-3 py-4 truncate">2022-08-16 15:42:11</td>
-                        <td
-                          class="px-3 py-4 font-medium text-gray-900 whitespace-nowrap"
-                        >
+                        <td class="px-2 py-4 truncate">17 day ago</td>
+                        <td class="px-2 py-4">GGR</td>
+                        <td class="px-2 py-4">
                           <a
-                            href="javascript:void(0);"
-                            class="inline-block underline cursor-pointer"
-                            onclick="fnUserDetailModal('')"
-                          ></a>
+                            href="https://scan.wa-recycle.com/search/0xb2b845ffb6c405d2e842a16ad7924125f737e08d"
+                            target="_blank"
+                            class="underline truncate"
+                            >0xb2b845ffb6c405d2e842a16ad7924125f737e08d</a
+                          >
                         </td>
-                        <td class="px-3 py-4">WRC</td>
-                        <td class="px-3 py-4">1</td>
-                        <td class="px-3 py-4">10,000</td>
-                        <td class="px-3 py-4">KRW</td>
-                        <td class="px-3 py-4">Transaction cancellation</td>
-                        <td class="px-3"></td>
-                        <td class="">
+                        <td class="px-2 py-4">
                           <a
-                            href="javascript:void(0);"
-                            class="inline-block w-full h-full btn btn-small btn-default"
-                            onclick="showLogList('412', 'sell');"
-                            >transaction history</a
+                            href="https://scan.wa-recycle.com/search/0xb271a2207057fa3db2df9f6cb1253ed4ff358ba8"
+                            target="_blank"
+                            class="underline truncate"
+                            >0xb271a2207057fa3db2df9f6cb1253ed4ff358ba8</a
+                          >
+                        </td>
+                        <td class="px-2 py-4">3</td>
+                        <td class="px-2 py-4">
+                          <a
+                            href="https://scan.wa-recycle.com/search/0xd38438c731122f3b3e91f024203d0fd9772ff9dbf94f8905c48f0b9bef7d590c"
+                            target="_blank"
+                            class="underline text-ellipsis"
+                            >0xd38438c731122f3b3e91f024203d0fd9772ff9dbf94f8905c48f0b9bef7d590c</a
+                          >
+                        </td>
+                      </tr>
+
+                      <tr class="bg-white border-b">
+                        <td class="px-2 py-4 truncate">18 day ago</td>
+                        <td class="px-2 py-4">GGR</td>
+                        <td class="px-2 py-4">
+                          <a
+                            href="https://scan.wa-recycle.com/search/0xb271a2207057fa3db2df9f6cb1253ed4ff358ba8"
+                            target="_blank"
+                            class="underline truncate"
+                            >0xb271a2207057fa3db2df9f6cb1253ed4ff358ba8</a
+                          >
+                        </td>
+                        <td class="px-2 py-4">
+                          <a
+                            href="https://scan.wa-recycle.com/search/0xb2b845ffb6c405d2e842a16ad7924125f737e08d"
+                            target="_blank"
+                            class="underline truncate"
+                            >0xb2b845ffb6c405d2e842a16ad7924125f737e08d</a
+                          >
+                        </td>
+                        <td class="px-2 py-4">1</td>
+                        <td class="px-2 py-4">
+                          <a
+                            href="https://scan.wa-recycle.com/search/0xcaddcc7288534f50963634c05a806bca572e7ef732008ce98ca5fa24caea9bec"
+                            target="_blank"
+                            class="underline text-ellipsis"
+                            >0xcaddcc7288534f50963634c05a806bca572e7ef732008ce98ca5fa24caea9bec</a
+                          >
+                        </td>
+                      </tr>
+
+                      <tr class="bg-white border-b">
+                        <td class="px-2 py-4 truncate">18 day ago</td>
+                        <td class="px-2 py-4">GGR</td>
+                        <td class="px-2 py-4">
+                          <a
+                            href="https://scan.wa-recycle.com/search/0xc5c575bf1d355c3e5cd6f3534be512fc6aab14e8"
+                            target="_blank"
+                            class="underline truncate"
+                            >0xc5c575bf1d355c3e5cd6f3534be512fc6aab14e8</a
+                          >
+                        </td>
+                        <td class="px-2 py-4">
+                          <a
+                            href="https://scan.wa-recycle.com/search/0xb271a2207057fa3db2df9f6cb1253ed4ff358ba8"
+                            target="_blank"
+                            class="underline truncate"
+                            >0xb271a2207057fa3db2df9f6cb1253ed4ff358ba8</a
+                          >
+                        </td>
+                        <td class="px-2 py-4">0.001</td>
+                        <td class="px-2 py-4">
+                          <a
+                            href="https://scan.wa-recycle.com/search/0x10f419c8fbad0099f13e7224ec0d230db26e417e1e5ff3d00ed2e4bdeaa0b0cf"
+                            target="_blank"
+                            class="underline text-ellipsis"
+                            >0x10f419c8fbad0099f13e7224ec0d230db26e417e1e5ff3d00ed2e4bdeaa0b0cf</a
+                          >
+                        </td>
+                      </tr>
+
+                      <tr class="bg-white border-b">
+                        <td class="px-2 py-4 truncate">19 day ago</td>
+                        <td class="px-2 py-4">GGR</td>
+                        <td class="px-2 py-4">
+                          <a
+                            href="https://scan.wa-recycle.com/search/0xc5c575bf1d355c3e5cd6f3534be512fc6aab14e8"
+                            target="_blank"
+                            class="underline truncate"
+                            >0xc5c575bf1d355c3e5cd6f3534be512fc6aab14e8</a
+                          >
+                        </td>
+                        <td class="px-2 py-4">
+                          <a
+                            href="https://scan.wa-recycle.com/search/0xb271a2207057fa3db2df9f6cb1253ed4ff358ba8"
+                            target="_blank"
+                            class="underline truncate"
+                            >0xb271a2207057fa3db2df9f6cb1253ed4ff358ba8</a
+                          >
+                        </td>
+                        <td class="px-2 py-4">0.0005</td>
+                        <td class="px-2 py-4">
+                          <a
+                            href="https://scan.wa-recycle.com/search/0x9f6ebd9305a0224938975f7e9913810aaab7c584248f1bfb2eafbfdec8ea43f3"
+                            target="_blank"
+                            class="underline text-ellipsis"
+                            >0x9f6ebd9305a0224938975f7e9913810aaab7c584248f1bfb2eafbfdec8ea43f3</a
+                          >
+                        </td>
+                      </tr>
+
+                      <tr class="bg-white border-b">
+                        <td class="px-2 py-4 truncate">19 day ago</td>
+                        <td class="px-2 py-4">GGR</td>
+                        <td class="px-2 py-4">
+                          <a
+                            href="https://scan.wa-recycle.com/search/0xc5c575bf1d355c3e5cd6f3534be512fc6aab14e8"
+                            target="_blank"
+                            class="underline truncate"
+                            >0xc5c575bf1d355c3e5cd6f3534be512fc6aab14e8</a
+                          >
+                        </td>
+                        <td class="px-2 py-4">
+                          <a
+                            href="https://scan.wa-recycle.com/search/0xb271a2207057fa3db2df9f6cb1253ed4ff358ba8"
+                            target="_blank"
+                            class="underline truncate"
+                            >0xb271a2207057fa3db2df9f6cb1253ed4ff358ba8</a
+                          >
+                        </td>
+                        <td class="px-2 py-4">0.001</td>
+                        <td class="px-2 py-4">
+                          <a
+                            href="https://scan.wa-recycle.com/search/0x0e719789762b39de56a4849c382a5f1946de2f846ac6e6a177cf37341ffbb04d"
+                            target="_blank"
+                            class="underline text-ellipsis"
+                            >0x0e719789762b39de56a4849c382a5f1946de2f846ac6e6a177cf37341ffbb04d</a
+                          >
+                        </td>
+                      </tr>
+
+                      <tr class="bg-white border-b">
+                        <td class="px-2 py-4 truncate">19 day ago</td>
+                        <td class="px-2 py-4">GGR</td>
+                        <td class="px-2 py-4">
+                          <a
+                            href="https://scan.wa-recycle.com/search/0xc5c575bf1d355c3e5cd6f3534be512fc6aab14e8"
+                            target="_blank"
+                            class="underline truncate"
+                            >0xc5c575bf1d355c3e5cd6f3534be512fc6aab14e8</a
+                          >
+                        </td>
+                        <td class="px-2 py-4">
+                          <a
+                            href="https://scan.wa-recycle.com/search/0xb271a2207057fa3db2df9f6cb1253ed4ff358ba8"
+                            target="_blank"
+                            class="underline truncate"
+                            >0xb271a2207057fa3db2df9f6cb1253ed4ff358ba8</a
+                          >
+                        </td>
+                        <td class="px-2 py-4">0.0015</td>
+                        <td class="px-2 py-4">
+                          <a
+                            href="https://scan.wa-recycle.com/search/0xd6b9dadf3f0e02f9d29b75ae6e3817cede80910f19edae8da213642c3523627a"
+                            target="_blank"
+                            class="underline text-ellipsis"
+                            >0xd6b9dadf3f0e02f9d29b75ae6e3817cede80910f19edae8da213642c3523627a</a
+                          >
+                        </td>
+                      </tr>
+
+                      <tr class="bg-white border-b">
+                        <td class="px-2 py-4 truncate">20 day ago</td>
+                        <td class="px-2 py-4">GGR</td>
+                        <td class="px-2 py-4">
+                          <a
+                            href="https://scan.wa-recycle.com/search/0xc28c365a0aaca12050544953d7c48ca12ed64dc7"
+                            target="_blank"
+                            class="underline truncate"
+                            >0xc28c365a0aaca12050544953d7c48ca12ed64dc7</a
+                          >
+                        </td>
+                        <td class="px-2 py-4">
+                          <a
+                            href="https://scan.wa-recycle.com/search/0xb271a2207057fa3db2df9f6cb1253ed4ff358ba8"
+                            target="_blank"
+                            class="underline truncate"
+                            >0xb271a2207057fa3db2df9f6cb1253ed4ff358ba8</a
+                          >
+                        </td>
+                        <td class="px-2 py-4">3</td>
+                        <td class="px-2 py-4">
+                          <a
+                            href="https://scan.wa-recycle.com/search/0x2f758ac9184f540498107147efe3cedf98a3b10430fa493940a08d08f5953437"
+                            target="_blank"
+                            class="underline text-ellipsis"
+                            >0x2f758ac9184f540498107147efe3cedf98a3b10430fa493940a08d08f5953437</a
+                          >
+                        </td>
+                      </tr>
+
+                      <tr class="bg-white border-b">
+                        <td class="px-2 py-4 truncate">20 day ago</td>
+                        <td class="px-2 py-4">GGR</td>
+                        <td class="px-2 py-4">
+                          <a
+                            href="https://scan.wa-recycle.com/search/0xe502c81ee227859df8c9036bff9573d079c4c370"
+                            target="_blank"
+                            class="underline truncate"
+                            >0xe502c81ee227859df8c9036bff9573d079c4c370</a
+                          >
+                        </td>
+                        <td class="px-2 py-4">
+                          <a
+                            href="https://scan.wa-recycle.com/search/0xb271a2207057fa3db2df9f6cb1253ed4ff358ba8"
+                            target="_blank"
+                            class="underline truncate"
+                            >0xb271a2207057fa3db2df9f6cb1253ed4ff358ba8</a
+                          >
+                        </td>
+                        <td class="px-2 py-4">1</td>
+                        <td class="px-2 py-4">
+                          <a
+                            href="https://scan.wa-recycle.com/search/0x87ba953abe6959391d9afc4a201f6113aa94ad52d54fd40dd43ddd7264cae123"
+                            target="_blank"
+                            class="underline text-ellipsis"
+                            >0x87ba953abe6959391d9afc4a201f6113aa94ad52d54fd40dd43ddd7264cae123</a
                           >
                         </td>
                       </tr>
@@ -1129,193 +1343,36 @@
                     >
                       1
                     </li>
+
+                    <!--            <a href="javascript:void(0);" onclick="$('#pageIndex').val('2'); fnSearch();"><span class="page">2</span></a>-->
+                    <li
+                      class="px-3 py-2 hover:bg-blue-300 cursor-pointer border-l border-r border-y"
+                      onclick="$('#pageIndex').val('2'); fnSearch();"
+                    >
+                      2
+                    </li>
+
+                    <!--            <a href="javascript:void(0);" onclick="$('#pageIndex').val('3'); fnSearch();"><span class="page">3</span></a>-->
+                    <li
+                      class="px-3 py-2 hover:bg-blue-300 cursor-pointer border-l border-r border-y"
+                      onclick="$('#pageIndex').val('3'); fnSearch();"
+                    >
+                      3
+                    </li>
+
+                    <!--            <a href="javascript:void(0);" onclick="$('#pageIndex').val('4'); fnSearch();"><span class="page">4</span></a>-->
+                    <li
+                      class="px-3 py-2 hover:bg-blue-300 cursor-pointer border-l border-r border-y"
+                      onclick="$('#pageIndex').val('4'); fnSearch();"
+                    >
+                      4
+                    </li>
                   </ul>
                 </div>
                 <input type="hidden" id="pageIndex" value="1" />
               </div>
             </div>
-            <!-- Buyer Table | END -->
-
-            <!-- Buyer Card | Start -->
-            <div class="col-span-1 xl:hidden">
-              <div>
-                <div>
-                  <div class="grid grid-cols-1 gap-2">
-                    <div class="">
-                      <div class="text-sm w-full">
-                        <div
-                          class="grid grid-cols-2 p-5 border rounded-lg gap-y-1.5 tracking-tighter"
-                        >
-                          <div class="col-span-1 w-full truncate">
-                            2022-08-16 15:50:23
-                          </div>
-                          <div class="col-span-1">
-                            <div class="text-end">
-                              2
-
-                              <span class="ml-2 font-semibold">Coin</span>
-                            </div>
-                          </div>
-                          <div class="col-span-1">WRC</div>
-                          <div class="col-span-1">
-                            <div class="text-end">
-                              1,000
-
-                              <span class="ml-2 font-semibold">KRW</span>
-                            </div>
-                          </div>
-                          <div class="col-span-1"></div>
-                          <div class="col-span-1 text-end">
-                            <!-- <div class="badge badge-dark inline-block">AUTO</div>
-														<div class="badge badge-green inline-block uppercase">ESCROW</div>
-														<div class="badge badge-default inline-block">Manual</div>
-														<div class="badge badge-red inline-block uppercase">Non-ESCROW</div> -->
-                            Trade waiting
-                          </div>
-                          <div class="col-span-2">
-                            <div
-                              class="flex xl:flex-col justify-end items-center gap-2"
-                            >
-                              <button
-                                class="btn btn-small btn-dark text-center w-full"
-                                onclick="showDetail('414', 'sell');"
-                              >
-                                Detail
-                              </button>
-
-                              <button
-                                class="btn btn-small btn-red text-center w-full"
-                                onclick="sellCancel('414','');"
-                              >
-                                Cancel
-                              </button>
-                            </div>
-                          </div>
-                          <div class="w-full col-span-2 mt-2">
-                            <button
-                              class="btn w-full btn-small btn-default text-center"
-                              onclick="showLogList('414', 'sell');"
-                            >
-                              transaction history
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="">
-                      <div class="text-sm w-full">
-                        <div
-                          class="grid grid-cols-2 p-5 border rounded-lg gap-y-1.5 tracking-tighter"
-                        >
-                          <div class="col-span-1 w-full truncate">
-                            <a
-                              href="javascript:void(0);"
-                              class="inline-block underline"
-                              onclick="fnDetailLog('413','871');"
-                              >2022-08-16 15:45:03</a
-                            >
-                          </div>
-                          <div class="col-span-1">
-                            <div class="text-end">
-                              <span class="ml-2 font-semibold">Coin</span>
-                            </div>
-                          </div>
-                          <div class="col-span-1">WRC</div>
-                          <div class="col-span-1">
-                            <div class="text-end">
-                              10,000
-
-                              <span class="ml-2 font-semibold">KRW</span>
-                            </div>
-                          </div>
-                          <div class="col-span-1">seller1</div>
-                          <div class="col-span-1 text-end">
-                            <!-- <div class="badge badge-dark inline-block">AUTO</div>
-														<div class="badge badge-green inline-block uppercase">ESCROW</div>
-														<div class="badge badge-default inline-block">Manual</div>
-														<div class="badge badge-red inline-block uppercase">Non-ESCROW</div> -->
-                            Transaction completed
-                          </div>
-                          <div class="col-span-2">
-                            <div
-                              class="flex xl:flex-col justify-end items-center gap-2"
-                            ></div>
-                          </div>
-                          <div class="w-full col-span-2 mt-2">
-                            <button
-                              class="btn w-full btn-small btn-default text-center"
-                              onclick="showLogList('413', 'sell');"
-                            >
-                              transaction history
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="">
-                      <div class="text-sm w-full">
-                        <div
-                          class="grid grid-cols-2 p-5 border rounded-lg gap-y-1.5 tracking-tighter"
-                        >
-                          <div class="col-span-1 w-full truncate">
-                            2022-08-16 15:42:11
-                          </div>
-                          <div class="col-span-1">
-                            <div class="text-end">
-                              1
-
-                              <span class="ml-2 font-semibold">Coin</span>
-                            </div>
-                          </div>
-                          <div class="col-span-1">WRC</div>
-                          <div class="col-span-1">
-                            <div class="text-end">
-                              10,000
-
-                              <span class="ml-2 font-semibold">KRW</span>
-                            </div>
-                          </div>
-                          <div class="col-span-1"></div>
-                          <div class="col-span-1 text-end">
-                            <!-- <div class="badge badge-dark inline-block">AUTO</div>
-														<div class="badge badge-green inline-block uppercase">ESCROW</div>
-														<div class="badge badge-default inline-block">Manual</div>
-														<div class="badge badge-red inline-block uppercase">Non-ESCROW</div> -->
-                            Transaction cancellation
-                          </div>
-                          <div class="col-span-2">
-                            <div
-                              class="flex xl:flex-col justify-end items-center gap-2"
-                            ></div>
-                          </div>
-                          <div class="w-full col-span-2 mt-2">
-                            <button
-                              class="btn w-full btn-small btn-default text-center"
-                              onclick="showLogList('412', 'sell');"
-                            >
-                              transaction history
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="mt-5">
-                  <ul class="flex items-center justify-center">
-                    <!--            <a href="javascript:void(0);" class="page"><span class="page active">1</span></a>-->
-                    <li
-                      class="px-3 py-2 hover:bg-blue-300 cursor-pointer border-l border-r border-y"
-                    >
-                      1
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <!-- SELLer Card | END -->
+            <!-- Coin Transaction Table | END -->
           </div>
         </div>
       </section>
@@ -1555,17 +1612,120 @@
     </script>
     <script src="/js/sideNav.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/chatting.js"></script>
+    <script src="/js/main.js"></script>
     <script>
-      function fnSearch() {
+      $(function () {
+        getCoinBalance();
+      });
+
+      function getCoinBalance() {
+        let data = {};
+        $.ajax({
+          url: "/m/getCoinBalance",
+          dataType: "json",
+          type: "POST",
+          data: data,
+          success: function (result) {
+            if (result.success) {
+              $("#dataBody").html("");
+              let list = result.data;
+              list.forEach(function (el) {
+                let html = "";
+                html += '<tr class="bg-white border-b">';
+                html += '<td class="px-2 py-4">' + el.coin_name + "</td>";
+                html += '<td class="px-2 py-4">';
+                html +=
+                  '<a href="#" class="underline">' + el.coin_addr + "</a>";
+                html += "</td>";
+                html += '<td class="px-2 py-4">' + el.balance + "</td>";
+                html += '<td class="px-2 py-4">' + el.lock_balance + "</td>";
+                html += '<td class="px-2 py-4">';
+                html +=
+                  '<a href="javascript:void(0);" class="inline-block btn btn-default w-28 text-center" onclick="fnSend(\'' +
+                  el.coin_name +
+                  "','" +
+                  el.coin_addr +
+                  "','" +
+                  el.coin_typ +
+                  "');\">Send</a>";
+                html += "</td>";
+                html += '<td class="px-2 py-4">';
+                html +=
+                  '<a href="javascript:void(0);" class="inline-block btn btn-dark w-28 text-center" onclick="fnReceive(\'' +
+                  el.coin_addr +
+                  "');\">Receive</a>";
+                html += "</td>";
+                html += "</tr>";
+
+                $("#dataBody").append(html);
+              });
+            } else {
+              fnAlertMessage(
+                "It was not processed normally. Please try again!"
+              );
+            }
+          },
+          error: function (XMLHttpRequest, textStatus, errorThrown) {
+            fnAlertMessage("It was not processed normally. Please try again!");
+          },
+        });
+      }
+
+      function fnReceive(coin_addr) {
+        var form = document.createElement("form");
+        form.setAttribute("charset", "UTF-8");
+        form.setAttribute("method", "Post");
+        form.setAttribute("action", "/m/receive");
+
+        var hiddenField1 = document.createElement("input");
+        hiddenField1.setAttribute("type", "hidden");
+        hiddenField1.setAttribute("name", "coin_addr");
+        hiddenField1.setAttribute("value", coin_addr);
+        form.appendChild(hiddenField1);
+
+        document.body.appendChild(form);
+        form.submit();
+      }
+
+      function fnSend(coin_name, coin_addr, coin_typ) {
+        var form = document.createElement("form");
+        form.setAttribute("charset", "UTF-8");
+        form.setAttribute("method", "Post");
+        form.setAttribute("action", "/m/send");
+
+        var hiddenField1 = document.createElement("input");
+        hiddenField1.setAttribute("type", "hidden");
+        hiddenField1.setAttribute("name", "coin_name");
+        hiddenField1.setAttribute("value", coin_name);
+        form.appendChild(hiddenField1);
+
+        var hiddenField2 = document.createElement("input");
+        hiddenField2.setAttribute("type", "hidden");
+        hiddenField2.setAttribute("name", "coin_addr");
+        hiddenField2.setAttribute("value", coin_addr);
+        form.appendChild(hiddenField2);
+
+        var hiddenField3 = document.createElement("input");
+        hiddenField3.setAttribute("type", "hidden");
+        hiddenField3.setAttribute("name", "coin_typ");
+        hiddenField3.setAttribute("value", coin_typ);
+        form.appendChild(hiddenField3);
+
+        document.body.appendChild(form);
+        form.submit();
+      }
+
+      function selectCoin() {
+        let coinIdx = $("#coin_type_idx option").index(
+          $("#coin_type_idx option:selected")
+        );
         let pageIndex = $("#pageIndex").val();
-        let coin_nm = $("#coin_nm").val();
-        let coin_typ = $($("#coin_typ")).val();
-        let buyer_id = $("#buyer_id").val();
 
         var form = document.createElement("form");
         form.setAttribute("charset", "UTF-8");
         form.setAttribute("method", "Post");
-        form.setAttribute("action", "/m/sellHistory");
+        form.setAttribute("action", "/m/affiliateWallet");
 
         var hiddenField1 = document.createElement("input");
         hiddenField1.setAttribute("type", "hidden");
@@ -1575,156 +1735,36 @@
 
         var hiddenField2 = document.createElement("input");
         hiddenField2.setAttribute("type", "hidden");
-        hiddenField2.setAttribute("name", "coin_nm");
-        hiddenField2.setAttribute("value", coin_nm);
+        hiddenField2.setAttribute("name", "coinIdx");
+        hiddenField2.setAttribute("value", coinIdx);
         form.appendChild(hiddenField2);
-
-        var hiddenField3 = document.createElement("input");
-        hiddenField3.setAttribute("type", "hidden");
-        hiddenField3.setAttribute("name", "coin_typ");
-        hiddenField3.setAttribute("value", coin_typ);
-        form.appendChild(hiddenField3);
-
-        var hiddenField4 = document.createElement("input");
-        hiddenField4.setAttribute("type", "hidden");
-        hiddenField4.setAttribute("name", "buyer_id");
-        hiddenField4.setAttribute("value", buyer_id);
-        form.appendChild(hiddenField4);
 
         document.body.appendChild(form);
         form.submit();
       }
 
-      function selectCoin() {
-        $("#coin_nm").val("");
-        let affi = $("#coin_typ option:selected").data("affi");
-        if (affi == "N") {
-          $("#coin_nm").show();
-        } else {
-          $("#coin_nm").hide();
-        }
-      }
+      function fnSearch() {
+        let coinIdx = $("#coin_type_idx option").index(
+          $("#coin_type_idx option:selected")
+        );
+        let pageIndex = $("#pageIndex").val();
 
-      function fnDetail(seq) {
         var form = document.createElement("form");
         form.setAttribute("charset", "UTF-8");
         form.setAttribute("method", "Post");
-        form.setAttribute("action", "/s/detail");
+        form.setAttribute("action", "/m/affiliateWallet");
 
         var hiddenField1 = document.createElement("input");
         hiddenField1.setAttribute("type", "hidden");
-        hiddenField1.setAttribute("name", "seq");
-        hiddenField1.setAttribute("value", seq);
+        hiddenField1.setAttribute("name", "pageIndex");
+        hiddenField1.setAttribute("value", pageIndex);
         form.appendChild(hiddenField1);
 
         var hiddenField2 = document.createElement("input");
         hiddenField2.setAttribute("type", "hidden");
-        hiddenField2.setAttribute("name", "calcelType");
-        hiddenField2.setAttribute("value", "sell");
+        hiddenField2.setAttribute("name", "coinIdx");
+        hiddenField2.setAttribute("value", coinIdx);
         form.appendChild(hiddenField2);
-
-        document.body.appendChild(form);
-        form.submit();
-      }
-
-      function fnDetailLog(seq, request_seq) {
-        var form = document.createElement("form");
-        form.setAttribute("charset", "UTF-8");
-        form.setAttribute("method", "Post");
-        form.setAttribute("action", "/s/logDetail");
-
-        var hiddenField1 = document.createElement("input");
-        hiddenField1.setAttribute("type", "hidden");
-        hiddenField1.setAttribute("name", "seq");
-        hiddenField1.setAttribute("value", seq);
-        form.appendChild(hiddenField1);
-
-        var hiddenField2 = document.createElement("input");
-        hiddenField2.setAttribute("type", "hidden");
-        hiddenField2.setAttribute("name", "request_seq");
-        hiddenField2.setAttribute("value", "buy-" + request_seq);
-        form.appendChild(hiddenField2);
-
-        var hiddenField3 = document.createElement("input");
-        hiddenField3.setAttribute("type", "hidden");
-        hiddenField3.setAttribute("name", "trade_typ");
-        hiddenField3.setAttribute("value", "sell");
-        form.appendChild(hiddenField3);
-
-        var hiddenField4 = document.createElement("input");
-        hiddenField4.setAttribute("type", "hidden");
-        hiddenField4.setAttribute("name", "clickFn");
-        hiddenField4.setAttribute("value", "sell");
-        form.appendChild(hiddenField4);
-
-        document.body.appendChild(form);
-        form.submit();
-      }
-
-      function showDetail(seq, tradeType) {
-        /**
-         * {String} tradeType "sell", "buy", "affSell"
-         */
-        let data = {
-          seq,
-          tradeType,
-        };
-
-        $.ajax({
-          url: "/m/showDetail",
-          dataType: "json",
-          type: "POST",
-          data: data,
-          success: function (result) {
-            if (result.success) {
-              fnDetailModal(result.data);
-            } else {
-              // fnAlertMessage('It was not processed normally. Please try again!');
-            }
-          },
-          error: function (XMLHttpRequest, textStatus, errorThrown) {
-            fnAlertMessage("It was not processed normally. Please try again!");
-          }, //function끝
-        });
-      }
-
-      function sellCancel(seq, room_id) {
-        let data = {
-          seq: seq,
-          room_id: room_id,
-        };
-
-        $.ajax({
-          url: "/s/sellCancel",
-          dataType: "json",
-          type: "POST",
-          data: data,
-          success: function (result) {
-            if (result.success) {
-              fnAlertLocationMessage("The transaction has been canceled.", "/");
-            } else {
-              fnAlertMessage(
-                "It was not processed normally. Please try again!"
-              );
-            }
-          },
-          error: function (XMLHttpRequest, textStatus, errorThrown) {
-            fnAlertMessage("It was not processed normally. Please try again!");
-          }, //function끝
-        });
-      }
-
-      function showLogList(seq) {
-        let form = document.createElement("form");
-        form.setAttribute("charset", "UTF-8");
-        form.setAttribute("method", "Post");
-        form.setAttribute("action", "/m/sellLogHistory");
-
-        let hiddenField1 = document.createElement("input");
-        hiddenField1.setAttribute("type", "hidden");
-        hiddenField1.setAttribute("name", "sell_seq");
-        hiddenField1.setAttribute("value", seq);
-        form.appendChild(hiddenField1);
 
         document.body.appendChild(form);
         form.submit();

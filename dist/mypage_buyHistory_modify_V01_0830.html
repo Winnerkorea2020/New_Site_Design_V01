@@ -709,7 +709,7 @@
 
     <!-- Main -->
     <main class="p-0">
-      <!-- Tap Header -->
+      <!-- Tap Menu -->
       <section class="section">
         <div class="pt-2 flex justify-start">
           <div
@@ -882,7 +882,7 @@
             </ul>
           </div>
         </div>
-        <input type="hidden" id="menu" value="sellHistory" />
+        <input type="hidden" id="menu" value="buyHistory" />
         <script>
           //todo[limsy820] dropdown 메뉴 active 안먹음
           $(function () {
@@ -920,22 +920,21 @@
       <!-- Sell Coins | Start -->
       <section class="section">
         <div class="pt-5 xl:pt-16">
-          <!-- Sell Header Area | Start -->
+          <!-- Buy Header Area | Start -->
           <div class="flex justify-between items-center">
-            <h4>Sell History</h4>
+            <h4>Buy History</h4>
 
             <div class="hidden xl:flex items-center gap-2 text-xs">
               <div>HOME</div>
               <div><i class="bx bx-chevron-right"></i></div>
               <div>My Page</div>
               <div><i class="bx bx-chevron-right"></i></div>
-              <div>Sell History</div>
+              <div>Buy History</div>
             </div>
           </div>
-          <!-- Sell Header Area | End -->
+          <!-- Buy Header Area | End -->
           <div class="grid grid-cols-1 xl:grid-cols-11 gap-5 mt-5 xl:mt-8">
             <!-- Search Coins | Start -->
-
             <div class="col-span-1 xl:col-span-3">
               <div class="bg-white px-3 py-8 h-full rounded-xl border">
                 <div class="grid grid-cols-1 gap-5">
@@ -944,9 +943,8 @@
                     <label class="" for="">Coin Name</label>
                     <input
                       type="text"
-                      1
                       id="coin_nm"
-                      class="w-full border mt-2 px-2.5 py-2 border-gray-300 rounded-xl tracking-tighter"
+                      class="w-full border-2 mt-2 px-2.5 py-2 border-gray-300 rounded-xl tracking-tighter"
                       style="display: none"
                       value=""
                     />
@@ -966,12 +964,12 @@
                       </option>
                     </select>
                   </div>
-                  <!--Buyer ID -->
+                  <!--seller ID -->
                   <div class="">
-                    <label class="" for="">Buyer ID</label>
+                    <label class="" for="">seller ID</label>
                     <input
                       type="text"
-                      id="buyer_id"
+                      id="seller_id"
                       placeholder="Enter seller ID"
                       class="w-full border mt-2 px-2.5 py-2 border-gray-300 rounded-xl tracking-tighter"
                       value=""
@@ -981,7 +979,7 @@
                 <!-- Button -->
                 <div class="mt-5">
                   <button
-                    class="btn btn-exlarge btn-rounded w-full btn-default"
+                    class="btn btn-large btn-rounded w-full btn-default"
                     onclick="fnSearch();"
                   >
                     Search
@@ -989,7 +987,6 @@
                 </div>
               </div>
             </div>
-
             <!-- Search Coins | END -->
             <!-- Buyer Table | Start -->
             <div class="hidden xl:block col-span-1 xl:col-span-8">
@@ -1000,7 +997,9 @@
                     <thead class="text-xs text-gray-700 uppercase bg-gray-100">
                       <tr>
                         <th scope="col" class="px-5 py-3 truncate">Date</th>
-                        <th scope="col" class="px-5 py-3 truncate">Buyer ID</th>
+                        <th scope="col" class="px-5 py-3 truncate">
+                          Seller ID
+                        </th>
                         <th scope="col" class="px-5 py-3 truncate">
                           Coin Name
                         </th>
@@ -1017,106 +1016,30 @@
                     </thead>
                     <tbody>
                       <tr class="bg-white border-b">
-                        <td class="px-3 py-4 truncate">2022-08-16 15:50:23</td>
-                        <td
-                          class="px-3 py-4 font-medium text-gray-900 whitespace-nowrap"
-                        >
-                          <a
-                            href="javascript:void(0);"
-                            class="inline-block underline cursor-pointer"
-                            onclick="fnUserDetailModal('')"
-                          ></a>
-                        </td>
-                        <td class="px-3 py-4">WRC</td>
-                        <td class="px-3 py-4">2</td>
-                        <td class="px-3 py-4">1,000</td>
-                        <td class="px-3 py-4">KRW</td>
-                        <td class="px-3 py-4">Trade waiting</td>
-                        <td class="px-3">
-                          <a
-                            href="javascript:void(0);"
-                            class="inline-block w-full btn btn-small btn-dark"
-                            onclick="showDetail('414', 'sell');"
-                            >Detail</a
-                          >
-
-                          <a
-                            href="javascript:void(0);"
-                            class="inline-block w-full btn btn-small btn-red"
-                            onclick="sellCancel('414','');"
-                            >Cancel</a
-                          >
-                        </td>
-                        <td class="">
-                          <a
-                            href="javascript:void(0);"
-                            class="inline-block w-full h-full btn btn-small btn-default"
-                            onclick="showLogList('414', 'sell');"
-                            >transaction history</a
-                          >
-                        </td>
-                      </tr>
-
-                      <tr class="bg-white border-b">
                         <td class="px-3 py-4 truncate">
                           <a
                             href="javascript:void(0);"
                             class="inline-block underline"
-                            onclick="fnDetailLog('413','871');"
-                            >2022-08-16 15:45:03</a
+                            onclick="fnDetailLog('306','335');"
+                            >2022-08-16 15:47:03</a
                           >
                         </td>
-                        <td
-                          class="px-3 py-4 font-medium text-gray-900 whitespace-nowrap"
+                        <th
+                          scope="row"
+                          class="px-3 py-4 font-medium text-gray-900 whitespace-nowrap underline cursor-pointer"
+                          onclick="fnUserDetailModal('seller1')"
                         >
-                          <a
-                            href="javascript:void(0);"
-                            class="inline-block underline cursor-pointer"
-                            onclick="fnUserDetailModal('seller1')"
-                            >seller1</a
-                          >
-                        </td>
-                        <td class="px-3 py-4">WRC</td>
-                        <td class="px-3 py-4"></td>
-                        <td class="px-3 py-4">10,000</td>
-                        <td class="px-3 py-4">KRW</td>
-                        <td class="px-3 py-4">Transaction completed</td>
-                        <td class="px-3"></td>
-                        <td class="">
-                          <a
-                            href="javascript:void(0);"
-                            class="inline-block w-full h-full btn btn-small btn-default"
-                            onclick="showLogList('413', 'sell');"
-                            >transaction history</a
-                          >
-                        </td>
-                      </tr>
-
-                      <tr class="bg-white border-b">
-                        <td class="px-3 py-4 truncate">2022-08-16 15:42:11</td>
-                        <td
-                          class="px-3 py-4 font-medium text-gray-900 whitespace-nowrap"
-                        >
-                          <a
-                            href="javascript:void(0);"
-                            class="inline-block underline cursor-pointer"
-                            onclick="fnUserDetailModal('')"
-                          ></a>
-                        </td>
+                          seller1
+                        </th>
                         <td class="px-3 py-4">WRC</td>
                         <td class="px-3 py-4">1</td>
-                        <td class="px-3 py-4">10,000</td>
+                        <td class="px-3 py-4">1,000</td>
                         <td class="px-3 py-4">KRW</td>
-                        <td class="px-3 py-4">Transaction cancellation</td>
-                        <td class="px-3"></td>
-                        <td class="">
-                          <a
-                            href="javascript:void(0);"
-                            class="inline-block w-full h-full btn btn-small btn-default"
-                            onclick="showLogList('412', 'sell');"
-                            >transaction history</a
-                          >
-                        </td>
+                        <td class="px-3 py-4">Transaction completed</td>
+
+                        <td class="px-5 py-4"></td>
+
+                        <td class="px-5 py-4"></td>
                       </tr>
                     </tbody>
                   </table>
@@ -1147,11 +1070,16 @@
                           class="grid grid-cols-2 p-5 border rounded-lg gap-y-1.5 tracking-tighter"
                         >
                           <div class="col-span-1 w-full truncate">
-                            2022-08-16 15:50:23
+                            <a
+                              href="javascript:void(0);"
+                              class="inline-block underline"
+                              onclick="fnDetailLog('306','335');"
+                              >2022-08-16 15:47:03</a
+                            >
                           </div>
                           <div class="col-span-1">
                             <div class="text-end">
-                              2
+                              1
 
                               <span class="ml-2 font-semibold">Coin</span>
                             </div>
@@ -1164,154 +1092,42 @@
                               <span class="ml-2 font-semibold">KRW</span>
                             </div>
                           </div>
-                          <div class="col-span-1"></div>
+                          <div
+                            class="col-span-1 underline"
+                            onclick="fnUserDetailModal('seller1')"
+                          >
+                            seller1
+                          </div>
                           <div class="col-span-1 text-end">
-                            <!-- <div class="badge badge-dark inline-block">AUTO</div>
-														<div class="badge badge-green inline-block uppercase">ESCROW</div>
-														<div class="badge badge-default inline-block">Manual</div>
-														<div class="badge badge-red inline-block uppercase">Non-ESCROW</div> -->
-                            Trade waiting
-                          </div>
-                          <div class="col-span-2">
-                            <div
-                              class="flex xl:flex-col justify-end items-center gap-2"
-                            >
-                              <button
-                                class="btn btn-small btn-dark text-center w-full"
-                                onclick="showDetail('414', 'sell');"
-                              >
-                                Detail
-                              </button>
-
-                              <button
-                                class="btn btn-small btn-red text-center w-full"
-                                onclick="sellCancel('414','');"
-                              >
-                                Cancel
-                              </button>
-                            </div>
-                          </div>
-                          <div class="w-full col-span-2 mt-2">
-                            <button
-                              class="btn w-full btn-small btn-default text-center"
-                              onclick="showLogList('414', 'sell');"
-                            >
-                              transaction history
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="">
-                      <div class="text-sm w-full">
-                        <div
-                          class="grid grid-cols-2 p-5 border rounded-lg gap-y-1.5 tracking-tighter"
-                        >
-                          <div class="col-span-1 w-full truncate">
-                            <a
-                              href="javascript:void(0);"
-                              class="inline-block underline"
-                              onclick="fnDetailLog('413','871');"
-                              >2022-08-16 15:45:03</a
-                            >
-                          </div>
-                          <div class="col-span-1">
-                            <div class="text-end">
-                              <span class="ml-2 font-semibold">Coin</span>
-                            </div>
-                          </div>
-                          <div class="col-span-1">WRC</div>
-                          <div class="col-span-1">
-                            <div class="text-end">
-                              10,000
-
-                              <span class="ml-2 font-semibold">KRW</span>
-                            </div>
-                          </div>
-                          <div class="col-span-1">seller1</div>
-                          <div class="col-span-1 text-end">
-                            <!-- <div class="badge badge-dark inline-block">AUTO</div>
-														<div class="badge badge-green inline-block uppercase">ESCROW</div>
-														<div class="badge badge-default inline-block">Manual</div>
-														<div class="badge badge-red inline-block uppercase">Non-ESCROW</div> -->
                             Transaction completed
                           </div>
+                          <div></div>
                           <div class="col-span-2">
                             <div
-                              class="flex xl:flex-col justify-end items-center gap-2"
-                            ></div>
-                          </div>
-                          <div class="w-full col-span-2 mt-2">
-                            <button
-                              class="btn w-full btn-small btn-default text-center"
-                              onclick="showLogList('413', 'sell');"
+                              class="flex justify-end items-center gap-2 mt-1"
                             >
-                              transaction history
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                              <td class="px-5 py-4"></td>
 
-                    <div class="">
-                      <div class="text-sm w-full">
-                        <div
-                          class="grid grid-cols-2 p-5 border rounded-lg gap-y-1.5 tracking-tighter"
-                        >
-                          <div class="col-span-1 w-full truncate">
-                            2022-08-16 15:42:11
-                          </div>
-                          <div class="col-span-1">
-                            <div class="text-end">
-                              1
-
-                              <span class="ml-2 font-semibold">Coin</span>
+                              <td class="px-5 py-4"></td>
                             </div>
-                          </div>
-                          <div class="col-span-1">WRC</div>
-                          <div class="col-span-1">
-                            <div class="text-end">
-                              10,000
-
-                              <span class="ml-2 font-semibold">KRW</span>
-                            </div>
-                          </div>
-                          <div class="col-span-1"></div>
-                          <div class="col-span-1 text-end">
-                            <!-- <div class="badge badge-dark inline-block">AUTO</div>
-														<div class="badge badge-green inline-block uppercase">ESCROW</div>
-														<div class="badge badge-default inline-block">Manual</div>
-														<div class="badge badge-red inline-block uppercase">Non-ESCROW</div> -->
-                            Transaction cancellation
-                          </div>
-                          <div class="col-span-2">
-                            <div
-                              class="flex xl:flex-col justify-end items-center gap-2"
-                            ></div>
-                          </div>
-                          <div class="w-full col-span-2 mt-2">
-                            <button
-                              class="btn w-full btn-small btn-default text-center"
-                              onclick="showLogList('412', 'sell');"
-                            >
-                              transaction history
-                            </button>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="mt-5">
-                  <ul class="flex items-center justify-center">
-                    <!--            <a href="javascript:void(0);" class="page"><span class="page active">1</span></a>-->
-                    <li
-                      class="px-3 py-2 hover:bg-blue-300 cursor-pointer border-l border-r border-y"
-                    >
-                      1
-                    </li>
-                  </ul>
+                <div>
+                  <div class="mt-5">
+                    <ul class="flex items-center justify-center">
+                      <!--            <a href="javascript:void(0);" class="page"><span class="page active">1</span></a>-->
+                      <li
+                        class="px-3 py-2 hover:bg-blue-300 cursor-pointer border-l border-r border-y"
+                      >
+                        1
+                      </li>
+                    </ul>
+                  </div>
+                  <input type="hidden" id="pageIndex" value="1" />
                 </div>
               </div>
             </div>
@@ -1319,6 +1135,7 @@
           </div>
         </div>
       </section>
+      <!-- Sell Coins | End -->
     </main>
 
     <!-- Footer -->
@@ -1555,17 +1372,19 @@
     </script>
     <script src="/js/sideNav.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/chatting.js"></script>
+    <script src="/js/main.js"></script>
     <script>
       function fnSearch() {
         let pageIndex = $("#pageIndex").val();
         let coin_nm = $("#coin_nm").val();
         let coin_typ = $($("#coin_typ")).val();
-        let buyer_id = $("#buyer_id").val();
+        let seller_id = $("#seller_id").val();
 
         var form = document.createElement("form");
         form.setAttribute("charset", "UTF-8");
         form.setAttribute("method", "Post");
-        form.setAttribute("action", "/m/sellHistory");
+        form.setAttribute("action", "/m/buyHistory");
 
         var hiddenField1 = document.createElement("input");
         hiddenField1.setAttribute("type", "hidden");
@@ -1587,8 +1406,8 @@
 
         var hiddenField4 = document.createElement("input");
         hiddenField4.setAttribute("type", "hidden");
-        hiddenField4.setAttribute("name", "buyer_id");
-        hiddenField4.setAttribute("value", buyer_id);
+        hiddenField4.setAttribute("name", "seller_id");
+        hiddenField4.setAttribute("value", seller_id);
         form.appendChild(hiddenField4);
 
         document.body.appendChild(form);
@@ -1609,7 +1428,7 @@
         var form = document.createElement("form");
         form.setAttribute("charset", "UTF-8");
         form.setAttribute("method", "Post");
-        form.setAttribute("action", "/s/detail");
+        form.setAttribute("action", "/b/detail");
 
         var hiddenField1 = document.createElement("input");
         hiddenField1.setAttribute("type", "hidden");
@@ -1620,7 +1439,7 @@
         var hiddenField2 = document.createElement("input");
         hiddenField2.setAttribute("type", "hidden");
         hiddenField2.setAttribute("name", "calcelType");
-        hiddenField2.setAttribute("value", "sell");
+        hiddenField2.setAttribute("value", "buy");
         form.appendChild(hiddenField2);
 
         document.body.appendChild(form);
@@ -1631,7 +1450,7 @@
         var form = document.createElement("form");
         form.setAttribute("charset", "UTF-8");
         form.setAttribute("method", "Post");
-        form.setAttribute("action", "/s/logDetail");
+        form.setAttribute("action", "/b/logDetail");
 
         var hiddenField1 = document.createElement("input");
         hiddenField1.setAttribute("type", "hidden");
@@ -1642,60 +1461,33 @@
         var hiddenField2 = document.createElement("input");
         hiddenField2.setAttribute("type", "hidden");
         hiddenField2.setAttribute("name", "request_seq");
-        hiddenField2.setAttribute("value", "buy-" + request_seq);
+        hiddenField2.setAttribute("value", "sell-" + request_seq);
         form.appendChild(hiddenField2);
 
         var hiddenField3 = document.createElement("input");
         hiddenField3.setAttribute("type", "hidden");
         hiddenField3.setAttribute("name", "trade_typ");
-        hiddenField3.setAttribute("value", "sell");
+        hiddenField3.setAttribute("value", "buy");
         form.appendChild(hiddenField3);
 
         var hiddenField4 = document.createElement("input");
         hiddenField4.setAttribute("type", "hidden");
         hiddenField4.setAttribute("name", "clickFn");
-        hiddenField4.setAttribute("value", "sell");
+        hiddenField4.setAttribute("value", "buy");
         form.appendChild(hiddenField4);
 
         document.body.appendChild(form);
         form.submit();
       }
 
-      function showDetail(seq, tradeType) {
-        /**
-         * {String} tradeType "sell", "buy", "affSell"
-         */
-        let data = {
-          seq,
-          tradeType,
-        };
-
-        $.ajax({
-          url: "/m/showDetail",
-          dataType: "json",
-          type: "POST",
-          data: data,
-          success: function (result) {
-            if (result.success) {
-              fnDetailModal(result.data);
-            } else {
-              // fnAlertMessage('It was not processed normally. Please try again!');
-            }
-          },
-          error: function (XMLHttpRequest, textStatus, errorThrown) {
-            fnAlertMessage("It was not processed normally. Please try again!");
-          }, //function끝
-        });
-      }
-
-      function sellCancel(seq, room_id) {
+      function buyCancel(seq, room_id) {
         let data = {
           seq: seq,
           room_id: room_id,
         };
 
         $.ajax({
-          url: "/s/sellCancel",
+          url: "/b/buyCancel",
           dataType: "json",
           type: "POST",
           data: data,
@@ -1714,20 +1506,32 @@
         });
       }
 
-      function showLogList(seq) {
-        let form = document.createElement("form");
-        form.setAttribute("charset", "UTF-8");
-        form.setAttribute("method", "Post");
-        form.setAttribute("action", "/m/sellLogHistory");
+      function showDetail(seq, tradeType) {
+        /**
+         * {String} tradeType "sell", "buy", "affSell"
+         */
+        let data = {
+          seq,
+          tradeType,
+        };
 
-        let hiddenField1 = document.createElement("input");
-        hiddenField1.setAttribute("type", "hidden");
-        hiddenField1.setAttribute("name", "sell_seq");
-        hiddenField1.setAttribute("value", seq);
-        form.appendChild(hiddenField1);
-
-        document.body.appendChild(form);
-        form.submit();
+        $.ajax({
+          url: "/m/showDetail",
+          dataType: "json",
+          type: "POST",
+          data: data,
+          success: function (result) {
+            console.log("result :>> ", result);
+            if (result.success) {
+              fnDetailModal(result.data);
+            } else {
+              // fnAlertMessage('It was not processed normally. Please try again!');
+            }
+          },
+          error: function (XMLHttpRequest, textStatus, errorThrown) {
+            fnAlertMessage("It was not processed normally. Please try again!");
+          }, //function끝
+        });
       }
     </script>
   </body>

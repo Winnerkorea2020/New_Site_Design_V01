@@ -79,20 +79,8 @@
         $("#loadingImg").show();
       }
     </script>
-
-    <link
-      type="text/css"
-      rel="stylesheet"
-      charset="UTF-8"
-      href="https://translate.googleapis.com/translate_static/css/translateelement.css"
-    />
-    <script
-      type="text/javascript"
-      charset="UTF-8"
-      src="https://translate.googleapis.com/_/translate_http/_/js/k=translate_http.tr.ko.dEVjjPddqQY.O/d=1/exm=el_conf/ed=1/rs=AN8SPfr2Yh7Vl1c49EhOxTaXJfQmU4qEoA/m=el_main"
-    ></script>
   </head>
-  <body class="largeBody" cz-shortcut-listen="true">
+  <body class="largeBody">
     <!-- Header -->
     <!-- Header -->
     <header
@@ -101,23 +89,23 @@
       <!-- Top Navigation -->
       <section class="section">
         <div class="flex justify-between items-center h-16">
-          <div class="text-2xl md:hidden flex justify-center items-center">
+          <div class="text-2xl xl:hidden flex justify-center items-center">
             <i class="bx bx-menu cursor-pointer nav-toggle"></i>
           </div>
 
-          <a href="/" class="flex items-center justify-center md:hidden">
+          <a href="/" class="flex items-center justify-center xl:hidden">
             <img src="/img/logo/logo_small.png" class="h-8 w-8 mx-2" alt="" />
             <div class="nav-brand__logo">Bitypeer</div>
           </a>
           <div
-            class="justify-end items-center px-12 w-full gap-5 text-sm hidden md:flex"
+            class="justify-end items-center px-12 w-full gap-5 text-sm hidden xl:flex"
           >
             <div><a href="/h/logout">Logout</a></div>
           </div>
 
           <!-- TODO: [퍼블] 주석처리 된 알람벨로 수정해야함 -->
           <div
-            class="absolute right-12 mt-2 md:relative w-20 pr-2 text-end mr-5 md:mt-1"
+            class="absolute right-12 mt-2 xl:relative w-20 pr-2 text-end mr-5 xl:mt-1"
           >
             <div
               class="cursor-pointer hover:text-gray-800"
@@ -142,7 +130,7 @@
             </div>
           </div>
 
-          <!--			<div class="absolute right-12 mt-2 md:relative w-fit pr-2 text-end mr-5 md:mt-1">-->
+          <!--			<div class="absolute right-12 mt-2 xl:relative w-fit pr-2 text-end mr-5 xl:mt-1">-->
           <!--				<div class="cursor-pointer hover:text-gray-800" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="dropdownAlarm">-->
           <!--					<i class="bx bxs-bell bx-sm"></i>-->
           <!--				</div>-->
@@ -157,11 +145,13 @@
             id="dropdownAlarm"
             style="
               position: absolute;
-              inset: 0px auto auto 0px;
+              inset: auto auto 0px 0px;
               margin: 0px;
-              transform: translate(371px, 60px);
+              transform: translate(1246px, 803px);
             "
-            data-popper-placement="bottom"
+            data-popper-reference-hidden=""
+            data-popper-escaped=""
+            data-popper-placement="top"
           >
             <ul
               class="py-1 pr-5"
@@ -180,11 +170,13 @@
             id="dropdown"
             style="
               position: absolute;
-              inset: 0px auto auto 0px;
+              inset: auto auto 0px 0px;
               margin: 0px;
-              transform: translate(439px, 54px);
+              transform: translate(1246px, 803px);
             "
-            data-popper-placement="bottom"
+            data-popper-reference-hidden=""
+            data-popper-escaped=""
+            data-popper-placement="top"
           >
             <!-- Drop Down Contents | Start -->
 
@@ -353,18 +345,18 @@
           <div class="flex items-center">
             <button
               type="button"
-              class="flex items-center mr-3 text-sm rounded-full md:mr-0"
+              class="flex items-center mr-3 text-sm rounded-full xl:mr-0"
               id="user-menu-button"
               aria-expanded="false"
               data-dropdown-toggle="dropdown"
             >
               <span class="sr-only">Open user menu</span>
               <img
-                class="w-6 h-6 md:w-8 md:h-8 border-none"
+                class="w-6 h-6 xl:w-8 xl:h-8 border-none"
                 src="/img/flag/usa.png"
                 alt="National Flag"
               />
-              <i class="bx bx-chevron-down bx-sm hidden md:block"></i>
+              <i class="bx bx-chevron-down bx-sm hidden xl:block"></i>
             </button>
             <!-- Dropdown menu -->
             <div
@@ -637,13 +629,14 @@
       }
     </script>
 
+    <!-- Side Navi -->
     <aside
-      class="side-nav fixed -left-full md:left-0 duration-1000 ease-in-out top-0 h-full bg-white border-r nav-side"
+      class="side-nav fixed -left-full xl:left-0 duration-1000 ease-in-out top-0 h-full bg-white border-r nav-side"
       style="z-index: 1000"
     >
       <!-- Side Navigation Header -->
       <div class="px-5">
-        <a href="/" class="h-16 hidden md:flex items-center justify-between">
+        <a href="/" class="h-16 hidden xl:flex items-center justify-between">
           <img src="/img/logo/logo_small.png" class="h-8 w-8 mx-2" alt="" />
 
           <div
@@ -653,12 +646,12 @@
           </div>
         </a>
         <!-- Close Button -->
-        <div class="absolute top-7 right-5 md:hidden">
+        <div class="absolute top-7 right-5 xl:hidden">
           <i class="bx bx-x-circle bx-sm cursor-pointer nav-close"></i>
         </div>
 
         <!-- Side Menu List | Start -->
-        <nav class="px-2 pt-20 md:pt-16 flex flex-col justify-start">
+        <nav class="px-2 pt-20 xl:pt-16 flex flex-col justify-start">
           <ul class="flex flex-col gap-8 uppercase">
             <li>
               <a href="/s/view" class="inline-flex items-center">
@@ -666,14 +659,12 @@
                 <span class="pl-3">Sell</span>
               </a>
             </li>
-
             <li>
               <a href="/b/view" class="inline-flex items-center">
                 <i class="bx bxs-wallet bx-sm"></i>
                 <span class="pl-3">Buy</span>
               </a>
             </li>
-
             <li>
               <a href="/h/affiliate" class="inline-flex items-center">
                 <i class="bx bxs-buildings bx-sm"></i>
@@ -702,7 +693,7 @@
             </li>
           </ul>
 
-          <div class="absolute bottom-52 flex flex-col gap-5 ml-9 md:hidden">
+          <div class="absolute bottom-52 flex flex-col gap-5 ml-9 xl:hidden">
             <!-- Sign Up / Sign In Area -->
             <div class="flex flex-col gap-5"></div>
             <!-- Log Out Area -->
@@ -718,7 +709,7 @@
 
     <!-- Main -->
     <main class="p-0">
-      <!-- Tap Header -->
+      <!-- Tap Menu -->
       <section class="section">
         <div class="pt-2 flex justify-start">
           <div
@@ -731,7 +722,7 @@
                 <button
                   id="dropdownNavbarLink"
                   data-dropdown-toggle="dropdownNavbar"
-                  class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-blue dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                  class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 border-b border-gray-100 hover:bg-gray-50 xl:hover:bg-transparent xl:border-0 xl:hover:text-blue-700 xl:p-0 xl:w-auto dark:text-gray-400 dark:hover:text-blue dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 xl:dark:hover:bg-transparent"
                 >
                   History
                   <svg
@@ -750,9 +741,9 @@
                 <!-- Dropdown menu -->
                 <div
                   id="dropdownNavbar"
-                  class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-fit menuClass history"
+                  class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-fit menuClass history tab__nav_active"
                   style="
-                    transform: translate(68px, 134px);
+                    transform: translate3d(338px, 146px, 0px);
                     position: absolute;
                     inset: 0px auto auto 0px;
                     margin: 0px;
@@ -821,7 +812,7 @@
               <li class="mr-2">
                 <a
                   href="/m/buyRegister"
-                  class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-blue-500 menuClass buy tab__nav_active"
+                  class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-blue-500 menuClass buy"
                   >Buy</a
                 >
               </li>
@@ -846,7 +837,7 @@
                 <button
                   id="dropdownNavbarLink"
                   data-dropdown-toggle="Affiliate"
-                  class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                  class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 border-b border-gray-100 hover:bg-gray-50 xl:hover:bg-transparent xl:border-0 xl:hover:text-blue-700 xl:p-0 xl:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 xl:dark:hover:bg-transparent"
                 >
                   Affiliate Code/Sell registration
                   <svg
@@ -865,9 +856,9 @@
                 <!-- Dropdown menu -->
                 <div
                   id="Affiliate"
-                  class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-fit menuClass history"
+                  class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-fit menuClass history tab__nav_active"
                   style="
-                    transform: translate(143px, 227px);
+                    transform: translate3d(1050.5px, 146px, 0px);
                     position: absolute;
                     inset: 0px auto auto 0px;
                     margin: 0px;
@@ -891,7 +882,7 @@
             </ul>
           </div>
         </div>
-        <input type="hidden" id="menu" value="buyRegister" />
+        <input type="hidden" id="menu" value="Affiliate Buy Request List" />
         <script>
           //todo[limsy820] dropdown 메뉴 active 안먹음
           $(function () {
@@ -926,435 +917,171 @@
         </script>
       </section>
 
+      <!-- Buy Coins | Start -->
       <section class="section">
-        <div class="pt-5 md:pt-16">
-          <!-- Sell Header Area | Start -->
+        <div class="pt-5 xl:pt-16">
+          <!-- Buy Header Area | Start -->
           <div class="flex justify-between items-center">
-            <h4>Buy Coins</h4>
-            <div class="hidden md:flex items-center gap-2 text-xs">
+            <h4>Affiliate Buy Request History</h4>
+            <div class="hidden xl:flex items-center gap-2 text-xs">
               <div>HOME</div>
               <div><i class="bx bx-chevron-right"></i></div>
-              <div>My page</div>
+              <div>MY PAGE</div>
               <div><i class="bx bx-chevron-right"></i></div>
-              <div>Coin Buys Registration</div>
+              <div>Affiliate Buy Request History</div>
             </div>
           </div>
-          <!-- Sell Header Area | End -->
+          <!-- Buy Header Area | End -->
+          <div class="grid grid-cols-12 gap-5 mt-5 xl:mt-8">
+            <!-- Search Coins | Start -->
+            <!-- Search Coins | END -->
+            <!-- Buyer Table | Start -->
+            <div class="col-span-12">
+              <!-- Table -->
+              <div class="border bg-white h-full rounded-xl p-5">
+                <div class="overflow-x-auto">
+                  <table class="w-full text-sm text-left text-gray-500">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+                      <tr>
+                        <th
+                          scope="col"
+                          class="px-2 py-1.5 xl:px-5 xl:py-3 text-xs font-thin xl:font-normal truncate"
+                        >
+                          Date
+                        </th>
+                        <th
+                          scope="col"
+                          class="px-2 py-1.5 xl:px-5 xl:py-3 text-xs font-thin xl:font-normal truncate"
+                        >
+                          Seller ID
+                        </th>
+                        <th
+                          scope="col"
+                          class="px-2 py-1.5 xl:px-5 xl:py-3 text-xs font-thin xl:font-normal truncate"
+                        >
+                          Coin Name
+                        </th>
+                        <th
+                          scope="col"
+                          class="px-2 py-1.5 xl:px-5 xl:py-3 text-xs font-thin xl:font-normal truncate"
+                        >
+                          Amount of coins
+                        </th>
+                        <th
+                          scope="col"
+                          class="px-2 py-1.5 xl:px-5 xl:py-3 text-xs font-thin xl:font-normal truncate"
+                        >
+                          Price
+                        </th>
+                        <th
+                          scope="col"
+                          class="px-2 py-1.5 xl:px-5 xl:py-3 text-xs font-thin xl:font-normal truncate"
+                        >
+                          Currency
+                        </th>
+                        <th
+                          scope="col"
+                          class="px-2 py-1.5 xl:px-5 xl:py-3 text-xs font-thin xl:font-normal truncate"
+                        >
+                          State
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="bg-white border-b">
+                        <td class="px-2 py-1.5 xl:px-5 xl:py-4 truncate">
+                          <a
+                            href="javascript:void(0);"
+                            class="inline-block underline"
+                            onclick="foundBuyDetail('121');"
+                            >2022-08-30 14:06:16</a
+                          >
+                        </td>
+                        <td
+                          class="px-2 py-1.5 xl:px-5 xl:py-4 font-medium text-gray-900 whitespace-nowrap underline"
+                          onclick="fnUserDetailModal('wrc_seller')"
+                        >
+                          wrc_seller
+                        </td>
+                        <td class="px-2 py-1.5 xl:px-5 xl:py-4">WRC</td>
+                        <td class="px-2 py-1.5 xl:px-5 xl:py-4">100,000</td>
+                        <td class="px-2 py-1.5 xl:px-5 xl:py-4">0.75</td>
+                        <td class="px-2 py-1.5 xl:px-5 xl:py-4">USD</td>
+                        <td class="px-2 py-1.5 xl:px-5 xl:py-4">Trading</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="mt-5">
+                  <ul class="flex items-center justify-center">
+                    <!--            <a href="javascript:void(0);" class="page"><span class="page active">1</span></a>-->
+                    <li
+                      class="px-3 py-2 hover:bg-blue-300 cursor-pointer border-l border-r border-y"
+                    >
+                      1
+                    </li>
+                  </ul>
+                </div>
+                <input type="hidden" id="pageIndex" value="1" />
+              </div>
+            </div>
+            <!-- Seller Table | END -->
+          </div>
         </div>
       </section>
-
-      <!-- Buyer Detail -->
-      <section class="section">
-        <div class="mt-8">
-          <div class="grid grid-cols-1 md:grid-cols-10 gap-5">
-            <!-- Item 1 -->
-            <div class="col-span-1 md:col-span-7">
-              <div class="bg-white h-full px-5 py-2 shadow-md rounded-xl">
-                <!-- Buyer Information  -->
-                <div class="w-full grid grid-cols-1 gap-2 mb-5">
-                  <div class="grid grid-cols-12 items-center gap-5">
-                    <div
-                      class="col-span-12 md:col-span-2 h-full py-2 md:py-0 bg-gray-300 rounded text-black flex items-center px-5 uppercase justify-center tracking-tighter"
-                    >
-                      Coin Name
-                    </div>
-                    <div class="col-span-6 md:col-span-3">
-                      <input
-                        class="w-full rounded-xl py-2.5 px-5 border"
-                        type="text"
-                        id="coin_nm"
-                      />
-                    </div>
-                    <div class="col-span-6 md:col-span-3">
-                      <select
-                        name=""
-                        id="selectCoin"
-                        class="w-full rounded-xl border px-5 py-2.5 col-span-8"
-                        onchange="selectCoinBuy();"
-                      >
-                        <option value="">select</option>
-                        <option data-affi="N" value="CMDT00000000000071">
-                          normal
-                        </option>
-
-                        <option data-affi="Y" value="CMDT00000000000064">
-                          GGR
-                        </option>
-                      </select>
-                    </div>
-                  </div>
-                  <div id="selectCoinView" style="display: none">
-                    <div class="grid grid-cols-12 gap-5">
-                      <div
-                        class="col-span-2 h-full bg-gray-300 rounded text-black flex items-center px-5 uppercase justify-center"
-                      >
-                        price
-                      </div>
-                      <input
-                        class="col-span-3 rounded-xl border px-5 py-2.5"
-                        type="text"
-                        id="buy_price"
-                        onkeyup="chkNumDot(this);"
-                      />
-                      <select
-                        name=""
-                        id="country"
-                        class="w-full rounded-xl border px-5 py-2.5 col-span-3"
-                      >
-                        <option value="">select</option>
-
-                        <option value="CMDT00000000000072">KRW</option>
-
-                        <option value="CMDT00000000000073">USD</option>
-
-                        <option value="CMDT00000000000074">JPY</option>
-
-                        <option value="CMDT00000000000075">EUR</option>
-                      </select>
-                    </div>
-                    <div class="grid grid-cols-12 items-center gap-5 mt-2">
-                      <div
-                        class="col-span-2 h-full bg-gray-300 rounded text-black flex items-center px-5 uppercase justify-center tracking-tighter"
-                      >
-                        amount
-                      </div>
-                      <div class="col-span-3">
-                        <input
-                          class="col-span-3 rounded-xl border px-5 py-2.5"
-                          type="text"
-                          id="buy_amount"
-                          onkeyup="chkNumDot(this);"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <div class="py-2">
-                    <input type="checkbox" class="border-2" id="agree" />
-                    <span class="font-semibold"> Terms Required</span>
-                  </div>
-                  <div class="px-5 pb-4">
-                    <ul class="list-decimal px-5 text-sm md:text-base">
-                      <li>
-                        When registering and transacting coins that are not
-                        escrow of Bitypeer affiliated coins, all legal
-                        responsibilities for the transaction are the
-                        (individaul) responsibility.
-                      </li>
-                      <li>
-                        I understand and agree that 1:1 coin personal
-                        transactions have nothing to do with Bitypeer.
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="p-5 border rounded-xl">
-                  <!-- <div class="p-5 border bg-gray-200 rounded-lg">
-                                <div>Information</div>
-                                <ul>
-                                    <li>Fill out this form to start chatting.</li>
-                                    <li>Purchase request coin amount:</li>
-                                    <li>Purchase request price:</li>
-                                    <li>My wallet address:</li>
-                                </ul>
-                            </div> -->
-                  <div class="p-5 border mt-5 text-xs md:text-base rounded-lg">
-                    <textarea
-                      class="w-full"
-                      name=""
-                      id="memo"
-                      cols="30"
-                      rows="20"
-                      style="resize: none"
-                    >
-Information
-Fill out this form to start chatting.
-
-My wallet address :
-Account Holder :
-Name of bank :
-Account Number :</textarea
-                    >
-                  </div>
-                </div>
-
-                <div class="pt-5">
-                  <div class="flex items-center justify-end gap-5">
-                    <a
-                      href="javascript:void(0);"
-                      class="block btn btn-dark"
-                      onclick="insertBuy();"
-                      >Registration</a
-                    >
-                    <!--                                <a href="" class="block btn btn-red">Cancel</a>-->
-                  </div>
-                </div>
+      <section class="section xl:bg-gray-100 mt-16">
+        <div
+          class="px-5 pt-8 xl:pt-16 border rounded-xl xl:border-none xl:rounded-none"
+        >
+          <div class="grid xl:flex justify-between">
+            <div class="xl:basis-3/12 pb-5 hidden xl:block">
+              <div class="px-5 flex justify-center">
+                <img src="/img/main/img05.png" alt="" class="h-fit" />
               </div>
             </div>
-            <div class="col-span-1 md:col-span-3">
-              <!-- Buyer Input Request -->
-
-              <div class="col-span-3">
-                <div class="bg-gray-200 rounded-md px-6 py-8">
-                  <h5 class="tracking-tighter">Set Buying time</h5>
-                  <div class="grid grid-cols-1 md:gap-2 text-sm pt-8">
-                    <!-- Sun -->
-                    <div class="flex items-center md:gap-2">
-                      <div class="flex items-center gap-2 sellingTimeInputBox">
-                        <input
-                          type="checkbox"
-                          id="sunCheckBox"
-                          class="w-6 h-6"
-                        />
-                        <div class="py-2 text-lg w-10">SUN</div>
-                      </div>
-                      <div class="flex justify-between items-center md:gap-2">
-                        <input
-                          class="py-2 w-full border rounded-md text-xs md:text-sm px-5"
-                          type="time"
-                          id="buy_hours_sun_start"
-                          name="appt"
-                          min="00:00"
-                          max="24:00"
-                          required=""
-                        />
-                        <input
-                          class="py-2 w-full border rounded-md text-xs md:text-sm px-5"
-                          type="time"
-                          id="buy_hours_sun_end"
-                          name="appt"
-                          min="00:00"
-                          max="24:00"
-                          required=""
-                        />
-                      </div>
-                    </div>
-                    <!-- Mon -->
-                    <div class="flex items-center md:gap-2">
-                      <div class="flex items-center gap-2 sellingTimeInputBox">
-                        <input
-                          type="checkbox"
-                          id="monCheckBox"
-                          class="w-6 h-6"
-                        />
-                        <div class="py-2 text-lg w-10">MON</div>
-                      </div>
-                      <div class="flex justify-between items-center md:gap-2">
-                        <input
-                          class="py-2 w-full border rounded-md text-xs md:text-sm px-5"
-                          type="time"
-                          id="buy_hours_mon_start"
-                          name="appt"
-                          min="00:00"
-                          max="24:00"
-                          required=""
-                        />
-                        <input
-                          class="py-2 w-full border rounded-md text-xs md:text-sm px-5"
-                          type="time"
-                          id="buy_hours_mon_end"
-                          name="appt"
-                          min="00:00"
-                          max="24:00"
-                          required=""
-                        />
-                      </div>
-                    </div>
-                    <!-- TUE -->
-                    <div class="flex items-center md:gap-2">
-                      <div class="flex items-center gap-2 sellingTimeInputBox">
-                        <input
-                          type="checkbox"
-                          id="tueCheckBox"
-                          class="w-6 h-6"
-                        />
-                        <div class="py-2 text-lg w-10">TUE</div>
-                      </div>
-                      <div class="flex justify-between items-center md:gap-2">
-                        <input
-                          class="py-2 w-full border rounded-md text-xs md:text-sm px-5"
-                          type="time"
-                          id="buy_hours_tue_start"
-                          name="appt"
-                          min="00:00"
-                          max="24:00"
-                          required=""
-                        />
-                        <input
-                          class="py-2 w-full border rounded-md text-xs md:text-sm px-5"
-                          type="time"
-                          id="buy_hours_tue_end"
-                          name="appt"
-                          min="00:00"
-                          max="24:00"
-                          required=""
-                        />
-                      </div>
-                    </div>
-                    <!-- WED -->
-                    <div class="flex items-center md:gap-2">
-                      <div class="flex items-center gap-2 sellingTimeInputBox">
-                        <input
-                          type="checkbox"
-                          id="wedCheckBox"
-                          class="w-6 h-6"
-                        />
-                        <div class="py-2 text-lg w-10">WED</div>
-                      </div>
-                      <div class="flex justify-between items-center md:gap-2">
-                        <input
-                          class="py-2 w-full border rounded-md text-xs md:text-sm px-5"
-                          type="time"
-                          id="buy_hours_wed_start"
-                          name="appt"
-                          min="00:00"
-                          max="24:00"
-                          required=""
-                        />
-                        <input
-                          class="py-2 w-full border rounded-md text-xs md:text-sm px-5"
-                          type="time"
-                          id="buy_hours_wed_end"
-                          name="appt"
-                          min="00:00"
-                          max="24:00"
-                          required=""
-                        />
-                      </div>
-                    </div>
-                    <!-- THU -->
-                    <div class="flex items-center md:gap-2">
-                      <div class="flex items-center gap-2 sellingTimeInputBox">
-                        <input
-                          type="checkbox"
-                          id="thuCheckBox"
-                          class="w-6 h-6"
-                        />
-                        <div class="py-2 text-lg w-10">THU</div>
-                      </div>
-                      <div class="flex justify-between items-center md:gap-2">
-                        <input
-                          class="py-2 w-full border rounded-md text-xs md:text-sm px-5"
-                          type="time"
-                          id="buy_hours_thu_start"
-                          name="appt"
-                          min="00:00"
-                          max="24:00"
-                          required=""
-                        />
-                        <input
-                          class="py-2 w-full border rounded-md text-xs md:text-sm px-5"
-                          type="time"
-                          id="buy_hours_thu_end"
-                          name="appt"
-                          min="00:00"
-                          max="24:00"
-                          required=""
-                        />
-                      </div>
-                    </div>
-                    <!-- FRI -->
-                    <div class="flex items-center md:gap-2">
-                      <div class="flex items-center gap-2 sellingTimeInputBox">
-                        <input
-                          type="checkbox"
-                          id="friCheckBox"
-                          class="w-6 h-6"
-                        />
-                        <div class="py-2 text-lg w-10">FRI</div>
-                      </div>
-                      <div class="flex justify-between items-center md:gap-2">
-                        <input
-                          class="py-2 w-full border rounded-md text-xs md:text-sm px-5"
-                          type="time"
-                          id="buy_hours_fri_start"
-                          name="appt"
-                          min="00:00"
-                          max="24:00"
-                          required=""
-                        />
-                        <input
-                          class="py-2 w-full border rounded-md text-xs md:text-sm px-5"
-                          type="time"
-                          id="buy_hours_fri_end"
-                          name="appt"
-                          min="00:00"
-                          max="24:00"
-                          required=""
-                        />
-                      </div>
-                    </div>
-                    <!-- SAT -->
-                    <div class="flex items-center md:gap-2">
-                      <div class="flex items-center gap-2 sellingTimeInputBox">
-                        <input
-                          type="checkbox"
-                          id="satCheckBox"
-                          class="w-6 h-6"
-                        />
-                        <div class="py-2 text-lg w-10">SAT</div>
-                      </div>
-                      <div class="flex justify-between items-center md:gap-2">
-                        <input
-                          class="py-2 w-full border rounded-md text-xs md:text-sm px-5"
-                          type="time"
-                          id="buy_hours_sat_start"
-                          name="appt"
-                          min="00:00"
-                          max="24:00"
-                          required=""
-                        />
-                        <input
-                          class="py-2 w-full border rounded-md text-xs md:text-sm px-5"
-                          type="time"
-                          id="buy_hours_sat_end"
-                          name="appt"
-                          min="00:00"
-                          max="24:00"
-                          required=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="bg-white border rounded-md mt-5 shadow-md">
-                  <div class="px-3 pt-2 rounded-md text-red-500">
-                    <i class="bx bxs-alarm-exclamation bx-lg"></i>
-                  </div>
-                  <div class="px-5 py-1">
-                    <div class="text-sm tracking-tighter">
-                      UTC basis. UTC is the standard time difference for each
-                      region based on the UK (UTC+0:00).
-                    </div>
-                  </div>
-                </div>
+            <div class="xl:basis-5/12 pb-5">
+              <div class="">
+                <div class="badge badge-purple w-fit">TRUSTED PLATFORM</div>
+                <h5 class="pt-5">Trusted Platform anytime & anywhere</h5>
+                <p class="pt-5 tracking-tighter">
+                  You can trade anytime and anywhere with the Bitypeer App for
+                  iOS and Android. Stay connected, and gain instant access to
+                  the cryptoeconomy, in the palm of your hand.
+                </p>
               </div>
             </div>
-            <!-- Chatting Area -->
-            <div class="hidden col-span-4"></div>
+            <div class="xl:basis-4/12 pb-2 xl:pb-5">
+              <div class="flex justify-end items-end h-full pb-5">
+                <a href="javascript:alert('coming soon')">
+                  <img src="/img/main/img07.png" alt="" class="w-24" />
+                </a>
+                <a href="javascript:alert('coming soon')">
+                  <img src="/img/main/img08.png" alt="" class="w-24" />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
+    <!-- Footer -->
     <footer class="px-5 py-5 bg-gray-100 pt-10 mt-16">
       <section class="section">
         <div class="px-5 pt-16">
           <div
-            class="grid grid-cols-1 md:grid-cols-12 pb-16 text-sm gap-10 md:gap-0"
+            class="grid grid-cols-1 xl:grid-cols-12 pb-16 text-sm gap-10 xl:gap-0"
           >
             <div class="col-span-2">
-              <div class="flex items-center gap-2 md:gap-5">
+              <div class="flex items-center gap-2 xl:gap-5">
                 <img src="/img/logo/logo_small.png" alt="" class="h-10 w-10" />
                 <h5>Bitypeer</h5>
               </div>
             </div>
-            <div class="col-span-3 md:border-r md:px-10">
+            <div class="col-span-3 xl:border-r xl:px-10">
               <div>
                 <div class="text-xl uppercase">About</div>
-                <ul class="flex flex-col gap-2 md:gap-4 pt-8">
+                <ul class="flex flex-col gap-2 xl:gap-4 pt-8">
                   <li><a href="/h/terms">Terms of Use</a></li>
                   <li><a href="/h/privacy">Privacy Policy</a></li>
                   <li><a href="/h/openApi">Open API</a></li>
@@ -1368,10 +1095,10 @@ Account Number :</textarea
                 </ul>
               </div>
             </div>
-            <div class="col-span-3 md:border-r md:px-10">
+            <div class="col-span-3 xl:border-r xl:px-10">
               <div>
                 <div class="text-xl uppercase">Contact</div>
-                <ul class="flex flex-col gap-2 md:gap-4 pt-8 tracking-tighter">
+                <ul class="flex flex-col gap-2 xl:gap-4 pt-8 tracking-tighter">
                   <li>Telegram</li>
                   <li>@Bitypeer</li>
                   <li>Email</li>
@@ -1379,7 +1106,7 @@ Account Number :</textarea
                 </ul>
               </div>
             </div>
-            <div class="col-span-3 md:px-10">
+            <div class="col-span-3 xl:px-10">
               <div>
                 <div class="text-xl uppercase">NEWSLETTER</div>
                 <p class="pt-8">
@@ -1570,197 +1297,128 @@ Account Number :</textarea
         }
       });
     </script>
-
+    <script src="/js/sideNav.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/chatting.js"></script>
     <script>
-      (function () {
-        $("#memo").html(
-          "Information\nFill out this form to start chatting.\n\nMy wallet address :\nAccount Holder :\nName of bank :\nAccount Number :"
-        );
-      })();
+      function fnSearch() {
+        let pageIndex = $("#pageIndex").val();
+        let coin_nm = $("#coin_nm").val();
+        let coin_typ = $($("#coin_typ")).val();
+        let min_price = $("#min_price").val();
+        let max_price = $("#max_price").val();
+        let country = $("#country").val();
+        let seller_id = $("#seller_id").val();
 
-      function selectCoinBuy() {
-        let affi = $("#selectCoin option:selected").data("affi");
-        if (affi == "Y") {
-          $("#selectCoinView").show();
-          $("#coin_nm").val($("#selectCoin option:selected").text());
-          $("#coin_nm").attr("readonly", true);
-        } else if (affi == "N") {
-          $("#selectCoinView").show();
-          $("#coin_nm").val("");
-          $("#coin_nm").attr("readonly", false);
+        var form = document.createElement("form");
+        form.setAttribute("charset", "UTF-8");
+        form.setAttribute("method", "Post");
+        form.setAttribute("action", "/ab/buyRegistView");
+
+        var hiddenField1 = document.createElement("input");
+        hiddenField1.setAttribute("type", "hidden");
+        hiddenField1.setAttribute("name", "pageIndex");
+        hiddenField1.setAttribute("value", pageIndex);
+        form.appendChild(hiddenField1);
+
+        var hiddenField2 = document.createElement("input");
+        hiddenField2.setAttribute("type", "hidden");
+        hiddenField2.setAttribute("name", "coin_nm");
+        hiddenField2.setAttribute("value", coin_nm);
+        form.appendChild(hiddenField2);
+
+        var hiddenField3 = document.createElement("input");
+        hiddenField3.setAttribute("type", "hidden");
+        hiddenField3.setAttribute("name", "coin_typ");
+        hiddenField3.setAttribute("value", coin_typ);
+        form.appendChild(hiddenField3);
+
+        var hiddenField4 = document.createElement("input");
+        hiddenField4.setAttribute("type", "hidden");
+        hiddenField4.setAttribute("name", "min_price");
+        hiddenField4.setAttribute("value", min_price);
+        form.appendChild(hiddenField4);
+
+        var hiddenField5 = document.createElement("input");
+        hiddenField5.setAttribute("type", "hidden");
+        hiddenField5.setAttribute("name", "max_price");
+        hiddenField5.setAttribute("value", max_price);
+        form.appendChild(hiddenField5);
+
+        var hiddenField6 = document.createElement("input");
+        hiddenField6.setAttribute("type", "hidden");
+        hiddenField6.setAttribute("name", "country");
+        hiddenField6.setAttribute("value", country);
+        form.appendChild(hiddenField6);
+
+        var hiddenField7 = document.createElement("input");
+        hiddenField7.setAttribute("type", "hidden");
+        hiddenField7.setAttribute("name", "seller_id");
+        hiddenField7.setAttribute("value", seller_id);
+        form.appendChild(hiddenField7);
+
+        document.body.appendChild(form);
+        form.submit();
+      }
+
+      function selectCoin() {
+        $("#coin_nm").val("");
+        let affi = $("#coin_typ option:selected").data("affi");
+        if (affi == "N") {
+          $("#coin_nm").show();
         } else {
-          $("#selectCoinView").hide();
+          $("#coin_nm").hide();
         }
       }
 
-      function insertBuy() {
-        if ($("#selectCoin").val() == "") {
-          fnAlertMessage("Please select a coin.");
-          return;
-        }
-        if ($("#coin_nm").val() == "") {
-          fnAlertMessage("Please enter your coin name.");
-          return;
-        }
+      function foundBuyDetail(seq) {
+        var form = document.createElement("form");
+        form.setAttribute("charset", "UTF-8");
+        form.setAttribute("method", "Post");
+        form.setAttribute("action", "/ab/detail");
 
-        if ($("#buy_price").val() == "" || $("#buy_price").val() <= 0) {
-          fnAlertMessage("Please enter the price.");
-          return;
-        }
+        var hiddenField1 = document.createElement("input");
+        hiddenField1.setAttribute("type", "hidden");
+        hiddenField1.setAttribute("name", "seq");
+        hiddenField1.setAttribute("value", seq);
+        form.appendChild(hiddenField1);
 
-        if ($("#buy_amount").val() == "" || $("#buy_amount").val() <= 0) {
-          fnAlertMessage("Please enter the sales amount.");
-          return;
-        }
+        var hiddenField2 = document.createElement("input");
+        hiddenField2.setAttribute("type", "hidden");
+        hiddenField2.setAttribute("name", "calcelType");
+        hiddenField2.setAttribute("value", "affriRequestBuy");
+        form.appendChild(hiddenField2);
 
-        if ($("#country").val() == "") {
-          fnAlertMessage("Please enter the currency.");
-          return;
-        }
-
-        if (!$("#agree").is(":checked")) {
-          fnAlertMessage("Please check the Terms Required.");
-          return;
-        }
-
-        fnAlertConfirmMessage("Would you like to register?", buyCallBack);
+        document.body.appendChild(form);
+        form.submit();
       }
 
-      function buyCallBack() {
-        let buy_hours_sun =
-          $("#buy_hours_sun_start").val() + "~" + $("#buy_hours_sun_end").val();
-        let buy_hours_mon =
-          $("#buy_hours_mon_start").val() + "~" + $("#buy_hours_mon_end").val();
-        let buy_hours_tue =
-          $("#buy_hours_tue_start").val() + "~" + $("#buy_hours_tue_end").val();
-        let buy_hours_wed =
-          $("#buy_hours_wed_start").val() + "~" + $("#buy_hours_wed_end").val();
-        let buy_hours_thu =
-          $("#buy_hours_thu_start").val() + "~" + $("#buy_hours_thu_end").val();
-        let buy_hours_fri =
-          $("#buy_hours_fri_start").val() + "~" + $("#buy_hours_fri_end").val();
-        let buy_hours_sat =
-          $("#buy_hours_sat_start").val() + "~" + $("#buy_hours_sat_end").val();
+      function foundBuyDetailLog(seq, request_seq) {
+        var form = document.createElement("form");
+        form.setAttribute("charset", "UTF-8");
+        form.setAttribute("method", "Post");
+        form.setAttribute("action", "/ab/logDetail");
 
-        if (!$("#sunCheckBox").is(":checked")) {
-          buy_hours_sun = "";
-        } else {
-          if (
-            $("#buy_hours_sun_start").val() == "" ||
-            $("#buy_hours_sun_end").val() == ""
-          ) {
-            fnAlertMessage("Please check the selling time.");
-            return;
-          }
-        }
-        if (!$("#monCheckBox").is(":checked")) {
-          buy_hours_mon = "";
-        } else {
-          if (
-            $("#buy_hours_mon_start").val() == "" ||
-            $("#buy_hours_mon_end").val() == ""
-          ) {
-            fnAlertMessage("Please check the selling time.");
-            return;
-          }
-        }
-        if (!$("#tueCheckBox").is(":checked")) {
-          buy_hours_tue = "";
-        } else {
-          if (
-            $("#buy_hours_tue_start").val() == "" ||
-            $("#buy_hours_tue_end").val() == ""
-          ) {
-            fnAlertMessage("Please check the selling time.");
-            return;
-          }
-        }
-        if (!$("#wedCheckBox").is(":checked")) {
-          buy_hours_wed = "";
-        } else {
-          if (
-            $("#buy_hours_wed_start").val() == "" ||
-            $("#buy_hours_wed_end").val() == ""
-          ) {
-            fnAlertMessage("Please check the selling time.");
-            return;
-          }
-        }
-        if (!$("#thuCheckBox").is(":checked")) {
-          buy_hours_thu = "";
-        } else {
-          if (
-            $("#buy_hours_thu_start").val() == "" ||
-            $("#buy_hours_thu_end").val() == ""
-          ) {
-            fnAlertMessage("Please check the selling time.");
-            return;
-          }
-        }
-        if (!$("#friCheckBox").is(":checked")) {
-          buy_hours_fri = "";
-        } else {
-          if (
-            $("#buy_hours_fri_start").val() == "" ||
-            $("#buy_hours_fri_end").val() == ""
-          ) {
-            fnAlertMessage("Please check the selling time.");
-            return;
-          }
-        }
-        if (!$("#satCheckBox").is(":checked")) {
-          buy_hours_sat = "";
-        } else {
-          if (
-            $("#buy_hours_sat_start").val() == "" ||
-            $("#buy_hours_sat_end").val() == ""
-          ) {
-            fnAlertMessage("Please check the selling time.");
-            return;
-          }
-        }
+        var hiddenField1 = document.createElement("input");
+        hiddenField1.setAttribute("type", "hidden");
+        hiddenField1.setAttribute("name", "seq");
+        hiddenField1.setAttribute("value", seq);
+        form.appendChild(hiddenField1);
 
-        let data = {
-          coin_nm: $("#coin_nm").val(),
-          coin_typ: $("#selectCoin").val(),
-          all_yn: "N",
-          buy_amount: $("#buy_amount").val(),
-          country: $("#country").val(),
-          buy_price: $("#buy_price").val(),
-          auto_yn: "N",
-          buy_hours_sun: buy_hours_sun,
-          buy_hours_mon: buy_hours_mon,
-          buy_hours_tue: buy_hours_tue,
-          buy_hours_wed: buy_hours_wed,
-          buy_hours_thu: buy_hours_thu,
-          buy_hours_fri: buy_hours_fri,
-          buy_hours_sat: buy_hours_sat,
-          affiliate_yn: $("#selectCoin option:selected").data("affi"),
-          memo: $("#memo").val(),
-        };
+        var hiddenField2 = document.createElement("input");
+        hiddenField2.setAttribute("type", "hidden");
+        hiddenField2.setAttribute("name", "request_seq");
+        hiddenField2.setAttribute("value", "affiBuy-" + request_seq);
+        form.appendChild(hiddenField2);
 
-        console.log("data :>> ", data);
+        var hiddenField3 = document.createElement("input");
+        hiddenField3.setAttribute("type", "hidden");
+        hiddenField3.setAttribute("name", "trade_typ");
+        hiddenField3.setAttribute("value", "affiSell");
+        form.appendChild(hiddenField3);
 
-        $.ajax({
-          url: "/m/insertBuyCoin",
-          dataType: "json",
-          type: "POST",
-          data: data,
-          success: function (result) {
-            if (result.success) {
-              fnAlertRefreshMessage(
-                "Registration is complete. Check out our buy list."
-              );
-            } else {
-              fnAlertMessage(
-                "It was not processed normally. Please try again!"
-              );
-            }
-          },
-          error: function (XMLHttpRequest, textStatus, errorThrown) {
-            fnAlertMessage("It was not processed normally. Please try again!");
-          },
-        });
+        document.body.appendChild(form);
+        form.submit();
       }
     </script>
   </body>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="height: 100%">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,7 +10,7 @@
       rel="stylesheet"
     />
     <!-- css -->
-    <link rel="stylesheet" href="assets/css/font.css" />
+    <link rel="stylesheet" href="/css/font.css" />
     <link rel="stylesheet" href="assets/css/base.css" />
     <link rel="stylesheet" href="/css/sweetalert2.min.css" />
     <title>Bitypeer</title>
@@ -79,8 +79,24 @@
         $("#loadingImg").show();
       }
     </script>
+
+    <link
+      type="text/css"
+      rel="stylesheet"
+      charset="UTF-8"
+      href="https://translate.googleapis.com/translate_static/css/translateelement.css"
+    />
+    <script
+      type="text/javascript"
+      charset="UTF-8"
+      src="https://translate.googleapis.com/_/translate_http/_/js/k=translate_http.tr.ko.dEVjjPddqQY.O/d=1/exm=el_conf/ed=1/rs=AN8SPfr2Yh7Vl1c49EhOxTaXJfQmU4qEoA/m=el_main"
+    ></script>
   </head>
-  <body class="largeBody">
+  <body
+    class="largeBody"
+    cz-shortcut-listen="true"
+    style="position: relative; min-height: 100%; top: 0px"
+  >
     <!-- Header -->
     <!-- Header -->
     <header
@@ -145,13 +161,13 @@
             id="dropdownAlarm"
             style="
               position: absolute;
-              inset: auto auto 0px 0px;
+              inset: 0px auto auto 0px;
               margin: 0px;
-              transform: translate(1246px, 803px);
+              transform: translate3d(1747px, 58px, 0px);
             "
+            data-popper-placement="bottom"
             data-popper-reference-hidden=""
             data-popper-escaped=""
-            data-popper-placement="top"
           >
             <ul
               class="py-1 pr-5"
@@ -160,7 +176,161 @@
             ></ul>
           </div>
 
-          <div id="google_translate_element" style="display: none"></div>
+          <div id="google_translate_element" style="display: none">
+            <div class="skiptranslate goog-te-gadget" dir="ltr" style="">
+              <div id=":0.targetLanguage">
+                <select class="goog-te-combo" aria-label="언어 번역 위젯">
+                  <option value="">언어 선택</option>
+                  <option value="ko">한국어</option>
+                  <option value="gl">갈리시아어</option>
+                  <option value="gn">과라니어</option>
+                  <option value="gu">구자라트어</option>
+                  <option value="el">그리스어</option>
+                  <option value="nl">네덜란드어</option>
+                  <option value="ne">네팔어</option>
+                  <option value="no">노르웨이어</option>
+                  <option value="da">덴마크어</option>
+                  <option value="doi">도그리어</option>
+                  <option value="de">독일어</option>
+                  <option value="dv">디베히어</option>
+                  <option value="lo">라오어</option>
+                  <option value="lv">라트비아어</option>
+                  <option value="la">라틴어</option>
+                  <option value="ru">러시아어</option>
+                  <option value="lg">루간다어</option>
+                  <option value="ro">루마니아어</option>
+                  <option value="lb">룩셈부르크어</option>
+                  <option value="lt">리투아니아어</option>
+                  <option value="ln">링갈라어</option>
+                  <option value="mr">마라티어</option>
+                  <option value="mi">마오리어</option>
+                  <option value="mai">마이틸어</option>
+                  <option value="mk">마케도니아어</option>
+                  <option value="mg">말라가시어</option>
+                  <option value="ml">말라얄람어</option>
+                  <option value="ms">말레이어</option>
+                  <option value="mni-Mtei">메이테이어(마니푸르어)</option>
+                  <option value="mt">몰타어</option>
+                  <option value="mn">몽골어</option>
+                  <option value="hmn">몽어</option>
+                  <option value="my">미얀마어(버마어)</option>
+                  <option value="lus">미조어</option>
+                  <option value="eu">바스크어</option>
+                  <option value="bm">밤바라어</option>
+                  <option value="vi">베트남어</option>
+                  <option value="be">벨라루스어</option>
+                  <option value="bn">벵골어</option>
+                  <option value="bs">보스니아어</option>
+                  <option value="bho">보즈푸리어</option>
+                  <option value="nso">북소토어</option>
+                  <option value="bg">불가리아어</option>
+                  <option value="sm">사모아어</option>
+                  <option value="sa">산스크리트</option>
+                  <option value="sr">세르비아어</option>
+                  <option value="ceb">세부아노어</option>
+                  <option value="st">세소토어</option>
+                  <option value="so">소말리아어</option>
+                  <option value="sn">쇼나어</option>
+                  <option value="su">순다어</option>
+                  <option value="sw">스와힐리어</option>
+                  <option value="sv">스웨덴어</option>
+                  <option value="gd">스코틀랜드 게일어</option>
+                  <option value="es">스페인어</option>
+                  <option value="sk">슬로바키아어</option>
+                  <option value="sl">슬로베니아어</option>
+                  <option value="sd">신디어</option>
+                  <option value="si">싱할라어</option>
+                  <option value="ar">아랍어</option>
+                  <option value="hy">아르메니아어</option>
+                  <option value="as">아삼어</option>
+                  <option value="ay">아이마라어</option>
+                  <option value="is">아이슬란드어</option>
+                  <option value="ht">아이티 크리올어</option>
+                  <option value="ga">아일랜드어</option>
+                  <option value="az">아제르바이잔어</option>
+                  <option value="af">아프리칸스어</option>
+                  <option value="sq">알바니아어</option>
+                  <option value="am">암하라어</option>
+                  <option value="et">에스토니아어</option>
+                  <option value="eo">에스페란토어</option>
+                  <option value="ee">에웨어</option>
+                  <option value="om">오로모어</option>
+                  <option value="or">오리야어</option>
+                  <option value="yo">요루바어</option>
+                  <option value="ur">우르두어</option>
+                  <option value="uz">우즈베크어</option>
+                  <option value="uk">우크라이나어</option>
+                  <option value="cy">웨일즈어</option>
+                  <option value="ug">위구르어</option>
+                  <option value="ig">이그보어</option>
+                  <option value="yi">이디시어</option>
+                  <option value="it">이탈리아어</option>
+                  <option value="id">인도네시아어</option>
+                  <option value="ilo">일로카노어</option>
+                  <option value="ja">일본어</option>
+                  <option value="jw">자바어</option>
+                  <option value="ka">조지아어</option>
+                  <option value="zu">줄루어</option>
+                  <option value="zh-CN">중국어(간체)</option>
+                  <option value="zh-TW">중국어(번체)</option>
+                  <option value="ny">체와어</option>
+                  <option value="cs">체코어</option>
+                  <option value="ts">총가어</option>
+                  <option value="kk">카자흐어</option>
+                  <option value="ca">카탈로니아어</option>
+                  <option value="kn">칸나다어</option>
+                  <option value="qu">케추아어</option>
+                  <option value="co">코르시카어</option>
+                  <option value="xh">코사어</option>
+                  <option value="gom">콘칸어</option>
+                  <option value="ckb">쿠르드어(소라니)</option>
+                  <option value="ku">쿠르드어(쿠르만지)</option>
+                  <option value="hr">크로아티아어</option>
+                  <option value="kri">크리오어</option>
+                  <option value="km">크메르어</option>
+                  <option value="rw">키냐르완다어</option>
+                  <option value="ky">키르기스어</option>
+                  <option value="ta">타밀어</option>
+                  <option value="tg">타지크어</option>
+                  <option value="tt">타타르어</option>
+                  <option value="th">태국어</option>
+                  <option value="tr">터키어</option>
+                  <option value="te">텔루구어</option>
+                  <option value="tk">투르크멘어</option>
+                  <option value="ak">트위어</option>
+                  <option value="ti">티그리냐어</option>
+                  <option value="ps">파슈토어</option>
+                  <option value="pa">펀자브어</option>
+                  <option value="fa">페르시아어</option>
+                  <option value="pt">포르투갈어</option>
+                  <option value="pl">폴란드어</option>
+                  <option value="fr">프랑스어</option>
+                  <option value="fy">프리지아어</option>
+                  <option value="fi">핀란드어</option>
+                  <option value="tl">필리핀어</option>
+                  <option value="haw">하와이어</option>
+                  <option value="ha">하우사어</option>
+                  <option value="hu">헝가리어</option>
+                  <option value="iw">히브리어</option>
+                  <option value="hi">힌디어</option>
+                </select>
+              </div>
+              <span style="white-space: nowrap"
+                ><a
+                  class="goog-logo-link"
+                  href="https://translate.google.com"
+                  target="_blank"
+                  ><img
+                    src="https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png"
+                    width="37px"
+                    height="14px"
+                    style="padding-right: 3px"
+                    alt="Google 번역"
+                  />번역</a
+                ></span
+              >에서 제공
+            </div>
+          </div>
 
           <!-- Alam DropDwon Menu -->
 
@@ -170,13 +340,13 @@
             id="dropdown"
             style="
               position: absolute;
-              inset: auto auto 0px 0px;
+              inset: 0px auto auto 0px;
               margin: 0px;
-              transform: translate(1246px, 803px);
+              transform: translate3d(1888.5px, 58px, 0px);
             "
+            data-popper-placement="bottom"
             data-popper-reference-hidden=""
             data-popper-escaped=""
-            data-popper-placement="top"
           >
             <!-- Drop Down Contents | Start -->
 
@@ -629,7 +799,6 @@
       }
     </script>
 
-    <!-- Side Navi -->
     <aside
       class="side-nav fixed -left-full xl:left-0 duration-1000 ease-in-out top-0 h-full bg-white border-r nav-side"
       style="z-index: 1000"
@@ -659,12 +828,14 @@
                 <span class="pl-3">Sell</span>
               </a>
             </li>
+
             <li>
               <a href="/b/view" class="inline-flex items-center">
                 <i class="bx bxs-wallet bx-sm"></i>
                 <span class="pl-3">Buy</span>
               </a>
             </li>
+
             <li>
               <a href="/h/affiliate" class="inline-flex items-center">
                 <i class="bx bxs-buildings bx-sm"></i>
@@ -686,7 +857,7 @@
             </li>
 
             <li>
-              <a href="/m/info" class="inline-flex items-center items-center">
+              <a href="/m/info" class="inline-flex items-center">
                 <i class="bx bxs-user-rectangle bx-sm"></i>
                 <span class="pl-3">My Page</span>
               </a>
@@ -741,12 +912,12 @@
                 <!-- Dropdown menu -->
                 <div
                   id="dropdownNavbar"
-                  class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-fit menuClass history tab__nav_active"
+                  class="z-10 bg-white divide-y divide-gray-100 rounded shadow w-fit menuClass history hidden"
                   style="
-                    transform: translate3d(338px, 146px, 0px);
                     position: absolute;
                     inset: 0px auto auto 0px;
                     margin: 0px;
+                    transform: translate(338px, 134px);
                   "
                   data-popper-placement="bottom"
                 >
@@ -804,7 +975,7 @@
               <li class="mr-2">
                 <a
                   href="/m/sellRegister"
-                  class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-blue-500 menuClass sell"
+                  class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-blue-500 menuClass sell tab__nav_active"
                   >Sell</a
                 >
               </li>
@@ -856,9 +1027,9 @@
                 <!-- Dropdown menu -->
                 <div
                   id="Affiliate"
-                  class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-fit menuClass history tab__nav_active"
+                  class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-fit menuClass history"
                   style="
-                    transform: translate3d(1050.5px, 146px, 0px);
+                    transform: translate3d(1050.5px, 134px, 0px);
                     position: absolute;
                     inset: 0px auto auto 0px;
                     margin: 0px;
@@ -882,7 +1053,7 @@
             </ul>
           </div>
         </div>
-        <input type="hidden" id="menu" value="sellHistory" />
+        <input type="hidden" id="menu" value="sellRegister" />
         <script>
           //todo[limsy820] dropdown 메뉴 active 안먹음
           $(function () {
@@ -917,411 +1088,524 @@
         </script>
       </section>
 
-      <!-- Sell Coins | Start -->
       <section class="section">
         <div class="pt-5 xl:pt-16">
           <!-- Sell Header Area | Start -->
           <div class="flex justify-between items-center">
-            <h4>Sell History</h4>
-
+            <h4>Sell Coins</h4>
             <div class="hidden xl:flex items-center gap-2 text-xs">
               <div>HOME</div>
               <div><i class="bx bx-chevron-right"></i></div>
-              <div>My Page</div>
+              <div>My page</div>
               <div><i class="bx bx-chevron-right"></i></div>
-              <div>Sell History</div>
+              <div>Coin Sellers Registration</div>
             </div>
           </div>
           <!-- Sell Header Area | End -->
-          <div class="grid grid-cols-1 xl:grid-cols-11 gap-5 mt-5 xl:mt-8">
-            <!-- Search Coins | Start -->
+        </div>
+      </section>
 
-            <div class="col-span-1 xl:col-span-3">
-              <div class="bg-white px-3 py-8 h-full rounded-xl border">
-                <div class="grid grid-cols-1 gap-5">
-                  <!-- Coin Name -->
-                  <div class="">
-                    <label class="" for="">Coin Name</label>
+      <!-- Buyer Detail -->
+      <section class="section">
+        <div class="mt-8">
+          <div class="grid grid-cols-1 2xl:grid-cols-10 gap-5">
+            <!-- Item 1 -->
+            <div class="col-span-1 2xl:col-span-7">
+              <div
+                class="bg-white h-full px-4 w-full xl:px-5 py-2 shadow-md rounded-xl"
+              >
+                <!-- Buyer Information  -->
+                <div class="w-full grid grid-cols-1 gap-2 mb-5">
+                  <div class="grid grid-cols-12 items-center gap-5">
+                    <div
+                      class="col-span-12 xl:col-span-2 h-full py-2 text-center xl:py-0 bg-gray-300 rounded text-black flex items-center px-5 uppercase justify-center tracking-tighter"
+                    >
+                      Coin Name
+                    </div>
+                    <!-- ITEM 1 -->
+                    <div class="col-span-6 xl:col-span-3">
+                      <input
+                        class="w-full rounded-xl py-2.5 px-5 border"
+                        type="text"
+                        id="coin_nm"
+                      />
+                    </div>
+                    <!-- ITEM 2 -->
+                    <div class="col-span-6 xl:col-span-3">
+                      <select
+                        name=""
+                        id="selectCoin"
+                        class="w-full rounded-xl py-2.5 px-5 border"
+                        onchange="selectCoinSell();"
+                      >
+                        <option value="">select</option>
+                        <option data-affi="N" value="CMDT00000000000071">
+                          normal
+                        </option>
+
+                        <option data-affi="Y" value="CMDT00000000000064">
+                          GGR
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- ITEM 3 -->
+
+                  <div class="grid grid-cols-12 gap-5">
+                    <div
+                      class="col-span-12 py-2 xl:py-0 xl:col-span-2 h-full bg-gray-300 rounded text-black flex items-center px-5 uppercase justify-center"
+                    >
+                      price
+                    </div>
                     <input
+                      class="col-span-6 xl:col-span-3 rounded-xl border px-5 py-2.5"
                       type="text"
-                      1
-                      id="coin_nm"
-                      class="w-full border mt-2 px-2.5 py-2 border-gray-300 rounded-xl tracking-tighter"
-                      style="display: none"
-                      value=""
+                      id="sell_price"
+                      onkeyup="chkNumDot(this);"
                     />
                     <select
                       name=""
-                      id="coin_typ"
-                      class="w-full border mt-2 px-2.5 py-2 border-gray-300 rounded-xl tracking-tighter"
-                      onchange="selectCoin();"
+                      id="country"
+                      class="col-span-6 xl:col-span-3 w-full rounded-xl border px-5 py-2.5"
                     >
                       <option value="">select</option>
-                      <option data-affi="N" value="CMDT00000000000071">
-                        normal
-                      </option>
 
-                      <option data-affi="Y" value="CMDT00000000000064">
-                        GGR
-                      </option>
+                      <option value="CMDT00000000000072">KRW</option>
+
+                      <option value="CMDT00000000000073">USD</option>
+
+                      <option value="CMDT00000000000074">JPY</option>
+
+                      <option value="CMDT00000000000075">EUR</option>
                     </select>
                   </div>
-                  <!--Buyer ID -->
-                  <div class="">
-                    <label class="" for="">Buyer ID</label>
-                    <input
-                      type="text"
-                      id="buyer_id"
-                      placeholder="Enter seller ID"
-                      class="w-full border mt-2 px-2.5 py-2 border-gray-300 rounded-xl tracking-tighter"
-                      value=""
-                    />
-                  </div>
-                </div>
-                <!-- Button -->
-                <div class="mt-5">
-                  <button
-                    class="btn btn-exlarge btn-rounded w-full btn-default"
-                    onclick="fnSearch();"
-                  >
-                    Search
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Search Coins | END -->
-            <!-- Buyer Table | Start -->
-            <div class="hidden xl:block col-span-1 xl:col-span-8">
-              <!-- Table -->
-              <div class="border bg-white h-full rounded-xl p-5">
-                <div class="overflow-x-auto">
-                  <table class="w-full text-sm text-left text-gray-500">
-                    <thead class="text-xs text-gray-700 uppercase bg-gray-100">
-                      <tr>
-                        <th scope="col" class="px-5 py-3 truncate">Date</th>
-                        <th scope="col" class="px-5 py-3 truncate">Buyer ID</th>
-                        <th scope="col" class="px-5 py-3 truncate">
-                          Coin Name
-                        </th>
-                        <th scope="col" class="px-5 py-3 truncate">
-                          Amount of coins
-                        </th>
-                        <th scope="col" class="px-5 py-3 truncate">Price</th>
-                        <th scope="col" class="px-5 py-3 truncate">Currency</th>
-                        <th scope="col" class="px-5 py-3 truncate">State</th>
-                        <th scope="col" class="px-5 py-3 truncate"></th>
-                        <th scope="col" class="px-5 py-3 truncate"></th>
-                        <th scope="col" class="px-5 py-3 truncate"></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr class="bg-white border-b">
-                        <td class="px-3 py-4 truncate">2022-08-16 15:50:23</td>
-                        <td
-                          class="px-3 py-4 font-medium text-gray-900 whitespace-nowrap"
-                        >
-                          <a
-                            href="javascript:void(0);"
-                            class="inline-block underline cursor-pointer"
-                            onclick="fnUserDetailModal('')"
-                          ></a>
-                        </td>
-                        <td class="px-3 py-4">WRC</td>
-                        <td class="px-3 py-4">2</td>
-                        <td class="px-3 py-4">1,000</td>
-                        <td class="px-3 py-4">KRW</td>
-                        <td class="px-3 py-4">Trade waiting</td>
-                        <td class="px-3">
-                          <a
-                            href="javascript:void(0);"
-                            class="inline-block w-full btn btn-small btn-dark"
-                            onclick="showDetail('414', 'sell');"
-                            >Detail</a
-                          >
-
-                          <a
-                            href="javascript:void(0);"
-                            class="inline-block w-full btn btn-small btn-red"
-                            onclick="sellCancel('414','');"
-                            >Cancel</a
-                          >
-                        </td>
-                        <td class="">
-                          <a
-                            href="javascript:void(0);"
-                            class="inline-block w-full h-full btn btn-small btn-default"
-                            onclick="showLogList('414', 'sell');"
-                            >transaction history</a
-                          >
-                        </td>
-                      </tr>
-
-                      <tr class="bg-white border-b">
-                        <td class="px-3 py-4 truncate">
-                          <a
-                            href="javascript:void(0);"
-                            class="inline-block underline"
-                            onclick="fnDetailLog('413','871');"
-                            >2022-08-16 15:45:03</a
-                          >
-                        </td>
-                        <td
-                          class="px-3 py-4 font-medium text-gray-900 whitespace-nowrap"
-                        >
-                          <a
-                            href="javascript:void(0);"
-                            class="inline-block underline cursor-pointer"
-                            onclick="fnUserDetailModal('seller1')"
-                            >seller1</a
-                          >
-                        </td>
-                        <td class="px-3 py-4">WRC</td>
-                        <td class="px-3 py-4"></td>
-                        <td class="px-3 py-4">10,000</td>
-                        <td class="px-3 py-4">KRW</td>
-                        <td class="px-3 py-4">Transaction completed</td>
-                        <td class="px-3"></td>
-                        <td class="">
-                          <a
-                            href="javascript:void(0);"
-                            class="inline-block w-full h-full btn btn-small btn-default"
-                            onclick="showLogList('413', 'sell');"
-                            >transaction history</a
-                          >
-                        </td>
-                      </tr>
-
-                      <tr class="bg-white border-b">
-                        <td class="px-3 py-4 truncate">2022-08-16 15:42:11</td>
-                        <td
-                          class="px-3 py-4 font-medium text-gray-900 whitespace-nowrap"
-                        >
-                          <a
-                            href="javascript:void(0);"
-                            class="inline-block underline cursor-pointer"
-                            onclick="fnUserDetailModal('')"
-                          ></a>
-                        </td>
-                        <td class="px-3 py-4">WRC</td>
-                        <td class="px-3 py-4">1</td>
-                        <td class="px-3 py-4">10,000</td>
-                        <td class="px-3 py-4">KRW</td>
-                        <td class="px-3 py-4">Transaction cancellation</td>
-                        <td class="px-3"></td>
-                        <td class="">
-                          <a
-                            href="javascript:void(0);"
-                            class="inline-block w-full h-full btn btn-small btn-default"
-                            onclick="showLogList('412', 'sell');"
-                            >transaction history</a
-                          >
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="mt-5">
-                  <ul class="flex items-center justify-center">
-                    <!--            <a href="javascript:void(0);" class="page"><span class="page active">1</span></a>-->
-                    <li
-                      class="px-3 py-2 hover:bg-blue-300 cursor-pointer border-l border-r border-y"
-                    >
-                      1
-                    </li>
-                  </ul>
-                </div>
-                <input type="hidden" id="pageIndex" value="1" />
-              </div>
-            </div>
-            <!-- Buyer Table | END -->
-
-            <!-- Buyer Card | Start -->
-            <div class="col-span-1 xl:hidden">
-              <div>
-                <div>
-                  <div class="grid grid-cols-1 gap-2">
-                    <div class="">
-                      <div class="text-sm w-full">
-                        <div
-                          class="grid grid-cols-2 p-5 border rounded-lg gap-y-1.5 tracking-tighter"
-                        >
-                          <div class="col-span-1 w-full truncate">
-                            2022-08-16 15:50:23
+                  <!-- ITEM 4 -->
+                  <div id="selectCoinView" style="display: none">
+                    <div class="grid grid-cols-3 gap-5">
+                      <div class="col-span-5 inline-flex">
+                        <div class="flex items-center gap-3 text-lg">
+                          <div class="flex items-center gap-2">
+                            <input
+                              type="radio"
+                              name="sellType"
+                              value="Y"
+                              onclick="selectAutoYn('Y');"
+                            />
+                            <div>Auto Sell</div>
                           </div>
-                          <div class="col-span-1">
-                            <div class="text-end">
-                              2
-
-                              <span class="ml-2 font-semibold">Coin</span>
-                            </div>
-                          </div>
-                          <div class="col-span-1">WRC</div>
-                          <div class="col-span-1">
-                            <div class="text-end">
-                              1,000
-
-                              <span class="ml-2 font-semibold">KRW</span>
-                            </div>
-                          </div>
-                          <div class="col-span-1"></div>
-                          <div class="col-span-1 text-end">
-                            <!-- <div class="badge badge-dark inline-block">AUTO</div>
-														<div class="badge badge-green inline-block uppercase">ESCROW</div>
-														<div class="badge badge-default inline-block">Manual</div>
-														<div class="badge badge-red inline-block uppercase">Non-ESCROW</div> -->
-                            Trade waiting
-                          </div>
-                          <div class="col-span-2">
-                            <div
-                              class="flex xl:flex-col justify-end items-center gap-2"
-                            >
-                              <button
-                                class="btn btn-small btn-dark text-center w-full"
-                                onclick="showDetail('414', 'sell');"
-                              >
-                                Detail
-                              </button>
-
-                              <button
-                                class="btn btn-small btn-red text-center w-full"
-                                onclick="sellCancel('414','');"
-                              >
-                                Cancel
-                              </button>
-                            </div>
-                          </div>
-                          <div class="w-full col-span-2 mt-2">
-                            <button
-                              class="btn w-full btn-small btn-default text-center"
-                              onclick="showLogList('414', 'sell');"
-                            >
-                              transaction history
-                            </button>
+                          <div class="flex items-center gap-2">
+                            <input
+                              type="radio"
+                              name="sellType"
+                              value="N"
+                              checked=""
+                              onclick="selectAutoYn('N');"
+                            />
+                            <div>Manual Sell</div>
                           </div>
                         </div>
                       </div>
                     </div>
-
-                    <div class="">
-                      <div class="text-sm w-full">
-                        <div
-                          class="grid grid-cols-2 p-5 border rounded-lg gap-y-1.5 tracking-tighter"
-                        >
-                          <div class="col-span-1 w-full truncate">
-                            <a
-                              href="javascript:void(0);"
-                              class="inline-block underline"
-                              onclick="fnDetailLog('413','871');"
-                              >2022-08-16 15:45:03</a
-                            >
-                          </div>
-                          <div class="col-span-1">
-                            <div class="text-end">
-                              <span class="ml-2 font-semibold">Coin</span>
+                    <div id="balanceYn">
+                      <div class="grid grid-cols-3 gap-5">
+                        <div class="col-span-5 inline-flex">
+                          <div class="flex items-center gap-3 text-lg pt-5">
+                            <div class="flex items-center gap-2">
+                              <input
+                                type="radio"
+                                name="chkAllYn"
+                                value="Y"
+                                onclick="chkAllYn('Y');"
+                              />
+                              <div>
+                                All balances (whenever the balance is
+                                replenished)
+                              </div>
                             </div>
-                          </div>
-                          <div class="col-span-1">WRC</div>
-                          <div class="col-span-1">
-                            <div class="text-end">
-                              10,000
-
-                              <span class="ml-2 font-semibold">KRW</span>
-                            </div>
-                          </div>
-                          <div class="col-span-1">seller1</div>
-                          <div class="col-span-1 text-end">
-                            <!-- <div class="badge badge-dark inline-block">AUTO</div>
-														<div class="badge badge-green inline-block uppercase">ESCROW</div>
-														<div class="badge badge-default inline-block">Manual</div>
-														<div class="badge badge-red inline-block uppercase">Non-ESCROW</div> -->
-                            Transaction completed
-                          </div>
-                          <div class="col-span-2">
-                            <div
-                              class="flex xl:flex-col justify-end items-center gap-2"
-                            ></div>
-                          </div>
-                          <div class="w-full col-span-2 mt-2">
-                            <button
-                              class="btn w-full btn-small btn-default text-center"
-                              onclick="showLogList('413', 'sell');"
-                            >
-                              transaction history
-                            </button>
                           </div>
                         </div>
                       </div>
-                    </div>
-
-                    <div class="">
-                      <div class="text-sm w-full">
-                        <div
-                          class="grid grid-cols-2 p-5 border rounded-lg gap-y-1.5 tracking-tighter"
-                        >
-                          <div class="col-span-1 w-full truncate">
-                            2022-08-16 15:42:11
-                          </div>
-                          <div class="col-span-1">
-                            <div class="text-end">
-                              1
-
-                              <span class="ml-2 font-semibold">Coin</span>
+                      <div class="grid grid-cols-3 gap-5">
+                        <div class="col-span-5 inline-flex">
+                          <div class="flex items-center gap-3 text-lg">
+                            <div class="flex items-center gap-2">
+                              <input
+                                type="radio"
+                                name="chkAllYn"
+                                value="N"
+                                checked=""
+                                onclick="chkAllYn('N');"
+                              />
+                              <div>Sell amount</div>
                             </div>
-                          </div>
-                          <div class="col-span-1">WRC</div>
-                          <div class="col-span-1">
-                            <div class="text-end">
-                              10,000
-
-                              <span class="ml-2 font-semibold">KRW</span>
-                            </div>
-                          </div>
-                          <div class="col-span-1"></div>
-                          <div class="col-span-1 text-end">
-                            <!-- <div class="badge badge-dark inline-block">AUTO</div>
-														<div class="badge badge-green inline-block uppercase">ESCROW</div>
-														<div class="badge badge-default inline-block">Manual</div>
-														<div class="badge badge-red inline-block uppercase">Non-ESCROW</div> -->
-                            Transaction cancellation
-                          </div>
-                          <div class="col-span-2">
-                            <div
-                              class="flex xl:flex-col justify-end items-center gap-2"
-                            ></div>
-                          </div>
-                          <div class="w-full col-span-2 mt-2">
-                            <button
-                              class="btn w-full btn-small btn-default text-center"
-                              onclick="showLogList('412', 'sell');"
-                            >
-                              transaction history
-                            </button>
+                            <input
+                              class="col-span-8 rounded-xl border px-5 py-2.5"
+                              type="text"
+                              id="sell_amount"
+                              onkeyup="chkNumDot(this);"
+                            />
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="mt-5">
-                  <ul class="flex items-center justify-center">
-                    <!--            <a href="javascript:void(0);" class="page"><span class="page active">1</span></a>-->
-                    <li
-                      class="px-3 py-2 hover:bg-blue-300 cursor-pointer border-l border-r border-y"
+
+                <div class="mt-2">
+                  <div class="py-2">
+                    <input type="checkbox" class="border-2" id="agree" />
+                    <span class="font-semibold"> Terms Required</span>
+                  </div>
+                  <div class="px-5 pb-4">
+                    <ul class="list-decimal px-5 text-sm xl:text-base">
+                      <li>
+                        When registering and transacting coins that are not
+                        escrow of Bitypeer affiliated coins, all legal
+                        responsibilities for the transaction are the
+                        (individaul) responsibility.
+                      </li>
+                      <li>
+                        I understand and agree that 1:1 coin personal
+                        transactions have nothing to do with Bitypeer.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="p-5 border rounded-xl">
+                  <!-- <div class="p-5 border bg-gray-200 rounded-lg">
+                                <div>Information</div>
+                                <ul>
+                                    <li>Fill out this form to start chatting.</li>
+                                    <li>My wallet address :</li>
+                                    <li>Account Holder :</li>
+                                    <li>Name of bank :</li>
+                                    <li>Account Number :</li>
+                                </ul>
+                            </div> -->
+                  <div class="p-5 border mt-5 text-xs xl:text-base rounded-lg">
+                    <textarea
+                      class="w-full"
+                      name=""
+                      id="memo"
+                      cols="30"
+                      rows="20"
+                      style="resize: none"
                     >
-                      1
-                    </li>
-                  </ul>
+Information
+Fill out this form to start chatting.
+
+My wallet address :
+Account Holder :
+Name of bank :
+Account Number :</textarea
+                    >
+                  </div>
+                </div>
+
+                <div class="pt-5">
+                  <div class="flex items-center justify-end gap-5">
+                    <a
+                      href="javascript:void(0);"
+                      class="block btn btn-dark"
+                      onclick="insertSell();"
+                      >Registration</a
+                    >
+                    <!--                                <a href="" class="block btn btn-red">Cancel</a>-->
+                  </div>
                 </div>
               </div>
             </div>
-            <!-- SELLer Card | END -->
+            <div class="col-span-1 2xl:col-span-3">
+              <!-- Buyer Input Request -->
+
+              <div class="col-span-3">
+                <div class="bg-gray-200 rounded-md px-6 py-8">
+                  <h5 class="tracking-tighter">Set Selling time</h5>
+                  <div class="grid grid-cols-1 xl:gap-2 text-sm pt-8">
+                    <!-- Sun -->
+                    <div class="flex items-center xl:gap-2">
+                      <div class="flex items-center gap-2 sellingTimeInputBox">
+                        <input
+                          type="checkbox"
+                          id="sunCheckBox"
+                          class="w-6 h-6"
+                        />
+                        <div
+                          class="py-2 text-xs sm:text-sm text-center xl:text-left xl:text-lg w-8 sm:w-10"
+                        >
+                          SUN
+                        </div>
+                      </div>
+                      <div class="flex justify-between items-center xl:gap-2">
+                        <input
+                          class="py-2 w-full border rounded-md text-xs xl:text-sm px-0 sm:pl-3 xl:px-2 3xl:px-5"
+                          lang="en-US"
+                          type="time"
+                          id="sell_hours_sun_start"
+                          name="appt"
+                          min="00:00"
+                          max="24:00"
+                          required=""
+                        />
+                        <input
+                          class="py-2 w-full border rounded-md text-xs xl:text-sm px-0 sm:pl-3 xl:px-2 3xl:px-5"
+                          lang="en-US"
+                          type="time"
+                          id="sell_hours_sun_end"
+                          name="appt"
+                          min="00:00"
+                          max="24:00"
+                          required=""
+                        />
+                      </div>
+                    </div>
+                    <!-- Mon -->
+                    <div class="flex items-center xl:gap-2">
+                      <div class="flex items-center gap-2 sellingTimeInputBox">
+                        <input
+                          type="checkbox"
+                          id="monCheckBox"
+                          class="w-6 h-6"
+                        />
+                        <div
+                          class="py-2 text-xs sm:text-sm text-center xl:text-left xl:text-lg w-8 sm:w-10"
+                        >
+                          MON
+                        </div>
+                      </div>
+                      <div class="flex justify-between items-center xl:gap-2">
+                        <input
+                          class="py-2 w-full border rounded-md text-xs xl:text-sm px-0 sm:pl-3 xl:px-2 3xl:px-5"
+                          lang="en-US"
+                          type="time"
+                          id="sell_hours_mon_start"
+                          name="appt"
+                          min="00:00"
+                          max="24:00"
+                          required=""
+                        />
+                        <input
+                          class="py-2 w-full border rounded-md text-xs xl:text-sm px-0 sm:pl-3 xl:px-2 3xl:px-5"
+                          lang="en-US"
+                          type="time"
+                          id="sell_hours_mon_end"
+                          name="appt"
+                          min="00:00"
+                          max="24:00"
+                          required=""
+                        />
+                      </div>
+                    </div>
+                    <!-- TUE -->
+                    <div class="flex items-center xl:gap-2">
+                      <div class="flex items-center gap-2 sellingTimeInputBox">
+                        <input
+                          type="checkbox"
+                          id="tueCheckBox"
+                          class="w-6 h-6"
+                        />
+                        <div
+                          class="py-2 text-xs sm:text-sm text-center xl:text-left xl:text-lg w-8 sm:w-10"
+                        >
+                          TUE
+                        </div>
+                      </div>
+                      <div class="flex justify-between items-center xl:gap-2">
+                        <input
+                          class="py-2 w-full border rounded-md text-xs xl:text-sm px-0 sm:pl-3 xl:px-2 3xl:px-5"
+                          lang="en-US"
+                          type="time"
+                          id="sell_hours_tue_start"
+                          name="appt"
+                          min="00:00"
+                          max="24:00"
+                          required=""
+                        />
+                        <input
+                          class="py-2 w-full border rounded-md text-xs xl:text-sm px-0 sm:pl-3 xl:px-2 3xl:px-5"
+                          lang="en-US"
+                          type="time"
+                          id="sell_hours_tue_end"
+                          name="appt"
+                          min="00:00"
+                          max="24:00"
+                          required=""
+                        />
+                      </div>
+                    </div>
+                    <!-- WED -->
+                    <div class="flex items-center xl:gap-2">
+                      <div class="flex items-center gap-2 sellingTimeInputBox">
+                        <input
+                          type="checkbox"
+                          id="wedCheckBox"
+                          class="w-6 h-6"
+                        />
+                        <div
+                          class="py-2 text-xs sm:text-sm text-center xl:text-left xl:text-lg w-8 sm:w-10"
+                        >
+                          WED
+                        </div>
+                      </div>
+                      <div class="flex justify-between items-center xl:gap-2">
+                        <input
+                          class="py-2 w-full border rounded-md text-xs xl:text-sm px-0 sm:pl-3 xl:px-2 3xl:px-5"
+                          lang="en-US"
+                          type="time"
+                          id="sell_hours_wed_start"
+                          name="appt"
+                          min="00:00"
+                          max="24:00"
+                          required=""
+                        />
+                        <input
+                          class="py-2 w-full border rounded-md text-xs xl:text-sm px-0 sm:pl-3 xl:px-2 3xl:px-5"
+                          lang="en-US"
+                          type="time"
+                          id="sell_hours_wed_end"
+                          name="appt"
+                          min="00:00"
+                          max="24:00"
+                          required=""
+                        />
+                      </div>
+                    </div>
+                    <!-- THU -->
+                    <div class="flex items-center xl:gap-2">
+                      <div class="flex items-center gap-2 sellingTimeInputBox">
+                        <input
+                          type="checkbox"
+                          id="thuCheckBox"
+                          class="w-6 h-6"
+                        />
+                        <div
+                          class="py-2 text-xs sm:text-sm text-center xl:text-left xl:text-lg w-8 sm:w-10"
+                        >
+                          THU
+                        </div>
+                      </div>
+                      <div class="flex justify-between items-center xl:gap-2">
+                        <input
+                          class="py-2 w-full border rounded-md text-xs xl:text-sm px-0 sm:pl-3 xl:px-2 3xl:px-5"
+                          lang="en-US"
+                          type="time"
+                          id="sell_hours_thu_start"
+                          name="appt"
+                          min="00:00"
+                          max="24:00"
+                          required=""
+                        />
+                        <input
+                          class="py-2 w-full border rounded-md text-xs xl:text-sm px-0 sm:pl-3 xl:px-2 3xl:px-5"
+                          lang="en-US"
+                          type="time"
+                          id="sell_hours_thu_end"
+                          name="appt"
+                          min="00:00"
+                          max="24:00"
+                          required=""
+                        />
+                      </div>
+                    </div>
+                    <!-- FRI -->
+                    <div class="flex items-center xl:gap-2">
+                      <div class="flex items-center gap-2 sellingTimeInputBox">
+                        <input
+                          type="checkbox"
+                          id="friCheckBox"
+                          class="w-6 h-6"
+                        />
+                        <div
+                          class="py-2 text-xs sm:text-sm text-center xl:text-left xl:text-lg w-8 sm:w-10"
+                        >
+                          FRI
+                        </div>
+                      </div>
+                      <div class="flex justify-between items-center xl:gap-2">
+                        <input
+                          class="py-2 w-full border rounded-md text-xs xl:text-sm px-0 sm:pl-3 xl:px-2 3xl:px-5"
+                          lang="en-US"
+                          type="time"
+                          id="sell_hours_fri_start"
+                          name="appt"
+                          min="00:00"
+                          max="24:00"
+                          required=""
+                        />
+                        <input
+                          class="py-2 w-full border rounded-md text-xs xl:text-sm px-0 sm:pl-3 xl:px-2 3xl:px-5"
+                          lang="en-US"
+                          type="time"
+                          id="sell_hours_fri_end"
+                          name="appt"
+                          min="00:00"
+                          max="24:00"
+                          required=""
+                        />
+                      </div>
+                    </div>
+                    <!-- SAT -->
+                    <div class="flex items-center xl:gap-2">
+                      <div class="flex items-center gap-2 sellingTimeInputBox">
+                        <input
+                          type="checkbox"
+                          id="satCheckBox"
+                          class="w-6 h-6"
+                        />
+                        <div
+                          class="py-2 text-xs sm:text-sm text-center xl:text-left xl:text-lg w-8 sm:w-10"
+                        >
+                          SAT
+                        </div>
+                      </div>
+                      <div class="flex justify-between items-center xl:gap-2">
+                        <input
+                          class="py-2 w-full border rounded-md text-xs xl:text-sm px-0 sm:pl-3 xl:px-2 3xl:px-5"
+                          lang="en-US"
+                          type="time"
+                          id="sell_hours_sat_start"
+                          name="appt"
+                          min="00:00"
+                          max="24:00"
+                          required=""
+                        />
+                        <input
+                          class="py-2 w-full border rounded-md text-xs xl:text-sm px-0 sm:pl-3 xl:px-2 3xl:px-5"
+                          lang="en-US"
+                          type="time"
+                          id="sell_hours_sat_end"
+                          name="appt"
+                          min="00:00"
+                          max="24:00"
+                          required=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="xl:flex xl:items-center 2xl:items-start xl:py-5 bg-white border rounded-md mt-5 shadow-md"
+                >
+                  <div class="px-3 pt-2 rounded-md text-red-500">
+                    <i class="bx bxs-alarm-exclamation bx-lg"></i>
+                  </div>
+                  <div class="px-5 py-1">
+                    <div class="text-sm tracking-tighter lg:text-lg xl:text-xl">
+                      UTC basis. UTC is the standard time difference for each
+                      region based on the UK (UTC+0:00).
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Chatting Area -->
+            <div class="hidden col-span-4"></div>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- Footer -->
     <footer class="px-5 py-5 bg-gray-100 pt-10 mt-16">
       <section class="section">
         <div class="px-5 pt-16">
@@ -1553,182 +1837,313 @@
         }
       });
     </script>
-    <script src="/js/sideNav.js"></script>
-    <script src="/js/main.js"></script>
+
+    <div id="goog-gt-tt" class="skiptranslate" dir="ltr">
+      <div style="padding: 8px">
+        <div>
+          <div class="logo">
+            <img
+              src="https://www.gstatic.com/images/branding/product/1x/translate_24dp.png"
+              width="20"
+              height="20"
+              alt="Google 번역"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="top" style="padding: 8px; float: left; width: 100%">
+        <h1 class="title gray">원본 텍스트</h1>
+      </div>
+      <div class="middle" style="padding: 8px">
+        <div class="original-text"></div>
+      </div>
+      <div class="bottom" style="padding: 8px">
+        <div class="activity-links">
+          <span class="activity-link">번역 제안하기</span
+          ><span class="activity-link"></span>
+        </div>
+        <div class="started-activity-container">
+          <hr
+            style="
+              color: #ccc;
+              background-color: #ccc;
+              height: 1px;
+              border: none;
+            "
+          />
+          <div class="activity-root"></div>
+        </div>
+      </div>
+      <div class="status-message" style="display: none"></div>
+    </div>
     <script>
-      function fnSearch() {
-        let pageIndex = $("#pageIndex").val();
-        let coin_nm = $("#coin_nm").val();
-        let coin_typ = $($("#coin_typ")).val();
-        let buyer_id = $("#buyer_id").val();
+      (function () {
+        $("#memo").html(
+          "Information\nFill out this form to start chatting.\n\nMy wallet address :\nAccount Holder :\nName of bank :\nAccount Number :"
+        );
+      })();
 
-        var form = document.createElement("form");
-        form.setAttribute("charset", "UTF-8");
-        form.setAttribute("method", "Post");
-        form.setAttribute("action", "/m/sellHistory");
+      function insertSell() {
+        if ($("#selectCoin").val() == "") {
+          fnAlertMessage("Please select a coin.");
+          return;
+        }
+        if ($("#coin_nm").val() == "") {
+          fnAlertMessage("Please enter your coin name.");
+          return;
+        }
 
-        var hiddenField1 = document.createElement("input");
-        hiddenField1.setAttribute("type", "hidden");
-        hiddenField1.setAttribute("name", "pageIndex");
-        hiddenField1.setAttribute("value", pageIndex);
-        form.appendChild(hiddenField1);
+        if ($("#sell_price").val() == "" || $("#sell_price").val() <= 0) {
+          fnAlertMessage("Please enter the price.");
+          return;
+        }
+        if ($("#country").val() == "") {
+          fnAlertMessage("Please enter the currency.");
+          return;
+        }
 
-        var hiddenField2 = document.createElement("input");
-        hiddenField2.setAttribute("type", "hidden");
-        hiddenField2.setAttribute("name", "coin_nm");
-        hiddenField2.setAttribute("value", coin_nm);
-        form.appendChild(hiddenField2);
+        if ($('input[name="chkAllYn"]:checked').val() == "N") {
+          if ($("#sell_amount").val() == "" || $("#sell_amount").val() <= 0) {
+            fnAlertMessage("Please enter the sales amount.");
+            return;
+          }
+        }
 
-        var hiddenField3 = document.createElement("input");
-        hiddenField3.setAttribute("type", "hidden");
-        hiddenField3.setAttribute("name", "coin_typ");
-        hiddenField3.setAttribute("value", coin_typ);
-        form.appendChild(hiddenField3);
+        if (!$("#agree").is(":checked")) {
+          fnAlertMessage("Please check the Terms Required.");
+          return;
+        }
 
-        var hiddenField4 = document.createElement("input");
-        hiddenField4.setAttribute("type", "hidden");
-        hiddenField4.setAttribute("name", "buyer_id");
-        hiddenField4.setAttribute("value", buyer_id);
-        form.appendChild(hiddenField4);
-
-        document.body.appendChild(form);
-        form.submit();
+        fnAlertConfirmMessage("Would you like to register?", sellCallBack);
       }
 
-      function selectCoin() {
-        $("#coin_nm").val("");
-        let affi = $("#coin_typ option:selected").data("affi");
-        if (affi == "N") {
-          $("#coin_nm").show();
+      function sellCallBack() {
+        let sell_hours_sun =
+          $("#sell_hours_sun_start").val() +
+          "~" +
+          $("#sell_hours_sun_end").val();
+        let sell_hours_mon =
+          $("#sell_hours_mon_start").val() +
+          "~" +
+          $("#sell_hours_mon_end").val();
+        let sell_hours_tue =
+          $("#sell_hours_tue_start").val() +
+          "~" +
+          $("#sell_hours_tue_end").val();
+        let sell_hours_wed =
+          $("#sell_hours_wed_start").val() +
+          "~" +
+          $("#sell_hours_wed_end").val();
+        let sell_hours_thu =
+          $("#sell_hours_thu_start").val() +
+          "~" +
+          $("#sell_hours_thu_end").val();
+        let sell_hours_fri =
+          $("#sell_hours_fri_start").val() +
+          "~" +
+          $("#sell_hours_fri_end").val();
+        let sell_hours_sat =
+          $("#sell_hours_sat_start").val() +
+          "~" +
+          $("#sell_hours_sat_end").val();
+
+        if (!$("#sunCheckBox").is(":checked")) {
+          sell_hours_sun = "";
         } else {
-          $("#coin_nm").hide();
+          if (
+            $("#sell_hours_sun_start").val() == "" ||
+            $("#sell_hours_sun_end").val() == ""
+          ) {
+            fnAlertMessage("Please check the selling time.");
+            return;
+          }
+        }
+        if (!$("#monCheckBox").is(":checked")) {
+          sell_hours_mon = "";
+        } else {
+          if (
+            $("#sell_hours_mon_start").val() == "" ||
+            $("#sell_hours_mon_end").val() == ""
+          ) {
+            fnAlertMessage("Please check the selling time.");
+            return;
+          }
+        }
+        if (!$("#tueCheckBox").is(":checked")) {
+          sell_hours_tue = "";
+        } else {
+          if (
+            $("#sell_hours_tue_start").val() == "" ||
+            $("#sell_hours_tue_end").val() == ""
+          ) {
+            fnAlertMessage("Please check the selling time.");
+            return;
+          }
+        }
+        if (!$("#wedCheckBox").is(":checked")) {
+          sell_hours_wed = "";
+        } else {
+          if (
+            $("#sell_hours_wed_start").val() == "" ||
+            $("#sell_hours_wed_end").val() == ""
+          ) {
+            fnAlertMessage("Please check the selling time.");
+            return;
+          }
+        }
+        if (!$("#thuCheckBox").is(":checked")) {
+          sell_hours_thu = "";
+        } else {
+          if (
+            $("#sell_hours_thu_start").val() == "" ||
+            $("#sell_hours_thu_end").val() == ""
+          ) {
+            fnAlertMessage("Please check the selling time.");
+            return;
+          }
+        }
+        if (!$("#friCheckBox").is(":checked")) {
+          sell_hours_fri = "";
+        } else {
+          if (
+            $("#sell_hours_fri_start").val() == "" ||
+            $("#sell_hours_fri_end").val() == ""
+          ) {
+            fnAlertMessage("Please check the selling time.");
+            return;
+          }
+        }
+        if (!$("#satCheckBox").is(":checked")) {
+          sell_hours_sat = "";
+        } else {
+          if (
+            $("#sell_hours_sat_start").val() == "" ||
+            $("#sell_hours_sat_end").val() == ""
+          ) {
+            fnAlertMessage("Please check the selling time.");
+            return;
+          }
+        }
+
+        let data = {
+          coin_nm: $("#coin_nm").val(),
+          coin_typ: $("#selectCoin").val(),
+          all_yn: $('input[name="chkAllYn"]:checked').val(),
+          sell_amount: $("#sell_amount").val(),
+          country: $("#country").val(),
+          sell_price: $("#sell_price").val(),
+          auto_yn: $('input[name="sellType"]:checked').val(),
+          sell_hours_sun: sell_hours_sun,
+          sell_hours_mon: sell_hours_mon,
+          sell_hours_tue: sell_hours_tue,
+          sell_hours_wed: sell_hours_wed,
+          sell_hours_thu: sell_hours_thu,
+          sell_hours_fri: sell_hours_fri,
+          sell_hours_sat: sell_hours_sat,
+          affiliate_yn: $("#selectCoin option:selected").data("affi"),
+          memo: $("#memo").val(),
+        };
+
+        $.ajax({
+          url: "/m/insertSellCoin",
+          dataType: "json",
+          type: "POST",
+          data: data,
+          success: function (result) {
+            if (result.success) {
+              fnAlertRefreshMessage(
+                "Registration is complete. Check out our sell list."
+              );
+            } else {
+              fnAlertMessage(result.message);
+            }
+          },
+          error: function (XMLHttpRequest, textStatus, errorThrown) {
+            fnAlertMessage("It was not processed normally. Please try again!");
+          },
+        });
+      }
+
+      function selectCoinSell() {
+        let chkAllYn = document.getElementsByName("chkAllYn");
+        let sellType = document.getElementsByName("sellType");
+
+        $("#sell_price").val("");
+
+        let affi = $("#selectCoin option:selected").data("affi");
+        if (affi == "Y") {
+          $("#selectCoinView").show();
+          $("#coin_nm").val($("#selectCoin option:selected").text());
+          $("#coin_nm").attr("readonly", true);
+          chkAllYn[0].checked = true;
+          sellType[0].checked = true;
+          $("#sell_amount").attr("readonly", true);
+          $("input[name=sellType]").attr("disabled", false);
+          $("input[name=chkAllYn]").attr("disabled", false);
+        } else if (affi == "N") {
+          $("#selectCoinView").show();
+          $("#coin_nm").val("");
+          $("#coin_nm").attr("readonly", false);
+          chkAllYn[1].checked = true;
+          sellType[1].checked = true;
+          $("#sell_amount").attr("readonly", false);
+          $("input[name=sellType]").attr("disabled", true);
+          $("input[name=chkAllYn]").attr("disabled", true);
+        } else {
+          $("#selectCoinView").hide();
+          chkAllYn[1].checked = true;
+          sellType[1].checked = true;
         }
       }
 
-      function fnDetail(seq) {
-        var form = document.createElement("form");
-        form.setAttribute("charset", "UTF-8");
-        form.setAttribute("method", "Post");
-        form.setAttribute("action", "/s/detail");
-
-        var hiddenField1 = document.createElement("input");
-        hiddenField1.setAttribute("type", "hidden");
-        hiddenField1.setAttribute("name", "seq");
-        hiddenField1.setAttribute("value", seq);
-        form.appendChild(hiddenField1);
-
-        var hiddenField2 = document.createElement("input");
-        hiddenField2.setAttribute("type", "hidden");
-        hiddenField2.setAttribute("name", "calcelType");
-        hiddenField2.setAttribute("value", "sell");
-        form.appendChild(hiddenField2);
-
-        document.body.appendChild(form);
-        form.submit();
+      function chkAllYn(val) {
+        $("#sell_amount").val("");
+        if (val == "Y") {
+          $("#sell_amount").attr("readonly", true);
+          $("#sell_price").attr("readonly", true);
+          $("#country").attr("disabled", true);
+        } else if (val == "N") {
+          $("#sell_amount").attr("readonly", false);
+          $("#sell_price").attr("readonly", false);
+          $("#country").attr("disabled", false);
+        }
       }
 
-      function fnDetailLog(seq, request_seq) {
-        var form = document.createElement("form");
-        form.setAttribute("charset", "UTF-8");
-        form.setAttribute("method", "Post");
-        form.setAttribute("action", "/s/logDetail");
-
-        var hiddenField1 = document.createElement("input");
-        hiddenField1.setAttribute("type", "hidden");
-        hiddenField1.setAttribute("name", "seq");
-        hiddenField1.setAttribute("value", seq);
-        form.appendChild(hiddenField1);
-
-        var hiddenField2 = document.createElement("input");
-        hiddenField2.setAttribute("type", "hidden");
-        hiddenField2.setAttribute("name", "request_seq");
-        hiddenField2.setAttribute("value", "buy-" + request_seq);
-        form.appendChild(hiddenField2);
-
-        var hiddenField3 = document.createElement("input");
-        hiddenField3.setAttribute("type", "hidden");
-        hiddenField3.setAttribute("name", "trade_typ");
-        hiddenField3.setAttribute("value", "sell");
-        form.appendChild(hiddenField3);
-
-        var hiddenField4 = document.createElement("input");
-        hiddenField4.setAttribute("type", "hidden");
-        hiddenField4.setAttribute("name", "clickFn");
-        hiddenField4.setAttribute("value", "sell");
-        form.appendChild(hiddenField4);
-
-        document.body.appendChild(form);
-        form.submit();
-      }
-
-      function showDetail(seq, tradeType) {
-        /**
-         * {String} tradeType "sell", "buy", "affSell"
-         */
-        let data = {
-          seq,
-          tradeType,
-        };
-
-        $.ajax({
-          url: "/m/showDetail",
-          dataType: "json",
-          type: "POST",
-          data: data,
-          success: function (result) {
-            if (result.success) {
-              fnDetailModal(result.data);
-            } else {
-              // fnAlertMessage('It was not processed normally. Please try again!');
-            }
-          },
-          error: function (XMLHttpRequest, textStatus, errorThrown) {
-            fnAlertMessage("It was not processed normally. Please try again!");
-          }, //function끝
-        });
-      }
-
-      function sellCancel(seq, room_id) {
-        let data = {
-          seq: seq,
-          room_id: room_id,
-        };
-
-        $.ajax({
-          url: "/s/sellCancel",
-          dataType: "json",
-          type: "POST",
-          data: data,
-          success: function (result) {
-            if (result.success) {
-              fnAlertLocationMessage("The transaction has been canceled.", "/");
-            } else {
-              fnAlertMessage(
-                "It was not processed normally. Please try again!"
-              );
-            }
-          },
-          error: function (XMLHttpRequest, textStatus, errorThrown) {
-            fnAlertMessage("It was not processed normally. Please try again!");
-          }, //function끝
-        });
-      }
-
-      function showLogList(seq) {
-        let form = document.createElement("form");
-        form.setAttribute("charset", "UTF-8");
-        form.setAttribute("method", "Post");
-        form.setAttribute("action", "/m/sellLogHistory");
-
-        let hiddenField1 = document.createElement("input");
-        hiddenField1.setAttribute("type", "hidden");
-        hiddenField1.setAttribute("name", "sell_seq");
-        hiddenField1.setAttribute("value", seq);
-        form.appendChild(hiddenField1);
-
-        document.body.appendChild(form);
-        form.submit();
+      function selectAutoYn(autoYn) {
+        let chkAllYn = document.getElementsByName("chkAllYn");
+        if (autoYn == "Y") {
+          chkAllYn[0].checked = true;
+          $("input[name=chkAllYn]").attr("disabled", false);
+          $("#sell_amount").attr("readonly", true);
+          $("#sell_amount").val("");
+        } else {
+          chkAllYn[1].checked = true;
+          $("input[name=chkAllYn]").attr("disabled", true);
+          $("#sell_amount").attr("readonly", false);
+          $("#sell_amount").val("");
+        }
       }
     </script>
+    <div class="goog-te-spinner-pos">
+      <div class="goog-te-spinner-animation">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="goog-te-spinner"
+          width="96px"
+          height="96px"
+          viewBox="0 0 66 66"
+        >
+          <circle
+            class="goog-te-spinner-path"
+            fill="none"
+            stroke-width="6"
+            stroke-linecap="round"
+            cx="33"
+            cy="33"
+            r="30"
+          ></circle>
+        </svg>
+      </div>
+    </div>
   </body>
 </html>
