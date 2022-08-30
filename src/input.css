@@ -12,7 +12,7 @@
 @import "./components/modal.css";
 
 .section {
-  @apply container xl:max-w-full xl:px-10 mx-auto px-5 md:px-0;
+  @apply container xl:max-w-full xl:px-10 mx-auto px-5;
 }
 
 .checking-password {
@@ -20,11 +20,11 @@
 }
 
 .largeBody {
-  @apply pt-16 md:pl-56 bg-white;
+  @apply pt-16 xl:pl-56 bg-white;
 }
 
 .largeBody .nav-header {
-  @apply md:pl-56;
+  @apply xl:pl-56;
 }
 
 .largeBody aside {
