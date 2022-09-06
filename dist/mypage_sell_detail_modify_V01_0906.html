@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- BOX ICONS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/font.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="/css/sweetalert2.min.css" />
+    <title>Bitypeer</title>
+
+    <script src="/js/jquery-3.5.1.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/validation.js"></script>
+    <script src="/js/sweetalert2.min.js"></script>
+    <script src="/js/commFunc.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+    <script src="/client.js"></script>
+    <script src="/js/bootstrap.bundel.min.js"></script>
+    <script>
+      function wrapWindowByMaskHide() {
+        $("#mask, #loadingImg").hide();
+        $("#mask, #loadingImg").remove();
+      }
+
+      function wrapWindowByMaskShow() {
+        //화면의 높이와 너비를 구한다.
+        var maskHeight = $(document).height();
+        //      var maskWidth = $(document).width();
+        var maskWidth = window.document.body.clientWidth;
+
+        var mask =
+          "<div id='mask' style='position:absolute; z-index:9000; background-color:#000000; display:none; left:0; top:0;'></div>";
+        var loadingImg = "";
+
+        loadingImg +=
+          "<div id='loadingImg' style='position:absolute; left:48%; top:50%; display:none; z-index:10000;'>";
+        loadingImg += " <img src='/img/viewLoading.gif'/>";
+        loadingImg += "</div>";
+
+        //화면에 레이어 추가
+        $("body").append(mask).append(loadingImg);
+
+        //마스크의 높이와 너비를 화면 것으로 만들어 전체 화면을 채운다.
+        $("#mask").css({
+          width: maskWidth,
+          height: maskHeight,
+          opacity: "0.3",
+        });
+
+        $("#loadingImg").css(
+          "top",
+          Math.max(
+            0,
+            ($(window).height() - $("#loadingImg").outerHeight()) / 2 +
+              $(window).scrollTop()
+          ) + "px"
+        );
+        $("#loadingImg").css(
+          "left",
+          Math.max(
+            0,
+            ($(window).width() - $("#loadingImg").outerWidth()) / 2 +
+              $(window).scrollLeft() -
+              15
+          ) + "px"
+        );
+
+        //마스크 표시
+        $("#mask").show();
+
+        //로딩중 이미지 표시
+        $("#loadingImg").show();
+      }
+    </script>
+  </head>
+  <body class="largeBody">
+    <!-- Header -->
+    <!-- Header -->
+    <header
+      class="fixed top-0 left-0 w-full bg-white border-b h-16 nav-header z-50"
+    >
+      <!-- Top Navigation -->
+      <section class="section">
+        <div class="flex justify-between items-center h-16">
+          <div class="text-2xl xl:hidden flex justify-center items-center">
+            <i class="bx bx-menu cursor-pointer nav-toggle"></i>
+          </div>
+
+          <a href="/" class="flex items-center justify-center xl:hidden">
+            <img src="/img/logo/logo_small.png" class="h-8 w-8 mx-2" alt="" />
+            <div class="nav-brand__logo">Bitypeer</div>
+          </a>
+          <div
+            class="justify-end items-center px-12 w-full gap-5 text-sm hidden xl:flex"
+          >
+            <div><a href="/h/logout">Logout</a></div>
+          </div>
+
+          <!-- TODO: [퍼블] 주석처리 된 알람벨로 수정해야함 -->
+          <div
+            class="absolute right-12 mt-2 xl:relative w-20 pr-2 text-end mr-5 xl:mt-1"
+          >
+            <div
+              class="cursor-pointer hover:text-gray-800"
+              id="user-menu-button"
+              aria-expanded="false"
+              data-dropdown-toggle="dropdownAlarm"
+            >
+              <i class="bx bxs-bell bx-sm"></i>
+            </div>
+
+            <div
+              class="absolute top-0 right-1 w-4 h-4 bg-red-500 rounded-full"
+              id="alarmYn"
+              style="display: none"
+            >
+              <div
+                class="flex justify-center items-center text-white text-xs tracking-tighter"
+                style="font-size: 0.2rem"
+              >
+                <span></span>
+              </div>
+            </div>
+          </div>
+
+          <!--			<div class="absolute right-12 mt-2 xl:relative w-fit pr-2 text-end mr-5 xl:mt-1">-->
+          <!--				<div class="cursor-pointer hover:text-gray-800" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="dropdownAlarm">-->
+          <!--					<i class="bx bxs-bell bx-sm"></i>-->
+          <!--				</div>-->
+
+          <!--				<div class="absolute top-0 right-1 w-4 h-4 bg-red-500 rounded-full" id="alarmYn" style="display: none">-->
+          <!--					<div class="flex justify-center items-center text-white text-xs py-1 tracking-tighter" style="font-size: 0.2rem"></div>-->
+          <!--				</div>-->
+          <!--			</div>-->
+
+          <div
+            class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow-sm border w-80"
+            id="dropdownAlarm"
+            style="
+              position: absolute;
+              inset: auto auto 0px 0px;
+              margin: 0px;
+              transform: translate(1246px, 803px);
+            "
+            data-popper-reference-hidden=""
+            data-popper-escaped=""
+            data-popper-placement="top"
+          >
+            <ul
+              class="py-1 pr-5"
+              aria-labelledby="dropdownAlarm"
+              id="alarmMessage"
+            ></ul>
+          </div>
+
+          <div id="google_translate_element" style="display: none"></div>
+
+          <!-- Alam DropDwon Menu -->
+
+          <!-- Dropdown menu -->
+          <div
+            class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow-sm border w-80"
+            id="dropdown"
+            style="
+              position: absolute;
+              inset: auto auto 0px 0px;
+              margin: 0px;
+              transform: translate(1246px, 803px);
+            "
+            data-popper-reference-hidden=""
+            data-popper-escaped=""
+            data-popper-placement="top"
+          >
+            <!-- Drop Down Contents | Start -->
+
+            <ul class="py-1 pr-5" aria-labelledby="dropdownAlarm">
+              <!-- National Flags | Start -->
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  onclick="changeLang('zh-CN', this)"
+                >
+                  <img
+                    src="/img/flag/china.png"
+                    alt=""
+                    class="w-8 h-8 border-none mr-2"
+                  />
+                  <span>China</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  onclick="changeLang('de', this)"
+                >
+                  <img
+                    src="/img/flag/germany.png"
+                    alt=""
+                    class="w-8 h-8 border-none mr-2"
+                  />
+                  <span>Germany</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  onclick="changeLang('en', this)"
+                >
+                  <img
+                    src="/img/flag/great-britain.png"
+                    alt=""
+                    class="w-8 h-8 border-none mr-2"
+                  />
+                  <span>Greate-britain</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  onclick="changeLang('ar', this)"
+                >
+                  <img
+                    src="/img/flag/oman.png"
+                    alt=""
+                    class="w-8 h-8 border-none mr-2"
+                  />
+                  <span>Oman</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  onclick="changeLang('fr', this)"
+                >
+                  <img
+                    src="/img/flag/france.png"
+                    alt=""
+                    class="w-8 h-8 border-none mr-2"
+                  />
+                  <span>France</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  onclick="changeLang('es', this)"
+                >
+                  <img
+                    src="/img/flag/spain.png"
+                    alt=""
+                    class="w-8 h-8 border-none mr-2"
+                  />
+                  <span>Spain</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  onclick="changeLang('ko', this)"
+                >
+                  <img
+                    src="/img/flag/south-korea.png"
+                    alt=""
+                    class="w-8 h-8 border-none mr-2"
+                  />
+                  <span>Korea</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  onclick="changeLang('ms', this)"
+                >
+                  <img
+                    src="/img/flag/singapore.png"
+                    alt=""
+                    class="w-8 h-8 border-none mr-2"
+                  />
+                  <span>Singapore</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  onclick="changeLang('ms', this)"
+                >
+                  <img
+                    src="/img/flag/malaysia.png"
+                    alt=""
+                    class="w-8 h-8 border-none mr-2"
+                  />
+                  <span>Malyasia</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  onclick="changeLang('en', this)"
+                >
+                  <img
+                    src="/img/flag/new-zealand.png"
+                    alt=""
+                    class="w-8 h-8 border-none mr-2"
+                  />
+                  <span>New-zealand</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0);"
+                  class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  onclick="changeLang('en', this)"
+                >
+                  <img
+                    src="/img/flag/usa.png"
+                    alt=""
+                    class="w-8 h-8 border-none mr-2"
+                  />
+                  <span>USA</span>
+                </a>
+              </li>
+              <!-- National Flags | End -->
+            </ul>
+
+            <!-- Drop Down Contents | End -->
+          </div>
+
+          <div class="flex items-center">
+            <button
+              type="button"
+              class="flex items-center mr-3 text-sm rounded-full xl:mr-0"
+              id="user-menu-button"
+              aria-expanded="false"
+              data-dropdown-toggle="dropdown"
+            >
+              <span class="sr-only">Open user menu</span>
+              <img
+                class="w-6 h-6 xl:w-8 xl:h-8 border-none"
+                src="/img/flag/usa.png"
+                alt="National Flag"
+                id="countryImg"
+              />
+              <i class="bx bx-chevron-down bx-sm hidden xl:block"></i>
+            </button>
+            <!-- Dropdown menu -->
+            <div
+              class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow-sm border"
+              id="dropdown"
+              style="
+                position: absolute;
+                inset: auto auto 0px 0px;
+                margin: 0px;
+                transform: translate(1246px, 803px);
+              "
+              data-popper-reference-hidden=""
+              data-popper-escaped=""
+              data-popper-placement="top"
+            >
+              <!-- Drop Down Contents | Start -->
+
+              <ul class="py-1 pr-5" aria-labelledby="dropdown">
+                <!-- National Flags | Start -->
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    <img
+                      src="/img/flag/china.png"
+                      alt=""
+                      class="w-8 h-8 border-none mr-2"
+                    />
+                    <span> China </span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    <img
+                      src="/img/flag/germany.png"
+                      alt=""
+                      class="w-8 h-8 border-none mr-2"
+                    />
+                    <span> Germany </span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    <img
+                      src="/img/flag/great-britain.png"
+                      alt=""
+                      class="w-8 h-8 border-none mr-2"
+                    />
+                    <span> Greate-britain </span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    <img
+                      src="/img/flag/oman.png"
+                      alt=""
+                      class="w-8 h-8 border-none mr-2"
+                    />
+                    <span> Oman </span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    <img
+                      src="/img/flag/france.png"
+                      alt=""
+                      class="w-8 h-8 border-none mr-2"
+                    />
+                    <span> France </span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    <img
+                      src="/img/flag/spain.png"
+                      alt=""
+                      class="w-8 h-8 border-none mr-2"
+                    />
+                    <span> Spain </span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    <img
+                      src="/img/flag/south-korea.png"
+                      alt=""
+                      class="w-8 h-8 border-none mr-2"
+                    />
+                    <span> Korea </span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    <img
+                      src="/img/flag/singapore.png"
+                      alt=""
+                      class="w-8 h-8 border-none mr-2"
+                    />
+                    <span> Singapore </span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    <img
+                      src="/img/flag/malaysia.png"
+                      alt=""
+                      class="w-8 h-8 border-none mr-2"
+                    />
+                    <span> Malyasia </span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    <img
+                      src="/img/flag/new-zealand.png"
+                      alt=""
+                      class="w-8 h-8 border-none mr-2"
+                    />
+                    <span> New-zealand </span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0);"
+                    class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    <img
+                      src="/img/flag/usa.png"
+                      alt=""
+                      class="w-8 h-8 border-none mr-2"
+                    />
+                    <span> USA </span>
+                  </a>
+                </li>
+                <!-- National Flags | End -->
+              </ul>
+
+              <!-- Drop Down Contents | End -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <style>
+      .goog-te-banner-frame.skiptranslate {
+        display: none !important;
+      }
+      .skiptranslate {
+        display: none !important;
+      }
+    </style>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript">
+      /* 구글 번역 초기화 */
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: "en", autoDisplay: true },
+          "google_translate_element"
+        );
+      }
+    </script>
+    <script>
+      $(function () {
+        console.log(getCookie("countryImg"));
+        if (getCookie("countryImg")) {
+          $("#countryImg").attr("src", getCookie("countryImg"));
+        }
+        let userId = "limsy820";
+        if (userId) {
+          getAlarm();
+        }
+      });
+
+      function changeLang(lang, obj) {
+        const gtcombo = document.querySelector(".goog-te-combo");
+        gtcombo.value = lang; // 변경할 언어 적용
+        gtcombo.dispatchEvent(new Event("change")); // 변경 이벤트 트리거
+        $("#countryImg").attr("src", $(obj).children("img").attr("src"));
+        setCookie("countryImg", $(obj).children("img").attr("src"));
+      }
+
+      function setCookie(cookie_name, value, days) {
+        var exdate = new Date();
+        exdate.setDate(exdate.getDate() + days);
+
+        var cookie_value =
+          escape(value) +
+          (days == null ? "" : "; expires=" + exdate.toUTCString());
+        document.cookie = cookie_name + "=" + cookie_value + "; path=/";
+      }
+
+      function getCookie(cookie_name) {
+        var x, y;
+        var val = document.cookie.split(";");
+
+        for (var i = 0; i < val.length; i++) {
+          x = val[i].substr(0, val[i].indexOf("="));
+          y = val[i].substr(val[i].indexOf("=") + 1);
+          x = x.replace(/^\s+|\s+$/g, ""); // 앞과 뒤의 공백 제거하기
+          if (x == cookie_name) {
+            return unescape(y); // unescape로 디코딩 후 값 리턴
+          }
+        }
+      }
+
+      function getAlarm() {
+        let data = {};
+
+        $.ajax({
+          url: "/h/getAlarm",
+          dataType: "json",
+          type: "POST",
+          data: data,
+          success: function (result) {
+            console.log(result);
+            if (result.success) {
+              if (result.data.chat_count > 0) {
+                $("#alarmYn").show();
+                let html = "<li>";
+                html +=
+                  '<a href="/m/info" class="flex items-center py-2 px-4 text-sm text-gray-700 hover:bg-gray-100">';
+                html +=
+                  "<span>There are unread messages. (" +
+                  result.data.chat_count +
+                  ")</span>";
+                html += "</a>";
+                html += "</li>";
+                $("#alarmMessage").append(html);
+                send(
+                  "There are unread messages. (" + result.data.chat_count + ")"
+                );
+              }
+            } else {
+              fnAlertMessage(
+                "It was not processed normally. Please try again!"
+              );
+            }
+          },
+          error: function (XMLHttpRequest, textStatus, errorThrown) {
+            fnAlertMessage("It was not processed normally. Please try again!");
+          },
+        });
+      }
+    </script>
+
+    <!-- Side Navi -->
+    <aside
+      class="side-nav fixed -left-full xl:left-0 duration-1000 ease-in-out top-0 h-full bg-white border-r nav-side"
+      style="z-index: 1000"
+    >
+      <!-- Side Navigation Header -->
+      <div class="px-5">
+        <a href="/" class="h-16 hidden xl:flex items-center justify-between">
+          <img src="/img/logo/logo_small.png" class="h-8 w-8 mx-2" alt="" />
+
+          <div
+            class="justify-between items-center w-full ml-2 gap-2 nav-brand__logo"
+          >
+            <div>Bitypeer</div>
+          </div>
+        </a>
+        <!-- Close Button -->
+        <div class="absolute top-7 right-5 xl:hidden">
+          <i class="bx bx-x-circle bx-sm cursor-pointer nav-close"></i>
+        </div>
+
+        <!-- Side Menu List | Start -->
+        <nav class="px-2 pt-20 xl:pt-16 flex flex-col justify-start">
+          <ul class="flex flex-col gap-8 uppercase">
+            <li>
+              <a href="/s/view" class="inline-flex items-center">
+                <i class="bx bxs-cart-alt bx-sm"></i>
+                <span class="pl-3">Sell</span>
+              </a>
+            </li>
+            <li>
+              <a href="/b/view" class="inline-flex items-center">
+                <i class="bx bxs-wallet bx-sm"></i>
+                <span class="pl-3">Buy</span>
+              </a>
+            </li>
+            <li>
+              <a href="/h/affiliate" class="inline-flex items-center">
+                <i class="bx bxs-buildings bx-sm"></i>
+                <span class="pl-3">Affiliation</span>
+              </a>
+            </li>
+            <li>
+              <a href="/h/notice" class="inline-flex items-center">
+                <i class="bx bxs-megaphone bx-sm"></i>
+                <span class="pl-3">Notice</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="/as/view" class="inline-flex items-center">
+                <i class="bx bxs-cart-add bx-sm"></i>
+                <span class="pl-3">Affiliate Sell</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="/m/info" class="inline-flex items-center items-center">
+                <i class="bx bxs-user-rectangle bx-sm"></i>
+                <span class="pl-3">My Page</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="absolute bottom-52 flex flex-col gap-5 ml-9 xl:hidden">
+            <!-- Sign Up / Sign In Area -->
+            <div class="flex flex-col gap-5"></div>
+            <!-- Log Out Area -->
+
+            <div>
+              <a href="/h/logout" class="btn btn-red">Log Out</a>
+            </div>
+          </div>
+        </nav>
+        <!-- Side Menu List | End -->
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="p-0">
+      <!-- Sell Coins | Start -->
+      <section class="section">
+        <div class="pt-5 xl:pt-16">
+          <!-- Sell Header Area | Start -->
+          <div class="flex justify-between items-center">
+            <h4>Sell Coins Detail</h4>
+            <div class="hidden xl:flex items-center gap-2 text-xs">
+              <div>HOME</div>
+              <div><i class="bx bx-chevron-right"></i></div>
+              <div>Sell Coins</div>
+              <div><i class="bx bx-chevron-right"></i></div>
+              <div>Sell Coins Detail</div>
+            </div>
+          </div>
+          <!-- Sell Header Area | End -->
+        </div>
+      </section>
+
+      <!-- Seller Detail -->
+      <section class="section">
+        <div class="mt-8">
+          <div class="relative grid grid-cols-1 xl:grid-cols-11 gap-5">
+            <!-- Chatting Alam Icons -->
+            <div
+              class="absolute -top-10 right-0 animate-bounce chatting-alam xl:hidden"
+            >
+              <div
+                class="px-2 h-8 bg-blue-600 flex items-center justify-center text-white border rounded relative"
+              >
+                <span>Chat</span>
+                <!-- <div class="w-5 h-5 absolute bg-red-500 rounded-full -top-2.5 -right-2 text-white flex justify-center items-center text-xs">99</div> -->
+              </div>
+            </div>
+
+            <!-- Item 1 -->
+            <div class="xl:col-span-7">
+              <form action="" class="bg-white p-5 border rounded-xl">
+                <!-- Seller Information  -->
+                <div class="grid grid-cols-1 xl:grid-cols-2 gap-2">
+                  <!-- Item 1 -->
+                  <div
+                    class="grid grid-cols-1 border xl:border-none rounded xl:rounded-none xl:grid-cols-2 text-sm xl:gap-5"
+                  >
+                    <div
+                      class="col-span-1 rounded border px-5 py-2.5 bg-gray-300 text-start h-fit"
+                    >
+                      Coin Name
+                    </div>
+                    <div
+                      class="col-span-1 rounded px-5 py-2.5 text-start xl:h-fit"
+                    >
+                      GGR
+                    </div>
+                  </div>
+
+                  <div
+                    class="grid grid-cols-1 border xl:border-none rounded xl:rounded-none xl:grid-cols-2 text-sm xl:gap-5"
+                  >
+                    <div
+                      class="col-span-1 rounded border px-5 py-2.5 bg-gray-300 text-start h-fit"
+                    >
+                      Amount of coins
+                    </div>
+                    <div
+                      class="col-span-1 rounded px-5 py-2.5 text-start xl:h-fit"
+                    >
+                      1
+                    </div>
+                  </div>
+                  <div
+                    class="grid grid-cols-1 border xl:border-none rounded xl:rounded-none xl:grid-cols-2 text-sm xl:gap-5"
+                  >
+                    <div
+                      class="col-span-1 rounded border px-5 py-2.5 bg-gray-300 text-start h-fit"
+                    >
+                      Price
+                    </div>
+                    <div
+                      class="col-span-1 rounded px-5 py-2.5 text-start xl:h-fit"
+                    >
+                      1,000 KRW
+                    </div>
+                  </div>
+
+                  <!-- Item 5 -->
+                  <div
+                    class="grid grid-cols-1 border xl:border-none rounded xl:rounded-none xl:grid-cols-2 text-sm xl:gap-5"
+                  >
+                    <div
+                      class="col-span-1 rounded border px-5 py-2.5 bg-gray-300 text-start h-fit"
+                    >
+                      Buyer
+                    </div>
+                    <div
+                      class="col-span-1 rounded px-5 py-2.5 text-start xl:h-fit underline"
+                      onclick="fnUserDetailModal('tmddus820')"
+                    >
+                      tmddus820
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Seller Input Request -->
+                <div class="grid grid-cols-1 xl:grid-cols-12 gap-5 mt-5">
+                  <div class="col-span-1 xl:col-span-9">
+                    <textarea
+                      name=""
+                      id=""
+                      cols="30"
+                      rows="35"
+                      readonly
+                      class="border resize-none rounded-md h-full w-full p-8 text-xs"
+                    >
+test</textarea
+                    >
+                  </div>
+                  <div class="col-span-1 xl:col-span-3">
+                    <div class="bg-gray-200 rounded-md px-6 py-8">
+                      <h5 class="tracking-tighter">Seller Hours</h5>
+                      <div class="grid grid-cols-1 gap-2 text-sm pt-8">
+                        <div class="grid grid-cols-12">
+                          <div class="col-span-2">Sun</div>
+                          <div class="col-span-10 text-right">07:08~19:08</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bg-white border rounded-md mt-5">
+                      <div class="p-3 rounded-md">
+                        <h4
+                          class="px-5 text-xl bg-red-500 text-white w-full text-center py-2 rounded"
+                        >
+                          Caution
+                        </h4>
+                        <p class="px-2 mt-5 text-base tracking-tighter">
+                          Please note that 1:1 transactions are person-to-person
+                          transactions and have nothing to do with Bitypeer. For
+                          individual transactions, please meet in person and do
+                          1:1 direct transactions.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <div class="pt-2 w-full">
+                <div
+                  class="flex flex-col xl:flex-row items-center justify-end gap-5"
+                >
+                  <a
+                    href="javascript:void(0)"
+                    class="w-full tracking-tighter text-center btn btn-yellow"
+                    onclick="sellConfirm('3690', 'Y')"
+                    >Re-registration Complete</a
+                  >
+                  <a
+                    href="javascript:void(0)"
+                    class="w-full tracking-tighter text-center btn btn-dark"
+                    onclick="sellConfirm('3690', 'N');"
+                    >Purchase Complete</a
+                  >
+
+                  <a
+                    href="javascript:void(0)"
+                    class="w-full text-center btn btn-red"
+                    onclick="sellOppCancel('3690','5fea665a-6834-4250-8043-c62e3feebbae');"
+                    >Cancel</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Chatting Area -->
+            <input
+              type="hidden"
+              id="m_seq"
+              value="dcf83dcd-8e9c-44b1-98db-f505aa3348b4"
+            />
+            <div
+              class="absolute -top-32 xl:top-0 xl:static xl:col-span-3 z-50 xl:z-0 chatting-message xl:block block w-full"
+            >
+              <div class="bg-white p-2 border rounded-xl">
+                <div
+                  class="fixed xl:hidden top-0 left-0 h-full w-full bg-gray-900/80 -z-10"
+                ></div>
+                <div
+                  class="flex flex-col justify-end h-[90vh] xl:h-[79vh] relative"
+                >
+                  <div
+                    class="absolute top-0 left-0 w-full flex sm:items-center justify-between py-3 border-b-2 border-gray-200 z-50 bg-white"
+                  >
+                    <!-- 수정 8.4 -->
+                    <div
+                      class="relative flex items-center justify-end w-full px-5"
+                    >
+                      <div class="tracking-tighter text-lg">
+                        Bitypeer Real Chatting message
+                      </div>
+                      <div class="cursor-pointer xl:hidden">
+                        <i class="bx bx-arrow-back chatting-close"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    id="chatBody"
+                    class="flex flex-col space-y-4 p-3 overflow-y-auto gap-2"
+                  ></div>
+                  <div
+                    class="border-t-2 border-gray-200 px-4 pt-4 mb-2 sm:mb-0"
+                  >
+                    <div class="relative flex">
+                      <input
+                        type="text"
+                        id="message"
+                        placeholder="Write your message!"
+                        class="w-full focus:outline-none focus:placeholder-gray-400 text-gray-600 placeholder-gray-600 pl-12 bg-gray-200 rounded-md py-3"
+                      />
+                      <div
+                        class="absolute right-0 items-center inset-y-0 sm:flex"
+                      >
+                        <button
+                          onclick="insertChat()"
+                          type="button"
+                          class="inline-flex items-center justify-center rounded-lg px-4 py-3 transition duration-500 ease-in-out text-white bg-blue-500 hover:bg-blue-400 focus:outline-none"
+                        >
+                          <div>
+                            <span class="font-bold"
+                              ><i class="bx bxs-send"></i
+                            ></span>
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Sell Coins | End -->
+    </main>
+    <!-- Footer -->
+    <footer class="px-5 py-5 bg-gray-100 pt-10 mt-16">
+      <section class="section">
+        <div class="px-5 pt-16">
+          <div
+            class="grid grid-cols-1 xl:grid-cols-12 pb-16 text-sm gap-10 xl:gap-0"
+          >
+            <div class="col-span-2">
+              <div class="flex items-center gap-2 xl:gap-5">
+                <img src="/img/logo/logo_small.png" alt="" class="h-10 w-10" />
+                <h5>Bitypeer</h5>
+              </div>
+            </div>
+            <div class="col-span-3 xl:border-r xl:px-10">
+              <div>
+                <div class="text-xl uppercase">About</div>
+                <ul class="flex flex-col gap-2 xl:gap-4 pt-8">
+                  <li><a href="/h/terms">Terms of Use</a></li>
+                  <li><a href="/h/privacy">Privacy Policy</a></li>
+                  <li><a href="/h/openApi">Open API</a></li>
+                  <!--                            <li><a href="/h/guide">Guide</a></li>-->
+                  <li>
+                    <a href="javascript:fnAlertMessage('Comming Soon.')"
+                      >Guide</a
+                    >
+                  </li>
+                  <li><a href="/h/contact">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-span-3 xl:border-r xl:px-10">
+              <div>
+                <div class="text-xl uppercase">Contact</div>
+                <ul class="flex flex-col gap-2 xl:gap-4 pt-8 tracking-tighter">
+                  <li>Telegram</li>
+                  <li>@Bitypeer</li>
+                  <li>Email</li>
+                  <li>infoservice@bitypeer.com</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-span-3 xl:px-10">
+              <div>
+                <div class="text-xl uppercase">NEWSLETTER</div>
+                <p class="pt-8">
+                  Subscribe our newseletter to get more free Crypto currency
+                  information and resource.
+                </p>
+              </div>
+              <div>
+                <form class="pt-8">
+                  <div class="relative">
+                    <div
+                      class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none"
+                    >
+                      <svg
+                        class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <input
+                      type="text"
+                      id="email"
+                      class="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-full border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                      placeholder="Enter Your E-mail"
+                    />
+                    <button
+                      onclick="emailValidator()"
+                      type="submit"
+                      class="text-gray-300 absolute flex items-center justify-center right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm w-8 h-8"
+                    >
+                      <i class="bx bx-right-arrow-alt"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <script>
+        function emailValidator() {
+          let emailRegExp =
+            /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+          if (!emailRegExp.test($("#email").val())) {
+            return fnAlertRefreshMessage(
+              "Mail has been registered. We will send you a newsletter when it becomes available."
+            );
+          }
+        }
+      </script>
+    </footer>
+    <div
+      class="modal fade"
+      id="mainModalID"
+      tabindex="-1"
+      aria-labelledby="mainModalID"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content border rounded-xl px-5 py-8">
+          <div class="modal-header px-5">
+            <div
+              class="flex items-center justify-between w-full tracking-tighter"
+            >
+              <div>Kimseller</div>
+              <div class="flex items-center justify-start gap-2">
+                <div class="flex justify-center items-center">
+                  <i class="bx bx-id-card bx-md"></i>
+                </div>
+                <div>Affilate Seller</div>
+              </div>
+            </div>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="px-5 py-10 text-center">
+              <!-- Items  -->
+              <div class="grid grid-cols-5 text-sm">
+                <!-- 1 -->
+                <div
+                  class="col-span-3 py-1.5 pl-4 border-t border-l bg-gray-500 text-white text-left"
+                >
+                  All Trades
+                </div>
+                <div class="col-span-2 py-1.5 pr-4 border-t border-x text-end">
+                  250,000,000
+                </div>
+                <!-- 2 -->
+                <div
+                  class="col-span-3 py-1.5 pl-4 border-t border-l bg-gray-500 text-white text-left"
+                >
+                  Number of Sell
+                </div>
+                <div class="col-span-2 py-1.5 pr-4 border-t border-x text-end">
+                  250,000,000
+                </div>
+                <!-- 2 -->
+                <div
+                  class="col-span-3 py-1.5 pl-4 border-t border-l bg-gray-500 text-white text-left"
+                >
+                  Number of Buy
+                </div>
+                <div class="col-span-2 py-1.5 pr-4 border-t border-x text-end">
+                  250,000,000
+                </div>
+                <!-- 2 -->
+                <div
+                  class="col-span-3 py-1.5 pl-4 border-t border-l bg-gray-500 text-white text-left"
+                >
+                  Number of Sell Request
+                </div>
+                <div class="col-span-2 py-1.5 pr-4 border-t border-x text-end">
+                  250,000,000
+                </div>
+                <!-- 2 -->
+                <div
+                  class="col-span-3 py-1.5 pl-4 border-t border-l bg-gray-500 text-white text-left"
+                >
+                  Number of Buy Request
+                </div>
+                <div class="col-span-2 py-1.5 pr-4 border-t border-x text-end">
+                  250,000,000
+                </div>
+                <!-- 2 -->
+                <div
+                  class="col-span-3 py-1.5 pl-4 border-t border-l bg-gray-500 text-white text-left"
+                >
+                  Number of Transaction Completion
+                </div>
+                <div class="col-span-2 py-1.5 pr-4 border-t border-x text-end">
+                  250,000,000
+                </div>
+                <!-- 2 -->
+                <div
+                  class="col-span-3 py-1.5 pl-4 border-t border-l bg-gray-500 text-white text-left"
+                >
+                  Number of Transaction Cancellations
+                </div>
+                <div class="col-span-2 py-1.5 pr-4 border-t border-x text-end">
+                  250,000,000
+                </div>
+                <!-- 2 -->
+
+                <!-- 2 -->
+                <div
+                  class="col-span-3 py-1.5 pl-4 border-y border-l bg-gray-500 text-white text-left"
+                >
+                  Transaction Completion Rate
+                </div>
+                <div class="col-span-2 py-1.5 pr-4 border-y border-x text-end">
+                  250,000,000
+                </div>
+                <!-- 2 -->
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-center items-center mt-5 gap-5">
+            <button
+              type="button"
+              class="uppercase w-36 text-center btn btn-purple"
+              data-bs-dismiss="modal"
+            >
+              Confirm
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <input type="hidden" id="alertMessage" value="" />
+    <script>
+      $(document).ready(function () {
+        if ($("#alertMessage").val() != "") {
+          fnAlertMessage($("#alertMessage").val());
+        }
+      });
+    </script>
+    <script src="/js/sideNav.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/chatting.js"></script>
+    <script>
+      let chatList = [];
+      let interval;
+      $(function () {
+        selectChatList();
+        interval = setInterval(selectChatList, 1000);
+      });
+
+      function selectChatList() {
+        let data = {
+          room_id: "5fea665a-6834-4250-8043-c62e3feebbae",
+        };
+
+        let calcelType = "sell";
+        console.log(calcelType);
+        let read_yn = "";
+        if (calcelType == "requestBuy") {
+          read_yn = "buy";
+        } else if (calcelType == "sell") {
+          read_yn = "sell";
+        }
+
+        data.read_yn = read_yn;
+        console.log(data);
+        $("#chatBody").scrollTop($("#chatBody")[0].scrollHeight);
+        $.ajax({
+          url: "/s/chatList",
+          dataType: "json",
+          type: "POST",
+          data: data,
+          success: function (result) {
+            if (result.success) {
+              let list = result.data;
+              if (list.length > 0) {
+                if (chatList.length != list.length) {
+                  $("#chatBody").html("");
+                  chatList = list;
+                  list.forEach(function (e) {
+                    let html = "";
+                    if (e.create_user == $("#m_seq").val()) {
+                      html += '<div class="chat-message">';
+                      html += '<div class="flex items-end justify-end">';
+                      html +=
+                        '<div class="flex flex-col space-y-2 text-base max-w-xs mx-2 order-1 items-end">';
+                      html += "<div>";
+                      html +=
+                        '<span class="px-4 py-2 rounded-lg inline-block rounded-br-none bg-blue-600 text-white">' +
+                        e.message +
+                        "</span>";
+                      html += "</div>";
+                      html += "</div>";
+                      html += "</div>";
+                      html += "</div>";
+                    } else {
+                      html += '<div class="chat-message">';
+                      html += '<div class="flex items-end">';
+                      html +=
+                        '<div class="flex flex-col space-y-2 text-base max-w-xs mx-2 order-2 items-start">';
+                      html += "<div>";
+                      html +=
+                        '<span class="px-4 py-2 rounded-lg inline-block bg-gray-300 text-gray-600">' +
+                        e.message +
+                        "</span>";
+                      html += "</div>";
+                      html += "</div>";
+                      html += "</div>";
+                      html += "</div>";
+                    }
+                    $("#chatBody").append(html);
+                    $("#chatBody").scrollTop($("#chatBody")[0].scrollHeight);
+                  });
+                }
+              }
+            } else {
+              clearInterval(interval);
+              fnAlertLocationMessage(
+                "It was not processed normally. Please try again!",
+                "/"
+              );
+            }
+          },
+          error: function (XMLHttpRequest, textStatus, errorThrown) {
+            clearInterval(interval);
+            fnAlertLocationMessage(
+              "It was not processed normally. Please try again!",
+              "/"
+            );
+          }, //function끝
+        });
+      }
+
+      function insertChat() {
+        if ($("#message").val() != "") {
+          let data = {
+            room_id: "5fea665a-6834-4250-8043-c62e3feebbae",
+            message: $("#message").val(),
+          };
+
+          $.ajax({
+            url: "/s/insertChat",
+            dataType: "json",
+            type: "POST",
+            data: data,
+            success: function (result) {
+              if (result.success) {
+                $("#message").val("");
+                selectChatList();
+              } else {
+                fnAlertMessage(
+                  "It was not processed normally. Please try again!"
+                );
+              }
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+              fnAlertMessage(
+                "It was not processed normally. Please try again!"
+              );
+            }, //function끝
+          });
+        }
+      }
+
+      function buyRequestCancel(seq, room_id) {
+        let data = {
+          seq: seq,
+          room_id: room_id,
+        };
+
+        $.ajax({
+          url: "/b/buyRequestCancel",
+          dataType: "json",
+          type: "POST",
+          data: data,
+          success: function (result) {
+            if (result.success) {
+              fnAlertLocationMessage(
+                "The transaction has been canceled.",
+                "/m/buyRegistView"
+              );
+            } else {
+              fnAlertMessage(result.message);
+            }
+          },
+          error: function (XMLHttpRequest, textStatus, errorThrown) {
+            fnAlertMessage("It was not processed normally. Please try again!");
+          }, //function끝
+        });
+      }
+
+      function sellOppCancel(seq, room_id) {
+        let data = {
+          seq: seq,
+          room_id: room_id,
+        };
+
+        $.ajax({
+          url: "/s/sellOppCancel",
+          dataType: "json",
+          type: "POST",
+          data: data,
+          success: function (result) {
+            if (result.success) {
+              fnAlertLocationMessage(
+                "The transaction has been canceled.",
+                "/m/sellHistory"
+              );
+            } else {
+              fnAlertMessage(
+                "It was not processed normally. Please try again!"
+              );
+            }
+          },
+          error: function (XMLHttpRequest, textStatus, errorThrown) {
+            fnAlertMessage("It was not processed normally. Please try again!");
+          }, //function끝
+        });
+      }
+
+      function sellConfirm(seq, reRegistration) {
+        let data = {
+          seq: seq,
+          reRegistration: reRegistration,
+        };
+
+        $.ajax({
+          url: "/s/sellConfirm",
+          dataType: "json",
+          type: "POST",
+          data: data,
+          success: function (result) {
+            if (result.success) {
+              fnAlertLocationMessage(
+                "Your purchase has been completed.",
+                "/m/sellHistory"
+              );
+            } else if (result.code == "-3") {
+              fnAlertMessage(result.message);
+            } else {
+              fnAlertMessage(
+                "It was not processed normally. Please try again!"
+              );
+            }
+          },
+          error: function (XMLHttpRequest, textStatus, errorThrown) {
+            fnAlertMessage("It was not processed normally. Please try again!");
+          }, //function끝
+        });
+      }
+
+      function buyRequestConfirm(seq) {
+        let data = {
+          seq: seq,
+        };
+
+        $.ajax({
+          url: "/b/buyRequestConfirm",
+          dataType: "json",
+          type: "POST",
+          data: data,
+          success: function (result) {
+            if (result.success) {
+              fnAlertLocationMessage(
+                "Your purchase has been completed.",
+                "/m/buyRegistView"
+              );
+            } else {
+              fnAlertMessage(
+                "It was not processed normally. Please try again!"
+              );
+            }
+          },
+          error: function (XMLHttpRequest, textStatus, errorThrown) {
+            fnAlertMessage("It was not processed normally. Please try again!");
+          }, //function끝
+        });
+      }
+    </script>
+  </body>
+</html>

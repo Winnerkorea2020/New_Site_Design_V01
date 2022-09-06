@@ -78,3 +78,11 @@ h5 {
 .tab__nav_active {
   @apply text-blue-600 rounded-t-lg border-b-2 border-blue-600;
 }
+
+/*  ============= ADD CSS Start ================= */
+
+.grow {
+  flex-grow: 1;
+}
+
+/*  ============= ADD CSS End ================= */

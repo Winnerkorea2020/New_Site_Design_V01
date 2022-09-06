@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- BOX ICONS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="/css/font.css" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/sweetalert2.min.css" />
+    <title>Bitypeer</title>
+
+    <script src="/js/jquery-3.5.1.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/validation.js"></script>
+    <script src="/js/sweetalert2.min.js"></script>
+    <script src="/js/commFunc.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+    <script src="/client.js"></script>
+    <script src="/js/bootstrap.bundel.min.js"></script>
+    <script>
+      function wrapWindowByMaskHide() {
+        $("#mask, #loadingImg").hide();
+        $("#mask, #loadingImg").remove();
+      }
+
+      function wrapWindowByMaskShow() {
+        //화면의 높이와 너비를 구한다.
+        var maskHeight = $(document).height();
+        //      var maskWidth = $(document).width();
+        var maskWidth = window.document.body.clientWidth;
+
+        var mask =
+          "<div id='mask' style='position:absolute; z-index:9000; background-color:#000000; display:none; left:0; top:0;'></div>";
+        var loadingImg = "";
+
+        loadingImg +=
+          "<div id='loadingImg' style='position:absolute; left:48%; top:50%; display:none; z-index:10000;'>";
+        loadingImg += " <img src='/img/viewLoading.gif'/>";
+        loadingImg += "</div>";
+
+        //화면에 레이어 추가
+        $("body").append(mask).append(loadingImg);
+
+        //마스크의 높이와 너비를 화면 것으로 만들어 전체 화면을 채운다.
+        $("#mask").css({
+          width: maskWidth,
+          height: maskHeight,
+          opacity: "0.3",
+        });
+
+        $("#loadingImg").css(
+          "top",
+          Math.max(
+            0,
+            ($(window).height() - $("#loadingImg").outerHeight()) / 2 +
+              $(window).scrollTop()
+          ) + "px"
+        );
+        $("#loadingImg").css(
+          "left",
+          Math.max(
+            0,
+            ($(window).width() - $("#loadingImg").outerWidth()) / 2 +
+              $(window).scrollLeft() -
+              15
+          ) + "px"
+        );
+
+        //마스크 표시
+        $("#mask").show();
+
+        //로딩중 이미지 표시
+        $("#loadingImg").show();
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Header -->
+    <!-- 수정 8.04 | START remove fixed-->
+    <header class="top-0 left-0 w-full h-12">
+      <div class="section max-w-3xl">
+        <div class="h-12 flex items-center justify-between">
+          <a
+            href="/"
+            class="inline-flex justify-start gap-2 items-center mt-10"
+          >
+            <img
+              src="/img/logo/logo_small.png"
+              alt=""
+              width="35px"
+              height="35px"
+            />
+            <div class="font-semibold text-xl tracking-tight">Bitypeer</div>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main class="mt-8 lg:mt-12">
+      <section class="section">
+        <div class="pt-12 w-full md:max-w-md mx-auto pb-10">
+          <h3 class="p-5 border-gray-300 text-center text-3xl">
+            Sign in to Bitypeer
+          </h3>
+          <div>
+            <div class="grid grid-cols-1 gap-5">
+              <!-- ID -->
+              <div class="">
+                <label class="" for="">ID</label>
+                <input
+                  type="text"
+                  id="mId"
+                  placeholder="ID"
+                  class="w-full border-2 mt-2 px-2.5 py-2 text-xl border-gray-300 rounded-xl"
+                />
+                <!-- <p class="text-red-400 tracking-tighter text-xs px-3">The email address was entered incorrectly.</p> -->
+              </div>
+              <!-- Password -->
+              <div class="">
+                <label class="" for="">PASSWORD</label>
+                <div class="relative">
+                  <input
+                    type="password"
+                    id="mPw"
+                    maxlength="20"
+                    placeholder="Passwords"
+                    class="w-full border-2 mt-2 pl-2.5 pr-10 py-2 text-xl border-gray-300 rounded-xl"
+                  />
+                  <div class="absolute right-3 bottom-3">
+                    <i class="fa-regular fa-eye"></i>
+                  </div>
+                </div>
+                <!-- <p class="text-red-400 tracking-tighter text-xs px-3">Paswword format (including English, numbers, and special characters).</p> -->
+              </div>
+            </div>
+            <!-- Forgot ID and Password -->
+            <div class="w-full flex justify-between items-center mt-5">
+              <a href="/h/findId" class="forget">Forgot ID?</a>
+              <a href="/h/findPassword" class="forget">Forgot Password?</a>
+            </div>
+            <!-- 수정  : Add 신규가입 Sign Up -->
+            <div class="mt-5">
+              <a href="/h/signup" class="forget">Sign Up to Bitypeer!</a>
+            </div>
+            <!-- reCaptach Area-->
+            <div class="mt-5 w-full lg:w-[400px] mx-auto">
+              <div class="mb-2">Please verify you are a human.</div>
+              <div
+                class="g-recaptcha"
+                data-sitekey="6LfDiM8gAAAAAE9dxg-TS_AO1KyvqLhUtNNpHxNz"
+              ></div>
+            </div>
+            <!-- Button -->
+            <div class="mt-5">
+              <button
+                class="btn btn-exlarge btn-rounded w-full btn-default"
+                onclick="fnLogin();"
+              >
+                Login
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <input type="hidden" id="alertMessage" value="" />
+    <script>
+      $(document).ready(function () {
+        if ($("#alertMessage").val() != "") {
+          fnAlertMessage($("#alertMessage").val());
+        }
+      });
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script type="text/javascript">
+      // function linkMain(){
+      //     location.href = "/h/view";
+      // }
+      $(document).ready(function () {
+        $("#mPw").keypress(function (event) {
+          if (event.which == 13) {
+            fnLogin();
+          }
+        });
+      });
+
+      function fnLogin() {
+        let v = grecaptcha.getResponse();
+        // if (v.length == 0) {
+        // 	fnAlertMessage("Click the I am not a robot checkbox.");
+        // 	return;
+        // }
+
+        let mId = $("#mId").val().trim();
+        let mPw = $("#mPw").val().trim();
+
+        if (!nullChk(mId)) {
+          fnAlertMessage("The ID is empty, Please fill it out again.");
+          return;
+        } else if (!nullChk(mPw)) {
+          fnAlertMessage("The Password is empty, Please fill it out again.");
+          return;
+        }
+
+        let form = document.createElement("form");
+        form.setAttribute("charset", "UTF-8");
+        form.setAttribute("method", "post"); //Post 방식
+        form.setAttribute("action", "/h/signin"); //요청 보낼 주소
+
+        let hiddenField = document.createElement("input");
+        hiddenField.setAttribute("type", "hidden");
+        hiddenField.setAttribute("name", "mId");
+        hiddenField.setAttribute("value", mId);
+        form.appendChild(hiddenField);
+
+        let hiddenField2 = document.createElement("input");
+        hiddenField2.setAttribute("type", "hidden");
+        hiddenField2.setAttribute("name", "mPw");
+        hiddenField2.setAttribute("value", mPw);
+        form.appendChild(hiddenField2);
+
+        document.body.appendChild(form);
+        form.submit();
+      }
+    </script>
+  </body>
+</html>
